@@ -5,7 +5,7 @@ A hackathon project for AI search visibility analysis. Measures and improves dom
 ## Architecture
 
 **Backend (Python)**
-- `main.py`: Core AI search experiment runner using Gemini 2.5 Flash with Google Search grounding
+- `extract.py`: Core AI search experiment runner using Gemini 2.5 Flash with Google Search grounding
 - `analytics.py`: Search performance analytics engine with domain ranking analysis
 - `api.py`: FastAPI REST API serving comprehensive search analytics reports
 
