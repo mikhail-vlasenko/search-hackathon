@@ -1,0 +1,906 @@
+[
+  {
+    "prompt": "cheapest bicycle to buy in berlin",
+    "results": {
+      "gemini-2.5-flash": [
+        {
+          "model": "gemini-2.5-flash",
+          "response": "The cheapest bicycles in Berlin are typically found through second-hand options. Here's a breakdown of where to look: \n\n **1. Second-Hand Markets & Shops** \n\n * **Fietsenb\u00f6rse:** This is Berlin's largest bike market, held monthly on Winterfeldtplatz in Sch\u00f6neberg. It features over 600 used bikes from private sellers and dealers, offering a wide range of types and prices. You can test ride bikes and get independent advice from specialists. \n * **Berliner Fahrradmarkt:** This market, which started in 2015, is another large platform for used bicycles with multiple locations in 2025 (Kreuzk\u00f6lln, Moabit, Prenzlauer Berg, Neuk\u00f6lln). They offer free and independent on-site purchasing advice and test rides. \n * **bikePARK - Fahrrad Outlet Berlin:** Located in the heart of Berlin, bikePARK has over 300 used bicycles starting from \u20ac39. They offer a large selection of various types of bikes, all professionally repaired and maintained. \n * **Gebrauchte Fahrr\u00e4der Berlin (Gefa Berlin):** This place focuses on keeping costs low by operating primarily through regular warehouse sales. Their bikes typically range from \u20ac100 to \u20ac300, with many under \u20ac200. \n * **Bikeopia:** Specializes in quality used high-end bikes, particularly 80s and 90s vintage models. Their prices range from \u20ac400 to \u20ac1500, and they offer a 6-month warranty on all bikes. \n * **Radwelt:** Offers both new and used bicycles at their Friedrichshain and Mitte locations. They ensure that all used bikes are checked, functional, and come with a proper invoice and warranty. Used bikes here can start from \u20ac150. \n * **BIKE A-WAY Berlin:** They salvage and repair discarded bikes, offering quality second-hand bikes with a 1-year warranty at affordable prices. They have a large assortment of serviced used bikes, including racers, city bikes, and urban bikes. \n * **Decathlon:** Their \"Second Use\" program offers returned, tried-out, or bought-back bicycles at fair prices. These bikes are inspected by their experts and may have minor signs of use. You also get the same legal conditions, warranty, and guarantee rights as new products. \n\n **2. Online Marketplaces & Other Options** \n\n * **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin. \n * **Facebook groups:** \"Sell Your Bike Berlin\" is a Facebook group with over 30,000 members where you might find bikes for sale. \n * **Toll office auctions:** Regular auctions for lost and found bicycles are held where you can bid online. \n\n **Important Considerations for Used Bikes:** \n\n * **Inspect the bike thoroughly:** Always test ride the bike before buying it. Check the brakes, gears, frame, and wheels. \n * **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be too old, overpriced, and often stolen. \n * **Professional inspection:** Even if you buy a used bike, it's recommended to get it fitted and adjusted at a bike shop for a smoother and more comfortable ride. \n\n For new bikes, Decathlon is generally considered to offer good value for the price.",
+          "web_searches": {
+            "cheapest bicycle shops in Berlin": {
+              "https://fietsenboerse.de": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "You can test ride bikes and get independent advice from specialists."
+                ]
+              },
+              "https://www.visitberlin.de/en/event/berlin-bicycle-market": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "They offer free and independent on-site purchasing advice and test rides."
+                ]
+              },
+              "https://bikeparkberlin.de": {
+                "citations": [
+                  3
+                ],
+                "contents": [
+                  "They offer a large selection of various types of bikes, all professionally repaired and maintained."
+                ]
+              },
+              "https://xn--gebrauchte-fahrrder-berlin-vhc.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Their bikes typically range from \u20ac100 to \u20ac300, with many under \u20ac200."
+                ]
+              },
+              "https://bikeopia.com": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "Their prices range from \u20ac400 to \u20ac1500, and they offer a 6-month warranty on all bikes."
+                ]
+              },
+              "https://radwelt.berlin": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "Used bikes here can start from \u20ac150."
+                ]
+              },
+              "https://bikeawayberlin.de": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "They have a large assortment of serviced used bikes, including racers, city bikes, and urban bikes."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "You also get the same legal conditions, warranty, and guarantee rights as new products."
+                ]
+              },
+              "https://allaboutberlin.com/guides/bicycle-in-berlin#buying-a-stolen-bicycle": {
+                "citations": [
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15
+                ],
+                "contents": [
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
+                  "* **Facebook groups:** \"Sell Your Bike Berlin\" is a Facebook group with over 30,000 members where you might find bikes for sale.",
+                  "* **Toll office auctions:** Regular auctions for lost and found bicycles are held where you can bid online.",
+                  "Check the brakes, gears, frame, and wheels.",
+                  "* **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be too old, overpriced, and often stolen.",
+                  "* **Professional inspection:** Even if you buy a used bike, it's recommended to get it fitted and adjusted at a bike shop for a smoother and more comfortable ride.",
+                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/mnk3fl/affordable_bicycle_shops_in_berlin/": {
+                "citations": [
+                  15
+                ],
+                "contents": [
+                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                ]
+              }
+            },
+            "second-hand bicycles Berlin": {
+              "https://fietsenboerse.de/en/second-hand-bikes/berlin": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "You can test ride bikes and get independent advice from specialists."
+                ]
+              },
+              "https://www.berlin.de/en/shopping/markets/flea-markets/7403870-2983302-fietsenboerse-bicycle-market.en.html": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "You can test ride bikes and get independent advice from specialists."
+                ]
+              },
+              "https://www.visitberlin.de/en/event/berlin-bicycle-market": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "They offer free and independent on-site purchasing advice and test rides."
+                ]
+              },
+              "https://bikeparkberlin.de": {
+                "citations": [
+                  3
+                ],
+                "contents": [
+                  "They offer a large selection of various types of bikes, all professionally repaired and maintained."
+                ]
+              },
+              "https://xn--gebrauchte-fahrrder-berlin-vhc.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Their bikes typically range from \u20ac100 to \u20ac300, with many under \u20ac200."
+                ]
+              },
+              "https://bikeopia.com/": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "Their prices range from \u20ac400 to \u20ac1500, and they offer a 6-month warranty on all bikes."
+                ]
+              },
+              "https://radwelt.berlin": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "Used bikes here can start from \u20ac150."
+                ]
+              },
+              "https://www.bikeawayberlin.de/": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "They have a large assortment of serviced used bikes, including racers, city bikes, and urban bikes."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "You also get the same legal conditions, warranty, and guarantee rights as new products."
+                ]
+              },
+              "https://allaboutberlin.com": {
+                "citations": [
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15
+                ],
+                "contents": [
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
+                  "* **Facebook groups:** \"Sell Your Bike Berlin\" is a Facebook group with over 30,000 members where you might find bikes for sale.",
+                  "* **Toll office auctions:** Regular auctions for lost and found bicycles are held where you can bid online.",
+                  "Check the brakes, gears, frame, and wheels.",
+                  "* **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be too old, overpriced, and often stolen.",
+                  "* **Professional inspection:** Even if you buy a used bike, it's recommended to get it fitted and adjusted at a bike shop for a smoother and more comfortable ride.",
+                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                ]
+              },
+              "https://reddit.com": {
+                "citations": [
+                  15
+                ],
+                "contents": [
+                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                ]
+              }
+            },
+            "affordable bikes Berlin": {
+              "https://fietsenboerse.de": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "You can test ride bikes and get independent advice from specialists."
+                ]
+              },
+              "https://www.bikeawayberlin.de/": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "They have a large assortment of serviced used bikes, including racers, city bikes, and urban bikes."
+                ]
+              },
+              "https://visitberlin.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "They offer free and independent on-site purchasing advice and test rides."
+                ]
+              },
+              "https://bikeparkberlin.de": {
+                "citations": [
+                  3
+                ],
+                "contents": [
+                  "They offer a large selection of various types of bikes, all professionally repaired and maintained."
+                ]
+              },
+              "https://xn--gebrauchte-fahrrder-berlin-vhc.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Their bikes typically range from \u20ac100 to \u20ac300, with many under \u20ac200."
+                ]
+              },
+              "https://bikeopia.com": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "Their prices range from \u20ac400 to \u20ac1500, and they offer a 6-month warranty on all bikes."
+                ]
+              },
+              "https://radwelt.berlin": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "Used bikes here can start from \u20ac150."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "You also get the same legal conditions, warranty, and guarantee rights as new products."
+                ]
+              },
+              "https://allaboutberlin.com/guides/bicycle-in-berlin": {
+                "citations": [
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15
+                ],
+                "contents": [
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
+                  "* **Facebook groups:** \"Sell Your Bike Berlin\" is a Facebook group with over 30,000 members where you might find bikes for sale.",
+                  "* **Toll office auctions:** Regular auctions for lost and found bicycles are held where you can bid online.",
+                  "Check the brakes, gears, frame, and wheels.",
+                  "* **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be too old, overpriced, and often stolen.",
+                  "* **Professional inspection:** Even if you buy a used bike, it's recommended to get it fitted and adjusted at a bike shop for a smoother and more comfortable ride.",
+                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/mnk3fl/affordable_bicycle_shops_in_berlin/": {
+                "citations": [
+                  15
+                ],
+                "contents": [
+                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                ]
+              }
+            },
+            "Gebrauchtfahrrad Berlin": {
+              "https://fietsenboerse.de": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "You can test ride bikes and get independent advice from specialists."
+                ]
+              },
+              "https://bikeparkberlin.de/": {
+                "citations": [
+                  3
+                ],
+                "contents": [
+                  "They offer a large selection of various types of bikes, all professionally repaired and maintained."
+                ]
+              },
+              "https://visitberlin.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "They offer free and independent on-site purchasing advice and test rides."
+                ]
+              },
+              "https://www.xn--gebrauchte-fahrrder-berlin-vhc.de/": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Their bikes typically range from \u20ac100 to \u20ac300, with many under \u20ac200."
+                ]
+              },
+              "https://bikeopia.com": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "Their prices range from \u20ac400 to \u20ac1500, and they offer a 6-month warranty on all bikes."
+                ]
+              },
+              "https://radwelt.berlin/fahrrad-kaufen/gebrauchte-fahrraeder-berlin": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "Used bikes here can start from \u20ac150."
+                ]
+              },
+              "https://bikeawayberlin.de": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "They have a large assortment of serviced used bikes, including racers, city bikes, and urban bikes."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "You also get the same legal conditions, warranty, and guarantee rights as new products."
+                ]
+              },
+              "https://allaboutberlin.com": {
+                "citations": [
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15
+                ],
+                "contents": [
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
+                  "* **Facebook groups:** \"Sell Your Bike Berlin\" is a Facebook group with over 30,000 members where you might find bikes for sale.",
+                  "* **Toll office auctions:** Regular auctions for lost and found bicycles are held where you can bid online.",
+                  "Check the brakes, gears, frame, and wheels.",
+                  "* **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be too old, overpriced, and often stolen.",
+                  "* **Professional inspection:** Even if you buy a used bike, it's recommended to get it fitted and adjusted at a bike shop for a smoother and more comfortable ride.",
+                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                ]
+              },
+              "https://reddit.com": {
+                "citations": [
+                  15
+                ],
+                "contents": [
+                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                ]
+              }
+            }
+          },
+          "success": true,
+          "run_number": 1
+        }
+      ]
+    },
+    "summary": {
+      "gemini-2.5-flash": {
+        "total_runs": 1,
+        "successful_runs": 1,
+        "success_rate": 1.0,
+        "total_web_searches": 4,
+        "unique_web_searches": 4,
+        "web_search_queries": [
+          "cheapest bicycle shops in Berlin",
+          "second-hand bicycles Berlin",
+          "affordable bikes Berlin",
+          "Gebrauchtfahrrad Berlin"
+        ]
+      }
+    }
+  },
+  {
+    "prompt": "cycling good, where to buy cycling machine deutschalnd",
+    "results": {
+      "gemini-2.5-flash": [
+        {
+          "model": "gemini-2.5-flash",
+          "response": "In Deutschland gibt es verschiedene M\u00f6glichkeiten, Standfahrr\u00e4der zu kaufen, die oft als Ergometer, Heimtrainer oder Indoor Cycles bezeichnet werden. Hier sind einige der besten Anlaufstellen: \n\n **Online-Shops:** \n\n * **Sport- und Fitnessfachh\u00e4ndler:** \n * **Fitshop** (ehemals Sport-Tiedje) ist \"Europas Nr. 1 f\u00fcr Heimfitness\" und wurde mehrfach als bester Online-Shop f\u00fcr Fitnessger\u00e4te ausgezeichnet. Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an. \n * **Gorilla Sports** hat ebenfalls Fahrradtrainer in seinem Online-Shop, teilweise mit versandkostenfreier Lieferung innerhalb Deutschlands. \n * **BIKE24** bietet eine Auswahl an Hometrainern, Rollentrainern und Ergometern sowie passendes Zubeh\u00f6r an. \n * **HAMMER Fitnessger\u00e4te** f\u00fchrt verschiedene Heimtrainer und Fitnessbikes f\u00fcr das Training zu Hause. \n\n * **Gro\u00dfe Online-Warenh\u00e4user:** \n * **Lidl.de** bietet hochwertige Ergometer, Fahrradtrainer und Crosstrainer an. \n * **MediaMarkt** hat ebenfalls Ergometer und Heimtrainer in seinem Online-Shop. \n * **Kaufland.de** f\u00fchrt eine Auswahl an Ergometern und Heimtrainern. \n\n * **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an. \n * **Das Radhaus** ist einer der gr\u00f6\u00dften Fahrrad- und E-Bike-H\u00e4ndler in Deutschland und hat neben Fahrr\u00e4dern auch Heimtrainer im Sortiment. \n * **MHW Bike-House** bietet ebenfalls ein umfangreiches Sortiment an Fahrr\u00e4dern und Zubeh\u00f6r in S\u00fcddeutschland an. \n * **Zweirad Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Online-Shop und Filialen in Deutschland, das eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes bietet. \n * **B.O.C.** ist ein Fahrrad Online Shop mit 49 Filialen in Deutschland, der eine gro\u00dfe Auswahl und schnellen Versand bietet. \n\n **Wichtige Hinweise zum Kauf:** \n\n * **Ergometer vs. Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht. \n * **Schwungmasse:** Das Gewicht der Schwungmasse allein ist nicht das einzige entscheidende Kriterium; die Qualit\u00e4t des gesamten Widerstandssystems ist wichtiger. \n * **App-Kompatibilit\u00e4t:** Viele moderne Heimtrainer und Ergometer verf\u00fcgen \u00fcber Bluetooth, um sich mit Trainings-Apps zu verbinden und so neue Trainingsm\u00f6glichkeiten zu er\u00f6ffnen. \n * **Komfort:** Achten Sie auf ergonomisch einstellbare S\u00e4ttel und Lenker f\u00fcr eine bequeme Sitzposition, besonders bei l\u00e4ngeren Trainingseinheiten. \n\n Es wird empfohlen, die Produktbeschreibungen genau zu lesen und gegebenenfalls Kundenbewertungen zu ber\u00fccksichtigen, um das passende Ger\u00e4t f\u00fcr Ihre Bed\u00fcrfnisse zu finden.",
+          "web_searches": {
+            "Fahrradtrainer kaufen Deutschland": {
+              "https://fitshop.de": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an."
+                ]
+              },
+              "https://gorillasports.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "* **Gorilla Sports** hat ebenfalls Fahrradtrainer in seinem Online-Shop, teilweise mit versandkostenfreier Lieferung innerhalb Deutschlands."
+                ]
+              },
+              "https://bike24.de": {
+                "citations": [
+                  3
+                ],
+                "contents": [
+                  "* **BIKE24** bietet eine Auswahl an Hometrainern, Rollentrainern und Ergometern sowie passendes Zubeh\u00f6r an."
+                ]
+              },
+              "https://www.hammer.de/ausdauertraining/heimtrainer-ergometer.html#buying-hometrainer": {
+                "citations": [
+                  4,
+                  13
+                ],
+                "contents": [
+                  "* **HAMMER Fitnessger\u00e4te** f\u00fchrt verschiedene Heimtrainer und Fitnessbikes f\u00fcr das Training zu Hause.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht."
+                ]
+              },
+              "https://www.lidl.de/h/heimtrainer/h10006884": {
+                "citations": [
+                  5,
+                  13,
+                  15
+                ],
+                "contents": [
+                  "* **Gro\u00dfe Online-Warenh\u00e4user:** \n * **Lidl.de** bietet hochwertige Ergometer, Fahrradtrainer und Crosstrainer an.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
+                  "* **App-Kompatibilit\u00e4t:** Viele moderne Heimtrainer und Ergometer verf\u00fcgen \u00fcber Bluetooth, um sich mit Trainings-Apps zu verbinden und so neue Trainingsm\u00f6glichkeiten zu er\u00f6ffnen."
+                ]
+              },
+              "https://www.mediamarkt.de/de/category/heimtrainer-ergometer-8003.html": {
+                "citations": [
+                  6,
+                  13,
+                  16
+                ],
+                "contents": [
+                  "* **MediaMarkt** hat ebenfalls Ergometer und Heimtrainer in seinem Online-Shop.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
+                  "* **Komfort:** Achten Sie auf ergonomisch einstellbare S\u00e4ttel und Lenker f\u00fcr eine bequeme Sitzposition, besonders bei l\u00e4ngeren Trainingseinheiten."
+                ]
+              },
+              "https://kaufland.de": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "* **Kaufland.de** f\u00fchrt eine Auswahl an Ergometern und Heimtrainern."
+                ]
+              },
+              "https://fahrrad-xxl.de": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
+                ]
+              },
+              "https://das-radhaus.de": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "* **Das Radhaus** ist einer der gr\u00f6\u00dften Fahrrad- und E-Bike-H\u00e4ndler in Deutschland und hat neben Fahrr\u00e4dern auch Heimtrainer im Sortiment."
+                ]
+              },
+              "https://mhw-bike.de": {
+                "citations": [
+                  10
+                ],
+                "contents": [
+                  "* **MHW Bike-House** bietet ebenfalls ein umfangreiches Sortiment an Fahrr\u00e4dern und Zubeh\u00f6r in S\u00fcddeutschland an."
+                ]
+              },
+              "https://zweirad-stadler.de": {
+                "citations": [
+                  11
+                ],
+                "contents": [
+                  "* **Zweirad Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Online-Shop und Filialen in Deutschland, das eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes bietet."
+                ]
+              },
+              "https://boc24.de": {
+                "citations": [
+                  12
+                ],
+                "contents": [
+                  "** ist ein Fahrrad Online Shop mit 49 Filialen in Deutschland, der eine gro\u00dfe Auswahl und schnellen Versand bietet."
+                ]
+              }
+            },
+            "Wo kann man in Deutschland Fahrradergometer kaufen?": {
+              "https://www.fitshop.de/ergometer?srsltid=AfmBOopzUVLz7gbs-Zevl6BSD0KdypyvtqOEUnVi9zWvMkIDzEF6kRxw": {
+                "citations": [
+                  1,
+                  13,
+                  14
+                ],
+                "contents": [
+                  "Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
+                  "* **Schwungmasse:** Das Gewicht der Schwungmasse allein ist nicht das einzige entscheidende Kriterium; die Qualit\u00e4t des gesamten Widerstandssystems ist wichtiger."
+                ]
+              },
+              "https://fitshop.de": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an."
+                ]
+              },
+              "https://gorillasports.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "* **Gorilla Sports** hat ebenfalls Fahrradtrainer in seinem Online-Shop, teilweise mit versandkostenfreier Lieferung innerhalb Deutschlands."
+                ]
+              },
+              "https://bike24.de": {
+                "citations": [
+                  3
+                ],
+                "contents": [
+                  "* **BIKE24** bietet eine Auswahl an Hometrainern, Rollentrainern und Ergometern sowie passendes Zubeh\u00f6r an."
+                ]
+              },
+              "https://hammer.de": {
+                "citations": [
+                  4,
+                  13
+                ],
+                "contents": [
+                  "* **HAMMER Fitnessger\u00e4te** f\u00fchrt verschiedene Heimtrainer und Fitnessbikes f\u00fcr das Training zu Hause.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht."
+                ]
+              },
+              "https://www.lidl.de/h/heimtrainer/h10006884": {
+                "citations": [
+                  5,
+                  13,
+                  15
+                ],
+                "contents": [
+                  "* **Gro\u00dfe Online-Warenh\u00e4user:** \n * **Lidl.de** bietet hochwertige Ergometer, Fahrradtrainer und Crosstrainer an.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
+                  "* **App-Kompatibilit\u00e4t:** Viele moderne Heimtrainer und Ergometer verf\u00fcgen \u00fcber Bluetooth, um sich mit Trainings-Apps zu verbinden und so neue Trainingsm\u00f6glichkeiten zu er\u00f6ffnen."
+                ]
+              },
+              "https://www.mediamarkt.de/de/category/heimtrainer-ergometer-8003.html": {
+                "citations": [
+                  6,
+                  13,
+                  16
+                ],
+                "contents": [
+                  "* **MediaMarkt** hat ebenfalls Ergometer und Heimtrainer in seinem Online-Shop.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
+                  "* **Komfort:** Achten Sie auf ergonomisch einstellbare S\u00e4ttel und Lenker f\u00fcr eine bequeme Sitzposition, besonders bei l\u00e4ngeren Trainingseinheiten."
+                ]
+              },
+              "https://www.kaufland.de/c/ergometer/~69104/": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "* **Kaufland.de** f\u00fchrt eine Auswahl an Ergometern und Heimtrainern."
+                ]
+              },
+              "https://www.fahrrad-xxl.de/fitness/ergometer/": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
+                ]
+              },
+              "https://fahrrad-xxl.de": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
+                ]
+              },
+              "https://das-radhaus.de": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "* **Das Radhaus** ist einer der gr\u00f6\u00dften Fahrrad- und E-Bike-H\u00e4ndler in Deutschland und hat neben Fahrr\u00e4dern auch Heimtrainer im Sortiment."
+                ]
+              },
+              "https://mhw-bike.de": {
+                "citations": [
+                  10
+                ],
+                "contents": [
+                  "* **MHW Bike-House** bietet ebenfalls ein umfangreiches Sortiment an Fahrr\u00e4dern und Zubeh\u00f6r in S\u00fcddeutschland an."
+                ]
+              },
+              "https://shop.zweirad-stadler.de/heimsport/fitnessgeraete-fuer-ausdauertraining/ergometer/?srsltid=AfmBOoojpI9OEE18CUUBSS197F1TGA-qnZAUkoF4qOeyQuNz3CBRvnWc": {
+                "citations": [
+                  11
+                ],
+                "contents": [
+                  "* **Zweirad Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Online-Shop und Filialen in Deutschland, das eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes bietet."
+                ]
+              },
+              "https://boc24.de": {
+                "citations": [
+                  12
+                ],
+                "contents": [
+                  "** ist ein Fahrrad Online Shop mit 49 Filialen in Deutschland, der eine gro\u00dfe Auswahl und schnellen Versand bietet."
+                ]
+              }
+            },
+            "Welche Fahrradtrainingsger\u00e4te gibt es in Deutschland?": {
+              "https://fitshop.de": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an."
+                ]
+              },
+              "https://gorillasports.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "* **Gorilla Sports** hat ebenfalls Fahrradtrainer in seinem Online-Shop, teilweise mit versandkostenfreier Lieferung innerhalb Deutschlands."
+                ]
+              },
+              "https://www.bike24.de/heimtrainer.html": {
+                "citations": [
+                  3
+                ],
+                "contents": [
+                  "* **BIKE24** bietet eine Auswahl an Hometrainern, Rollentrainern und Ergometern sowie passendes Zubeh\u00f6r an."
+                ]
+              },
+              "https://hammer.de": {
+                "citations": [
+                  4,
+                  13
+                ],
+                "contents": [
+                  "* **HAMMER Fitnessger\u00e4te** f\u00fchrt verschiedene Heimtrainer und Fitnessbikes f\u00fcr das Training zu Hause.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht."
+                ]
+              },
+              "https://www.lidl.de/h/heimtrainer/h10006884": {
+                "citations": [
+                  5,
+                  13,
+                  15
+                ],
+                "contents": [
+                  "* **Gro\u00dfe Online-Warenh\u00e4user:** \n * **Lidl.de** bietet hochwertige Ergometer, Fahrradtrainer und Crosstrainer an.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
+                  "* **App-Kompatibilit\u00e4t:** Viele moderne Heimtrainer und Ergometer verf\u00fcgen \u00fcber Bluetooth, um sich mit Trainings-Apps zu verbinden und so neue Trainingsm\u00f6glichkeiten zu er\u00f6ffnen."
+                ]
+              },
+              "https://www.mediamarkt.de/de/category/heimtrainer-ergometer-8003.html": {
+                "citations": [
+                  6,
+                  13,
+                  16
+                ],
+                "contents": [
+                  "* **MediaMarkt** hat ebenfalls Ergometer und Heimtrainer in seinem Online-Shop.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
+                  "* **Komfort:** Achten Sie auf ergonomisch einstellbare S\u00e4ttel und Lenker f\u00fcr eine bequeme Sitzposition, besonders bei l\u00e4ngeren Trainingseinheiten."
+                ]
+              },
+              "https://www.kaufland.de/c/ergometer/~69104/": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "* **Kaufland.de** f\u00fchrt eine Auswahl an Ergometern und Heimtrainern."
+                ]
+              },
+              "https://fahrrad-xxl.de": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
+                ]
+              },
+              "https://das-radhaus.de": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "* **Das Radhaus** ist einer der gr\u00f6\u00dften Fahrrad- und E-Bike-H\u00e4ndler in Deutschland und hat neben Fahrr\u00e4dern auch Heimtrainer im Sortiment."
+                ]
+              },
+              "https://mhw-bike.de": {
+                "citations": [
+                  10
+                ],
+                "contents": [
+                  "* **MHW Bike-House** bietet ebenfalls ein umfangreiches Sortiment an Fahrr\u00e4dern und Zubeh\u00f6r in S\u00fcddeutschland an."
+                ]
+              },
+              "https://zweirad-stadler.de": {
+                "citations": [
+                  11
+                ],
+                "contents": [
+                  "* **Zweirad Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Online-Shop und Filialen in Deutschland, das eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes bietet."
+                ]
+              },
+              "https://boc24.de": {
+                "citations": [
+                  12
+                ],
+                "contents": [
+                  "** ist ein Fahrrad Online Shop mit 49 Filialen in Deutschland, der eine gro\u00dfe Auswahl und schnellen Versand bietet."
+                ]
+              }
+            },
+            "Deutschland Fahrradgesch\u00e4fte": {
+              "https://fitshop.de": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an."
+                ]
+              },
+              "https://gorillasports.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "* **Gorilla Sports** hat ebenfalls Fahrradtrainer in seinem Online-Shop, teilweise mit versandkostenfreier Lieferung innerhalb Deutschlands."
+                ]
+              },
+              "https://www.megabike24.de/": {
+                "citations": [
+                  3
+                ],
+                "contents": [
+                  "* **BIKE24** bietet eine Auswahl an Hometrainern, Rollentrainern und Ergometern sowie passendes Zubeh\u00f6r an."
+                ]
+              },
+              "https://hammer.de": {
+                "citations": [
+                  4,
+                  13
+                ],
+                "contents": [
+                  "* **HAMMER Fitnessger\u00e4te** f\u00fchrt verschiedene Heimtrainer und Fitnessbikes f\u00fcr das Training zu Hause.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht."
+                ]
+              },
+              "https://lidl.de": {
+                "citations": [
+                  5,
+                  13,
+                  15
+                ],
+                "contents": [
+                  "* **Gro\u00dfe Online-Warenh\u00e4user:** \n * **Lidl.de** bietet hochwertige Ergometer, Fahrradtrainer und Crosstrainer an.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
+                  "* **App-Kompatibilit\u00e4t:** Viele moderne Heimtrainer und Ergometer verf\u00fcgen \u00fcber Bluetooth, um sich mit Trainings-Apps zu verbinden und so neue Trainingsm\u00f6glichkeiten zu er\u00f6ffnen."
+                ]
+              },
+              "https://mediamarkt.de": {
+                "citations": [
+                  6,
+                  13,
+                  16
+                ],
+                "contents": [
+                  "* **MediaMarkt** hat ebenfalls Ergometer und Heimtrainer in seinem Online-Shop.",
+                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
+                  "* **Komfort:** Achten Sie auf ergonomisch einstellbare S\u00e4ttel und Lenker f\u00fcr eine bequeme Sitzposition, besonders bei l\u00e4ngeren Trainingseinheiten."
+                ]
+              },
+              "https://kaufland.de": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "* **Kaufland.de** f\u00fchrt eine Auswahl an Ergometern und Heimtrainern."
+                ]
+              },
+              "https://www.fahrrad-xxl.de/": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
+                ]
+              },
+              "https://fahrrad-xxl.de": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
+                ]
+              },
+              "https://www.das-radhaus.de/?srsltid=AfmBOoqtTeO2IGnhjVnIg3_y0iylQL8LKqEEHxBQVrcKUnBZrYqHs8EU": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "* **Das Radhaus** ist einer der gr\u00f6\u00dften Fahrrad- und E-Bike-H\u00e4ndler in Deutschland und hat neben Fahrr\u00e4dern auch Heimtrainer im Sortiment."
+                ]
+              },
+              "https://mhw-bike.de": {
+                "citations": [
+                  10
+                ],
+                "contents": [
+                  "* **MHW Bike-House** bietet ebenfalls ein umfangreiches Sortiment an Fahrr\u00e4dern und Zubeh\u00f6r in S\u00fcddeutschland an."
+                ]
+              },
+              "https://shop.zweirad-stadler.de/?srsltid=AfmBOoqo0vqvLzox8rCnykkRms9lWUCmc7_vF_MOoEpUfBfkGDwdWYWV": {
+                "citations": [
+                  11
+                ],
+                "contents": [
+                  "* **Zweirad Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Online-Shop und Filialen in Deutschland, das eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes bietet."
+                ]
+              },
+              "https://boc24.de/?srsltid=AfmBOooACw-6l8GqGZTbX3OvcxDKo280X8pOkdQmJg7W2kLQAYx_grqM": {
+                "citations": [
+                  12
+                ],
+                "contents": [
+                  "** ist ein Fahrrad Online Shop mit 49 Filialen in Deutschland, der eine gro\u00dfe Auswahl und schnellen Versand bietet."
+                ]
+              }
+            }
+          },
+          "success": true,
+          "run_number": 1
+        }
+      ]
+    },
+    "summary": {
+      "gemini-2.5-flash": {
+        "total_runs": 1,
+        "successful_runs": 1,
+        "success_rate": 1.0,
+        "total_web_searches": 4,
+        "unique_web_searches": 4,
+        "web_search_queries": [
+          "Fahrradtrainer kaufen Deutschland",
+          "Wo kann man in Deutschland Fahrradergometer kaufen?",
+          "Welche Fahrradtrainingsger\u00e4te gibt es in Deutschland?",
+          "Deutschland Fahrradgesch\u00e4fte"
+        ]
+      }
+    }
+  }
+]

@@ -3,6 +3,7 @@ from google.genai import types
 from google.api_core.client_options import ClientOptions
 
 # from google.cloud import discoveryengine_v1 as discoveryengine
+import warnings
 import json
 import re
 import os
@@ -110,6 +111,8 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
         all_queries = grounding_metadata.web_search_queries
         supports = grounding_metadata.grounding_supports
         chunks = grounding_metadata.grounding_chunks
+        if chunks is None:
+            warnings.warn(f"Ultra bad, {response.candidates[0].contents}")
 
         # Extract all domains from chunk titles
         chunk_domains = []
@@ -272,7 +275,7 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
                 search_citations = extract_searches_and_citations(response)
                 break
             except Exception as e:
-                print(f"FUCK FUCK FUCK FUCK with {e}")
+                warnings.warn(f"FUCK FUCK FUCK FUCK with {e}")
                 pass
 
         return {
@@ -419,56 +422,56 @@ def summarize_results(results: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any
     return summary
 
 
-def main():
-    """Example usage of the Gemini experiment function."""
-    # Example prompt
-    prompt = "What are the best AI SEO companies in Germany right now?"
-
+def respond(prompts):
     # Google Cloud configuration for Google Search model
     project_id = None  # os.getenv("GOOGLE_CLOUD_PROJECT")
     location = "global"  # os.getenv("GOOGLE_CLOUD_LOCATION", "global")
     engine_id = None  # os.getenv("GOOGLE_CLOUD_ENGINE_ID")
 
-    try:
-        # Run experiments
-        results = run_all_gemini_models(
-            prompt, project_id=project_id, location=location, engine_id=engine_id
+    def process_prompt(prompt):
+        for i in range(3):
+            try:
+                results = run_all_gemini_models(
+                    prompt,
+                    project_id=project_id,
+                    location=location,
+                    engine_id=engine_id,
+                )
+
+                summary = summarize_results(results)
+
+                return {"prompt": prompt, "results": results, "summary": summary}
+            except Exception as e:
+                print(f"Error running experiments: {e}, retrying")
+                if i == 2:
+                    warnings.warn(
+                        f"FUCK FUCK FUCK FUCK FUCK - stuff is breaking very badly, probably rate limiting or whatever? {tb.format_exception(e)}"
+                    )
+                time.sleep(1)
+        return None
+
+    all_results = []
+    with ThreadPoolExecutor(max_workers=len(prompts)) as executor:
+        futures = [executor.submit(process_prompt, prompt) for prompt in prompts]
+        
+        for future in as_completed(futures):
+            result = future.result()
+            if result:
+                all_results.append(result)
+
+    with open("internal_responce_log.json", "w") as f:
+        json.dump(
+            all_results,
+            f,
+            indent=2,
         )
-
-        # Summarize results
-        summary = summarize_results(results)
-
-        # Print results
-        print("\n" + "=" * 60)
-        print("EXPERIMENT RESULTS SUMMARY")
-        print("=" * 60)
-
-        for model_name, stats in summary.items():
-            print(f"\n{model_name}:")
-            print(
-                f"  Success Rate: {stats['success_rate']:.1%} ({stats['successful_runs']}/{stats['total_runs']})"
-            )
-            print(f"  Total Web Searches: {stats['total_web_searches']}")
-            print(f"  Unique Web Searches: {stats['unique_web_searches']}")
-
-            if stats["web_search_queries"]:
-                print(f"  Sample Queries:")
-                for i, query in enumerate(stats["web_search_queries"][:5], 1):
-                    print(f"    {i}. {query}")
-                if len(stats["web_search_queries"]) > 5:
-                    print(f"    ... and {len(stats['web_search_queries']) - 5} more")
-
-        # Save detailed results to JSON
-        with open("gemini_experiment_results.json", "w") as f:
-            json.dump(
-                {"prompt": prompt, "results": results, "summary": summary}, f, indent=2
-            )
-
-        print(f"\nDetailed results saved to gemini_experiment_results.json")
-
-    except Exception as e:
-        print(f"Error running experiments: {e}")
+    return all_results
 
 
 if __name__ == "__main__":
-    main()
+    respond(
+        [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd",
+        ]
+    )
