@@ -199,7 +199,6 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
             "model": model_name,
             "response": response.text,
             "web_searches": search_citations,
-            "raw_response": response,  # Keep raw response for debugging
             "success": True,
         }
 
