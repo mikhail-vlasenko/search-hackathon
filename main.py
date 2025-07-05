@@ -71,7 +71,7 @@ def search_and_match_domains(
 
             # Match against target domains
             for turl in target_uris:
-                if turl in url or url in turl:
+                if turl == url:
                     domain_to_url[turl] = url
                     print(f"\t\tFound {url}")
                     break
@@ -84,7 +84,7 @@ def search_and_match_domains(
             for target_domain, turl in zip(target_domains, target_uris):
                 if turl in domain_to_url:
                     break
-                if target_domain in result_domain or result_domain in target_domain:
+                if turl == url:
                     domain_to_url[turl] = url
                     print(f"Found {url}")
                     break
@@ -123,9 +123,13 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
         chunk_domains = []
         chunk_uri = []
         for chunk in chunks:
-            domain = get_domain_from_title(chunk.web.title)
-            chunk_uri.append(decode_uri(chunk.web.uri))
-            chunk_domains.append(domain)
+            uri, title = (
+                decode_uri(chunk.web.uri),
+                get_domain_from_title(chunk.web.title),
+            )
+            print(uri, title)
+            chunk_uri.append(uri)
+            chunk_domains.append(title)
 
         # Build citation indices for each chunk
         chunk_citations = {}  # chunk_index -> list of citation indices
@@ -169,21 +173,20 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
                     # For each chunk, check if we found a matching URL
                     for chunk_idx, chunk in enumerate(chunks):
                         domain = chunk_domains[chunk_idx]
-                        url = chunk_uri[chunk_idx]
                         grounding_uri = chunk_uri[chunk_idx]
                         # print(f"The grounding uri is {grounding_uri}")
                         citations = chunk_citations.get(chunk_idx, [])
                         contents = chunk_contents.get(chunk_idx, [])
                         refs = {"citations": citations, "contents": contents}
 
-                        if url in url_to_url:
+                        if grounding_uri in url_to_url:
                             # Found a matching URL from Google search
-                            url = url_to_url[url]
+                            url = url_to_url[grounding_uri]
                             query_results[url] = refs
                         else:
                             # No matching URL found, use a placeholder
                             continue
-                            query_results[url] = refs
+                            query_results[grounding_uri] = refs
 
                     result[query] = query_results
 
