@@ -287,7 +287,7 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
         return {
             "model": model_name,
             "response_text": "",
-            "web_searches": {},
+            "web_searches": {"citations": [], "contents": []},
             "success": False,
             "error": str(e),
         }
@@ -361,7 +361,7 @@ def run_all_gemini_models(
 
             for future, run_num in futures:
                 try:
-                    result = future.result(timeout=60)
+                    result = future.result(timeout=300)
                     result["run_number"] = run_num + 1
                     model_results.append(result)
 
