@@ -30,34 +30,59 @@ export default function AnalyticsPage() {
     setWebsiteUrl(urlParam);
 
     // Simulate generating prompts
-    const mockPrompts: GeneratedPrompt[] = [
+    const mockPrompts = [
       {
         id: "1",
         prompt: "How to integrate AI search into my website?",
+        queries: [
+          "integrating AI search into my website",
+          "AI search integration best practices",
+          "AI search engine optimization",
+        ],
         category: "Integration",
         selected: true,
       },
       {
         id: "2",
         prompt: "Best practices for AI-powered site search",
+        queries: [
+          "AI-powered site search best practices",
+          "AI search engine optimization",
+          "AI search engine ranking",
+        ],
         category: "Best Practices",
         selected: true,
       },
       {
         id: "3",
         prompt: "Optimize website content for AI crawlers",
+        queries: [
+          "AI crawler optimization",
+          "AI search engine optimization",
+          "AI search engine ranking",
+        ],
         category: "SEO",
         selected: true,
       },
       {
         id: "4",
         prompt: "AI search analytics tools comparison",
+        queries: [
+          "AI search analytics tools comparison",
+          "AI search engine optimization",
+          "AI search engine ranking",
+        ],
         category: "Tools",
         selected: true,
       },
       {
         id: "5",
         prompt: "Implement semantic search on my site",
+        queries: [
+          "semantic search implementation",
+          "AI search engine optimization",
+          "AI search engine ranking",
+        ],
         category: "Implementation",
         selected: true,
       },
@@ -79,18 +104,37 @@ export default function AnalyticsPage() {
         averageRanking: 4.2,
         overallVisibility: 72,
         topCategory: "SEO",
-        results: selectedPrompts.map((prompt, index) => ({
-          id: prompt.id,
-          query: prompt.prompt,
-          prompt: prompt.prompt,
-          ranking: Math.floor(Math.random() * 10) + 1,
-          visibility: Math.floor(Math.random() * 40) + 60,
-          clickPotential: Math.floor(Math.random() * 30) + 70,
-          searchVolume: Math.floor(Math.random() * 5000) + 1000,
-          difficulty: Math.floor(Math.random() * 100),
-          category: prompt.category,
-          timestamp: new Date(),
-        })),
+        results: selectedPrompts.flatMap((prompt) => {
+          return prompt.queries.map((query) => {
+            const isMentioned = Math.random() > 0.3; // 70% chance of being mentioned
+            const mentionCount = isMentioned
+              ? Math.floor(Math.random() * 8) + 1
+              : 0;
+            const competitorAverage = Math.floor(Math.random() * 5) + 2; // 2-7 average mentions
+            const percentageDifference = isMentioned
+              ? ((mentionCount - competitorAverage) / competitorAverage) * 100
+              : -100; // -100% if not mentioned
+            const favorabilityScore = isMentioned
+              ? Math.floor(Math.random() * 40) + 60 // 60-100 if mentioned
+              : Math.floor(Math.random() * 30) + 10; // 10-40 if not mentioned
+            const totalSources = Math.floor(Math.random() * 15) + 5; // 5-20 sources
+
+            return {
+              id: prompt.id,
+              query: query,
+              prompt: prompt.prompt,
+              isMentioned,
+              mentionCount,
+              favorabilityScore,
+              competitorAverage,
+              percentageDifference: Math.round(percentageDifference),
+              totalSources,
+              visibility: isMentioned ? Math.floor(Math.random() * 40) + 60 : 0,
+              category: prompt.category,
+              timestamp: new Date(),
+            };
+          });
+        }),
       };
       setAnalysisResults(mockResults);
       setCurrentStep("results");
