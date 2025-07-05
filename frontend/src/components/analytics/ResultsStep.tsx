@@ -1,6 +1,8 @@
 "use client";
 
-import { WebsiteAnalysis } from "@/lib/types";
+import React, { useMemo } from "react";
+import { ColumnDef } from "@tanstack/react-table";
+import { AnalysisResult, WebsiteAnalysis } from "@/lib/types";
 import {
   Card,
   CardContent,
@@ -11,14 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { DataTable, createCellRenderer } from "@/components/ui/data-table";
 import {
   LineChart,
   Line,
@@ -33,7 +28,16 @@ import {
   Pie,
   Cell,
 } from "recharts";
-import { TrendingUp, Eye, MousePointer, Search, RefreshCw } from "lucide-react";
+import {
+  TrendingUp,
+  Eye,
+  MousePointer,
+  Search,
+  RefreshCw,
+  Calendar,
+  Target,
+  BarChart3,
+} from "lucide-react";
 
 interface ResultsStepProps {
   analysis: WebsiteAnalysis;
@@ -44,6 +48,182 @@ export default function ResultsStep({
   analysis,
   onNewAnalysis,
 }: ResultsStepProps) {
+  // Define columns for the DataTable
+  const columns = useMemo<ColumnDef<AnalysisResult>[]>(
+    () => [
+      {
+        accessorKey: "query",
+        header: "Query",
+        cell: createCellRenderer.truncatedText(50),
+        size: 300,
+      },
+      {
+        accessorKey: "category",
+        header: "Category",
+        cell: createCellRenderer.badge("secondary"),
+      },
+      {
+        accessorKey: "ranking",
+        header: "Ranking",
+        cell: createCellRenderer.ranking,
+      },
+      {
+        accessorKey: "visibility",
+        header: "Visibility",
+        cell: createCellRenderer.percentage,
+      },
+      {
+        accessorKey: "clickPotential",
+        header: "Click Potential",
+        cell: createCellRenderer.percentage,
+      },
+      {
+        accessorKey: "searchVolume",
+        header: "Search Volume",
+        cell: createCellRenderer.localeNumber,
+      },
+      {
+        accessorKey: "difficulty",
+        header: "Difficulty",
+        cell: createCellRenderer.difficulty,
+      },
+    ],
+    []
+  );
+
+  // Row details renderer
+  const renderRowDetails = (row: any) => {
+    const result = row.original as AnalysisResult;
+
+    return (
+      <div className="space-y-6">
+        <div>
+          <h4 className="font-medium text-sm text-muted-foreground mb-2">
+            Query
+          </h4>
+          <p className="text-sm">{result.query}</p>
+        </div>
+
+        <div>
+          <h4 className="font-medium text-sm text-muted-foreground mb-2">
+            Full Prompt
+          </h4>
+          <p className="text-sm text-muted-foreground">{result.prompt}</p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <h4 className="font-medium text-sm text-muted-foreground mb-2">
+              Performance
+            </h4>
+            <div className="space-y-3">
+              <div className="flex justify-between">
+                <span className="text-sm">Ranking</span>
+                <span
+                  className={`text-sm font-bold ${
+                    result.ranking <= 3
+                      ? "text-green-600"
+                      : result.ranking <= 5
+                      ? "text-yellow-600"
+                      : "text-red-600"
+                  }`}
+                >
+                  #{result.ranking}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Visibility</span>
+                <span className="text-sm font-medium">
+                  {result.visibility}%
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Click Potential</span>
+                <span className="text-sm font-medium">
+                  {result.clickPotential}%
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-medium text-sm text-muted-foreground mb-2">
+              Metrics
+            </h4>
+            <div className="space-y-3">
+              <div className="flex justify-between">
+                <span className="text-sm">Search Volume</span>
+                <span className="text-sm font-medium">
+                  {result.searchVolume.toLocaleString()}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Difficulty</span>
+                <span
+                  className={`text-sm font-medium ${
+                    result.difficulty < 30
+                      ? "text-green-600"
+                      : result.difficulty < 70
+                      ? "text-yellow-600"
+                      : "text-red-600"
+                  }`}
+                >
+                  {result.difficulty}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Category</span>
+                <Badge variant="secondary" className="text-xs">
+                  {result.category}
+                </Badge>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-medium text-sm text-muted-foreground mb-2">
+            Analysis Date
+          </h4>
+          <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+            <Calendar className="h-4 w-4" />
+            <span>{new Date(result.timestamp).toLocaleDateString()}</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-medium text-sm text-muted-foreground mb-2">
+            Recommendations
+          </h4>
+          <div className="space-y-2">
+            {result.ranking > 5 && (
+              <div className="flex items-start space-x-2 text-sm">
+                <Target className="h-4 w-4 text-orange-500 mt-0.5" />
+                <span>
+                  Consider optimizing content for this query to improve ranking
+                </span>
+              </div>
+            )}
+            {result.visibility < 50 && (
+              <div className="flex items-start space-x-2 text-sm">
+                <Eye className="h-4 w-4 text-blue-500 mt-0.5" />
+                <span>Low visibility - improve SEO and content relevance</span>
+              </div>
+            )}
+            {result.difficulty > 70 && (
+              <div className="flex items-start space-x-2 text-sm">
+                <BarChart3 className="h-4 w-4 text-red-500 mt-0.5" />
+                <span>
+                  High difficulty keyword - consider long-tail variations
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   // Prepare data for charts
   const categoryData = analysis.results.reduce((acc, result) => {
     const existing = acc.find((item) => item.category === result.category);
@@ -146,72 +326,17 @@ export default function ResultsStep({
               <CardTitle>AI Search Query Performance</CardTitle>
               <CardDescription>
                 Detailed analysis of how your website performs for each
-                AI-generated search query
+                AI-generated search query. Click on any row to see detailed
+                insights.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Query</TableHead>
-                    <TableHead>Category</TableHead>
-                    <TableHead className="text-center">Ranking</TableHead>
-                    <TableHead className="text-center">Visibility</TableHead>
-                    <TableHead className="text-center">
-                      Click Potential
-                    </TableHead>
-                    <TableHead className="text-center">Search Volume</TableHead>
-                    <TableHead className="text-center">Difficulty</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {analysis.results.map((result) => (
-                    <TableRow key={result.id}>
-                      <TableCell className="font-medium max-w-xs">
-                        {result.query}
-                      </TableCell>
-                      <TableCell>
-                        <Badge variant="secondary">{result.category}</Badge>
-                      </TableCell>
-                      <TableCell className="text-center">
-                        <span
-                          className={`font-bold ${
-                            result.ranking <= 3
-                              ? "text-green-600"
-                              : result.ranking <= 5
-                              ? "text-yellow-600"
-                              : "text-red-600"
-                          }`}
-                        >
-                          #{result.ranking}
-                        </span>
-                      </TableCell>
-                      <TableCell className="text-center">
-                        {result.visibility}%
-                      </TableCell>
-                      <TableCell className="text-center">
-                        {result.clickPotential}%
-                      </TableCell>
-                      <TableCell className="text-center">
-                        {result.searchVolume.toLocaleString()}
-                      </TableCell>
-                      <TableCell className="text-center">
-                        <span
-                          className={`font-medium ${
-                            result.difficulty < 30
-                              ? "text-green-600"
-                              : result.difficulty < 70
-                              ? "text-yellow-600"
-                              : "text-red-600"
-                          }`}
-                        >
-                          {result.difficulty}
-                        </span>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+              <DataTable
+                columns={columns}
+                data={analysis.results}
+                renderRowDetails={renderRowDetails}
+                initialSorting={[{ id: "ranking", desc: false }]}
+              />
             </CardContent>
           </Card>
         </TabsContent>
