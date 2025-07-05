@@ -7,7 +7,6 @@ from pprint import pprint
 API_BASE_URL = "http://localhost:8000"
 
 
-
 def test_custom_domain():
     """Test with a custom domain"""
     print("\n" + "=" * 50)
@@ -47,6 +46,30 @@ def test_custom_domain():
                 print(f"   • Appears in {domain_stats.get('total_appearances', 0)} queries")
                 print(f"   • Retrieval Rate: {domain_stats.get('retrieval_rate', 0):.2%}")
                 print(f"   • Usage Rate: {domain_stats.get('usage_rate', 0):.2%}")
+                
+                # Show frequency information
+                query_frequency_stats = data.get('query_frequency_stats', {})
+                if query_frequency_stats:
+                    print(f"\n📈 Query Frequency Information:")
+                    print(f"   • Total Queries: {query_frequency_stats.get('total_queries', 0)}")
+                    print(f"   • Unique Queries: {query_frequency_stats.get('unique_queries', 0)}")
+                    
+                    # Show most common queries
+                    most_common = query_frequency_stats.get('most_common_queries', [])
+                    if most_common:
+                        print(f"   • Most Common Queries:")
+                        for i, (query, frequency) in enumerate(most_common[:3], 1):
+                            print(f"     {i}. '{query}' (appears in {frequency} prompts)")
+                    
+                    # Show detailed frequency breakdown
+                    query_details = query_frequency_stats.get('query_details', {})
+                    if query_details:
+                        print(f"   • Query Frequency Breakdown:")
+                        for query, stats in list(query_details.items())[:5]:  # Show first 5
+                            print(f"     - '{query}': frequency={stats.get('frequency', 0)}, unique_prompts={stats.get('unique_prompts', 0)}")
+                        
+                        if len(query_details) > 5:
+                            print(f"     ... and {len(query_details) - 5} more queries")
                 
                 # Show recommendations
                 recommendations = data.get('recommendations', [])

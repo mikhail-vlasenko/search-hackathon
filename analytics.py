@@ -57,12 +57,18 @@ def load_and_process_experiment_results(file_path: str) -> Tuple[Dict[str, Dict[
         if not isinstance(data, list):
             data = [data]  # Convert single result to list for backward compatibility
         
-        # Aggregate all web searches from all experiments, models, and runs
-        aggregated_searches = defaultdict(lambda: defaultdict(lambda: {'citations': [], 'contents': []}))
+        # Process each experiment separately to maintain prompt-query associations
+        search_analytics_data = {}
         
         for experiment in data:
             prompt = experiment.get('prompt', '')
             results = experiment.get('results', {})
+            
+            if prompt not in search_analytics_data:
+                search_analytics_data[prompt] = {}
+            
+            # Aggregate searches for this specific prompt only
+            prompt_searches = defaultdict(lambda: defaultdict(lambda: {'citations': [], 'contents': []}))
             
             for model_name, model_runs in results.items():
                 for run_result in model_runs:
@@ -82,23 +88,15 @@ def load_and_process_experiment_results(file_path: str) -> Tuple[Dict[str, Dict[
                                             citations = citations_data.get('citations', [])
                                             contents = citations_data.get('contents', [])
                                             if isinstance(citations, list):
-                                                aggregated_searches[query][domain]['citations'].extend(citations)
+                                                prompt_searches[query][domain]['citations'].extend(citations)
                                             if isinstance(contents, list):
-                                                aggregated_searches[query][domain]['contents'].extend(contents)
+                                                prompt_searches[query][domain]['contents'].extend(contents)
                                         elif isinstance(citations_data, list):
                                             # Old format: just a list of citations
-                                            aggregated_searches[query][domain]['citations'].extend(citations_data)
-        
-        # Convert to the expected format - group by prompt
-        search_analytics_data = {}
-        
-        for experiment in data:
-            prompt = experiment.get('prompt', '')
-            if prompt not in search_analytics_data:
-                search_analytics_data[prompt] = {}
+                                            prompt_searches[query][domain]['citations'].extend(citations_data)
             
-            # Process this experiment's searches
-            for query, domains in aggregated_searches.items():
+            # Convert to the expected format for this prompt
+            for query, domains in prompt_searches.items():
                 if query not in search_analytics_data[prompt]:
                     search_analytics_data[prompt][query] = {}
                 
@@ -111,12 +109,12 @@ def load_and_process_experiment_results(file_path: str) -> Tuple[Dict[str, Dict[
                     
                     # Remove duplicates and sort citations
                     unique_citations = sorted(list(set(citation_data['citations'])))
-                    search_analytics_data[prompt][query][domain]['citations'].extend(unique_citations)
+                    search_analytics_data[prompt][query][domain]['citations'] = unique_citations
                     
                     # Add contents (may have duplicates, but that's okay for analysis)
-                    search_analytics_data[prompt][query][domain]['contents'].extend(citation_data['contents'])
+                    search_analytics_data[prompt][query][domain]['contents'] = citation_data['contents']
         
-        # Clean up duplicates in final result
+        # Clean up duplicates in final result (already done above, but keeping for consistency)
         for prompt_data in search_analytics_data.values():
             for query_data in prompt_data.values():
                 for domain_data in query_data.values():

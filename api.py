@@ -168,11 +168,9 @@ def generate_recommendations(domain_stats: Dict[str, Any], report: Dict[str, Any
                 analysis_text = analysis['gemini_analysis']
                 if analysis_text and not analysis_text.startswith('ERROR'):
                     # Truncate query for readability
-                    short_query = query[:100] + "..." if len(query) > 100 else query
-                    recommendations.append(f"Query '{short_query}': {analysis_text}")
+                    recommendations.append(analysis_text)
             elif isinstance(analysis, str) and not analysis.startswith('ERROR'):
-                short_query = query[:100] + "..." if len(query) > 100 else query
-                recommendations.append(f"Query '{short_query}': {analysis}")
+                recommendations.append(analysis)
     
     if not recommendations:
         recommendations.append("No poor performance cases identified by Gemini analysis")
