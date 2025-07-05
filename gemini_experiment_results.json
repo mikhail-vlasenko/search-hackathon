@@ -1,0 +1,136 @@
+{
+  "prompt": "What are the best AI SEO companies in Germany right now?",
+  "results": {
+    "gemini-2.5-flash": [
+      {
+        "model": "gemini-2.5-flash",
+        "response": "Several AI SEO companies in Germany are highly regarded for their innovative and results-driven strategies. Here are some of the best: \n\n * **Omnius** This agency specializes in B2B SaaS SEO and content marketing, with a focus on helping SaaS and Fintech companies attract organic leads. They offer AI Search Engine Optimization to optimize content for AI search engines like ChatGPT and Perplexity, and have a strong track record of helping German-based AI SaaS tools scale significantly. \n * **IInfotanks** Recognized as a leading SEO agency in Germany, IInfotanks offers \"Next Gen-SEO services for the AI Era,\" emphasizing AI-driven enhancements to improve conversion rates and website traffic. They highlight the importance of AI-driven searches and snippets in 2025 and aim to future-proof SEO with AI-generated smart snippets, voice search content optimization, and LLM surfing. \n * **Rankstar.io** This agency stands out by combining traditional SEO with unique Google Autosuggest and LLM Spotlight\u2122 services. They aim to get brands recommended by AI chatbots like ChatGPT, Claude, Gemini, and Perplexity, ensuring businesses are the suggested choice when users ask for solutions in their niche. Rankstar.io also claims to deliver fast results, with most clients seeing ROI within 1 to 3 months. \n * **UnitedAds** This digital marketing agency provides advanced SEO and AI-driven Google and Microsoft Ads solutions. They focus on personalized strategies and real-time optimization to deliver ROI on PPC campaigns and support scalable growth for businesses of all sizes. \n * **Doorboost** This company revolutionizes digital marketing with AI-powered solutions, aiming to unify global campaigns and local sales for brands and retailers. \n\n Other notable SEO agencies in Germany that incorporate advanced strategies and show strong results include: \n\n * **SEO Agentur Hamburg** This agency is recognized among Germany's top 100 SEO agencies and focuses on enhancing online visibility and sustainable growth through technical expertise, tailored content, and data-driven approaches. \n * **Seotrust** Based in Frankfurt, Seotrust has over 20 years of experience in online marketing and SEO, using data-driven strategies to achieve top online visibility. \n * **Morefire** This online marketing agency specializes in data-driven strategies for driving traffic, generating leads, and boosting sales. \n * **Pearl Lemon** This agency offers hands-on SEO services for the German and DACH regions, with expertise in technical SEO audits, keyword research, and multilingual and local SEO, acknowledging the role of AI-generated content when paired with human editing.",
+        "web_searches": {
+          "best AI SEO companies Germany": {
+            "https://www.omnius.so/blog/german-seo-agencies": {
+              "citations": [
+                1,
+                6,
+                8,
+                9,
+                10
+              ],
+              "contents": [
+                "They offer AI Search Engine Optimization to optimize content for AI search engines like ChatGPT and Perplexity, and have a strong track record of helping German-based AI SaaS tools scale significantly.",
+                "They focus on personalized strategies and real-time optimization to deliver ROI on PPC campaigns and support scalable growth for businesses of all sizes.",
+                "* **SEO Agentur Hamburg** This agency is recognized among Germany's top 100 SEO agencies and focuses on enhancing online visibility and sustainable growth through technical expertise, tailored content, and data-driven approaches.",
+                "* **Seotrust** Based in Frankfurt, Seotrust has over 20 years of experience in online marketing and SEO, using data-driven strategies to achieve top online visibility.",
+                "* **Morefire** This online marketing agency specializes in data-driven strategies for driving traffic, generating leads, and boosting sales."
+              ]
+            },
+            "https://iinfotanks.com": {
+              "citations": [
+                2
+              ],
+              "contents": [
+                "They highlight the importance of AI-driven searches and snippets in 2025 and aim to future-proof SEO with AI-generated smart snippets, voice search content optimization, and LLM surfing."
+              ]
+            },
+            "https://rankstar.io/seo-agency-in-germany/": {
+              "citations": [
+                3,
+                4,
+                5
+              ],
+              "contents": [
+                "* **Rankstar.io** This agency stands out by combining traditional SEO with unique Google Autosuggest and LLM Spotlight\u2122 services.",
+                "They aim to get brands recommended by AI chatbots like ChatGPT, Claude, Gemini, and Perplexity, ensuring businesses are the suggested choice when users ask for solutions in their niche.",
+                "Rankstar.io also claims to deliver fast results, with most clients seeing ROI within 1 to 3 months."
+              ]
+            },
+            "https://semrush.com": {
+              "citations": [
+                7
+              ],
+              "contents": [
+                "* **Doorboost** This company revolutionizes digital marketing with AI-powered solutions, aiming to unify global campaigns and local sales for brands and retailers."
+              ]
+            },
+            "https://pearllemon.com/seo-agency-in-germany/": {
+              "citations": [
+                11
+              ],
+              "contents": [
+                "* **Pearl Lemon** This agency offers hands-on SEO services for the German and DACH regions, with expertise in technical SEO audits, keyword research, and multilingual and local SEO, acknowledging the role of AI-generated content when paired with human editing."
+              ]
+            }
+          },
+          "top AI SEO agencies Germany": {
+            "https://www.omnius.so/blog/german-seo-agencies": {
+              "citations": [
+                1,
+                6,
+                8,
+                9,
+                10
+              ],
+              "contents": [
+                "They offer AI Search Engine Optimization to optimize content for AI search engines like ChatGPT and Perplexity, and have a strong track record of helping German-based AI SaaS tools scale significantly.",
+                "They focus on personalized strategies and real-time optimization to deliver ROI on PPC campaigns and support scalable growth for businesses of all sizes.",
+                "* **SEO Agentur Hamburg** This agency is recognized among Germany's top 100 SEO agencies and focuses on enhancing online visibility and sustainable growth through technical expertise, tailored content, and data-driven approaches.",
+                "* **Seotrust** Based in Frankfurt, Seotrust has over 20 years of experience in online marketing and SEO, using data-driven strategies to achieve top online visibility.",
+                "* **Morefire** This online marketing agency specializes in data-driven strategies for driving traffic, generating leads, and boosting sales."
+              ]
+            },
+            "https://iinfotanks.com": {
+              "citations": [
+                2
+              ],
+              "contents": [
+                "They highlight the importance of AI-driven searches and snippets in 2025 and aim to future-proof SEO with AI-generated smart snippets, voice search content optimization, and LLM surfing."
+              ]
+            },
+            "https://rankstar.io/seo-agency-in-germany/": {
+              "citations": [
+                3,
+                4,
+                5
+              ],
+              "contents": [
+                "* **Rankstar.io** This agency stands out by combining traditional SEO with unique Google Autosuggest and LLM Spotlight\u2122 services.",
+                "They aim to get brands recommended by AI chatbots like ChatGPT, Claude, Gemini, and Perplexity, ensuring businesses are the suggested choice when users ask for solutions in their niche.",
+                "Rankstar.io also claims to deliver fast results, with most clients seeing ROI within 1 to 3 months."
+              ]
+            },
+            "https://semrush.com": {
+              "citations": [
+                7
+              ],
+              "contents": [
+                "* **Doorboost** This company revolutionizes digital marketing with AI-powered solutions, aiming to unify global campaigns and local sales for brands and retailers."
+              ]
+            },
+            "https://pearllemon.com/seo-agency-in-germany/": {
+              "citations": [
+                11
+              ],
+              "contents": [
+                "* **Pearl Lemon** This agency offers hands-on SEO services for the German and DACH regions, with expertise in technical SEO audits, keyword research, and multilingual and local SEO, acknowledging the role of AI-generated content when paired with human editing."
+              ]
+            }
+          }
+        },
+        "success": true,
+        "run_number": 1
+      }
+    ]
+  },
+  "summary": {
+    "gemini-2.5-flash": {
+      "total_runs": 1,
+      "successful_runs": 1,
+      "success_rate": 1.0,
+      "total_web_searches": 2,
+      "unique_web_searches": 2,
+      "web_search_queries": [
+        "best AI SEO companies Germany",
+        "top AI SEO agencies Germany"
+      ]
+    }
+  }
+}
