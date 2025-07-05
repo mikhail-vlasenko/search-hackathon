@@ -191,63 +191,63 @@ export default function ResultsStep({
           );
         },
       },
-      {
-        accessorKey: "averageRanking",
-        header: () => (
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div className="">Avg Ranking</div>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>
-                  Average citation ranking position when your domain appears
-                  (lower is better)
-                </p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        ),
-        cell: (info: any) => {
-          const ranking = info.getValue() as number;
-          if (ranking === 0) {
-            return <span className="text-red-500">N/A</span>;
-          }
-          const colorClass =
-            ranking <= 3
-              ? "text-green-600"
-              : ranking <= 5
-              ? "text-yellow-600"
-              : "text-red-600";
-          return (
-            <span className={`font-bold ${colorClass}`}>
-              #{ranking.toFixed(1)}
-            </span>
-          );
-        },
-      },
-      {
-        accessorKey: "citationDistribution",
-        header: () => (
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div className="">Citation Distribution</div>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>
-                  Distribution of citations by ranking position. Red lines show
-                  where your domain appears.
-                </p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        ),
-        cell: (info: any) => {
-          const row = info.row.original as AnalysisResult;
-          return <CitationSparkline data={row} />;
-        },
-      },
+      // {
+      //   accessorKey: "averageRanking",
+      //   header: () => (
+      //     <TooltipProvider>
+      //       <Tooltip>
+      //         <TooltipTrigger asChild>
+      //           <div className="">Avg Ranking</div>
+      //         </TooltipTrigger>
+      //         <TooltipContent>
+      //           <p>
+      //             Average citation ranking position when your domain appears
+      //             (lower is better)
+      //           </p>
+      //         </TooltipContent>
+      //       </Tooltip>
+      //     </TooltipProvider>
+      //   ),
+      //   cell: (info: any) => {
+      //     const ranking = info.getValue() as number;
+      //     if (ranking === 0) {
+      //       return <span className="text-red-500">N/A</span>;
+      //     }
+      //     const colorClass =
+      //       ranking <= 3
+      //         ? "text-green-600"
+      //         : ranking <= 5
+      //         ? "text-yellow-600"
+      //         : "text-red-600";
+      //     return (
+      //       <span className={`font-bold ${colorClass}`}>
+      //         #{ranking.toFixed(1)}
+      //       </span>
+      //     );
+      //   },
+      // },
+      // {
+      //   accessorKey: "citationDistribution",
+      //   header: () => (
+      //     <TooltipProvider>
+      //       <Tooltip>
+      //         <TooltipTrigger asChild>
+      //           <div className="">Citation Distribution</div>
+      //         </TooltipTrigger>
+      //         <TooltipContent>
+      //           <p>
+      //             Distribution of citations by ranking position. Red lines show
+      //             where your domain appears.
+      //           </p>
+      //         </TooltipContent>
+      //       </Tooltip>
+      //     </TooltipProvider>
+      //   ),
+      //   cell: (info: any) => {
+      //     const row = info.row.original as AnalysisResult;
+      //     return <CitationSparkline data={row} />;
+      //   },
+      // },
       {
         accessorKey: "totalSources",
         header: () => (
@@ -664,10 +664,10 @@ export default function ResultsStep({
   return (
     <div className="space-y-6">
       {/* Top Row - Overview and Pie Chart */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="flex gap-6">
         {/* Compact Overview */}
-        <Card>
-          <CardHeader className="pb-2">
+        <Card className="flex-1">
+          <CardHeader className="">
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg">Performance Overview</CardTitle>
             </div>
@@ -796,7 +796,7 @@ export default function ResultsStep({
                   </div>
 
                   {/* Key Competitors */}
-                  <div className="space-y-1 flex-1">
+                  <div className="space-y-1 flex-1 min-w-[300px]">
                     <h4 className="font-medium text-xs text-gray-900 flex items-center space-x-1">
                       <Link className="h-3 w-3 text-blue-500" />
                       <span>Top Competitors</span>
@@ -881,7 +881,7 @@ export default function ResultsStep({
         </Card>
 
         {/* Domain Coverage Pie Chart */}
-        <div className="max-w-sm">
+        <div className="max-w-sm flex-1 shrink-0 min-w-[600px]">
           <div className="mb-3">
             <h3 className="text-lg font-semibold">Domain Coverage</h3>
             <p className="text-sm text-gray-600">
