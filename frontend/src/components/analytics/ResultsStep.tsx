@@ -249,43 +249,6 @@ export default function ResultsStep({
         },
       },
       {
-        accessorKey: "appearsInSearches",
-        header: () => (
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div className="">Search Coverage</div>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>
-                  How many related searches your domain appears in vs total
-                  searches performed
-                </p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        ),
-        cell: (info: any) => {
-          const row = info.row.original as AnalysisResult;
-          const coverage = row.appearsInSearches;
-          const total = row.totalSearches;
-          const percentage = total > 0 ? (coverage / total) * 100 : 0;
-
-          const colorClass =
-            percentage >= 80
-              ? "text-green-600"
-              : percentage >= 50
-              ? "text-yellow-600"
-              : "text-red-600";
-
-          return (
-            <span className={`font-medium ${colorClass}`}>
-              {coverage}/{total} ({percentage.toFixed(0)}%)
-            </span>
-          );
-        },
-      },
-      {
         accessorKey: "totalSources",
         header: () => (
           <TooltipProvider>

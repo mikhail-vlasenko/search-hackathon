@@ -230,34 +230,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ analysis, apiResponse: pythonResponse });
     } catch (fetchError) {
       console.error("Error calling Python API:", fetchError);
-
-      // Fallback to mock data if Python API is not available
-      console.warn("Python API unavailable, falling back to mock data");
-
-      // Generate mock data as fallback
-      const mockAnalysis = generateMockAnalysis(url, prompts);
-      const mockApiResponse = {
-        success: true,
-        data: {
-          recommendations: [
-            "Mock recommendation: Improve SEO and content relevance to appear in more search results",
-            "Mock recommendation: Focus on improving content quality and authority to increase citation likelihood",
-          ],
-          competitive_insights: {
-            market_position: "emerging_player",
-            key_competitors: [
-              { domain: "example.com", frequency: 5 },
-              { domain: "competitor.com", frequency: 3 },
-            ],
-            competitive_advantages: ["Strong content quality"],
-            improvement_areas: ["SEO optimization needed"],
-          },
-        },
-      };
-      return NextResponse.json({
-        analysis: mockAnalysis,
-        apiResponse: mockApiResponse,
-      });
+      return NextResponse.json(
+        { error: "Failed to analyze website" },
+        { status: 500 }
+      );
     }
   } catch (error) {
     console.error("Error analyzing website:", error);
@@ -266,91 +242,4 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
-}
-
-// Fallback mock data generation (simplified version of original)
-function generateMockAnalysis(
-  url: string,
-  prompts: GeneratedPrompt[]
-): WebsiteAnalysis {
-  const results: AnalysisResult[] = [];
-
-  prompts.forEach((prompt, promptIndex) => {
-    prompt.queries.forEach((query, queryIndex) => {
-      const isMentioned = Math.random() > 0.3; // 70% chance of being mentioned
-      const averageRanking = isMentioned
-        ? Math.floor(Math.random() * 8) + 1
-        : 0;
-      const visibility = isMentioned ? Math.floor(Math.random() * 60) + 40 : 0;
-
-      // Generate mock citation distribution data
-      const citationDistribution: Array<{ position: number; count: number }> =
-        [];
-      const userDomainPositions: number[] = [];
-
-      // Create a realistic distribution for sparkline
-      const maxPosition = Math.floor(Math.random() * 10) + 5; // 5-15 positions
-      for (let i = 1; i <= maxPosition; i++) {
-        // Higher positions (closer to 1) should have fewer citations
-        const count = Math.max(0, Math.floor(Math.random() * (15 - i)) + 1);
-        citationDistribution.push({ position: i, count });
-      }
-
-      // Add user domain positions if mentioned
-      if (isMentioned) {
-        const numPositions = Math.floor(Math.random() * 3) + 1; // 1-3 positions
-        for (let i = 0; i < numPositions; i++) {
-          userDomainPositions.push(Math.floor(Math.random() * maxPosition) + 1);
-        }
-      }
-
-      results.push({
-        id: `${prompt.id}-${queryIndex}`,
-        query: query,
-        prompt: prompt.prompt,
-        isMentioned,
-        averageRanking,
-        totalSearches: Math.floor(Math.random() * 5) + 3,
-        appearsInSearches: isMentioned ? Math.floor(Math.random() * 3) + 1 : 0,
-        totalSources: Math.floor(Math.random() * 10) + 5,
-        visibility,
-        promptCount: Math.floor(Math.random() * 3) + 1, // Mock: 1-3 prompts per query
-        category: prompt.category,
-        timestamp: new Date(),
-        citationDistribution,
-        userDomainPositions,
-      });
-    });
-  });
-
-  const totalQueries = results.length;
-  const mentionedResults = results.filter((r) => r.isMentioned);
-  const averageRanking =
-    mentionedResults.length > 0
-      ? mentionedResults.reduce((sum, r) => sum + r.averageRanking, 0) /
-        mentionedResults.length
-      : 0;
-  const overallVisibility =
-    results.length > 0
-      ? Math.round(
-          results.reduce((sum, r) => sum + r.visibility, 0) / results.length
-        )
-      : 0;
-
-  const categoryCount: { [key: string]: number } = {};
-  prompts.forEach((prompt) => {
-    categoryCount[prompt.category] = (categoryCount[prompt.category] || 0) + 1;
-  });
-  const topCategory =
-    Object.entries(categoryCount).sort(([, a], [, b]) => b - a)[0]?.[0] ||
-    "N/A";
-
-  return {
-    url,
-    totalQueries,
-    averageRanking: Math.round(averageRanking * 10) / 10,
-    overallVisibility,
-    topCategory,
-    results,
-  };
 }
