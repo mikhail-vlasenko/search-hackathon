@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AnalysisStep, GeneratedPrompt, WebsiteAnalysis } from "@/lib/types";
 import PromptsStep from "@/components/analytics/PromptsStep";
 import AnalyzingStep from "@/components/analytics/AnalyzingStep";
 import ResultsStep from "@/components/analytics/ResultsStep";
 
-export default function AnalyticsPage() {
+// Separate component that uses useSearchParams
+function AnalyticsContent() {
   const [currentStep, setCurrentStep] = useState<AnalysisStep>("prompts");
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [generatedPrompts, setGeneratedPrompts] = useState<GeneratedPrompt[]>(
@@ -215,5 +216,34 @@ export default function AnalyticsPage() {
         )}
       </main>
     </div>
+  );
+}
+
+// Loading fallback component
+function AnalyticsLoading() {
+  return (
+    <div
+      className="min-h-screen w-full flex items-center justify-center transition-opacity duration-300 relative overflow-hidden"
+      style={{
+        backgroundImage: "url('/group-2.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+        <p className="text-gray-600">Loading...</p>
+      </div>
+    </div>
+  );
+}
+
+// Main component with Suspense boundary
+export default function AnalyticsPage() {
+  return (
+    <Suspense fallback={<AnalyticsLoading />}>
+      <AnalyticsContent />
+    </Suspense>
   );
 }

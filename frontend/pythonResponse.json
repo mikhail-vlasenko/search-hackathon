@@ -2,17 +2,17 @@
   "success": true,
   "data": {
     "overview": {
-      "total_prompts": 6,
-      "total_queries": 24,
-      "total_unique_domains": 61
+      "total_prompts": 5,
+      "total_queries": 22,
+      "total_unique_domains": 56
     },
     "query_frequency_stats": {
-      "total_queries": 24,
-      "unique_queries": 24,
+      "total_queries": 22,
+      "unique_queries": 22,
       "query_details": {
         "cheapest bicycle Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "cheapest bicycle to buy in berlin"
           ],
@@ -20,15 +20,15 @@
         },
         "used bicycles Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "cheapest bicycle to buy in berlin"
           ],
           "unique_prompts": 1
         },
-        "budget bicycles Berlin": {
+        "budget bikes Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "cheapest bicycle to buy in berlin"
           ],
@@ -36,7 +36,7 @@
         },
         "affordable bikes Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "cheapest bicycle to buy in berlin"
           ],
@@ -44,23 +44,23 @@
         },
         "Fahrradgeschäfte Deutschland Rennrad": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
           ],
           "unique_prompts": 1
         },
-        "Fahrradhelm kaufen Deutschland": {
+        "Fahrradgeschäfte Deutschland Fahrradhelm": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
           ],
           "unique_prompts": 1
         },
-        "Fahrrad kaufen Deutschland": {
+        "Fahrradhändler Deutschland": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
           ],
@@ -68,119 +68,63 @@
         },
         "best bicycles for Berlin cycling": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "best bikes for cycling in Berlin"
           ],
           "unique_prompts": 1
         },
-        "Berlin bike commuting": {
+        "types of bikes suitable for Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "best bikes for cycling in Berlin"
           ],
           "unique_prompts": 1
         },
-        "cycling in Berlin tips": {
+        "Berlin cycling conditions bike recommendations": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "best bikes for cycling in Berlin"
           ],
           "unique_prompts": 1
         },
-        "most popular bikes in Berlin": {
+        "best bikes for cycling in Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "best bikes for cycling in Berlin"
           ],
           "unique_prompts": 1
         },
-        "best bikes for cycling near Berlin": {
+        "road cycling routes Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
-            "best bikes for cycling near Berlin"
+            "best bikes for cycling in Berlin"
           ],
           "unique_prompts": 1
         },
-        "road cycling Berlin": {
+        "gravel cycling routes Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
-            "best bikes for cycling near Berlin"
+            "best bikes for cycling in Berlin"
           ],
           "unique_prompts": 1
         },
-        "gravel cycling Berlin": {
+        "touring cycling routes Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
-            "best bikes for cycling near Berlin"
-          ],
-          "unique_prompts": 1
-        },
-        "touring cycling Berlin": {
-          "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
-          "prompts": [
-            "best bikes for cycling near Berlin"
-          ],
-          "unique_prompts": 1
-        },
-        "hybrid bikes Berlin": {
-          "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
-          "prompts": [
-            "best bikes for cycling near Berlin"
-          ],
-          "unique_prompts": 1
-        },
-        "best touring bikes for Europe": {
-          "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
-          "prompts": [
-            "best bikes for cycling in Europe"
-          ],
-          "unique_prompts": 1
-        },
-        "best road bikes for Europe": {
-          "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
-          "prompts": [
-            "best bikes for cycling in Europe"
-          ],
-          "unique_prompts": 1
-        },
-        "best hybrid bikes for Europe": {
-          "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
-          "prompts": [
-            "best bikes for cycling in Europe"
-          ],
-          "unique_prompts": 1
-        },
-        "best gravel bikes for Europe": {
-          "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
-          "prompts": [
-            "best bikes for cycling in Europe"
-          ],
-          "unique_prompts": 1
-        },
-        "bike packing Europe bike recommendations": {
-          "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
-          "prompts": [
-            "best bikes for cycling in Europe"
+            "best bikes for cycling in Berlin"
           ],
           "unique_prompts": 1
         },
         "fast city bikes Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "cycle fast; city bikes; berlin"
           ],
@@ -188,7 +132,7 @@
         },
         "Berlin bike shops fast city bikes": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "cycle fast; city bikes; berlin"
           ],
@@ -196,9 +140,49 @@
         },
         "high-performance city bikes Berlin": {
           "frequency": 1,
-          "frequency_rate": 0.041666666666666664,
+          "frequency_rate": 0.045454545454545456,
           "prompts": [
             "cycle fast; city bikes; berlin"
+          ],
+          "unique_prompts": 1
+        },
+        "best touring bikes for Europe": {
+          "frequency": 1,
+          "frequency_rate": 0.045454545454545456,
+          "prompts": [
+            "best bikes for cycling in Europe"
+          ],
+          "unique_prompts": 1
+        },
+        "best road bikes for Europe": {
+          "frequency": 1,
+          "frequency_rate": 0.045454545454545456,
+          "prompts": [
+            "best bikes for cycling in Europe"
+          ],
+          "unique_prompts": 1
+        },
+        "best hybrid bikes for Europe": {
+          "frequency": 1,
+          "frequency_rate": 0.045454545454545456,
+          "prompts": [
+            "best bikes for cycling in Europe"
+          ],
+          "unique_prompts": 1
+        },
+        "best gravel bikes for Europe": {
+          "frequency": 1,
+          "frequency_rate": 0.045454545454545456,
+          "prompts": [
+            "best bikes for cycling in Europe"
+          ],
+          "unique_prompts": 1
+        },
+        "bike packing Europe bike recommendations": {
+          "frequency": 1,
+          "frequency_rate": 0.045454545454545456,
+          "prompts": [
+            "best bikes for cycling in Europe"
           ],
           "unique_prompts": 1
         }
@@ -213,7 +197,7 @@
           1
         ],
         [
-          "budget bicycles Berlin",
+          "budget bikes Berlin",
           1
         ],
         [
@@ -225,11 +209,11 @@
           1
         ],
         [
-          "Fahrradhelm kaufen Deutschland",
+          "Fahrradgeschäfte Deutschland Fahrradhelm",
           1
         ],
         [
-          "Fahrrad kaufen Deutschland",
+          "Fahrradhändler Deutschland",
           1
         ],
         [
@@ -237,11 +221,11 @@
           1
         ],
         [
-          "Berlin bike commuting",
+          "types of bikes suitable for Berlin",
           1
         ],
         [
-          "cycling in Berlin tips",
+          "Berlin cycling conditions bike recommendations",
           1
         ]
       ]
@@ -249,51 +233,44 @@
     "prompt_stats": {
       "cheapest bicycle to buy in berlin": {
         "total_queries": 4,
-        "unique_domains": 9,
-        "total_citations": 88,
-        "domains_with_citations": 9,
-        "avg_citations_per_query": 22
+        "unique_domains": 11,
+        "total_citations": 108,
+        "domains_with_citations": 11,
+        "avg_citations_per_query": 27
       },
       "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet": {
         "total_queries": 3,
-        "unique_domains": 11,
-        "total_citations": 75,
-        "domains_with_citations": 11,
-        "avg_citations_per_query": 25
+        "unique_domains": 10,
+        "total_citations": 57,
+        "domains_with_citations": 10,
+        "avg_citations_per_query": 19
       },
       "best bikes for cycling in Berlin": {
-        "total_queries": 4,
-        "unique_domains": 12,
-        "total_citations": 160,
-        "domains_with_citations": 12,
-        "avg_citations_per_query": 40
-      },
-      "best bikes for cycling near Berlin": {
-        "total_queries": 5,
-        "unique_domains": 15,
-        "total_citations": 210,
-        "domains_with_citations": 15,
-        "avg_citations_per_query": 42
-      },
-      "best bikes for cycling in Europe": {
-        "total_queries": 5,
-        "unique_domains": 14,
-        "total_citations": 335,
-        "domains_with_citations": 14,
-        "avg_citations_per_query": 67
+        "total_queries": 7,
+        "unique_domains": 16,
+        "total_citations": 283,
+        "domains_with_citations": 16,
+        "avg_citations_per_query": 40.42857142857143
       },
       "cycle fast; city bikes; berlin": {
         "total_queries": 3,
         "unique_domains": 11,
-        "total_citations": 33,
+        "total_citations": 39,
         "domains_with_citations": 11,
-        "avg_citations_per_query": 11
+        "avg_citations_per_query": 13
+      },
+      "best bikes for cycling in Europe": {
+        "total_queries": 5,
+        "unique_domains": 15,
+        "total_citations": 475,
+        "domains_with_citations": 15,
+        "avg_citations_per_query": 95
       }
     },
     "domain_analysis": {
       "total_appearances": 7,
       "total_citations": 7,
-      "retrieval_rate": 0.2916666666666667,
+      "retrieval_rate": 0.3181818181818182,
       "usage_rate": 1,
       "avg_citation_rank": 9.142857142857142,
       "min_citation_rank": 8,
@@ -304,7 +281,7 @@
       "query_appearances": [
         "cheapest bicycle Berlin",
         "used bicycles Berlin",
-        "budget bicycles Berlin",
+        "budget bikes Berlin",
         "affordable bikes Berlin",
         "fast city bikes Berlin",
         "Berlin bike shops fast city bikes",
@@ -324,28 +301,30 @@
       "cheapest bicycle Berlin": {
         "target_domain_retrieved": true,
         "target_domain_cited": true,
-        "total_sources": 9,
+        "total_sources": 11,
         "prompts_using_query": [
           "cheapest bicycle to buy in berlin"
         ],
         "all_domains": [
+          "nextbike.de",
           "berlin.de",
-          "visitberlin.de",
-          "fietsenboerse.de",
-          "bikeawayberlin.de",
-          "nomadandinlove.com",
+          "reddit.com",
           "just-bikes.de",
-          "allaboutberlin.com",
+          "bikeawayberlin.de",
+          "101bikerentals.com",
           "bikeopia.com",
-          "reddit.com"
+          "nomadandinlove.com",
+          "fietsenboerse.de",
+          "visitberlin.de",
+          "allaboutberlin.com"
         ],
         "target_domain_citations": [
           10
         ],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 9,
-        "avg_sources_per_prompt": 9,
+        "total_unique_sources": 11,
+        "avg_sources_per_prompt": 11,
         "best_citation_rank": 10,
         "avg_citation_rank": 10,
         "total_citations": 1
@@ -353,57 +332,61 @@
       "used bicycles Berlin": {
         "target_domain_retrieved": true,
         "target_domain_cited": true,
-        "total_sources": 9,
+        "total_sources": 11,
         "prompts_using_query": [
           "cheapest bicycle to buy in berlin"
         ],
         "all_domains": [
+          "nextbike.de",
           "berlin.de",
-          "visitberlin.de",
-          "fietsenboerse.de",
-          "bikeawayberlin.de",
-          "nomadandinlove.com",
+          "reddit.com",
           "just-bikes.de",
-          "allaboutberlin.com",
+          "bikeawayberlin.de",
+          "101bikerentals.com",
           "bikeopia.com",
-          "reddit.com"
+          "nomadandinlove.com",
+          "fietsenboerse.de",
+          "visitberlin.de",
+          "allaboutberlin.com"
         ],
         "target_domain_citations": [
           10
         ],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 9,
-        "avg_sources_per_prompt": 9,
+        "total_unique_sources": 11,
+        "avg_sources_per_prompt": 11,
         "best_citation_rank": 10,
         "avg_citation_rank": 10,
         "total_citations": 1
       },
-      "budget bicycles Berlin": {
+      "budget bikes Berlin": {
         "target_domain_retrieved": true,
         "target_domain_cited": true,
-        "total_sources": 9,
+        "total_sources": 11,
         "prompts_using_query": [
           "cheapest bicycle to buy in berlin"
         ],
         "all_domains": [
+          "nextbike.de",
           "berlin.de",
-          "visitberlin.de",
-          "fietsenboerse.de",
-          "bikeawayberlin.de",
-          "nomadandinlove.com",
+          "reddit.com",
           "just-bikes.de",
-          "allaboutberlin.com",
+          "bikeawayberlin.de",
+          "101bikerentals.com",
           "bikeopia.com",
-          "reddit.com"
+          "nomadandinlove.com",
+          "fietsenboerse.de",
+          "visitberlin.de",
+          "allaboutberlin.com"
         ],
         "target_domain_citations": [
           10
         ],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 9,
-        "avg_sources_per_prompt": 9,
+        "total_unique_sources": 11,
+        "avg_sources_per_prompt": 11,
         "best_citation_rank": 10,
         "avg_citation_rank": 10,
         "total_citations": 1
@@ -411,28 +394,30 @@
       "affordable bikes Berlin": {
         "target_domain_retrieved": true,
         "target_domain_cited": true,
-        "total_sources": 9,
+        "total_sources": 11,
         "prompts_using_query": [
           "cheapest bicycle to buy in berlin"
         ],
         "all_domains": [
+          "nextbike.de",
           "berlin.de",
-          "visitberlin.de",
-          "fietsenboerse.de",
-          "bikeawayberlin.de",
-          "nomadandinlove.com",
+          "reddit.com",
           "just-bikes.de",
-          "allaboutberlin.com",
+          "bikeawayberlin.de",
+          "101bikerentals.com",
           "bikeopia.com",
-          "reddit.com"
+          "nomadandinlove.com",
+          "fietsenboerse.de",
+          "visitberlin.de",
+          "allaboutberlin.com"
         ],
         "target_domain_citations": [
           10
         ],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 9,
-        "avg_sources_per_prompt": 9,
+        "total_unique_sources": 11,
+        "avg_sources_per_prompt": 11,
         "best_citation_rank": 10,
         "avg_citation_rank": 10,
         "total_citations": 1
@@ -440,86 +425,83 @@
       "Fahrradgeschäfte Deutschland Rennrad": {
         "target_domain_retrieved": false,
         "target_domain_cited": false,
-        "total_sources": 11,
+        "total_sources": 10,
         "prompts_using_query": [
           "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
         ],
         "all_domains": [
-          "rosebikes.de",
-          "fahrrad.de",
+          "boc24.de",
+          "hibike.de",
           "shop.zweirad-stadler.de",
           "bikesnboards.de",
-          "decathlon.de",
-          "kaufland.de",
-          "bike-discount.de",
-          "rabe-bike.de",
+          "fahrrad.de",
           "fahrrad-xxl.de",
-          "boc24.de",
-          "bike24.de"
+          "lucky-bike.de",
+          "decathlon.de",
+          "rabe-bike.de",
+          "das-radhaus.de"
         ],
         "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 11,
-        "avg_sources_per_prompt": 11,
+        "total_unique_sources": 10,
+        "avg_sources_per_prompt": 10,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
       },
-      "Fahrradhelm kaufen Deutschland": {
+      "Fahrradgeschäfte Deutschland Fahrradhelm": {
         "target_domain_retrieved": false,
         "target_domain_cited": false,
-        "total_sources": 11,
+        "total_sources": 10,
         "prompts_using_query": [
           "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
         ],
         "all_domains": [
-          "rosebikes.de",
-          "fahrrad.de",
+          "boc24.de",
+          "hibike.de",
           "shop.zweirad-stadler.de",
           "bikesnboards.de",
-          "decathlon.de",
-          "kaufland.de",
-          "bike-discount.de",
-          "rabe-bike.de",
+          "fahrrad.de",
           "fahrrad-xxl.de",
-          "boc24.de",
-          "bike24.de"
+          "lucky-bike.de",
+          "decathlon.de",
+          "rabe-bike.de",
+          "das-radhaus.de"
         ],
         "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 11,
-        "avg_sources_per_prompt": 11,
+        "total_unique_sources": 10,
+        "avg_sources_per_prompt": 10,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
       },
-      "Fahrrad kaufen Deutschland": {
+      "Fahrradhändler Deutschland": {
         "target_domain_retrieved": false,
         "target_domain_cited": false,
-        "total_sources": 11,
+        "total_sources": 10,
         "prompts_using_query": [
           "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
         ],
         "all_domains": [
-          "rosebikes.de",
-          "fahrrad.de",
+          "boc24.de",
+          "hibike.de",
           "shop.zweirad-stadler.de",
           "bikesnboards.de",
-          "decathlon.de",
-          "kaufland.de",
-          "bike-discount.de",
-          "rabe-bike.de",
+          "fahrrad.de",
           "fahrrad-xxl.de",
-          "boc24.de",
-          "bike24.de"
+          "lucky-bike.de",
+          "decathlon.de",
+          "rabe-bike.de",
+          "das-radhaus.de"
         ],
         "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 11,
-        "avg_sources_per_prompt": 11,
+        "total_unique_sources": 10,
+        "avg_sources_per_prompt": 10,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
@@ -527,444 +509,189 @@
       "best bicycles for Berlin cycling": {
         "target_domain_retrieved": false,
         "target_domain_cited": false,
-        "total_sources": 12,
+        "total_sources": 8,
         "prompts_using_query": [
           "best bikes for cycling in Berlin"
         ],
         "all_domains": [
-          "letterstobarbara.com",
-          "thecolumbist.com",
-          "youtube.com",
-          "sbahn.berlin",
-          "visitberlin.de",
           "sustainablecities.travel",
-          "bikeopia.com",
-          "allaboutberlin.com",
-          "inyourpocket.com",
-          "reddit.com",
-          "en.wikipedia.org",
-          "welcome-center-germany.com"
+          "originalberlintours.com",
+          "welcome-center-germany.com",
+          "xjd.com",
+          "bikesurf.org",
+          "bicycleinfrastructuremanuals.com",
+          "meininger-hotels.com",
+          "allaboutberlin.com"
         ],
         "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 12,
-        "avg_sources_per_prompt": 12,
+        "total_unique_sources": 8,
+        "avg_sources_per_prompt": 8,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
       },
-      "Berlin bike commuting": {
+      "types of bikes suitable for Berlin": {
         "target_domain_retrieved": false,
         "target_domain_cited": false,
-        "total_sources": 12,
+        "total_sources": 8,
         "prompts_using_query": [
           "best bikes for cycling in Berlin"
         ],
         "all_domains": [
-          "letterstobarbara.com",
-          "thecolumbist.com",
-          "youtube.com",
-          "sbahn.berlin",
-          "visitberlin.de",
           "sustainablecities.travel",
-          "bikeopia.com",
-          "allaboutberlin.com",
-          "inyourpocket.com",
-          "reddit.com",
-          "en.wikipedia.org",
-          "welcome-center-germany.com"
+          "originalberlintours.com",
+          "welcome-center-germany.com",
+          "xjd.com",
+          "bikesurf.org",
+          "bicycleinfrastructuremanuals.com",
+          "meininger-hotels.com",
+          "allaboutberlin.com"
         ],
         "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 12,
-        "avg_sources_per_prompt": 12,
+        "total_unique_sources": 8,
+        "avg_sources_per_prompt": 8,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
       },
-      "cycling in Berlin tips": {
+      "Berlin cycling conditions bike recommendations": {
         "target_domain_retrieved": false,
         "target_domain_cited": false,
-        "total_sources": 12,
+        "total_sources": 8,
         "prompts_using_query": [
           "best bikes for cycling in Berlin"
         ],
         "all_domains": [
-          "letterstobarbara.com",
-          "thecolumbist.com",
-          "youtube.com",
-          "sbahn.berlin",
-          "visitberlin.de",
           "sustainablecities.travel",
-          "bikeopia.com",
-          "allaboutberlin.com",
-          "inyourpocket.com",
-          "reddit.com",
-          "en.wikipedia.org",
-          "welcome-center-germany.com"
+          "originalberlintours.com",
+          "welcome-center-germany.com",
+          "xjd.com",
+          "bikesurf.org",
+          "bicycleinfrastructuremanuals.com",
+          "meininger-hotels.com",
+          "allaboutberlin.com"
         ],
         "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 12,
-        "avg_sources_per_prompt": 12,
+        "total_unique_sources": 8,
+        "avg_sources_per_prompt": 8,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
       },
-      "most popular bikes in Berlin": {
+      "best bikes for cycling in Berlin": {
         "target_domain_retrieved": false,
         "target_domain_cited": false,
-        "total_sources": 12,
+        "total_sources": 10,
         "prompts_using_query": [
           "best bikes for cycling in Berlin"
         ],
         "all_domains": [
-          "letterstobarbara.com",
-          "thecolumbist.com",
-          "youtube.com",
-          "sbahn.berlin",
-          "visitberlin.de",
-          "sustainablecities.travel",
-          "bikeopia.com",
-          "allaboutberlin.com",
-          "inyourpocket.com",
-          "reddit.com",
-          "en.wikipedia.org",
-          "welcome-center-germany.com"
-        ],
-        "target_domain_citations": [],
-        "prompt_count": 1,
-        "unique_prompts": 1,
-        "total_unique_sources": 12,
-        "avg_sources_per_prompt": 12,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
-      },
-      "best bikes for cycling near Berlin": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
-        "total_sources": 15,
-        "prompts_using_query": [
-          "best bikes for cycling near Berlin"
-        ],
-        "all_domains": [
-          "canyon.com",
+          "bikemap.net",
           "strava.com",
-          "berlin.de",
-          "bikepacking.com",
-          "rosebikes.com",
-          "visitberlin.de",
-          "unlimitedbiking.com",
-          "walmart.com",
-          "ridemeister.cc",
           "sustainablecities.travel",
-          "rentahybridbike.com",
-          "meetup.com",
-          "utracks.com",
-          "gravelunion.cc",
-          "reddit.com"
-        ],
-        "target_domain_citations": [],
-        "prompt_count": 1,
-        "unique_prompts": 1,
-        "total_unique_sources": 15,
-        "avg_sources_per_prompt": 15,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
-      },
-      "road cycling Berlin": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
-        "total_sources": 15,
-        "prompts_using_query": [
-          "best bikes for cycling near Berlin"
-        ],
-        "all_domains": [
+          "cyclingthread.com",
           "canyon.com",
-          "strava.com",
-          "berlin.de",
-          "bikepacking.com",
-          "rosebikes.com",
-          "visitberlin.de",
-          "unlimitedbiking.com",
-          "walmart.com",
-          "ridemeister.cc",
-          "sustainablecities.travel",
-          "rentahybridbike.com",
-          "meetup.com",
-          "utracks.com",
+          "welcome-center-germany.com",
           "gravelunion.cc",
-          "reddit.com"
+          "reddit.com",
+          "outdooractive.com",
+          "visitberlin.de"
         ],
         "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 15,
-        "avg_sources_per_prompt": 15,
+        "total_unique_sources": 10,
+        "avg_sources_per_prompt": 10,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
       },
-      "gravel cycling Berlin": {
+      "road cycling routes Berlin": {
         "target_domain_retrieved": false,
         "target_domain_cited": false,
-        "total_sources": 15,
+        "total_sources": 10,
         "prompts_using_query": [
-          "best bikes for cycling near Berlin"
+          "best bikes for cycling in Berlin"
         ],
         "all_domains": [
+          "bikemap.net",
+          "strava.com",
+          "sustainablecities.travel",
+          "cyclingthread.com",
           "canyon.com",
-          "strava.com",
-          "berlin.de",
-          "bikepacking.com",
-          "rosebikes.com",
-          "visitberlin.de",
-          "unlimitedbiking.com",
-          "walmart.com",
-          "ridemeister.cc",
-          "sustainablecities.travel",
-          "rentahybridbike.com",
-          "meetup.com",
-          "utracks.com",
+          "welcome-center-germany.com",
           "gravelunion.cc",
-          "reddit.com"
+          "reddit.com",
+          "outdooractive.com",
+          "visitberlin.de"
         ],
         "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 15,
-        "avg_sources_per_prompt": 15,
+        "total_unique_sources": 10,
+        "avg_sources_per_prompt": 10,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
       },
-      "touring cycling Berlin": {
+      "gravel cycling routes Berlin": {
         "target_domain_retrieved": false,
         "target_domain_cited": false,
-        "total_sources": 15,
+        "total_sources": 10,
         "prompts_using_query": [
-          "best bikes for cycling near Berlin"
+          "best bikes for cycling in Berlin"
         ],
         "all_domains": [
+          "bikemap.net",
+          "strava.com",
+          "sustainablecities.travel",
+          "cyclingthread.com",
           "canyon.com",
-          "strava.com",
-          "berlin.de",
-          "bikepacking.com",
-          "rosebikes.com",
-          "visitberlin.de",
-          "unlimitedbiking.com",
-          "walmart.com",
-          "ridemeister.cc",
-          "sustainablecities.travel",
-          "rentahybridbike.com",
-          "meetup.com",
-          "utracks.com",
+          "welcome-center-germany.com",
           "gravelunion.cc",
-          "reddit.com"
+          "reddit.com",
+          "outdooractive.com",
+          "visitberlin.de"
         ],
         "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 15,
-        "avg_sources_per_prompt": 15,
+        "total_unique_sources": 10,
+        "avg_sources_per_prompt": 10,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
       },
-      "hybrid bikes Berlin": {
+      "touring cycling routes Berlin": {
         "target_domain_retrieved": false,
         "target_domain_cited": false,
-        "total_sources": 15,
+        "total_sources": 10,
         "prompts_using_query": [
-          "best bikes for cycling near Berlin"
+          "best bikes for cycling in Berlin"
         ],
         "all_domains": [
+          "bikemap.net",
+          "strava.com",
+          "sustainablecities.travel",
+          "cyclingthread.com",
           "canyon.com",
-          "strava.com",
-          "berlin.de",
-          "bikepacking.com",
-          "rosebikes.com",
-          "visitberlin.de",
-          "unlimitedbiking.com",
-          "walmart.com",
-          "ridemeister.cc",
-          "sustainablecities.travel",
-          "rentahybridbike.com",
-          "meetup.com",
-          "utracks.com",
+          "welcome-center-germany.com",
           "gravelunion.cc",
-          "reddit.com"
-        ],
-        "target_domain_citations": [],
-        "prompt_count": 1,
-        "unique_prompts": 1,
-        "total_unique_sources": 15,
-        "avg_sources_per_prompt": 15,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
-      },
-      "best touring bikes for Europe": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
-        "total_sources": 14,
-        "prompts_using_query": [
-          "best bikes for cycling in Europe"
-        ],
-        "all_domains": [
           "reddit.com",
-          "templecycles.com",
-          "reallybigbikeride.com",
-          "bicycling.com",
-          "cyclingweekly.com",
-          "bike24.com",
-          "road.cc",
-          "cyclingnews.com",
-          "fujibikes.eu",
-          "tredz.co.uk",
-          "off.road.cc",
-          "tomsbiketrip.com",
-          "bikeradar.com",
-          "chriscrossinggermany.com"
+          "outdooractive.com",
+          "visitberlin.de"
         ],
         "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
-        "total_unique_sources": 14,
-        "avg_sources_per_prompt": 14,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
-      },
-      "best road bikes for Europe": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
-        "total_sources": 14,
-        "prompts_using_query": [
-          "best bikes for cycling in Europe"
-        ],
-        "all_domains": [
-          "reddit.com",
-          "templecycles.com",
-          "reallybigbikeride.com",
-          "bicycling.com",
-          "cyclingweekly.com",
-          "bike24.com",
-          "road.cc",
-          "cyclingnews.com",
-          "fujibikes.eu",
-          "tredz.co.uk",
-          "off.road.cc",
-          "tomsbiketrip.com",
-          "bikeradar.com",
-          "chriscrossinggermany.com"
-        ],
-        "target_domain_citations": [],
-        "prompt_count": 1,
-        "unique_prompts": 1,
-        "total_unique_sources": 14,
-        "avg_sources_per_prompt": 14,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
-      },
-      "best hybrid bikes for Europe": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
-        "total_sources": 14,
-        "prompts_using_query": [
-          "best bikes for cycling in Europe"
-        ],
-        "all_domains": [
-          "reddit.com",
-          "templecycles.com",
-          "reallybigbikeride.com",
-          "bicycling.com",
-          "cyclingweekly.com",
-          "bike24.com",
-          "road.cc",
-          "cyclingnews.com",
-          "fujibikes.eu",
-          "tredz.co.uk",
-          "off.road.cc",
-          "tomsbiketrip.com",
-          "bikeradar.com",
-          "chriscrossinggermany.com"
-        ],
-        "target_domain_citations": [],
-        "prompt_count": 1,
-        "unique_prompts": 1,
-        "total_unique_sources": 14,
-        "avg_sources_per_prompt": 14,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
-      },
-      "best gravel bikes for Europe": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
-        "total_sources": 14,
-        "prompts_using_query": [
-          "best bikes for cycling in Europe"
-        ],
-        "all_domains": [
-          "reddit.com",
-          "templecycles.com",
-          "reallybigbikeride.com",
-          "bicycling.com",
-          "cyclingweekly.com",
-          "bike24.com",
-          "road.cc",
-          "cyclingnews.com",
-          "fujibikes.eu",
-          "tredz.co.uk",
-          "off.road.cc",
-          "tomsbiketrip.com",
-          "bikeradar.com",
-          "chriscrossinggermany.com"
-        ],
-        "target_domain_citations": [],
-        "prompt_count": 1,
-        "unique_prompts": 1,
-        "total_unique_sources": 14,
-        "avg_sources_per_prompt": 14,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
-      },
-      "bike packing Europe bike recommendations": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
-        "total_sources": 14,
-        "prompts_using_query": [
-          "best bikes for cycling in Europe"
-        ],
-        "all_domains": [
-          "reddit.com",
-          "templecycles.com",
-          "reallybigbikeride.com",
-          "bicycling.com",
-          "cyclingweekly.com",
-          "bike24.com",
-          "road.cc",
-          "cyclingnews.com",
-          "fujibikes.eu",
-          "tredz.co.uk",
-          "off.road.cc",
-          "tomsbiketrip.com",
-          "bikeradar.com",
-          "chriscrossinggermany.com"
-        ],
-        "target_domain_citations": [],
-        "prompt_count": 1,
-        "unique_prompts": 1,
-        "total_unique_sources": 14,
-        "avg_sources_per_prompt": 14,
+        "total_unique_sources": 10,
+        "avg_sources_per_prompt": 10,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
@@ -977,17 +704,17 @@
           "cycle fast; city bikes; berlin"
         ],
         "all_domains": [
-          "bikepunkshop.com",
-          "fahrradstation.com",
-          "swapfiets.de",
-          "fahrradtouren-berlin.com",
-          "veloretti.com",
-          "just-bikes.de",
-          "trekbikes.com",
           "nextbike.de",
+          "fahrradtouren-berlin.com",
+          "trekbikes.com",
           "mod-bikes.com",
+          "bikepunkshop.com",
+          "just-bikes.de",
+          "theurbanmobilitystore.com",
+          "veloretti.com",
+          "swapfiets.de",
           "bikeopia.com",
-          "theurbanmobilitystore.com"
+          "fahrradstation.com"
         ],
         "target_domain_citations": [
           8
@@ -1008,17 +735,17 @@
           "cycle fast; city bikes; berlin"
         ],
         "all_domains": [
-          "bikepunkshop.com",
-          "fahrradstation.com",
-          "swapfiets.de",
-          "fahrradtouren-berlin.com",
-          "veloretti.com",
-          "just-bikes.de",
-          "trekbikes.com",
           "nextbike.de",
+          "fahrradtouren-berlin.com",
+          "trekbikes.com",
           "mod-bikes.com",
+          "bikepunkshop.com",
+          "just-bikes.de",
+          "theurbanmobilitystore.com",
+          "veloretti.com",
+          "swapfiets.de",
           "bikeopia.com",
-          "theurbanmobilitystore.com"
+          "fahrradstation.com"
         ],
         "target_domain_citations": [
           8
@@ -1039,17 +766,17 @@
           "cycle fast; city bikes; berlin"
         ],
         "all_domains": [
-          "bikepunkshop.com",
-          "fahrradstation.com",
-          "swapfiets.de",
-          "fahrradtouren-berlin.com",
-          "veloretti.com",
-          "just-bikes.de",
-          "trekbikes.com",
           "nextbike.de",
+          "fahrradtouren-berlin.com",
+          "trekbikes.com",
           "mod-bikes.com",
+          "bikepunkshop.com",
+          "just-bikes.de",
+          "theurbanmobilitystore.com",
+          "veloretti.com",
+          "swapfiets.de",
           "bikeopia.com",
-          "theurbanmobilitystore.com"
+          "fahrradstation.com"
         ],
         "target_domain_citations": [
           8
@@ -1061,6 +788,171 @@
         "best_citation_rank": 8,
         "avg_citation_rank": 8,
         "total_citations": 1
+      },
+      "best touring bikes for Europe": {
+        "target_domain_retrieved": false,
+        "target_domain_cited": false,
+        "total_sources": 15,
+        "prompts_using_query": [
+          "best bikes for cycling in Europe"
+        ],
+        "all_domains": [
+          "templecycles.com",
+          "cyclingweekly.com",
+          "bikeradar.com",
+          "cyclingnews.com",
+          "bicycling.com",
+          "granfondo-cycling.com",
+          "tomsbiketrip.com",
+          "rosebikes.com",
+          "off.road.cc",
+          "fujibikes.eu",
+          "chriscrossinggermany.com",
+          "road.cc",
+          "reddit.com",
+          "tredz.co.uk",
+          "reallybigbikeride.com"
+        ],
+        "target_domain_citations": [],
+        "prompt_count": 1,
+        "unique_prompts": 1,
+        "total_unique_sources": 15,
+        "avg_sources_per_prompt": 15,
+        "best_citation_rank": null,
+        "avg_citation_rank": null,
+        "total_citations": 0
+      },
+      "best road bikes for Europe": {
+        "target_domain_retrieved": false,
+        "target_domain_cited": false,
+        "total_sources": 15,
+        "prompts_using_query": [
+          "best bikes for cycling in Europe"
+        ],
+        "all_domains": [
+          "templecycles.com",
+          "cyclingweekly.com",
+          "bikeradar.com",
+          "cyclingnews.com",
+          "bicycling.com",
+          "granfondo-cycling.com",
+          "tomsbiketrip.com",
+          "rosebikes.com",
+          "off.road.cc",
+          "fujibikes.eu",
+          "chriscrossinggermany.com",
+          "road.cc",
+          "reddit.com",
+          "tredz.co.uk",
+          "reallybigbikeride.com"
+        ],
+        "target_domain_citations": [],
+        "prompt_count": 1,
+        "unique_prompts": 1,
+        "total_unique_sources": 15,
+        "avg_sources_per_prompt": 15,
+        "best_citation_rank": null,
+        "avg_citation_rank": null,
+        "total_citations": 0
+      },
+      "best hybrid bikes for Europe": {
+        "target_domain_retrieved": false,
+        "target_domain_cited": false,
+        "total_sources": 15,
+        "prompts_using_query": [
+          "best bikes for cycling in Europe"
+        ],
+        "all_domains": [
+          "templecycles.com",
+          "cyclingweekly.com",
+          "bikeradar.com",
+          "cyclingnews.com",
+          "bicycling.com",
+          "granfondo-cycling.com",
+          "tomsbiketrip.com",
+          "rosebikes.com",
+          "off.road.cc",
+          "fujibikes.eu",
+          "chriscrossinggermany.com",
+          "road.cc",
+          "reddit.com",
+          "tredz.co.uk",
+          "reallybigbikeride.com"
+        ],
+        "target_domain_citations": [],
+        "prompt_count": 1,
+        "unique_prompts": 1,
+        "total_unique_sources": 15,
+        "avg_sources_per_prompt": 15,
+        "best_citation_rank": null,
+        "avg_citation_rank": null,
+        "total_citations": 0
+      },
+      "best gravel bikes for Europe": {
+        "target_domain_retrieved": false,
+        "target_domain_cited": false,
+        "total_sources": 15,
+        "prompts_using_query": [
+          "best bikes for cycling in Europe"
+        ],
+        "all_domains": [
+          "templecycles.com",
+          "cyclingweekly.com",
+          "bikeradar.com",
+          "cyclingnews.com",
+          "bicycling.com",
+          "granfondo-cycling.com",
+          "tomsbiketrip.com",
+          "rosebikes.com",
+          "off.road.cc",
+          "fujibikes.eu",
+          "chriscrossinggermany.com",
+          "road.cc",
+          "reddit.com",
+          "tredz.co.uk",
+          "reallybigbikeride.com"
+        ],
+        "target_domain_citations": [],
+        "prompt_count": 1,
+        "unique_prompts": 1,
+        "total_unique_sources": 15,
+        "avg_sources_per_prompt": 15,
+        "best_citation_rank": null,
+        "avg_citation_rank": null,
+        "total_citations": 0
+      },
+      "bike packing Europe bike recommendations": {
+        "target_domain_retrieved": false,
+        "target_domain_cited": false,
+        "total_sources": 15,
+        "prompts_using_query": [
+          "best bikes for cycling in Europe"
+        ],
+        "all_domains": [
+          "templecycles.com",
+          "cyclingweekly.com",
+          "bikeradar.com",
+          "cyclingnews.com",
+          "bicycling.com",
+          "granfondo-cycling.com",
+          "tomsbiketrip.com",
+          "rosebikes.com",
+          "off.road.cc",
+          "fujibikes.eu",
+          "chriscrossinggermany.com",
+          "road.cc",
+          "reddit.com",
+          "tredz.co.uk",
+          "reallybigbikeride.com"
+        ],
+        "target_domain_citations": [],
+        "prompt_count": 1,
+        "unique_prompts": 1,
+        "total_unique_sources": 15,
+        "avg_sources_per_prompt": 15,
+        "best_citation_rank": null,
+        "avg_citation_rank": null,
+        "total_citations": 0
       }
     },
     "response_chunks_analysis": {
@@ -1079,22 +971,22 @@
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "You'll find over 600 second-hand bikes from private sellers and dealers, including Dutch bikes, road bikes, mountain bikes, and city bikes",
+            "domain": "You can find over 600 second-hand bikes from private sellers and dealers, with prices and types varying widely",
             "position": 3
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "You can compare prices, test ride bikes, and get advice from independent specialists",
+            "domain": "You can test ride bikes and get independent advice",
             "position": 4
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **Berliner Fahrradmarkt:** This market has grown from a small flea market to a large platform for used bicycles with four locations in 2025: Kreuzkölln, Moabit, Prenzlauer Berg, and Neukölln",
+            "domain": "* **Berliner Fahrradmarkt:** This market, which started as a small flea market, is now one of Berlin's largest platforms for used bicycles, with four locations in 2025: Kreuzkölln, Moabit, Prenzlauer Berg, and Neukölln",
             "position": 5
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "They offer a wide selection of used bicycles and provide free, independent purchasing advice",
+            "domain": "They offer a large selection of used bikes and provide free, independent purchasing advice",
             "position": 6
           },
           {
@@ -1104,128 +996,168 @@
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "47, 10249 Berlin, Bikeopia specializes in quality used vintage bikes from the 80s and 90s",
+            "domain": "47, 10249 Berlin, Bikeopia specializes in quality used bikes, including vintage racers and city bikes",
             "position": 8
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Their prices range from 400 to 1500 euros, and they offer a 6-month warranty on all bikes",
+            "domain": "Their prices range from 400 to 1500 Euros, and they offer a 6-month warranty on all bikes",
             "position": 9
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **BIKE A-WAY Berlin:** This shop salvages and refurbishes used bikes, selling them at fair prices with a 1-year warranty",
+            "domain": "* **BIKE A-WAY Berlin:** This shop salvages and fixes up used bikes, selling them at fair prices",
             "position": 10
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "They also offer new single-speed, cross, urban, and city bikes",
+            "domain": "They also offer new single-speed, cross, urban, and city bikes, as well as used racers, all with a 1-year warranty",
             "position": 11
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **Other Used Bike Shops:** Look for shops specializing in used bikes, as they often have a smaller but curated selection",
+            "domain": "* **Other Used Bike Shops:** Look for shops specializing in used bikes, such as Hashims gebräuchte Fahrräder",
             "position": 12
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Hashims gebräuchte Fahrräder is one such recommendation",
+            "domain": "* **Online Classifieds:** Websites like eBay Kleinanzeigen are good for finding used bikes directly from sellers",
             "position": 13
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "**2",
+            "domain": "* **Flea Markets:** While some flea markets sell bicycles, be cautious as they can be old, overpriced, or even stolen",
             "position": 14
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Online Marketplaces & Social Media:** \n\n * **Kleinanzeigen (formerly eBay Kleinanzeigen):** This classifieds website has many used bikes listed",
+            "domain": "**2",
             "position": 15
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **\"Sell Your Bike Berlin\" Facebook group:** This group has over 30,000 members and can be a good place to find used bikes",
+            "domain": "New Budget-Friendly Bicycles:** \n\n * **Decathlon:** This large sports retailer is known for offering good value bikes",
             "position": 16
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "**3",
+            "domain": "* **Stadler:** You might find new bicycles for around €350 or less, especially if you don't need gears",
             "position": 17
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "New Budget-Friendly Options:** \n\n * **Decathlon:** This large sports retailer offers good value for money on new bikes",
+            "domain": "* **Just Bikes:** They offer affordable city bikes for men and women from the brand Airtracks",
             "position": 18
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **Stadler:** Another large bicycle store where you might find bikes for around €350 or less, especially if you're looking for a single-speed",
+            "domain": "* **Froschrad:** This local manufacturer in Kreuzberg used to have very affordable, solid-quality options",
             "position": 19
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **Just Bikes (Airtracks):** They sell new, cheap city bikes for men and women",
+            "domain": "**3",
             "position": 20
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "**4",
+            "domain": "Bicycle Rental/Sharing for Short-Term Needs:** \n\n If you only need a bike for a short period, consider these rental and sharing options: \n\n * **Nextbike:** Costs €1",
             "position": 21
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Bicycle Rentals & Subscriptions (for short-term or flexible needs):** \n\n * **Bike Sharing Services:** For short trips, bike-sharing services like Nextbike (€1 for every 15 minutes) and Donkey Republic (€1",
+            "domain": "50 for the first 15 minutes, then €1",
             "position": 22
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "80 for the first 15 minutes, cheaper for longer rentals) can be very affordable",
+            "domain": "20 for the next 15 minutes, and €1 for each additional 15 minutes, with a maximum of €15 per 24 hours",
             "position": 23
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **Monthly Bike Rentals:** Companies like Swapfiets offer city bikes for €14",
+            "domain": "It's one of the cheapest for trips under 30 minutes",
             "position": 24
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "90 or €17",
+            "domain": "* **Donkey Republic:** Prices vary by duration, becoming cheaper the longer you rent",
             "position": 25
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "90 per month, with maintenance and repairs included",
+            "domain": "For example, 4 hours can cost around €8",
             "position": 26
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "**Tips for Buying a Cheap Bicycle in Berlin:** \n\n * **Buy Used:** Used bicycles are generally much cheaper than new ones",
+            "domain": "50",
             "position": 27
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **Test Ride:** Always test the bike before buying it to check brakes, gears, frame, and wheels",
+            "domain": "* **Voi (e-bikes):** Costs €1 to unlock plus €0",
             "position": 28
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **Beware of Stolen Bikes:** Be cautious when buying from flea markets, as bikes there can be old, overpriced, and often stolen",
+            "domain": "24 per minute",
             "position": 29
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **Consider Independent Shops:** Smaller, independent bike shops often provide better service and personalized advice to help you find a bike within your budget",
+            "domain": "They also offer a Day Pass for €8",
             "position": 30
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "* **Check for Warranties:** Some used bike shops, like Bikeopia and BIKE A-WAY, offer warranties on their second-hand bikes",
+            "domain": "00, which includes unlimited unlocks and 100 minutes of riding over 24 hours",
             "position": 31
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Call a Bike (Deutsche Bahn):** Available in the Berlin S-Bahn-Ring area, with bikes rentable through their app",
+            "position": 32
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Swapfiets:** Offers monthly bike rentals starting from €14",
+            "position": 33
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "90 for a city bike",
+            "position": 34
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Tips for Buying a Used Bike:** \n\n * **Test Ride:** Always test the bike before buying to check brakes, gears, frame, and wheels",
+            "position": 35
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Inspection:** Look for cracks in the frame and ensure the wheels are straight",
+            "position": 36
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Warranty:** Some used bike shops, like Bikeopia and BIKE A-WAY, offer warranties on their second-hand bikes",
+            "position": 37
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Independent Advice:** Markets like Fietsenbörse and Berliner Fahrradmarkt offer independent bike specialists who can provide advice",
+            "position": 38
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Remember that prices and availability can vary, so it's always a good idea to check current stock and compare options",
+            "position": 39
           }
         ],
         "domain_citations": 0,
-        "competitor_citations": 31,
-        "total_citations": 31,
+        "competitor_citations": 39,
+        "total_citations": 39,
         "domain_share": 0,
         "first_mention_position": null,
         "performance_rating": "absent"
@@ -1235,27 +1167,27 @@
         "competitor_mentions": [
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Es ist großartig, dass Sie mit dem Radfahren anfangen möchten! Hier finden Sie Informationen, wo Sie in Deutschland Fahrräder (Rennräder für die Straße) und Helme kaufen können:\n\n**Fahrräder (Rennräder für die Straße):**\n\nSie können Rennräder in Deutschland sowohl online als auch in physischen Geschäften kaufen",
+            "domain": "Es ist großartig, dass Sie mit dem Radfahren beginnen möchten! In Deutschland gibt es viele Möglichkeiten, Fahrräder und Helme zu kaufen, sowohl online als auch in physischen Geschäften",
             "position": 1
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Online-Shops:**\n    *   **Fahrrad XXL:** Bietet eine große Auswahl an Fahrrädern, darunter auch Rennräder, und hat ein Filialnetz für Beratung und Service",
+            "domain": "**Wo Sie Fahrräder (Rennräder) kaufen können:**\n\n*   **Große Fahrradhändler mit Filialen und Online-Shops:**\n    *   **Fahrrad XXL:** Bietet eine riesige Auswahl an Fahrrädern (über 300",
             "position": 2
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Bike24:** Ein weiterer großer Online-Shop, der Fahrräder und E-Bikes anbietet",
+            "domain": "000 sofort verfügbare Fahrräder von über 300 Marken) und hat Filialen in ganz Deutschland",
             "position": 3
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **fahrrad",
+            "domain": "Sie können dort Rennräder kaufen",
             "position": 4
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "de:** Ein Online-Shop, der Fahrräder, Zubehör und Kleidung führt und auch Filialen und Service vor Ort anbietet",
+            "domain": "*   **Lucky Bike:** Hat über 35 Filialen in Deutschland und einen Online-Shop mit einer großen Auswahl an Markenrädern, darunter auch Rennräder",
             "position": 5
           },
           {
@@ -1275,123 +1207,138 @@
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": ":** Ein Online-Fahrradshop mit 49 Filialen in Deutschland",
+            "domain": ":** Verfügt über 49 Filialen in Deutschland und einen Online-Shop mit einer großen Auswahl an Fahrrädern",
             "position": 9
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Bike-Discount:** Bietet Fahrräder mit einer \"BEST-PRICE-Garantie\" an",
+            "domain": "*   **Zweirad Stadler:** Eines der größten Zweirad-Center mit Standorten in Deutschland und einem umfangreichen Online-Shop, der Rennräder anbietet",
             "position": 10
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Zweirad Stadler:** Hat einen Online-Shop und große Filialen in Deutschland",
+            "domain": "*   **Das Radhaus:** Ein großer Fahrrad- und E-Bike-Händler im Großraum Berlin mit 8 Filialen und einem Online-Shop, der hochwertige Räder führt",
             "position": 11
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **ROSE Bikes:** Bietet Rennräder online und in ihren Stores in Bocholt und München an",
+            "domain": "*   **RABE Bike:** Seit über 30 Jahren ein Kompetenzzentrum für hochwertige Fahrräder und E-Bikes mit 10 Standorten in Bayern und einem Online-Shop",
             "position": 12
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Bikesnboards:** Ein Fachhändler für verschiedene Fahrradmarken, der auch Rennräder anbietet",
+            "domain": "Sie bieten Rennräder an und werben mit einer europaweiten Best-Preis-Garantie",
             "position": 13
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Physische Geschäfte:**\n    *   Viele der oben genannten Online-Händler wie Fahrrad XXL, B",
+            "domain": "*   **Hibike",
             "position": 14
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "O",
+            "domain": "de:** Ein Online-Shop für Fahrräder, E-Bikes, Zubehör und Bikewear, der seit 1994 aktiv ist",
             "position": 15
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "C",
+            "domain": "*   **Bikesnboards:** Ein Fahrradfachhändler, der Marken wie Cube, Specialized, Trek und Scott führt und Rennräder anbietet",
             "position": 16
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": ", Zweirad Stadler und ROSE Bikes haben auch physische Geschäfte in Deutschland, wo Sie sich beraten lassen und Fahrräder vor Ort ansehen können",
+            "domain": "*   **Online-Shops:** Viele der oben genannten Händler bieten auch den Online-Kauf an, was eine bequeme Option sein kann, wenn Sie keine Filiale in Ihrer Nähe haben",
             "position": 17
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **RABE Bike:** Bietet hochwertige Fahrräder und E-Bikes an 10 Standorten in Bayern an, mit professioneller Montage und Beratung",
+            "domain": "**Wo Sie Fahrradhelme kaufen können:**\n\n*   **Fahrradfachgeschäfte:** Die meisten Fahrradgeschäfte, die Fahrräder verkaufen, führen auch eine große Auswahl an Helmen",
             "position": 18
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "**Fahrradhelme:**\n\nEin Fahrradhelm ist unerlässlich für Ihre Sicherheit",
+            "domain": "*   **Sportgeschäfte:** Große Sportgeschäfte wie Decathlon bieten ebenfalls Fahrradhelme an",
             "position": 19
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "In Deutschland müssen alle verkauften Helme bestimmten Prüfnormen entsprechen",
+            "domain": "*   **Online-Shops:**\n    *   **Fahrrad XXL:** Bietet Fahrradhelme an",
             "position": 20
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Es gibt verschiedene Arten von Helmen, darunter spezielle Rennradhelme",
+            "domain": "*   **Zweirad Stadler:** Hat eine große Auswahl an Fahrradhelmen online",
             "position": 21
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Wo kaufen:**\n    *   **Online-Shops:**\n        *   **Zweirad Stadler:** Bietet Fahrradhelme online an",
+            "domain": "*   **Fahrrad",
             "position": 22
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **BIKE24:** Führt eine große Auswahl an Fahrradhelmen von Top-Marken",
+            "domain": "de:** Bietet eine Vielzahl von Fahrradhelmen an, darunter MTB-Helme, Rennradhelme, Trekking- und Cityhelme sowie E-Bike-Helme",
             "position": 23
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Decathlon:** Bietet Fahrradhelme für Damen, Herren und Kinder an",
+            "domain": "*   **Decathlon:** Bietet Fahrradhelme für Damen, Herren und Kinder online an",
             "position": 24
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **ROSE Bikes:** Hat eine Auswahl an Fahrradhelmen für Rennrad, MTB, Gravel und E-Bike",
+            "domain": "*   **Hibike",
             "position": 25
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Kaufland",
+            "domain": "de:** Führt auch Fahrradhelme",
             "position": 26
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "de:** Bietet ebenfalls Fahrradhelme an",
+            "domain": "**Wichtige Hinweise zum Kauf eines Helms:**\n\n*   **Passform:** Der Helm muss richtig passen, darf nicht drücken oder wackeln und sollte Stirn, Schläfen und Hinterkopf sicher abdecken",
             "position": 27
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Physische Geschäfte:** Die meisten Fahrradgeschäfte, die Fahrräder verkaufen, führen auch eine Auswahl an Helmen",
+            "domain": "*   **Sicherheitsnormen:** Achten Sie darauf, dass der Helm die einschlägigen Sicherheitsnormen erfüllt und ein anerkanntes Prüfzeichen besitzt",
             "position": 28
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Wichtige Hinweise zum Fahrradhelm:**\n    *   Nach einem Sturz auf den Helm oder wenn er aus großer Höhe auf den Boden gefallen ist, sollte er ausgetauscht werden, da die Schutzfunktion beeinträchtigt sein kann",
+            "domain": "*   **Komfort:** Ein guter Helm sollte angenehm zu tragen sein, ein geringes Gewicht haben und eine optimale Belüftung bieten",
             "position": 29
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   Der ADFC (Allgemeiner Deutscher Fahrrad-Club) empfiehlt, den Helm alle 3 bis 5 Jahre zu ersetzen, da das Material durch äußere Einflüsse spröde werden kann",
+            "domain": "*   **Arten von Helmen:** Es gibt verschiedene Arten von Helmen für unterschiedliche Zwecke, z",
             "position": 30
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   Einige Helme verfügen über zusätzliche Schutzmaßnahmen wie MIPS (Multi-directional Impact Protection System), das Rotationskräfte bei Unfällen reduzieren kann",
+            "domain": "B",
             "position": 31
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "City-Helme, E-Bike-Helme, Mountainbike-Helme und Rennradhelme",
+            "position": 32
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Für E-Bikes bis 25 km/h ist in Deutschland ein normaler Fahrradhelm ausreichend, spezielle E-Bike-Helme bieten jedoch oft eine größere Schutzfläche",
+            "position": 33
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Viel Spaß beim Radfahren!",
+            "position": 34
           }
         ],
         "domain_citations": 0,
-        "competitor_citations": 31,
-        "total_citations": 31,
+        "competitor_citations": 34,
+        "total_citations": 34,
         "domain_share": 0,
         "first_mention_position": null,
         "performance_rating": "absent"
@@ -1401,615 +1348,323 @@
         "competitor_mentions": [
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Berlin is a very bike-friendly city due to its flat terrain and extensive network of bike lanes, making cycling a popular and efficient way to get around",
+            "domain": "Berlin is a very cycling-friendly city, known for its flat terrain, extensive network of bike paths, and strong cycling culture",
             "position": 1
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "When choosing a bike for cycling in Berlin, consider the type of riding you'll be doing most often",
+            "domain": "When choosing a bike for Berlin, consider the city's conditions, which include both asphalt and cobblestone streets",
             "position": 2
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Here are some popular bike types and considerations for cycling in Berlin:\n\n**Types of Bikes:**\n*   **Trekking Bikes:** These are sturdy and practical, often equipped with mudguards, dynamo lights, and a rear rack, making them suitable for various conditions and carrying items",
+            "domain": "Here are some of the best bike types for cycling in Berlin:\n\n**1",
             "position": 3
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "They offer an upright riding position",
+            "domain": "City Bikes (Urban/Hybrid Bikes)**\n*   **Why they're great:** These are highly recommended for Berlin due to their comfort and efficiency for urban riding",
             "position": 4
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **City Bikes (Dutch Bikes):** Known for a relaxed, upright riding position and easy on/off access, these bikes often come with built-in mudguards, chain protectors, and integrated lights",
+            "domain": "They typically have a few gears and medium-thickness tires, making them suitable for varied street surfaces, including cobblestones",
             "position": 5
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "They are comfortable for leisurely rides and sightseeing",
+            "domain": "*   **Features:** Upright riding position, often come with mudguards, dynamo lights, and a rear rack, making them practical for daily use and commuting",
             "position": 6
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Hybrid Bikes:** A good hybrid bike offers a balance of speed for city commuting and durability for handling gravel or sandy trails outside the city",
+            "domain": "*   **Good for:** Commuting, exploring the city, and leisurely rides",
             "position": 7
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Racing Bikes (Fixed Gear/Single Speed):** These bikes are light and fast, with minimal maintenance due to their single or fixed gears",
-            "position": 8
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "They are ideal if you prioritize speed and long distances",
-            "position": 9
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Mountain Bikes:** While not the most common for city riding, many people use them in Berlin",
-            "position": 10
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Older models can be sturdy and may include features like mudguards, suspension, and a rear rack",
-            "position": 11
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Cargo Bikes (Lastenrad):** If you need to transport children or heavy loads, a cargo bike is a practical option",
-            "position": 12
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Folding Bikes:** These are convenient for easy storage and for combining cycling with public transport, as you can take them on S-Bahn, U-Bahn, and trams (with a bike ticket)",
-            "position": 13
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **E-bikes:** Electric bikes are also available and can be rented through various bike-sharing programs",
-            "position": 14
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "**Where to find bikes in Berlin:**\n*   **New Bikes:** You can find new bicycles at independent bike shops, which often offer personalized advice and service",
-            "position": 15
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Larger stores like Décathlon, Stadler, and Radhaus have a wider selection",
-            "position": 16
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Used Bikes:** For more budget-friendly options, consider buying a used bike",
-            "position": 17
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Popular platforms include eBay Kleinanzeigen",
-            "position": 18
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "There are also monthly bicycle markets, such as the Berliner Fahrradmarkt, where you can find pre-owned bikes",
-            "position": 19
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Shops like Bikeopia specialize in quality used bikes, including vintage models",
-            "position": 20
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Bike Rentals:** If you're visiting or prefer not to own a bike, numerous rental options are available",
-            "position": 21
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "You can rent from bike shops (e",
-            "position": 22
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "g",
-            "position": 23
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": ", Bike 44, Berlin on Bike, Fat Tire Tours, Fahrradstation) or use app-based bike-sharing programs like Nextbike, Donkey Republic, Call a Bike (Deutsche Bahn), Tier, and Lime",
-            "position": 24
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "**Tips for Cycling in Berlin:**\n*   **Safety First:** Always wear a helmet, ensure your lights are functioning, and use common sense on the road",
-            "position": 25
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Follow Traffic Rules:** Cycle on the right side of the road and use designated bike lanes",
-            "position": 26
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Respect traffic lights, including those specifically for bikes",
-            "position": 27
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Bike Infrastructure:** Berlin has a well-developed cycling infrastructure with over 620 km of bike paths, including mandatory paths, off-road routes, and bike lanes on roads",
-            "position": 28
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "There are also \"Fahrradstrassen\" (bicycle streets) where bikes have priority and vehicles have a 30 km/h speed limit",
-            "position": 29
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Public Transport:** You can take your bike on S-Bahn and U-Bahn trains, trams, and some buses with a bike ticket",
-            "position": 30
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Look for doors with a bike logo",
-            "position": 31
-          }
-        ],
-        "domain_citations": 0,
-        "competitor_citations": 31,
-        "total_citations": 31,
-        "domain_share": 0,
-        "first_mention_position": null,
-        "performance_rating": "absent"
-      },
-      "best bikes for cycling near Berlin": {
-        "domain_mentions": [],
-        "competitor_mentions": [
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Berlin and its surrounding Brandenburg region offer diverse cycling experiences, from urban sightseeing to scenic nature rides, making different bike types suitable depending on your preferred terrain and activity",
-            "position": 1
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "The city itself is relatively flat with extensive bike lanes, while areas outside the city feature forests, lakes, and varied paths",
-            "position": 2
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "**Types of Bikes and Suitable Terrain:**\n\n*   **Hybrid Bikes:** These are versatile and a popular choice for cycling in Berlin",
-            "position": 3
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "They are well-suited for the city's flat landscape and a mix of paved paths and some unpaved routes you might encounter in parks and closer-to-nature areas",
-            "position": 4
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Hybrid bikes offer a relaxed riding position and can still be efficient for faster rides",
-            "position": 5
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Gravel Bikes:** If you plan to explore the many unpaved forest roads, gravel paths, and mixed terrain outside the city, a gravel bike is an excellent option",
-            "position": 6
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Routes like the Grunewald Gravel Ride and sections of the Berlin Wall Trail (Berliner Mauerweg) are particularly well-suited for gravel bikes, as they can handle both paved and rougher surfaces, including sandy sections and cobblestones",
-            "position": 7
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "There are even local groups dedicated to gravel cycling in Berlin",
-            "position": 8
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Road Bikes:** For dedicated road cyclists, there are paved routes in and around Berlin",
-            "position": 9
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Popular road biking areas include the Grunewald-Runde (Königsweg/Havelchaussee), routes around Schönower Heide, and south along the Teltowkanal",
-            "position": 10
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Some parts of the Berlin Wall Trail are also suitable for road bikes if you're looking for speed",
-            "position": 11
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Touring Bikes:** If you're planning longer trips or multi-day adventures, such as the Berlin to Baltic Sea tour or the Lost-In-Brandenburg Loop, a touring bike is ideal",
-            "position": 12
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "These bikes are designed for comfort and carrying luggage, making them suitable for exploring the diverse landscapes outside Berlin",
-            "position": 13
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Mountain Bikes:** While Berlin itself is flat, a mountain bike could be suitable if you specifically seek out more challenging off-road trails in the surrounding forests",
-            "position": 14
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Some suggest a mountain bike for general cycling in Berlin, though a hardtail might be unnecessary for most routes",
-            "position": 15
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "**Popular Cycling Routes and Areas Near Berlin:**\n\n*   **Berlin Wall Trail (Berliner Mauerweg):** This 160 km trail follows the former path of the Berlin Wall, offering a mix of historical sights and varied landscapes",
-            "position": 16
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "It can be ridden in sections and is suitable for gravel bikes due to alternating paved, cobblestone, and unpaved sections",
-            "position": 17
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Grunewald Forest:** A very popular spot for cyclists, offering scenic roads, trails, and gravel paths",
-            "position": 18
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "It's a great escape into nature with opportunities for swimming in lakes like Wannsee",
-            "position": 19
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Tempelhofer Feld:** This former airport has been decommissioned and offers a unique, flat landscape perfect for hybrid city bikes, with runways and fields for relaxed rides or fitness training",
-            "position": 20
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Tegeler See and Berlin Wall Trail Loop:** A 36",
-            "position": 21
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "68 km loop that takes you along the banks of Tegeler See lake and the Havel river, incorporating parts of the Berlin Wall Trail",
-            "position": 22
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Treptower Park -> Müggelsee -> Wuhlheide Loop:** A nearly 49 km loop starting at Treptower Park, leading to Müggelsee and Wuhlheide",
-            "position": 23
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Spreeway and the Berlin-Spandau Ship Canal Loop:** A 35",
-            "position": 24
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "71 km ride along the Spree river and the Berlin-Spandau Ship Canal",
-            "position": 25
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Schlosspark Niederschönhausen Loop:** A shorter 23",
-            "position": 26
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "06 km loop through a historic park",
-            "position": 27
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Potsdam and Döberitzer Heide:** You can cycle from Berlin to Potsdam on wide forest lanes, with the option to explore historic buildings or continue to Döberitzer Heide, a nature reserve with sandy paths, horses, and even bisons",
-            "position": 28
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Berlin-Copenhagen Radweg:** A fully paved inter-city bike road to the north, allowing for longer rides with the option to take a regional train back",
-            "position": 29
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "**Bike Rental in Berlin:**\n\nSeveral places in Berlin offer bike rentals, including hybrid bikes, road bikes, e-bikes, and touring bikes",
-            "position": 30
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Some options include:\n\n*   **ROSE Bikes Berlin:** Offers test rides and professional advice for various bike types",
-            "position": 31
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Unlimited Biking:** Provides comfort hybrid bikes for rent, starting from €5 for 2 hours or €15 for a full day",
-            "position": 32
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Bike 44 (Neukölln):** Offers basic bicycle rentals from €5/day",
-            "position": 33
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Berlin on Bike, Fat Tire Tours, and Fahrradstation:** Other rental options, typically ranging from €15-€18",
-            "position": 34
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Bike-sharing programs:** Services like Donkey Republic and Next Bike (for regular bicycles) and Tier and Lime (for e-bikes) are available via apps",
-            "position": 35
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "When renting, inquire about helmets and child seats if needed",
-            "position": 36
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "You can also take your bike on Berlin's public transport (U-Bahn, S-Bahn, trams, regional trains) with a separate ticket, though some rush hour restrictions may apply",
-            "position": 37
-          }
-        ],
-        "domain_citations": 0,
-        "competitor_citations": 37,
-        "total_citations": 37,
-        "domain_share": 0,
-        "first_mention_position": null,
-        "performance_rating": "absent"
-      },
-      "best bikes for cycling in Europe": {
-        "domain_mentions": [],
-        "competitor_mentions": [
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "The best bike for cycling in Europe largely depends on the type of cycling you plan to do, as Europe offers a diverse range of terrains and cycling experiences",
-            "position": 1
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Here are some of the best bike types and specific models recommended for European cycling: \n\n **1",
-            "position": 2
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "Touring Bikes** \n\n Touring bikes are designed for long-distance travel and carrying luggage, making them ideal for multi-day adventures across Europe",
-            "position": 3
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "They are built for robustness and reliability",
-            "position": 4
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Cube Touring Pro:** This is considered one of the best-value commercial touring bikes and is widely available in Europe",
-            "position": 5
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Ridgeback Panorama & Expedition:** These British-designed bikes feature Reynolds 725 cromoly steel frames and are well-equipped for long-haul asphalt touring, with the Panorama including front lowrider and rear racks as standard",
-            "position": 6
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Fuji Touring LTD/Disc LTD:** These entry-level touring bikes have Reynolds 520 cromoly steel frames, classic touring geometry, and come with mudguards and a rear rack",
-            "position": 7
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Oxford Bike Works Expedition:** These are custom-built touring bikes with hand-built Reynolds 525 cromoly steel frames, offering choices in wheel size, brake options, and other expedition-specific touches",
-            "position": 8
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Surly Disc Trucker:** A popular and highly regarded touring bike known for its sturdy frame and reliable components, capable of handling various terrains",
-            "position": 9
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Kona Sutra SE:** Another strong contender for touring, often compared to the Surly Disc Trucker and Trek 520",
-            "position": 10
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Genesis Tour de Fer 30:** This steel-framed touring bike is praised for its versatility, durability, smooth ride, powerful disc brakes, and wide-ranging gears, making it suitable for long-distance adventures and rough terrains",
-            "position": 11
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Fairlight Cycles Faran 2",
-            "position": 12
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "0:** Recommended for bikepacking and touring, this bike can be customized for various adventures",
-            "position": 13
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Trek 520:** A well-known touring bike often considered alongside the Kona Sutra",
-            "position": 14
           },
           {
             "sentence": "gemini-2.5-flash_response",
             "domain": "**2",
-            "position": 15
+            "position": 8
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Gravel Bikes** \n\n Gravel bikes are versatile, combining features of road and mountain bikes",
-            "position": 16
+            "domain": "Trekking Bikes**\n*   **Why they're great:** These are very sturdy and can handle various conditions",
+            "position": 9
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "They are excellent for mixed terrain, including paved roads, gravel paths, and light trails, which are common in many European routes",
-            "position": 17
+            "domain": "While they can be a bit heavy, their robust build makes them reliable for city cycling",
+            "position": 10
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Canyon Grizl CF SL 8 1by:** This is a versatile gravel bike with clearance for wide tires, mounts for fenders and bags, and geometry suitable for various terrains, from tarmac to dirt trails",
-            "position": 18
+            "domain": "*   **Features:** Upright riding position (though sportier versions exist), usually fitted with mudguards, dynamo lights, and a rack",
+            "position": 11
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Orbea Terra M21e Team 1X / M20iTeam GRX 825 Di2:** These bikes are noted for their all-round capability, comfort, and confident handling, with plenty of mounts for bikepacking",
-            "position": 19
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Specialized Diverge Comp E5:** This bike is recommended for bikepacking due to its relaxed geometry and comfortable position for long distances",
-            "position": 20
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Ribble Gravel SL Pro:** Offers good value and is fast and forgiving on open gravel roads, performing well on tarmac too",
-            "position": 21
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Fairlight Secan 2",
-            "position": 22
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "5:** A well-regarded steel gravel bike",
-            "position": 23
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Sonder Camino Ti:** A titanium option that is good for both technical gravel and long-distance adventures, offering room for wide tires",
-            "position": 24
+            "domain": "*   **Good for:** Everyday use, carrying loads, and longer distances",
+            "position": 12
           },
           {
             "sentence": "gemini-2.5-flash_response",
             "domain": "**3",
-            "position": 25
+            "position": 13
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Hybrid Bikes** \n\n Hybrid bikes offer a comfortable, upright riding position and are adaptable for various terrains, from city commuting to light trails",
-            "position": 26
+            "domain": "Dutch Bikes (Roadsters)**\n*   **Why they're great:** Offer a relaxed and upright riding position, making them very comfortable and easy to get on and off",
+            "position": 14
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "They often have wider tire clearance and mounts for racks and mudguards",
-            "position": 27
+            "domain": "*   **Features:** Built-in mudguards, chain protectors, and sometimes integrated lights",
+            "position": 15
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Fuji Traverse:** A dual-sport hybrid that is good for city commuting and easy trails, featuring disc brakes",
-            "position": 28
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Temple Cycles Classic Tour / Classic Lightweight:** These steel-framed bikes are ideal for urban commuting and light touring, offering a comfortable ride",
-            "position": 29
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Specialized Sirrus X 5",
-            "position": 30
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "0:** A premium hybrid bike known for its comfort and versatility",
-            "position": 31
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Trek FX 2 Disc Equipped:** A versatile option with lights, fenders, a kickstand, and a robust luggage rack, suitable for city rides and overnight trips",
-            "position": 32
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Ribble Hybrid AL e (electric) / AL (non-assisted):** These bikes offer engaging handling and good build quality, with the AL Trail version being suitable for both tarmac and off-road use",
-            "position": 33
-          },
-          {
-            "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Giant Escape:** A sporty hybrid designed mostly for tarmac but capable of light off-road use, with good stand-over clearance and reliable gearing",
-            "position": 34
+            "domain": "*   **Good for:** Casual rides, those new to cycling, and a comfortable, stress-free experience",
+            "position": 16
           },
           {
             "sentence": "gemini-2.5-flash_response",
             "domain": "**4",
+            "position": 17
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Racing Bikes (with considerations)**\n*   **Why they're great:** Light and fast, popular for quick commutes and long distances",
+            "position": 18
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Considerations:** Thin tires can be problematic on cobblestones and tram tracks, increasing the risk of buckling or losing grip in wet conditions",
+            "position": 19
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Single-speed or fixed-gear racing bikes are best for experienced riders",
+            "position": 20
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**5",
+            "position": 21
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Folding Bikes**\n*   **Why they're great:** Lightweight, compact, and fast, they can be folded to the size of a sports bag in under a minute",
+            "position": 22
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Good for:** Commuters who need to combine cycling with public transport, as you can take them on the U-bahn or S-bahn (with some restrictions during rush hour)",
+            "position": 23
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**6",
+            "position": 24
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Electric Bikes (E-bikes)**\n*   **Why they're great:** Provide pedal assistance, reducing fatigue, especially for longer commutes or if you want an easier ride",
+            "position": 25
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Good for:** Longer distances, those who want an extra boost, and integrating with public transport",
+            "position": 26
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Bikes to generally avoid for typical Berlin cycling:**\n*   **Mountain Bikes:** While some people use them, they are generally not recommended for city riding in Berlin as they can be uncomfortable and less efficient on paved surfaces",
+            "position": 27
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Important Considerations for Cycling in Berlin:**\n*   **Bike Theft:** Bike theft is common in Berlin, with over 30,000 bicycles stolen annually",
+            "position": 28
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "It's advisable not to get a very flashy or expensive bike and to always use a strong lock, locking your bike to something else",
+            "position": 29
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Avoid leaving your bike on the street overnight if possible",
+            "position": 30
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike Requirements:** Your bicycle must have lights (white front, red rear, StVZO-compliant), reflectors (white front, red rear, two yellow per wheel/spoke, two yellow on each pedal), a bell, and working brakes",
+            "position": 31
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Road Rules:** You must ride on the street or designated bike paths, not on the sidewalk (unless you are a child up to 8 years old, or up to 10 years old, or accompanying a child)",
+            "position": 32
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Buying a Bike:** You can buy new bikes from independent bike shops (e",
+            "position": 33
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "g",
+            "position": 34
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": ", Little John Bikes) or larger stores like Décathlon",
             "position": 35
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Road Bikes** \n\n While some road bikes are designed for racing, endurance road bikes are suitable for long rides on paved European roads, offering comfort and efficiency",
+            "domain": "For used bikes, consider Berliner Fahrradmarkt, Fietsenbörse, or Kleinanzeigen, but be cautious of stolen bikes, especially at flea markets",
             "position": 36
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Giant Defy Advanced:** A highly-rated endurance bike that is lighter and faster than previous models while retaining comfort and sensible geometry",
+            "domain": "*   **Rentals:** If you're not ready to buy, Berlin has many bike rental options, including daily rentals and bike-sharing programs like Nextbike, Call a Bike, Lime, Dott, and Bolt",
             "position": 37
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Specialized Roubaix SL8 Expert:** An endurance bike that includes suspension for added comfort",
+            "domain": "Berlin is a very bike-friendly city with a flat terrain and many bike paths, making it suitable for various types of cycling and bikes",
             "position": 38
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Cervélo Caledonia 5 Ultegra Di2:** Blends the comfort and stability of an endurance bike with aero features, making it versatile for various road conditions",
+            "domain": "**Types of Bikes and Their Suitability for Berlin Cycling:**\n\n*   **Hybrid/City Bikes:** These are versatile and perfect for exploring Tempelhofer Feld, which offers varied terrain from runways to wild grass fields",
             "position": 39
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Specialized Allez:** A well-rounded aluminum road bike with disc brakes, good tire clearance, and fender mounts, suitable for fast rides and commuting",
+            "domain": "*   **Touring Bikes:** Ideal for mixed-terrain leisure rides, such as the Grunewald Forest loop, which features lakes, hills, and dunes",
             "position": 40
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "**Key Considerations for Cycling in Europe:** \n\n *   **Terrain:** Europe offers diverse landscapes, from flat river routes to mountainous regions",
+            "domain": "Electric touring bikes are also a good option for this route",
             "position": 41
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "Consider if your route will be primarily paved roads, gravel, or a mix",
+            "domain": "*   **Road Bikes:** Suitable for longer distances and paved routes",
             "position": 42
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Luggage:** If you plan multi-day trips with gear, look for bikes with mounts for racks and panniers, or consider bikepacking bags for lighter setups",
+            "domain": "The Berlin Wall Trail (Berliner Mauerweg) is largely asphalted and can be conquered in a weekend on a road bike",
             "position": 43
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Brakes:** Disc brakes are highly recommended, especially when carrying luggage, as they offer consistent and powerful stopping in all weather conditions",
+            "domain": "Other road cycling routes include loops around Treptower Park, Müggelsee, Wuhlheide, Schlosspark Niederschönhausen, Tegeler See, and the Berlin-Spandau Ship Canal",
             "position": 44
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Tires:** Wider tires (32c to 47c or even 650b x 2",
+            "domain": "*   **Gravel Bikes:** Recommended for routes with varied surfaces, including cobblestones, forest paths, and unpaved sections",
             "position": 45
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "1 inch for off-road) provide more comfort and better grip on varied surfaces like gravel, sand, and cobblestones",
+            "domain": "The Berlin Wall Trail, especially sections outside the city center, can be quite bumpy and is well-suited for a gravel bike",
             "position": 46
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Gearing:** A wide range of gears is beneficial for tackling varied terrain, including steep climbs",
+            "domain": "Some routes around Berlin, like those in the Märkische Schweiz, might have slightly hilly sections and unpaved parts where a gravel bike would be beneficial",
             "position": 47
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Frame Material:** Steel frames are often favored for touring due to their durability and comfortable ride, while aluminum and carbon offer lighter options",
+            "domain": "*   **Trekking Bikes:** These are sturdy and practical, often equipped with mudguards, dynamo lights, and a rack, making them good for general use and longer distances",
             "position": 48
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Availability:** If you're in Europe, consider brands that are widely distributed there for easier test rides and potential servicing",
+            "domain": "*   **Folding Bikes:** A convenient option for combining cycling with public transport, as they are easy to store and take on trains",
             "position": 49
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Cargo Bikes:** Useful if you need to transport children or heavy loads",
+            "position": 50
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Popular Cycling Routes Near Berlin:**\n\n*   **Berlin Wall Trail (Berliner Mauerweg):** This 160 km route traces the former border of West Berlin, offering a journey through history and diverse landscapes",
+            "position": 51
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "It can be ridden in sections, with some parts being more suitable for road bikes and others for gravel bikes due to varying surfaces",
+            "position": 52
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Tempelhofer Feld:** A decommissioned airport now a public park, offering flat terrain perfect for a relaxed ride on a hybrid city bike",
+            "position": 53
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Grunewald Forest:** A 20 km loop with lakes, hills, and dunes, ideal for touring or electric bikes",
+            "position": 54
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Tegeler See Loop:** A 30 km route in Reinickendorf that takes you along the banks of Tegeler See lake and the river Havel",
+            "position": 55
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Spandau Trail:** A relaxed 7 km path through old town Spandau, following the Havel Radweg",
+            "position": 56
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Spreewald, Brandenburg:** A 32 km relaxed cycle trail from Vetschau to Lübbenau, offering diverse animal species and cultural stops",
+            "position": 57
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Dahlem Route:** An 18 km circular route through a charming part of Berlin with quiet paths, lakes (Krumme Lanke and Schlachtensee), museums, and cafes",
+            "position": 58
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Wannsee-Babelsberg Route:** An almost 19 km route through the UNESCO World Heritage Palaces and Parks of Potsdam and Berlin, passing lakes, royal residences, and historic sites",
+            "position": 59
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Berlin-Copenhagen Cycle Route:** You can ride a section of this long-distance route towards Hennigsdorf, passing through Spandauer and Tegeler Forst",
+            "position": 60
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Oder-Spree-Tour:** A nearly 300 km loop through forests, lakes, and canals in Brandenburg, suitable for nature lovers",
+            "position": 61
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Havel Cycle Route:** A long-distance route in Brandenburg",
+            "position": 62
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Bike Rental in Berlin:**\n\nYou can rent bikes in Berlin from various providers, including:\n*   Bike 44 (offers basic bicycles from €5/day)\n*   Berlin on Bike\n*   Fat Tire Tours\n*   Fahrradstation\n*   Bike-sharing programs like Nextbike and Donkey Republic (for regular bikes), and Tier and Lime (for e-bikes)\n\nMany bike-friendly hotels also offer bike rentals and provide maps and tools",
+            "position": 63
           }
         ],
         "domain_citations": 0,
-        "competitor_citations": 49,
-        "total_citations": 49,
+        "competitor_citations": 63,
+        "total_citations": 63,
         "domain_share": 0,
         "first_mention_position": null,
         "performance_rating": "absent"
@@ -2019,37 +1674,37 @@
         "competitor_mentions": [
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "For those in Berlin looking for a fast city bike, several options cater to speed, lightweight design, and urban maneuverability",
+            "domain": "Berlin offers a variety of options for those seeking fast city bikes, whether for purchase or rental",
             "position": 1
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "**Bikes Designed for Speed and Agility:**\n*   **Veloretti Berlin:** This model is highlighted for its speed and light weight, at just 11",
+            "domain": "Several shops specialize in urban and commuter bikes designed for speed and efficiency in the city",
             "position": 2
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "7 kg due to its aluminum frame",
+            "domain": "**Bikes for Purchase:**\n\n*   **Veloretti Berlin:** The Veloretti Berlin is highlighted as a light city bike, weighing just 11",
             "position": 3
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "It features a retro racing look and is designed for quick movement through the city",
+            "domain": "7 kg due to its aluminum frame, making it easy to handle and fast for city riding",
             "position": 4
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "It comes with a single-speed hub and an internal coaster brake",
+            "domain": "It features a retro racing look and is available in various pastel colors",
             "position": 5
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Brompton P Line:** If you're considering a folding bike, the Brompton P Line is known for its innovation, lightness, and high performance",
+            "domain": "*   **Brompton P Line:** For commuters and city riders looking for a high-quality, practical, and stylish folding bike, the Brompton P Line is a strong contender",
             "position": 6
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "It features a high-quality aluminum-titanium frame, making it the lightest Brompton model and ideal for commuters who frequently carry or transport their bike",
+            "domain": "It's the lightest Brompton model, featuring an aluminum-titanium frame for excellent riding performance",
             "position": 7
           },
           {
@@ -2059,78 +1714,424 @@
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "It boasts a powerful, torque-sensing electric system, a lightweight design, and a dual suspension kit, built for performance in urban environments",
+            "domain": "It boasts a powerful, torque-sensing electric system, a lightweight design, and a dual suspension kit for performance and comfort",
             "position": 9
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "It's also designed for comfort with front suspension and a wide gel saddle",
+            "domain": "*   **Bike Punk Shop:** This shop offers a wide selection of city, urban, and commuter bikes from manufacturers like 6KU and BLB, emphasizing durability, practical features, and modern design for fast and flexible urban travel",
             "position": 10
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "**Where to Find Fast City Bikes in Berlin:**\n*   **Bike Punk Shop:** This shop offers a diverse selection of city, urban, and commuter bikes from manufacturers like 6KU and BLB, emphasizing speed, flexibility, and eco-consciousness for urban travel",
+            "domain": "*   **Fahrradstation Berlin:** As one of Berlin's oldest bike stores, Fahrradstation offers a variety of new and used bikes, including city bikes, touring bikes, and racing bikes",
             "position": 11
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "They have a showroom in Berlin-Kreuzberg",
+            "domain": "*   **Bikeopia:** For those interested in quality used bikes, Bikeopia specializes in high-end, vintage bikes from brands like Motobecane, Koga Miyata, and Peugeot, which can offer a great ride at a lower cost",
             "position": 12
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Fahrradstation Berlin:** As one of Berlin's oldest bike stores, Fahrradstation offers a variety of new and used bikes, including city bikes, and provides services like repairs and rentals",
+            "domain": "They also customize bikes to fit individual needs",
             "position": 13
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Trek Bicycle Berlin-Mitte:** This store offers various bike types, including city bikes, and provides services like 24-hour turnaround on repairs for any bike brand",
+            "domain": "*   **Trek Bicycle Berlin-Mitte:** Trek offers various city and hybrid bikes, including models like the Verve and FX Sport, designed for comfort, active riding, and fitness",
             "position": 14
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "They also offer bike rentals",
+            "domain": "*   **Just Bikes:** This store in Berlin offers Airtracks city bikes for men and women",
             "position": 15
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Bikeopia:** For those interested in quality used bikes, Bikeopia specializes in vintage high-end bikes from the 80s and 90s that are in great condition and can be customized",
+            "domain": "**Bike Rental Options:**\n\n*   **Fahrradstation Berlin:** In addition to sales, Fahrradstation provides bike rentals, including high-quality city bikes for exploring Berlin",
             "position": 16
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "They offer city bikes, touring bikes, and vintage racers from brands like Motobecane, Koga Miyata, and Specialized",
+            "domain": "*   **Free Berlin Tours:** This rental service, centrally located near Alexanderplatz, offers city bikes, trekking bikes, and e-bikes",
             "position": 17
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Just Bikes:** You can find new city bikes for men and women from Airtracks at Just Bikes in Berlin",
+            "domain": "They provide various rental durations and include locks and helmets",
             "position": 18
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "**Bike Rental Options for Fast City Rides:**\n*   **Swapfiets:** This service offers monthly bike subscriptions in Berlin, including city bikes and e-bikes, with free check-ups and repairs",
+            "domain": "*   **Swapfiets:** This service offers bike subscriptions in Berlin, providing a high-quality bike (including city bikes and e-bikes) for a fixed monthly fee that covers free check-ups and repairs",
             "position": 19
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Nextbike:** As the official bike-sharing system of Berlin, Nextbike allows for easy and fast rentals through their app, with affordable tariffs",
+            "domain": "*   **Nextbike:** As the official bike-sharing system of Berlin, Nextbike allows users to rent bikes easily through an app, offering an affordable and sustainable way to get around the city quickly",
             "position": 20
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "*   **Free Berlin Tours:** This rental point, located near Alexanderplatz, offers various bikes including \"sportive trekking bikes\" with 7 speeds for a flexible and fast ride",
+            "domain": "*   **Trek Bicycle Berlin-Mitte:** This location also offers bike rentals",
+            "position": 21
+          }
+        ],
+        "domain_citations": 0,
+        "competitor_citations": 21,
+        "total_citations": 21,
+        "domain_share": 0,
+        "first_mention_position": null,
+        "performance_rating": "absent"
+      },
+      "best bikes for cycling in Europe": {
+        "domain_mentions": [],
+        "competitor_mentions": [
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "The best bike for cycling in Europe depends heavily on the type of cycling you plan to do",
+            "position": 1
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Europe offers a diverse range of terrain and cycling experiences, from paved roads and city commutes to gravel paths and challenging mountain trails",
+            "position": 2
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Here's a breakdown of bike types and recommended models suitable for European cycling:\n\n**1",
+            "position": 3
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Touring Bikes**\nTouring bikes are designed for long-distance travel and carrying luggage, making them ideal for multi-day trips across Europe",
+            "position": 4
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are built for robustness and reliability, often featuring steel frames for comfort and durability, and multiple mounting points for racks and panniers",
+            "position": 5
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Characteristics:**\n    *   Sturdy frames (often steel) for carrying heavy loads",
+            "position": 6
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Comfortable geometry for long hours in the saddle",
+            "position": 7
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Numerous mounts for racks, fenders, and bottle cages",
+            "position": 8
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Wide gear ranges to handle varied terrain, including hills",
+            "position": 9
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Disc brakes for reliable stopping power in all weather conditions, especially with luggage",
+            "position": 10
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Tires that can handle a mix of paved roads, gravel, and cobblestones",
+            "position": 11
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Recommended Models:**\n    *   **Cube Touring Pro:** Considered a great value and widely available in Europe",
+            "position": 12
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Ridgeback Panorama/Expedition:** British-designed, chromoly steel frames with disc brakes and durable components",
+            "position": 13
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fuji Touring LTD/Disc LTD:** Entry-level options with steel frames, classic touring geometry, and included racks and mudguards",
+            "position": 14
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Surly Disc Trucker:** A popular and legendary touring bike known for its sturdy frame and reliability",
+            "position": 15
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Kona Sutra SE:** A high-end touring bike offering excellent performance and comfort",
+            "position": 16
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Oxford Bike Works Expedition:** Custom-built steel touring bikes with high-end components",
+            "position": 17
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Genesis Tour de Fer 30:** A versatile and durable steel touring bike with disc brakes and wide-ranging gears",
+            "position": 18
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fairlight Cycles Faran 2",
+            "position": 19
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "0:** A dedicated bikepacking and touring bike that can be customized",
+            "position": 20
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Temple Cycles Classic Tour:** A classic steel touring bike",
             "position": 21
           },
           {
             "sentence": "gemini-2.5-flash_response",
-            "domain": "They also have city bikes and e-bikes available for rent",
+            "domain": "**2",
             "position": 22
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Gravel Bikes**\nGravel bikes are highly versatile, blending features of road and mountain bikes",
+            "position": 23
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are excellent for mixed-terrain cycling, including paved roads, gravel paths, and light trails, which are common in many European regions",
+            "position": 24
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Characteristics:**\n    *   Drop bars like road bikes, but with more relaxed geometry for comfort and stability",
+            "position": 25
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Generous tire clearance to accommodate wider, more comfortable tires with varying tread patterns for different surfaces",
+            "position": 26
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Disc brakes for effective stopping on varied terrain",
+            "position": 27
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Mounts for bikepacking bags and fenders",
+            "position": 28
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Often lighter than traditional touring bikes, making them suitable for faster-paced adventures",
+            "position": 29
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Recommended Models:**\n    *   **Canyon Grizl CF SL 8 1BY:** A versatile adventure gravel bike with ample tire clearance and numerous mounts for bikepacking",
+            "position": 30
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Canyon Grail CF SLX 8 AXS:** A fast and capable gravel bike, also from Canyon",
+            "position": 31
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Ribble Gravel SL Pro:** Offers good value and is fast and forgiving on open gravel roads",
+            "position": 32
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Orbea Terra M21e Team 1X:** A fast and capable gravel bike with a lightweight frame and bikepacking mounts",
+            "position": 33
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fairlight Secan 2",
+            "position": 34
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "5:** A highly recommended bikepacking bike",
+            "position": 35
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Merida Silex 700:** An aluminum-framed option with a refreshed geometry for stability on tougher gravel",
+            "position": 36
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Rose Backroad/Backroad AL:** Versatile aluminum and carbon options for all-road and adventure cycling",
+            "position": 37
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Specialized S-Works Crux:** An extremely lightweight gravel bike, suitable for racing",
+            "position": 38
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**3",
+            "position": 39
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Hybrid Bikes**\nHybrid bikes offer a comfortable, upright riding position and are versatile for city commuting, leisure rides, and light off-road paths",
+            "position": 40
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Characteristics:**\n    *   Flat handlebars for improved handling and visibility",
+            "position": 41
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Relaxed geometry for comfort",
+            "position": 42
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Wider tires than road bikes, providing comfort and grip on various surfaces",
+            "position": 43
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Often include mounts for mudguards and racks",
+            "position": 44
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Disc brakes are common for consistent stopping power",
+            "position": 45
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Recommended Models:**\n    *   **Fuji Traverse:** A dual-sport hybrid suitable for city streets and easy trails",
+            "position": 46
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Temple Cycles Classic Lightweight:** A steel-framed hybrid ideal for urban commuting and everyday trail adventures",
+            "position": 47
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Specialized Sirrus X 5",
+            "position": 48
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "0:** A premium hybrid bike",
+            "position": 49
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Trek FX Sport 4/5 or FX 2 Disc Equipped:** Versatile options for fitness, commuting, and light touring",
+            "position": 50
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Ribble Hybrid AL e (electric) or AL (non-assisted):** Offers engaging handling and good value",
+            "position": 51
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Giant Escape:** A sporty hybrid designed mostly for tarmac but capable of light off-road use",
+            "position": 52
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**4",
+            "position": 53
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Road Bikes**\nIf your cycling in Europe will primarily be on paved roads, especially for faster rides or racing, a road bike is suitable",
+            "position": 54
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Characteristics:**\n    *   Lightweight frames for speed and climbing",
+            "position": 55
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Drop handlebars for aerodynamic riding positions",
+            "position": 56
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Narrower tires for less rolling resistance on smooth surfaces",
+            "position": 57
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Recommended Models (generally high-performance and often pricier):**\n    *   **Specialized S-Works Tarmac SL8:** An excellent all-around race bike, blending aerodynamics, stiffness, and comfort",
+            "position": 58
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Giant Defy Advanced:** A top endurance bike known for comfort and sensible geometry",
+            "position": 59
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Cervélo Caledonia 5 Ultegra Di2:** Blends endurance comfort with aero features, making it versatile",
+            "position": 60
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Merida Scultura 9000:** A good value race bike",
+            "position": 61
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Canyon Ultimate/Aeroad:** Known for great features and competitive pricing, with the Aeroad excelling in aerodynamics",
+            "position": 62
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Key Considerations for Cycling in Europe:**\n\n*   **Terrain:** Consider the types of surfaces you'll be riding on",
+            "position": 63
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Paved roads, cobblestones, gravel paths, or mountain trails will influence your tire choice and bike type",
+            "position": 64
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Luggage:** If you plan to carry gear for multi-day trips, ensure the bike has appropriate mounting points for racks and panniers, or is suitable for bikepacking bags",
+            "position": 65
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Brakes:** Disc brakes are highly recommended for their consistent performance in all weather conditions, especially when carrying luggage or on varied terrain",
+            "position": 66
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Maintenance:** Knowing how to perform basic repairs, like changing a flat tire, is crucial, as bike shops might not always be readily available in remote areas",
+            "position": 67
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Availability:** Some European brands like Cube, Rose, VSF Fahrradmanufaktur, and Patria are popular and widely distributed within Europe, potentially making it easier to find and test ride bikes",
+            "position": 68
           }
         ],
         "domain_citations": 0,
-        "competitor_citations": 22,
-        "total_citations": 22,
+        "competitor_citations": 68,
+        "total_citations": 68,
         "domain_share": 0,
         "first_mention_position": null,
         "performance_rating": "absent"
@@ -2151,13 +2152,13 @@
           ],
           "competitor_count": 28,
           "competitor_info": [
-            "Domain fietsenboerse.de was cited for query 'cheapest bicycle Berlin' with content: \"You can compare prices, test ride bikes, and get advice from independent specialists.\"",
-            "Domain berlin.de was cited for query 'cheapest bicycle Berlin' with content: \"You can compare prices, test ride bikes, and get advice from independent specialists.\"",
-            "Domain visitberlin.de was cited for query 'cheapest bicycle Berlin' with content: \"They offer a wide selection of used bicycles and provide free, independent purchasing advice.\"",
-            "Domain allaboutberlin.com was cited for query 'cheapest bicycle Berlin' with content: \"They offer a wide selection of used bicycles and provide free, independent purchasing advice.\"",
-            "Domain bikeopia.com was cited for query 'cheapest bicycle Berlin' with content: \"Their prices range from 400 to 1500 euros, and they offer a 6-month warranty on all bikes.\""
+            "Domain fietsenboerse.de was cited for query 'cheapest bicycle Berlin' with content: \"You can test ride bikes and get independent advice.\"",
+            "Domain berlin.de was cited for query 'cheapest bicycle Berlin' with content: \"You can test ride bikes and get independent advice.\"",
+            "Domain visitberlin.de was cited for query 'cheapest bicycle Berlin' with content: \"They offer a large selection of used bikes and provide free, independent purchasing advice.\"",
+            "Domain allaboutberlin.com was cited for query 'cheapest bicycle Berlin' with content: \"They offer a large selection of used bikes and provide free, independent purchasing advice.\"",
+            "Domain bikeopia.com was cited for query 'cheapest bicycle Berlin' with content: \"Their prices range from 400 to 1500 Euros, and they offer a 6-month warranty on all bikes.\""
           ],
-          "gemini_analysis": "Just-bikes.de likely lacked specific, actionable information on where to find genuinely *cheap* bicycles in Berlin, such as price ranges, options for used bikes, or direct links to independent shops offering affordability and advice, which the cited competitors provided."
+          "gemini_analysis": "Just-bikes.de likely lacked specific information about local purchasing options, services like test rides and advice, price ranges, and warranties, which were key elements in the cited competitor content."
         },
         "cycle fast; city bikes; berlin": {
           "performance_rating": "poor",
@@ -2171,13 +2172,13 @@
           ],
           "competitor_count": 21,
           "competitor_info": [
-            "Domain veloretti.com was cited for query 'fast city bikes Berlin' with content: \"It comes with a single-speed hub and an internal coaster brake.\"",
-            "Domain theurbanmobilitystore.com was cited for query 'fast city bikes Berlin' with content: \"It features a high-quality aluminum-titanium frame, making it the lightest Brompton model and ideal for commuters who frequently carry or transport their bike.\"",
-            "Domain mod-bikes.com was cited for query 'fast city bikes Berlin' with content: \"It's also designed for comfort with front suspension and a wide gel saddle.\"",
-            "Domain bikepunkshop.com was cited for query 'fast city bikes Berlin' with content: \"They have a showroom in Berlin-Kreuzberg.\"",
-            "Domain fahrradstation.com was cited for query 'fast city bikes Berlin' with content: \"*   **Fahrradstation Berlin:** As one of Berlin's oldest bike stores, Fahrradstation offers a variety of new and used bikes, including city bikes, and provides services like repairs and rentals.\""
+            "Domain veloretti.com was cited for query 'fast city bikes Berlin' with content: \"It features a retro racing look and is available in various pastel colors.\"",
+            "Domain theurbanmobilitystore.com was cited for query 'fast city bikes Berlin' with content: \"It's the lightest Brompton model, featuring an aluminum-titanium frame for excellent riding performance.\"",
+            "Domain mod-bikes.com was cited for query 'fast city bikes Berlin' with content: \"It boasts a powerful, torque-sensing electric system, a lightweight design, and a dual suspension kit for performance and comfort.\"",
+            "Domain bikepunkshop.com was cited for query 'fast city bikes Berlin' with content: \"*   **Bike Punk Shop:** This shop offers a wide selection of city, urban, and commuter bikes from manufacturers like 6KU and BLB, emphasizing durability, practical features, and modern design for fast and flexible urban travel.\"",
+            "Domain fahrradstation.com was cited for query 'fast city bikes Berlin' with content: \"*   **Fahrradstation Berlin:** As one of Berlin's oldest bike stores, Fahrradstation offers a variety of new and used bikes, including city bikes, touring bikes, and racing bikes.\""
           ],
-          "gemini_analysis": "Just-bikes.de likely lacked specific content about **local availability in Berlin, unique bike features (like lightweight materials or comfort aspects), or direct product benefits related to speed and city commuting** that the competitors provided."
+          "gemini_analysis": "Just-bikes.de likely lacked specific product descriptions emphasizing speed, lightweight features, electric assistance, or direct mentions of Berlin-specific availability/shops for \"fast city bikes.\""
         }
       },
       "has_poor_performance": true,
@@ -2186,7 +2187,7 @@
     "domain_detailed_stats": {
       "total_appearances": 7,
       "total_citations": 7,
-      "retrieval_rate": 0.2916666666666667,
+      "retrieval_rate": 0.3181818181818182,
       "usage_rate": 1,
       "avg_citation_rank": 9.142857142857142,
       "min_citation_rank": 8,
@@ -2197,7 +2198,7 @@
       "query_appearances": [
         "cheapest bicycle Berlin",
         "used bicycles Berlin",
-        "budget bicycles Berlin",
+        "budget bikes Berlin",
         "affordable bikes Berlin",
         "fast city bikes Berlin",
         "Berlin bike shops fast city bikes",
@@ -2215,31 +2216,31 @@
     },
     "intersecting_queries": {},
     "recommendations": [
-      "Just-bikes.de likely lacked specific, actionable information on where to find genuinely *cheap* bicycles in Berlin, such as price ranges, options for used bikes, or direct links to independent shops offering affordability and advice, which the cited competitors provided.",
-      "Just-bikes.de likely lacked specific content about **local availability in Berlin, unique bike features (like lightweight materials or comfort aspects), or direct product benefits related to speed and city commuting** that the competitors provided."
+      "Just-bikes.de likely lacked specific information about local purchasing options, services like test rides and advice, price ranges, and warranties, which were key elements in the cited competitor content.",
+      "Just-bikes.de likely lacked specific product descriptions emphasizing speed, lightweight features, electric assistance, or direct mentions of Berlin-specific availability/shops for \"fast city bikes.\""
     ],
     "competitive_insights": {
       "market_position": "emerging_player",
       "key_competitors": [
         {
           "domain": "reddit.com",
-          "frequency": 18
-        },
-        {
-          "domain": "visitberlin.de",
           "frequency": 13
         },
         {
+          "domain": "visitberlin.de",
+          "frequency": 8
+        },
+        {
+          "domain": "allaboutberlin.com",
+          "frequency": 7
+        },
+        {
           "domain": "bikeopia.com",
-          "frequency": 11
+          "frequency": 7
         },
         {
-          "domain": "berlin.de",
-          "frequency": 9
-        },
-        {
-          "domain": "sustainablecities.travel",
-          "frequency": 9
+          "domain": "nextbike.de",
+          "frequency": 7
         }
       ],
       "competitive_advantages": [
@@ -2257,7 +2258,7 @@
     "experiment_files": [
       "gemini_experiment_results.json"
     ],
-    "total_prompts_analyzed": 6,
+    "total_prompts_analyzed": 5,
     "has_gemini_api": true,
     "has_response_chunks": true,
     "analysis_timestamp": null
