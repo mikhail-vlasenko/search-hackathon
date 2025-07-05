@@ -1,13 +1,19 @@
 from google import genai
 from google.genai import types
+from google.api_core.client_options import ClientOptions
+
+# from google.cloud import discoveryengine_v1 as discoveryengine
+import warnings
 import json
 import re
 import os
 from typing import List, Dict, Any
 import time
+import random
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from googlesearch import search
 from urllib.parse import urlparse
+import traceback as tb
 import requests
 
 
@@ -53,7 +59,7 @@ def search_and_match_domains(
 
         urls = []
         for i, url in enumerate(search_results):
-            print(f"Loaded {url}")
+            # print(f"Loaded {url}")
             if i > 10:
                 break
             time.sleep(0.1)
@@ -65,9 +71,9 @@ def search_and_match_domains(
 
             # Match against target domains
             for turl in target_uris:
-                if turl in url or url in turl:
+                if turl == url:
                     domain_to_url[turl] = url
-                    print(f"Found {url}")
+                    print(f"\t\tFound {url}")
                     break
 
         for url in urls:
@@ -78,7 +84,7 @@ def search_and_match_domains(
             for target_domain, turl in zip(target_domains, target_uris):
                 if turl in domain_to_url:
                     break
-                if target_domain in result_domain or result_domain in target_domain:
+                if turl == url:
                     domain_to_url[turl] = url
                     print(f"Found {url}")
                     break
@@ -87,6 +93,10 @@ def search_and_match_domains(
 
     except Exception as e:
         print(f"Error searching for query '{query}': {e}")
+        # Add randomized delay to avoid rate limiting
+        delay = random.uniform(1, 5)
+        print(f"Adding {delay:.2f}s delay after error")
+        time.sleep(delay)
         return {}
 
 
@@ -106,17 +116,24 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
         all_queries = grounding_metadata.web_search_queries
         supports = grounding_metadata.grounding_supports
         chunks = grounding_metadata.grounding_chunks
+        if chunks is None:
+            warnings.warn(f"Ultra bad, {response.candidates[0].contents}")
 
         # Extract all domains from chunk titles
         chunk_domains = []
         chunk_uri = []
         for chunk in chunks:
-            domain = get_domain_from_title(chunk.web.title)
-            chunk_uri.append(decode_uri(chunk.web.uri))
-            chunk_domains.append(domain)
+            uri, title = (
+                decode_uri(chunk.web.uri),
+                get_domain_from_title(chunk.web.title),
+            )
+            print(uri, title)
+            chunk_uri.append(uri)
+            chunk_domains.append(title)
 
         # Build citation indices for each chunk
         chunk_citations = {}  # chunk_index -> list of citation indices
+        chunk_contents = {}
 
         # Sort supports by start index to get citation order
         sorted_supports = sorted(supports, key=lambda s: s.segment.start_index)
@@ -127,42 +144,136 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
                     if chunk_idx < len(chunks):
                         if chunk_idx not in chunk_citations:
                             chunk_citations[chunk_idx] = []
+                            chunk_contents[chunk_idx] = []
                         chunk_citations[chunk_idx].append(citation_idx)
+                        chunk_contents[chunk_idx].append(support.segment.text)
 
-        # Now attribute domains to queries by searching
+        # Now attribute domains to queries by searching (parallelized)
         result = {}
 
-        for query in all_queries:
-            print(f"Searching for: {query}")
+        # Use ThreadPoolExecutor to parallelize Google searches
+        with ThreadPoolExecutor(max_workers=min(len(all_queries), 10)) as executor:
+            # Submit all search tasks
+            future_to_query = {
+                executor.submit(
+                    search_and_match_domains, query, chunk_domains, chunk_uri
+                ): query
+                for query in all_queries
+            }
 
-            # Search Google and match domains
-            url_to_url = search_and_match_domains(query, chunk_domains, chunk_uri)
+            # Collect results as they complete
+            for future in as_completed(future_to_query):
+                query = future_to_query[future]
+                # print(f"Searching for: {query}")
 
-            query_results = {}
+                try:
+                    url_to_url = future.result()
+                    query_results = {}
 
-            # For each chunk, check if we found a matching URL
-            for chunk_idx, chunk in enumerate(chunks):
-                domain = chunk_domains[chunk_idx]
-                url = chunk_uri[chunk_idx]
-                grounding_uri = chunk_uri[chunk_idx]
-                print(f"The grounding uri is {grounding_uri}")
-                citations = chunk_citations.get(chunk_idx, [])
+                    # For each chunk, check if we found a matching URL
+                    for chunk_idx, chunk in enumerate(chunks):
+                        domain = chunk_domains[chunk_idx]
+                        grounding_uri = chunk_uri[chunk_idx]
+                        # print(f"The grounding uri is {grounding_uri}")
+                        citations = chunk_citations.get(chunk_idx, [])
+                        contents = chunk_contents.get(chunk_idx, [])
+                        refs = {"citations": citations, "contents": contents}
 
-                if url in url_to_url:
-                    # Found a matching URL from Google search
-                    url = url_to_url[url]
-                    query_results[url] = citations
-                else:
-                    # No matching URL found, use a placeholder
-                    query_results[f"https://{domain}"] = citations
+                        if grounding_uri in url_to_url:
+                            # Found a matching URL from Google search
+                            url = url_to_url[grounding_uri]
+                            query_results[url] = refs
+                        else:
+                            # No matching URL found, use a placeholder
+                            continue
+                            query_results[grounding_uri] = refs
 
-            result[query] = query_results
+                    result[query] = query_results
+
+                except Exception as e:
+                    print(f"Error searching for query '{query}': {e}")
+                    # Add randomized delay to avoid rate limiting
+                    delay = random.uniform(1, 5)
+                    print(f"Adding {delay:.2f}s delay before next request")
+                    time.sleep(delay)
+                    result[query] = {}
 
         return result
 
     except Exception as e:
-        print(f"Error extracting searches and citations: {e}")
+        print(f"Error extracting searches and citations: {tb.format_exception(e)}")
         return {}
+
+
+def call_google_search_model(
+    prompt: str, project_id: str, location: str, engine_id: str
+) -> Dict[str, Any]:
+    """Call Google Search model using Discovery Engine to extract summaries."""
+    try:
+        client_options = (
+            ClientOptions(api_endpoint=f"{location}-discoveryengine.googleapis.com")
+            if location != "global"
+            else None
+        )
+
+        client = discoveryengine.ConversationalSearchServiceClient(
+            client_options=client_options
+        )
+
+        serving_config = f"projects/{project_id}/locations/{location}/collections/default_collection/engines/{engine_id}/servingConfigs/default_serving_config"
+
+        query_understanding_spec = discoveryengine.AnswerQueryRequest.QueryUnderstandingSpec(
+            query_rephraser_spec=discoveryengine.AnswerQueryRequest.QueryUnderstandingSpec.QueryRephraserSpec(
+                disable=False,
+                max_rephrase_steps=1,
+            ),
+            query_classification_spec=discoveryengine.AnswerQueryRequest.QueryUnderstandingSpec.QueryClassificationSpec(
+                types=[
+                    discoveryengine.AnswerQueryRequest.QueryUnderstandingSpec.QueryClassificationSpec.Type.ADVERSARIAL_QUERY,
+                    discoveryengine.AnswerQueryRequest.QueryUnderstandingSpec.QueryClassificationSpec.Type.NON_ANSWER_SEEKING_QUERY,
+                ]
+            ),
+        )
+
+        answer_generation_spec = discoveryengine.AnswerQueryRequest.AnswerGenerationSpec(
+            ignore_adversarial_query=False,
+            ignore_non_answer_seeking_query=False,
+            ignore_low_relevant_content=False,
+            model_spec=discoveryengine.AnswerQueryRequest.AnswerGenerationSpec.ModelSpec(
+                model_version="gemini-2.0-flash-001/answer_gen/v1",
+            ),
+            prompt_spec=discoveryengine.AnswerQueryRequest.AnswerGenerationSpec.PromptSpec(
+                preamble="Give a detailed answer.",
+            ),
+            include_citations=True,
+            answer_language_code="en",
+        )
+
+        request = discoveryengine.AnswerQueryRequest(
+            serving_config=serving_config,
+            query=discoveryengine.Query(text=prompt),
+            session=None,
+            query_understanding_spec=query_understanding_spec,
+            answer_generation_spec=answer_generation_spec,
+        )
+
+        response = client.answer_query(request)
+
+        return {
+            "model": "Google Search",
+            "response": response.answer.answer_text if response.answer else "",
+            "web_searches": {},
+            "success": True,
+        }
+
+    except Exception as e:
+        return {
+            "model": "Google Search",
+            "response_text": "",
+            "web_searches": {},
+            "success": False,
+            "error": str(e),
+        }
 
 
 def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, Any]:
@@ -177,6 +288,8 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
         config = types.GenerateContentConfig(
             tools=[grounding_tool],
             max_output_tokens=2048,
+            temperature=1.0,
+            seed=random.randint(1, 10000),
             thinking_config=types.ThinkingConfig(
                 thinking_budget=0
             ),  # Disable thinking for speed
@@ -185,6 +298,12 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
         response = client.models.generate_content(
             model=model_name, contents=prompt, config=config
         )
+        try:
+            print(
+                f"Got response from the {model_name} {prompt}: {response.text[:50]}; {len(response.candidates)}"
+            )
+        except:
+            pass
 
         search_citations = {}
         for i in range(5):
@@ -192,7 +311,7 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
                 search_citations = extract_searches_and_citations(response)
                 break
             except Exception as e:
-                print(f"FUCK FUCK FUCK FUCK with {e}")
+                warnings.warn(f"FUCK FUCK FUCK FUCK with {e}")
                 pass
 
         return {
@@ -206,14 +325,19 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
         return {
             "model": model_name,
             "response_text": "",
-            "web_searches": [],
+            "web_searches": {"citations": [], "contents": []},
             "success": False,
             "error": str(e),
         }
 
 
 def run_all_gemini_models(
-    prompt: str, api_key: str = None, runs_per_model: int = 1
+    prompt: str,
+    api_key: str = None,
+    runs_per_model: int = 2,
+    project_id: str = None,
+    location: str = "global",
+    engine_id: str = None,
 ) -> Dict[str, List[Dict[str, Any]]]:
     """
     Run experiments with multiple Gemini models and extract web tool calls.
@@ -222,6 +346,9 @@ def run_all_gemini_models(
         prompt: The prompt to send to the models
         api_key: Google API key (if None, will try to get from environment)
         runs_per_model: Number of times to run each model (default: 10)
+        project_id: Google Cloud project ID for Google Search model
+        location: Google Cloud location for Google Search model
+        engine_id: Discovery Engine ID for Google Search model
 
     Returns:
         Dictionary with model names as keys and lists of results as values
@@ -233,7 +360,7 @@ def run_all_gemini_models(
                 "API key must be provided or set in GEMINI_API_KEY environment variable"
             )
 
-    # Available Gemini models
+    # Available models
     models = [
         "gemini-2.5-flash",
         # "gemini-2.5-pro",
@@ -241,10 +368,14 @@ def run_all_gemini_models(
         # "gemini-1.5-flash",
     ]
 
+    # Add Google Search model if credentials are provided
+    if project_id and engine_id:
+        models.append("Google Search")
+
     results = {}
 
     for model_name in models:
-        print(f"Running experiments with {model_name}...")
+        print(f"Running experiments with {model_name} on {prompt}...")
         model_results = []
 
         # Use ThreadPoolExecutor for parallel execution
@@ -252,36 +383,58 @@ def run_all_gemini_models(
             futures = []
 
             for run_num in range(runs_per_model):
-                future = executor.submit(call_gemini_model, model_name, prompt, api_key)
+                if model_name == "Google Search":
+                    future = executor.submit(
+                        call_google_search_model,
+                        prompt,
+                        project_id,
+                        location,
+                        engine_id,
+                    )
+                else:
+                    future = executor.submit(
+                        call_gemini_model, model_name, prompt, api_key
+                    )
                 futures.append((future, run_num))
 
             for future, run_num in futures:
-                try:
-                    result = future.result(timeout=60)
-                    result["run_number"] = run_num + 1
-                    model_results.append(result)
+                for attempt_idx in range(3):
+                    try:
+                        result = future.result(timeout=300)
+                        result["run_number"] = run_num + 1
+                        model_results.append(result)
 
-                    if result["success"]:
-                        print(
-                            f"  Run {run_num + 1}: Found {len(result['web_searches'])} web searches"
-                        )
-                    else:
-                        print(
-                            f"  Run {run_num + 1}: Failed - {result.get('error', 'Unknown error')}"
-                        )
+                        print(f"{prompt}:")
+                        if result["success"]:
+                            print(
+                                f"  Run {run_num + 1}: Found {len(result['web_searches'])} web searches"
+                            )
+                            break
+                        else:
+                            print(
+                                f"  Run {run_num + 1}: Failed - {result.get('error', 'Unknown error')}"
+                            )
+                            print("Retrying....")
 
-                except Exception as e:
-                    print(f"  Run {run_num + 1}: Timeout or error - {str(e)}")
-                    model_results.append(
-                        {
-                            "model": model_name,
-                            "run_number": run_num + 1,
-                            "response_text": "",
-                            "web_searches": [],
-                            "success": False,
-                            "error": str(e),
-                        }
-                    )
+                    except Exception as e:
+                        print(f"  Run {run_num + 1}: Timeout or error - {str(e)}")
+                        # Add randomized delay to avoid rate limiting
+                        delay = random.uniform(1, 3)
+                        print(f"Adding {delay:.2f}s delay before retry")
+                        time.sleep(delay)
+                        model_results.append(
+                            {
+                                "model": model_name,
+                                "run_number": run_num + 1,
+                                "response_text": "",
+                                "web_searches": [],
+                                "success": False,
+                                "error": str(e),
+                            }
+                        )
+                        warnings.warn(
+                            f"Retrying; it was a total failure btw: {tb.format_exception(e)}"
+                        )
 
         results[model_name] = model_results
         time.sleep(1)  # Brief pause between models
@@ -316,49 +469,59 @@ def summarize_results(results: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any
     return summary
 
 
-def main():
-    """Example usage of the Gemini experiment function."""
-    # Example prompt
-    prompt = "What are the best AI SEO companies in Germany right now?"
+def respond(prompts):
+    # Google Cloud configuration for Google Search model
+    project_id = None  # os.getenv("GOOGLE_CLOUD_PROJECT")
+    location = "global"  # os.getenv("GOOGLE_CLOUD_LOCATION", "global")
+    engine_id = None  # os.getenv("GOOGLE_CLOUD_ENGINE_ID")
 
-    try:
-        # Run experiments
-        results = run_all_gemini_models(prompt)
+    def process_prompt(prompt):
+        for i in range(3):
+            try:
+                results = run_all_gemini_models(
+                    prompt,
+                    project_id=project_id,
+                    location=location,
+                    engine_id=engine_id,
+                )
 
-        # Summarize results
-        summary = summarize_results(results)
+                summary = summarize_results(results)
 
-        # Print results
-        print("\n" + "=" * 60)
-        print("EXPERIMENT RESULTS SUMMARY")
-        print("=" * 60)
+                return {"prompt": prompt, "results": results, "summary": summary}
+            except Exception as e:
+                print(f"Error running experiments: {e}, retrying")
+                if i == 2:
+                    warnings.warn(
+                        f"FUCK FUCK FUCK FUCK FUCK - stuff is breaking very badly, probably rate limiting or whatever? {tb.format_exception(e)}"
+                    )
+                # Add randomized delay to avoid rate limiting
+                delay = random.uniform(3, 10)
+                print(f"Adding {delay:.2f}s delay before retry")
+                time.sleep(delay)
+        return None
 
-        for model_name, stats in summary.items():
-            print(f"\n{model_name}:")
-            print(
-                f"  Success Rate: {stats['success_rate']:.1%} ({stats['successful_runs']}/{stats['total_runs']})"
-            )
-            print(f"  Total Web Searches: {stats['total_web_searches']}")
-            print(f"  Unique Web Searches: {stats['unique_web_searches']}")
+    all_results = []
+    with ThreadPoolExecutor(max_workers=len(prompts)) as executor:
+        futures = [executor.submit(process_prompt, prompt) for prompt in prompts]
 
-            if stats["web_search_queries"]:
-                print(f"  Sample Queries:")
-                for i, query in enumerate(stats["web_search_queries"][:5], 1):
-                    print(f"    {i}. {query}")
-                if len(stats["web_search_queries"]) > 5:
-                    print(f"    ... and {len(stats['web_search_queries']) - 5} more")
+        for future in as_completed(futures):
+            result = future.result()
+            if result:
+                all_results.append(result)
 
-        # Save detailed results to JSON
-        with open("gemini_experiment_results.json", "w") as f:
-            json.dump(
-                {"prompt": prompt, "results": results, "summary": summary}, f, indent=2
-            )
-
-        print(f"\nDetailed results saved to gemini_experiment_results.json")
-
-    except Exception as e:
-        print(f"Error running experiments: {e}")
+    with open("internal_responce_log.json", "w") as f:
+        json.dump(
+            all_results,
+            f,
+            indent=2,
+        )
+    return all_results
 
 
 if __name__ == "__main__":
-    main()
+    respond(
+        [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+        ]
+    )

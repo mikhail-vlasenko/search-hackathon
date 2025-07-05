@@ -1,10 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import {
-  GeneratedPrompt,
-  WebsiteAnalysis,
-  APIResponseList,
-  AnalysisResult,
-} from "@/lib/types";
+import { GeneratedPrompt, WebsiteAnalysis, AnalysisResult } from "@/lib/types";
 
 // Function to extract domain from URL
 function extractDomain(url: string): string {
@@ -16,159 +11,167 @@ function extractDomain(url: string): string {
   }
 }
 
-// Function to process API response and create analysis results
-function processAPIResponse(
-  apiResponses: APIResponseList,
+// Function to transform Python API response to frontend format
+function transformPythonResponseToAnalysis(
+  pythonResponse: any,
   websiteUrl: string,
   prompts: GeneratedPrompt[]
-): AnalysisResult[] {
-  const customerDomain = extractDomain(websiteUrl);
+): WebsiteAnalysis {
   const results: AnalysisResult[] = [];
 
-  apiResponses.forEach((apiResponse) => {
-    // Find the corresponding prompt
-    const prompt = prompts.find((p) => p.prompt === apiResponse.prompt);
-    if (!prompt) return;
+  // Extract data from new Python API response format
+  const data = pythonResponse.data || {};
+  const intersectingQueries = data.intersecting_queries || {};
+  const domainStats = data.domain_detailed_stats || {};
+  const queryFrequencyStats = data.query_frequency_stats || {};
 
-    // Process each model's response (for now, just use the first successful one)
-    const modelNames = Object.keys(apiResponse.results);
-    const primaryModel = modelNames[0];
-    const modelResponses = apiResponse.results[primaryModel];
+  // Extract domain from URL for matching
+  const targetDomain = extractDomain(websiteUrl);
 
-    if (!modelResponses || modelResponses.length === 0) return;
+  // Create analysis results for each query in intersecting_queries
+  let queryIndex = 0;
+  Object.entries(intersectingQueries).forEach(
+    ([query, queryData]: [string, any]) => {
+      // Find which prompts this query belongs to
+      const relatedPrompts = prompts.filter(
+        (prompt) =>
+          queryData.prompts && queryData.prompts.includes(prompt.prompt)
+      );
 
-    const primaryResponse = modelResponses[0];
-    if (!primaryResponse.success) return;
+      // If no related prompts found, try to match with any prompt for backwards compatibility
+      const prompt = relatedPrompts.length > 0 ? relatedPrompts[0] : prompts[0];
 
-    // Analyze web searches for customer domain
-    const webSearches = primaryResponse.web_searches;
-    const searchQueries = Object.keys(webSearches);
+      // Count how many prompts this query appears in
+      const promptCount = queryData.prompts ? queryData.prompts.length : 1;
 
-    let totalSearches = searchQueries.length;
-    let appearsInSearches = 0;
-    let totalRankings: number[] = [];
-    let totalSources = 0;
+      // Check if target domain appears in this query
+      const domainsWithCitations = queryData.domains_with_citations || {};
+      const domainEntries = Object.entries(domainsWithCitations);
 
-    // Process each search query
-    searchQueries.forEach((searchQuery) => {
-      const searchResults = webSearches[searchQuery];
-      const urls = Object.keys(searchResults);
-      totalSources += urls.length;
-
-      // Check if customer domain appears in this search
-      let domainFound = false;
-      urls.forEach((url) => {
-        const urlDomain = extractDomain(url);
-        if (
-          urlDomain.includes(customerDomain) ||
-          customerDomain.includes(urlDomain)
-        ) {
-          domainFound = true;
-          const rankings = searchResults[url];
-          totalRankings.push(...rankings);
-        }
+      // Find target domain in various formats
+      const targetDomainEntry = domainEntries.find(([domain]) => {
+        const cleanDomain = domain
+          .replace(/^https?:\/\//, "")
+          .replace(/^www\./, "");
+        return (
+          cleanDomain === targetDomain ||
+          cleanDomain.includes(targetDomain) ||
+          targetDomain.includes(cleanDomain)
+        );
       });
 
-      if (domainFound) {
-        appearsInSearches++;
+      const isMentioned = !!targetDomainEntry;
+      const citations = (
+        targetDomainEntry ? targetDomainEntry[1] : []
+      ) as number[];
+      const averageRanking =
+        isMentioned && citations.length > 0
+          ? citations.reduce((sum: number, rank: number) => sum + rank, 0) /
+            citations.length
+          : 0;
+
+      // Calculate metrics
+      const totalDomains = queryData.total_domains || 0;
+      const totalSearches = queryData.frequency || 1;
+      const appearsInSearches = isMentioned ? 1 : 0;
+      const visibility = isMentioned
+        ? Math.max(10, 100 - averageRanking * 10)
+        : 0;
+
+      // Create citation distribution data for sparkline
+      const citationDistribution: Array<{ position: number; count: number }> =
+        [];
+      const userDomainPositions: number[] = [];
+
+      if (queryData.domains_with_citations) {
+        // Count citations at each position
+        const positionCounts: { [position: number]: number } = {};
+
+        Object.entries(queryData.domains_with_citations).forEach(
+          ([domain, citations]) => {
+            const cleanDomain = domain
+              .replace(/^https?:\/\//, "")
+              .replace(/^www\./, "");
+            const isUserDomain =
+              cleanDomain === targetDomain ||
+              cleanDomain.includes(targetDomain) ||
+              targetDomain.includes(cleanDomain);
+
+            (citations as number[]).forEach((position) => {
+              positionCounts[position] = (positionCounts[position] || 0) + 1;
+
+              if (isUserDomain) {
+                userDomainPositions.push(position);
+              }
+            });
+          }
+        );
+
+        // Convert to array format for sparkline
+        const maxPosition = Math.max(
+          ...Object.keys(positionCounts).map(Number)
+        );
+        for (let i = 1; i <= maxPosition; i++) {
+          citationDistribution.push({
+            position: i,
+            count: positionCounts[i] || 0,
+          });
+        }
       }
-    });
 
-    // Calculate metrics
-    const isMentioned = totalRankings.length > 0;
-    const averageRanking = isMentioned
-      ? totalRankings.reduce((sum, rank) => sum + rank, 0) /
-        totalRankings.length
-      : 0;
-    const visibility = isMentioned
-      ? Math.min(100, (appearsInSearches / totalSearches) * 100)
-      : 0;
-
-    // Create analysis result for each query in the prompt
-    prompt.queries.forEach((query, index) => {
       results.push({
-        id: `${prompt.id}-${index}`,
+        id: `query-${queryIndex}`,
         query: query,
-        prompt: apiResponse.prompt,
+        prompt: prompt?.prompt || "Unknown prompt",
         isMentioned,
         averageRanking: Math.round(averageRanking * 10) / 10,
         totalSearches,
         appearsInSearches,
-        totalSources,
+        totalSources: totalDomains,
         visibility: Math.round(visibility),
-        category: prompt.category,
+        promptCount,
+        category: prompt?.category || "General",
         timestamp: new Date(),
+        citationDistribution,
+        userDomainPositions,
       });
-    });
+
+      queryIndex++;
+    }
+  );
+
+  // Calculate aggregate metrics
+  const totalQueries = results.length;
+  const mentionedResults = results.filter((r) => r.isMentioned);
+  const averageRanking =
+    mentionedResults.length > 0
+      ? mentionedResults.reduce((sum, r) => sum + r.averageRanking, 0) /
+        mentionedResults.length
+      : 0;
+  const overallVisibility =
+    results.length > 0
+      ? Math.round(
+          results.reduce((sum, r) => sum + r.visibility, 0) / results.length
+        )
+      : 0;
+
+  // Get top category
+  const categoryCount: { [key: string]: number } = {};
+  results.forEach((result) => {
+    categoryCount[result.category] = (categoryCount[result.category] || 0) + 1;
   });
+  const topCategory =
+    Object.entries(categoryCount).sort(([, a], [, b]) => b - a)[0]?.[0] ||
+    "N/A";
 
-  return results;
-}
-
-// Generate mock API response data
-function generateMockAPIResponse(
-  prompts: GeneratedPrompt[],
-  websiteUrl: string
-): APIResponseList {
-  const customerDomain = extractDomain(websiteUrl);
-
-  return prompts.map((prompt) => ({
-    prompt: prompt.prompt,
-    results: {
-      "gemini-2.5-flash": [
-        {
-          model: "gemini-2.5-flash",
-          response: `Here are some relevant companies and solutions for "${prompt.prompt}": AI bees, IInfotanks, Omnius, Rankstar.io, UnitedAds, Pearl Lemon, TRYSEO. These companies offer various AI-powered SEO solutions...`,
-          web_searches: {
-            [`${prompt.category.toLowerCase()} AI SEO companies`]: {
-              "https://ai-bees.io": [1, 3],
-              "https://iinfotanks.com": [2],
-              [`https://${customerDomain}`]:
-                Math.random() > 0.4 ? [Math.floor(Math.random() * 8) + 1] : [], // 60% chance of appearing
-              "https://omnius.so": [4, 6],
-              "https://rankstar.io": [5],
-              "https://pearllemon.com": [7],
-              "https://unitedads.com": [8],
-              "https://tryseo.com": [9],
-            },
-            [`best ${prompt.category.toLowerCase()} tools 2024`]: {
-              "https://semrush.com": [1],
-              [`https://${customerDomain}`]:
-                Math.random() > 0.5 ? [Math.floor(Math.random() * 6) + 2] : [], // 50% chance
-              "https://ahrefs.com": [2],
-              "https://moz.com": [3],
-              "https://brightedge.com": [4],
-              "https://searchenginejournal.com": [5],
-            },
-            [`${prompt.category.toLowerCase()} optimization strategies`]: {
-              "https://searchengineland.com": [1],
-              "https://backlinko.com": [2],
-              [`https://${customerDomain}`]:
-                Math.random() > 0.3 ? [Math.floor(Math.random() * 5) + 1] : [], // 70% chance
-              "https://neilpatel.com": [3],
-              "https://contentmarketinginstitute.com": [4],
-            },
-          },
-          success: true,
-          run_number: 1,
-        },
-      ],
-    },
-    summary: {
-      "gemini-2.5-flash": {
-        total_runs: 1,
-        successful_runs: 1,
-        success_rate: 1.0,
-        total_web_searches: 3,
-        unique_web_searches: 3,
-        web_search_queries: [
-          `${prompt.category.toLowerCase()} AI SEO companies`,
-          `best ${prompt.category.toLowerCase()} tools 2024`,
-          `${prompt.category.toLowerCase()} optimization strategies`,
-        ],
-      },
-    },
-  }));
+  return {
+    url: websiteUrl,
+    totalQueries,
+    averageRanking: Math.round(averageRanking * 10) / 10,
+    overallVisibility,
+    topCategory,
+    results,
+  };
 }
 
 export async function POST(request: NextRequest) {
@@ -184,38 +187,54 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Simulate processing time (3 seconds like in the original)
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // Extract domain from URL
+    const targetDomain = extractDomain(url);
 
-    // Generate mock API response
-    const mockApiResponse = generateMockAPIResponse(prompts, url);
-
-    // Process the API response
-    const processedResults = processAPIResponse(mockApiResponse, url, prompts);
-
-    // Create website analysis
-    const analysis: WebsiteAnalysis = {
-      url: url,
-      totalQueries: processedResults.length,
-      averageRanking:
-        processedResults.filter((r) => r.averageRanking > 0).length > 0
-          ? processedResults
-              .filter((r) => r.averageRanking > 0)
-              .reduce((sum, r) => sum + r.averageRanking, 0) /
-            processedResults.filter((r) => r.averageRanking > 0).length
-          : 0,
-      overallVisibility:
-        processedResults.length > 0
-          ? Math.round(
-              processedResults.reduce((sum, r) => sum + r.visibility, 0) /
-                processedResults.length
-            )
-          : 0,
-      topCategory: prompts.length > 0 ? prompts[0].category : "N/A",
-      results: processedResults,
+    // Prepare request for Python API
+    const pythonApiRequest = {
+      target_domain: targetDomain,
+      prompts: prompts.map((p) => p.prompt), // Convert to simple string array
     };
 
-    return NextResponse.json({ analysis });
+    // Make request to Python API
+    const pythonApiUrl = "http://localhost:8000/analyze";
+
+    try {
+      const response = await fetch(pythonApiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(pythonApiRequest),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Python API error: ${response.status} - ${errorText}`);
+      }
+
+      const pythonResponse = await response.json();
+      console.log(JSON.stringify(pythonResponse, null, 2));
+
+      if (!pythonResponse.success) {
+        throw new Error(`Python API returned error: ${pythonResponse.error}`);
+      }
+
+      // Transform Python API response to frontend format
+      const analysis = transformPythonResponseToAnalysis(
+        pythonResponse,
+        url,
+        prompts
+      );
+
+      return NextResponse.json({ analysis, apiResponse: pythonResponse });
+    } catch (fetchError) {
+      console.error("Error calling Python API:", fetchError);
+      return NextResponse.json(
+        { error: "Failed to analyze website" },
+        { status: 500 }
+      );
+    }
   } catch (error) {
     console.error("Error analyzing website:", error);
     return NextResponse.json(

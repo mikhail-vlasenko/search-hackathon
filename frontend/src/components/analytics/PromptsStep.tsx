@@ -10,7 +10,13 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Circle, ArrowRight, ArrowLeft, Globe } from "lucide-react";
+import {
+  CheckCircle2,
+  Circle,
+  ArrowRight,
+  ArrowLeft,
+  Globe,
+} from "lucide-react";
 import { GeneratedPrompt } from "@/lib/types";
 
 interface PromptsStepProps {
@@ -69,10 +75,11 @@ export default function PromptsStep({
         </div>
       )}
       <h2 className="text-3xl md:text-4xl font-light text-black mb-1 text-center">
-        AI Search Prompts for {domain || 'your website'}
+        AI Search Prompts for {domain || "your website"}
       </h2>
       <p className="mb-4 text-lg text-gray-600 text-center max-w-2xl">
-        We've generated {prompts.length} potential search queries that users might use to find your content. Select the ones you want to analyze.
+        We've generated {prompts.length} potential search queries that users
+        might use to find your content. Select the ones you want to analyze.
       </p>
       <div className="w-full space-y-3 mb-16">
         {selectedPrompts.map((prompt, idx) => (
@@ -86,7 +93,7 @@ export default function PromptsStep({
             `}
             style={{
               animationDelay: `${idx * 120}ms`,
-              animationFillMode: 'forwards',
+              animationFillMode: "forwards",
             }}
           >
             <div className="mt-0.5">
@@ -110,7 +117,11 @@ export default function PromptsStep({
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back
         </Button>
-        <Button onClick={handleConfirm} disabled={selectedCount === 0} className="flex-1 bg-black text-white hover:bg-gray-900">
+        <Button
+          onClick={handleConfirm}
+          disabled={selectedCount === 0}
+          className="flex-1 bg-black text-white hover:bg-gray-900"
+        >
           Analyze Selected
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>

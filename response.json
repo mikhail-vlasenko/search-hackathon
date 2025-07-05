@@ -1,0 +1,613 @@
+{
+  "success": true,
+  "data": {
+    "overview": {
+      "total_prompts": 2,
+      "total_queries": 38,
+      "total_unique_domains": 26
+    },
+    "query_frequency_stats": {
+      "total_queries": 38,
+      "unique_queries": 19,
+      "query_details": {
+        "Gebrauchtfahrrad Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "second-hand bicycles Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "affordable bikes Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "cheapest bicycle shops in Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Fahrrad kaufen Berlin günstig": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "discount bicycles Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "budget bicycles Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "cheapest bicycle shops Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Fahrradhelm kaufen Deutschland": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Wo kann man in Deutschland ein Rennrad kaufen?": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Heimtrainer für Fahrradtraining kaufen Deutschland": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Heimtrainer für Radfahrer Deutschland": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Fahrradgeschäfte für Rennräder in Deutschland": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Fahrradgeschäft Deutschland Rennrad kaufen": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Fahrradhelm Online-Shop Deutschland": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Fahrrad kaufen für Straße Deutschland": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Fahrradgeschäfte Deutschland": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Fahrrad kaufen Deutschland": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        },
+        "Fahrradhändler Deutschland": {
+          "frequency": 2,
+          "frequency_rate": 0.05263157894736842,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 2
+        }
+      },
+      "most_common_queries": [
+        ["Gebrauchtfahrrad Berlin", 2],
+        ["second-hand bicycles Berlin", 2],
+        ["affordable bikes Berlin", 2],
+        ["cheapest bicycle shops in Berlin", 2],
+        ["Fahrrad kaufen Berlin günstig", 2],
+        ["discount bicycles Berlin", 2],
+        ["budget bicycles Berlin", 2],
+        ["cheapest bicycle shops Berlin", 2],
+        ["Fahrradhelm kaufen Deutschland", 2],
+        ["Wo kann man in Deutschland ein Rennrad kaufen?", 2]
+      ]
+    },
+    "prompt_stats": {
+      "cheapest bicycle to buy in berlin": {
+        "total_queries": 19,
+        "unique_domains": 26,
+        "total_citations": 160,
+        "domains_with_citations": 26,
+        "avg_citations_per_query": 8.421052631578947
+      },
+      "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet": {
+        "total_queries": 19,
+        "unique_domains": 26,
+        "total_citations": 160,
+        "domains_with_citations": 26,
+        "avg_citations_per_query": 8.421052631578947
+      }
+    },
+    "domain_analysis": {
+      "total_appearances": 4,
+      "total_citations": 8,
+      "retrieval_rate": 0.10526315789473684,
+      "usage_rate": 1,
+      "avg_citation_rank": 4.5,
+      "min_citation_rank": 4,
+      "prompt_appearances": [
+        "cheapest bicycle to buy in berlin",
+        "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+      ],
+      "query_appearances": [
+        "second-hand bicycles Berlin",
+        "budget bicycles Berlin",
+        "second-hand bicycles Berlin",
+        "budget bicycles Berlin"
+      ],
+      "citation_positions": [4, 5, 4, 5, 4, 5, 4, 5]
+    },
+    "gemini_analysis": {
+      "poor_performance_analysis": {
+        "cheapest bicycle to buy in berlin": {
+          "performance_rating": "suboptimal",
+          "performance_score": 4,
+          "min_citation_rank": 4,
+          "total_citations": 4,
+          "all_citations": [4, 5, 4, 5],
+          "competitor_count": 20,
+          "competitor_info": [
+            "Domain berlinerfahrradmarkt.de ranked at position 2 for query: Gebrauchtfahrrad Berlin",
+            "Domain fietsenboerse.de ranked at position 1 for query: second-hand bicycles Berlin",
+            "Domain visitberlin.de ranked at position 2 for query: second-hand bicycles Berlin",
+            "Domain berlin.de ranked at position 1 for query: second-hand bicycles Berlin",
+            "Domain fietsenboerse.de ranked at position 1 for query: affordable bikes Berlin"
+          ],
+          "gemini_analysis": "The higher rankings of the competitor domains are likely due to a combination of stronger **domain authority and trust**, particularly for `.de` domains which inherently carry more local relevance for Berlin-specific searches. Their content is also more directly aligned with the specific \"second-hand\" or \"affordable\" keywords frequently used in the user queries, suggesting better **content relevance and quality** for those niche terms. Finally, **brand recognition** for official city sites like `berlin.de` and `visitberlin.de` or established local marketplaces like `fietsenboerse.de` and `berlinerfahrradmarkt.de` naturally gives them an advantage in user trust and implicit authority in AI algorithms."
+        },
+        "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet": {
+          "performance_rating": "suboptimal",
+          "performance_score": 4,
+          "min_citation_rank": 4,
+          "total_citations": 4,
+          "all_citations": [4, 5, 4, 5],
+          "competitor_count": 20,
+          "competitor_info": [
+            "Domain berlinerfahrradmarkt.de ranked at position 2 for query: Gebrauchtfahrrad Berlin",
+            "Domain fietsenboerse.de ranked at position 1 for query: second-hand bicycles Berlin",
+            "Domain visitberlin.de ranked at position 2 for query: second-hand bicycles Berlin",
+            "Domain berlin.de ranked at position 1 for query: second-hand bicycles Berlin",
+            "Domain fietsenboerse.de ranked at position 1 for query: affordable bikes Berlin"
+          ],
+          "gemini_analysis": "The competing domains likely outranked Bikeopia.com due to their strong local relevance and high domain authority. Sites like berlin.de and visitberlin.de are official or highly authoritative local portals, naturally ranking well for location-specific queries, while berlinerfahrradmarkt.de and fietsenboerse.de likely have specialized content and established trust within the German second-hand bike market. To improve, Bikeopia.com should focus on building localized content specifically for Germany, acquiring local backlinks, and optimizing for relevant German keywords related to \"cycling good,\" \"road bikes,\" and \"helmets\" in Deutschland."
+        }
+      },
+      "has_poor_performance": true,
+      "total_poor_performance_cases": 2,
+      "note": "No AI response chunks available for detailed Gemini analysis"
+    },
+    "domain_detailed_stats": {
+      "total_appearances": 4,
+      "total_citations": 8,
+      "retrieval_rate": 0.10526315789473684,
+      "usage_rate": 1,
+      "avg_citation_rank": 4.5,
+      "min_citation_rank": 4,
+      "prompt_appearances": [
+        "cheapest bicycle to buy in berlin",
+        "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+      ],
+      "query_appearances": [
+        "second-hand bicycles Berlin",
+        "budget bicycles Berlin",
+        "second-hand bicycles Berlin",
+        "budget bicycles Berlin"
+      ],
+      "citation_positions": [4, 5, 4, 5, 4, 5, 4, 5]
+    },
+    "intersecting_queries": {
+      "Gebrauchtfahrrad Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 5,
+        "domains_with_citations": {
+          "berlinerfahrradmarkt.de": [2],
+          "bikeparkberlin.de": [4],
+          "xn--gebrauchte-fahrrder-berlin-vhc.de": [5],
+          "radwelt.berlin": [15, 6, 7],
+          "kleinanzeigen.de": [8]
+        }
+      },
+      "second-hand bicycles Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 6,
+        "domains_with_citations": {
+          "fietsenboerse.de": [1],
+          "visitberlin.de": [18, 17, 2, 3],
+          "bikeawayberlin.de": [10, 6],
+          "urby.bike": [12],
+          "berlin.de": [1],
+          "bikeopia.com": [4, 5]
+        }
+      },
+      "affordable bikes Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 6,
+        "domains_with_citations": {
+          "fietsenboerse.de": [1],
+          "allaboutberlin.com": [7, 8, 9, 10, 12, 13, 14, 17, 18],
+          "reddit.com": [8, 10, 11, 7],
+          "bikeawayberlin.de": [10, 6],
+          "urby.bike": [12],
+          "nomadandinlove.com": [16, 13, 14, 15]
+        }
+      },
+      "cheapest bicycle shops in Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 3,
+        "domains_with_citations": {
+          "visitberlin.de": [17, 2, 3],
+          "allaboutberlin.com": [8, 9, 13, 14, 18],
+          "reddit.com": [8]
+        }
+      },
+      "Fahrrad kaufen Berlin günstig": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 4,
+        "domains_with_citations": {
+          "berlinerfahrradmarkt.de": [16, 2],
+          "bikeparkberlin.de": [4],
+          "radwelt.berlin": [6, 15],
+          "kleinanzeigen.de": [8]
+        }
+      },
+      "discount bicycles Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 2,
+        "domains_with_citations": {
+          "visitberlin.de": [18, 2, 3],
+          "reddit.com": [10, 11, 7]
+        }
+      },
+      "budget bicycles Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 4,
+        "domains_with_citations": {
+          "bikeopia.com": [4, 5],
+          "bikeawayberlin.de": [6],
+          "allaboutberlin.com": [7, 8, 9, 10, 12, 17],
+          "reddit.com": [10, 11, 7]
+        }
+      },
+      "cheapest bicycle shops Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 4,
+        "domains_with_citations": {
+          "fietsenboerse.de": [1],
+          "allaboutberlin.com": [7, 8, 9, 10, 12, 17],
+          "reddit.com": [10, 11, 7],
+          "bikebook.co.uk": [19]
+        }
+      },
+      "Fahrradhelm kaufen Deutschland": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 4,
+        "domains_with_citations": {
+          "fahrrad.de": [32, 33, 3, 38, 40, 41],
+          "bike24.de": [34, 4, 40, 9, 42, 16, 17, 18, 19],
+          "lidl.de": [24, 41, 32],
+          "decathlon.de": [25, 10, 37]
+        }
+      },
+      "Wo kann man in Deutschland ein Rennrad kaufen?": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 3,
+        "domains_with_citations": {
+          "bike24.de": [1, 4, 15],
+          "fahrrad-xxl.de": [8],
+          "bikeexchange.de": [12, 13, 14, 15]
+        }
+      },
+      "Heimtrainer für Fahrradtraining kaufen Deutschland": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 5,
+        "domains_with_citations": {
+          "bike24.de": [4, 22],
+          "lidl.de": [24, 18],
+          "hammer.de": [18, 26, 29],
+          "mediamarkt.de": [23],
+          "decathlon.de": [25]
+        }
+      },
+      "Heimtrainer für Radfahrer Deutschland": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 3,
+        "domains_with_citations": {
+          "bike24.de": [4, 22],
+          "hammer.de": [18, 26, 29],
+          "decathlon.de": [25]
+        }
+      },
+      "Fahrradgeschäfte für Rennräder in Deutschland": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 3,
+        "domains_with_citations": {
+          "fahrrad.de": [3],
+          "radon-bikes.de": [7],
+          "fahrrad-xxl.de": [8]
+        }
+      },
+      "Fahrradgeschäft Deutschland Rennrad kaufen": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 4,
+        "domains_with_citations": {
+          "bike24.de": [1, 4, 15],
+          "fahrrad-xxl.de": [8],
+          "boc24.de": [10, 13],
+          "bikeexchange.de": [12, 13, 14, 15]
+        }
+      },
+      "Fahrradhelm Online-Shop Deutschland": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 3,
+        "domains_with_citations": {
+          "fahrrad.de": [32, 33, 3, 38, 40, 41],
+          "bike24.de": [40, 34, 4, 42],
+          "decathlon.de": [25, 37]
+        }
+      },
+      "Fahrrad kaufen für Straße Deutschland": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 2,
+        "domains_with_citations": {
+          "fahrrad.de": [3],
+          "fahrrad-xxl.de": [8]
+        }
+      },
+      "Fahrradgeschäfte Deutschland": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 3,
+        "domains_with_citations": {
+          "fahrrad-xxl.de": [1],
+          "fahrrad.de": [3],
+          "rabe-bike.de": [5]
+        }
+      },
+      "Fahrrad kaufen Deutschland": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 1,
+        "domains_with_citations": {
+          "fahrrad.de": [3]
+        }
+      },
+      "Fahrradhändler Deutschland": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 2,
+        "domains_with_citations": {
+          "fahrrad-xxl.de": [1],
+          "fahrrad.de": [3]
+        }
+      }
+    },
+    "recommendations": [
+      "Query 'cheapest bicycle to buy in berlin': The higher rankings of the competitor domains are likely due to a combination of stronger **domain authority and trust**, particularly for `.de` domains which inherently carry more local relevance for Berlin-specific searches. Their content is also more directly aligned with the specific \"second-hand\" or \"affordable\" keywords frequently used in the user queries, suggesting better **content relevance and quality** for those niche terms. Finally, **brand recognition** for official city sites like `berlin.de` and `visitberlin.de` or established local marketplaces like `fietsenboerse.de` and `berlinerfahrradmarkt.de` naturally gives them an advantage in user trust and implicit authority in AI algorithms.",
+      "Query 'cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet': The competing domains likely outranked Bikeopia.com due to their strong local relevance and high domain authority. Sites like berlin.de and visitberlin.de are official or highly authoritative local portals, naturally ranking well for location-specific queries, while berlinerfahrradmarkt.de and fietsenboerse.de likely have specialized content and established trust within the German second-hand bike market. To improve, Bikeopia.com should focus on building localized content specifically for Germany, acquiring local backlinks, and optimizing for relevant German keywords related to \"cycling good,\" \"road bikes,\" and \"helmets\" in Deutschland."
+    ],
+    "competitive_insights": {
+      "market_position": "emerging_player",
+      "key_competitors": [
+        {
+          "domain": "fahrrad.de",
+          "frequency": 14
+        },
+        {
+          "domain": "bike24.de",
+          "frequency": 12
+        },
+        {
+          "domain": "fahrrad-xxl.de",
+          "frequency": 12
+        },
+        {
+          "domain": "reddit.com",
+          "frequency": 10
+        },
+        {
+          "domain": "allaboutberlin.com",
+          "frequency": 8
+        }
+      ],
+      "competitive_advantages": ["High citation conversion rate"],
+      "improvement_areas": [
+        "Citation ranking optimization needed",
+        "Search visibility expansion needed"
+      ]
+    }
+  },
+  "error": null,
+  "metadata": {
+    "target_domain": "bikeopia.com",
+    "experiment_files": ["gemini_experiment_results.json"],
+    "total_prompts_analyzed": 2,
+    "has_gemini_api": true,
+    "has_response_chunks": false,
+    "analysis_timestamp": null
+  }
+}

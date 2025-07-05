@@ -15,6 +15,7 @@ export default function AnalyticsPage() {
   );
   const [analysisResults, setAnalysisResults] =
     useState<WebsiteAnalysis | null>(null);
+  const [apiResponse, setApiResponse] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -86,6 +87,7 @@ export default function AnalyticsPage() {
 
       const data = await response.json();
       setAnalysisResults(data.analysis);
+      setApiResponse(data.apiResponse);
       setCurrentStep("results");
     } catch (err) {
       console.error("Error analyzing website:", err);
@@ -114,7 +116,8 @@ export default function AnalyticsPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen w-full flex items-center justify-center transition-opacity duration-300 relative overflow-hidden"
+      <div
+        className="min-h-screen w-full flex items-center justify-center transition-opacity duration-300 relative overflow-hidden"
         style={{
           backgroundImage: "url('/group-2.png')",
           backgroundSize: "cover",
@@ -162,7 +165,8 @@ export default function AnalyticsPage() {
   }
 
   return (
-    <div className={`min-h-screen w-full flex items-center justify-center transition-opacity duration-300 relative overflow-hidden`}
+    <div
+      className={`min-h-screen w-full flex items-center justify-center transition-opacity duration-300 relative overflow-hidden`}
       style={
         currentStep === "prompts" || currentStep === "analyzing"
           ? {
@@ -174,14 +178,31 @@ export default function AnalyticsPage() {
           : {}
       }
     >
-      <main className={`w-full flex flex-col items-center justify-center min-h-screen ${currentStep === 'results' ? 'pt-20' : ''}`}>
+      <main
+        className={`w-full flex flex-col items-center justify-center min-h-screen ${
+          currentStep === "results" ? "pt-20" : ""
+        }`}
+      >
         {currentStep === "prompts" && (
           <PromptsStep
             prompts={generatedPrompts}
             onConfirm={handlePromptsConfirm}
             onBack={handleBack}
-            logoUrl={websiteUrl ? `https://logo.clearbit.com/${websiteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}` : undefined}
-            domain={websiteUrl ? websiteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '').split('/')[0] : undefined}
+            logoUrl={
+              websiteUrl
+                ? `https://logo.clearbit.com/${websiteUrl
+                    .replace(/^https?:\/\//, "")
+                    .replace(/\/$/, "")}`
+                : undefined
+            }
+            domain={
+              websiteUrl
+                ? websiteUrl
+                    .replace(/^https?:\/\//, "")
+                    .replace(/\/$/, "")
+                    .split("/")[0]
+                : undefined
+            }
           />
         )}
 
@@ -191,6 +212,7 @@ export default function AnalyticsPage() {
           <ResultsStep
             analysis={analysisResults}
             onNewAnalysis={handleNewAnalysis}
+            apiResponse={apiResponse}
           />
         )}
       </main>

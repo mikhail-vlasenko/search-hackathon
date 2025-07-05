@@ -30,8 +30,12 @@ export default function Home() {
       }}
     >
       <main className="w-full flex flex-col items-center justify-center min-h-screen">
-        <h2 className="text-3xl md:text-4xl font-light text-gray-400 mb-2 text-center">Your AI Search-ability</h2>
-        <h1 className="text-4xl md:text-5xl font-bold text-black mb-8 text-center">Analyze your AI visibility right now</h1>
+        <h2 className="text-3xl md:text-4xl font-light text-gray-400 mb-2 text-center">
+          Your AI Search-ability
+        </h2>
+        <h1 className="text-4xl md:text-5xl font-bold text-black mb-8 text-center">
+          Analyze your AI visibility right now
+        </h1>
         <form
           onSubmit={(e) => {
             e.preventDefault();

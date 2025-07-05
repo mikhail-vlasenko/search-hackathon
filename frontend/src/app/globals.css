@@ -126,7 +126,7 @@
     animation: fadeIn 0.2s ease-in-out;
   }
   .animate-fadeInPrompt {
-    animation: fadeInPrompt 0.4s cubic-bezier(0.4,0,0.2,1) both;
+    animation: fadeInPrompt 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
   }
 
   @keyframes fadeIn {

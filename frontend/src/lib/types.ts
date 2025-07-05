@@ -45,8 +45,15 @@ export interface AnalysisResult {
   // percentageDifference: number; // percentage difference vs competitors
   totalSources: number; // total number of sources returned
   visibility: number;
+  promptCount: number; // how many prompts this query appears in
   category: string;
   timestamp: Date;
+  // Citation distribution data for sparkline
+  citationDistribution?: Array<{
+    position: number;
+    count: number;
+  }>;
+  userDomainPositions?: number[]; // positions where user domain appears
 }
 
 export interface WebsiteAnalysis {
