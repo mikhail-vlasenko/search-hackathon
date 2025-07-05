@@ -1,0 +1,11 @@
+[project]
+name = "hack"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "google>=3.0.0",
+    "google-genai>=1.24.0",
+    "google-search>=1.1.1",
+]
