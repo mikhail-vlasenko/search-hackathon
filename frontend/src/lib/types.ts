@@ -2,11 +2,13 @@ export interface AnalysisResult {
   id: string;
   query: string;
   prompt: string;
-  ranking: number;
+  isMentioned: boolean; // whether the customer is mentioned in results
+  mentionCount: number; // how many times mentioned
+  favorabilityScore: number; // favorability score
+  competitorAverage: number; // competitors average mentions
+  percentageDifference: number; // percentage difference vs competitors
+  totalSources: number; // total number of sources returned
   visibility: number;
-  clickPotential: number;
-  searchVolume: number;
-  difficulty: number;
   category: string;
   timestamp: Date;
 }
@@ -25,6 +27,7 @@ export interface GeneratedPrompt {
   prompt: string;
   category: string;
   selected: boolean;
+  queries: string[];
 }
 
 export type AnalysisStep = "input" | "prompts" | "analyzing" | "results";

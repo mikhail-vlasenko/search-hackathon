@@ -21,7 +21,6 @@ import {
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronUp, ChevronDown, ArrowUpDown, X, Eye } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -34,6 +33,7 @@ export interface DataTableProps<TData, TValue> {
   className?: string;
   showRowDetails?: boolean;
   initialSorting?: SortingState;
+  getRowClassName?: (row: Row<TData>) => string;
 }
 
 export function DataTable<TData, TValue>({
@@ -44,6 +44,7 @@ export function DataTable<TData, TValue>({
   className,
   showRowDetails = true,
   initialSorting = [],
+  getRowClassName,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>(initialSorting);
   const [selectedRow, setSelectedRow] = React.useState<Row<TData> | null>(null);
@@ -73,8 +74,8 @@ export function DataTable<TData, TValue>({
   };
 
   return (
-    <div className={cn("relative", className)}>
-      <div className="flex">
+    <div className={cn("relative bg-white", className)}>
+      <div className="flex bg-white">
         {/* Main Table */}
         <div
           className={cn(
@@ -82,7 +83,7 @@ export function DataTable<TData, TValue>({
             selectedRow ? "mr-96" : "mr-0"
           )}
         >
-          <div className="rounded-md border">
+          <div className="rounded-md border bg-white">
             <Table>
               <TableHeader>
                 {table.getHeaderGroups().map((headerGroup) => (
@@ -153,7 +154,8 @@ export function DataTable<TData, TValue>({
                         }}
                         className={cn(
                           "hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors cursor-pointer",
-                          selectedRow?.id === row.id && "bg-muted"
+                          selectedRow?.id === row.id && "bg-muted",
+                          getRowClassName?.(row)
                         )}
                         onClick={() => handleRowClick(row)}
                       >
