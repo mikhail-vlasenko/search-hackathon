@@ -1,0 +1,2344 @@
+{
+  "success": true,
+  "data": {
+    "overview": {
+      "total_prompts": 5,
+      "total_queries": 18,
+      "total_unique_domains": 29
+    },
+    "query_frequency_stats": {
+      "total_queries": 18,
+      "unique_queries": 18,
+      "query_details": {
+        "affordable bikes Berlin": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cheapest bicycle to buy in berlin"
+          ],
+          "unique_prompts": 1
+        },
+        "cheapest bicycle shops in Berlin": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cheapest bicycle to buy in berlin"
+          ],
+          "unique_prompts": 1
+        },
+        "Gebrauchtfahrrad Berlin": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cheapest bicycle to buy in berlin"
+          ],
+          "unique_prompts": 1
+        },
+        "second-hand bicycles Berlin": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cheapest bicycle to buy in berlin"
+          ],
+          "unique_prompts": 1
+        },
+        "best touring bikes Europe": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "best bikes for cycling in Europe"
+          ],
+          "unique_prompts": 1
+        },
+        "suitable bikes for European cycling routes": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "best bikes for cycling in Europe"
+          ],
+          "unique_prompts": 1
+        },
+        "best road bikes for European cycling trips": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "best bikes for cycling in Europe"
+          ],
+          "unique_prompts": 1
+        },
+        "Rennrad kaufen Deutschland": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 1
+        },
+        "Fahrradhelm kaufen Deutschland": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 1
+        },
+        "Fahrradgeschäft Deutschland Rennräder Helme": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 1
+        },
+        "Fahrradgeschäfte Deutschland": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 1
+        },
+        "Fahrrad kaufen Deutschland Straße": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+          ],
+          "unique_prompts": 1
+        },
+        "fast city bikes Berlin": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycle fast; city bikes; berlin"
+          ],
+          "unique_prompts": 1
+        },
+        "best commuter bikes Berlin": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycle fast; city bikes; berlin"
+          ],
+          "unique_prompts": 1
+        },
+        "lightweight city bikes Berlin": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycle fast; city bikes; berlin"
+          ],
+          "unique_prompts": 1
+        },
+        "high-performance urban bikes Berlin": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycle fast; city bikes; berlin"
+          ],
+          "unique_prompts": 1
+        },
+        "Berlin bike shops fast city bikes": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycle fast; city bikes; berlin"
+          ],
+          "unique_prompts": 1
+        },
+        "high-performance city bikes Berlin": {
+          "frequency": 1,
+          "frequency_rate": 0.05555555555555555,
+          "prompts": [
+            "cycle fast; city bikes; berlin"
+          ],
+          "unique_prompts": 1
+        }
+      },
+      "most_common_queries": [
+        [
+          "affordable bikes Berlin",
+          1
+        ],
+        [
+          "cheapest bicycle shops in Berlin",
+          1
+        ],
+        [
+          "Gebrauchtfahrrad Berlin",
+          1
+        ],
+        [
+          "second-hand bicycles Berlin",
+          1
+        ],
+        [
+          "best touring bikes Europe",
+          1
+        ],
+        [
+          "suitable bikes for European cycling routes",
+          1
+        ],
+        [
+          "best road bikes for European cycling trips",
+          1
+        ],
+        [
+          "Rennrad kaufen Deutschland",
+          1
+        ],
+        [
+          "Fahrradhelm kaufen Deutschland",
+          1
+        ],
+        [
+          "Fahrradgeschäft Deutschland Rennräder Helme",
+          1
+        ]
+      ]
+    },
+    "prompt_stats": {
+      "cheapest bicycle to buy in berlin": {
+        "total_queries": 4,
+        "unique_domains": 11,
+        "total_citations": 62,
+        "domains_with_citations": 11,
+        "avg_citations_per_query": 15.5
+      },
+      "best bikes for cycling in Europe": {
+        "total_queries": 3,
+        "unique_domains": 6,
+        "total_citations": 40,
+        "domains_with_citations": 6,
+        "avg_citations_per_query": 13.333333333333334
+      },
+      "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet": {
+        "total_queries": 5,
+        "unique_domains": 7,
+        "total_citations": 30,
+        "domains_with_citations": 7,
+        "avg_citations_per_query": 6
+      },
+      "best bikes for cycling in Berlin": {
+        "total_queries": 0,
+        "unique_domains": 0,
+        "total_citations": 0,
+        "domains_with_citations": 0,
+        "avg_citations_per_query": 0
+      },
+      "cycle fast; city bikes; berlin": {
+        "total_queries": 6,
+        "unique_domains": 8,
+        "total_citations": 39,
+        "domains_with_citations": 8,
+        "avg_citations_per_query": 6.5
+      }
+    },
+    "domain_analysis": {
+      "total_appearances": 1,
+      "total_citations": 2,
+      "retrieval_rate": 0.05555555555555555,
+      "usage_rate": 1,
+      "avg_citation_rank": 17,
+      "min_citation_rank": 11,
+      "prompt_appearances": [
+        "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+      ],
+      "query_appearances": [
+        "Fahrradhelm kaufen Deutschland"
+      ],
+      "citation_positions": [
+        11,
+        23
+      ]
+    },
+    "response_chunks_analysis": {
+      "cheapest bicycle to buy in berlin": {
+        "domain_mentions": [],
+        "competitor_mentions": [
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "To find the cheapest bicycle in Berlin, your best bet is to look for used bikes rather than new ones",
+            "position": 1
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Here's a breakdown of options: \n\n **1",
+            "position": 2
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Second-hand Bike Markets & Stores** \n\n * **Fietsenbörse:** This is Berlin's largest bike market, held monthly on Winterfeldtplatz in Schöneberg",
+            "position": 3
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "You'll find over 600 second-hand bikes from private sellers, dealers, and tinkerers, offering a wide range of types and prices",
+            "position": 4
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "You can test ride bikes and get independent advice from specialists",
+            "position": 5
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "The next market is on July 20, 2025",
+            "position": 6
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Berliner Fahrradmarkt:** This market has grown from a small flea market to one of Berlin's largest platforms for used bicycles, with four locations in 2025",
+            "position": 7
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They also offer a bicycle workshop and free, independent purchasing advice",
+            "position": 8
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **bikePARK – Fahrrad Outlet Berlin:** They have over 300 used bicycles in the heart of Berlin, with prices starting from €39",
+            "position": 9
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They offer various types of bikes, including Dutch bikes, racing bikes, mountain bikes, and city bikes, all professionally repaired and maintained",
+            "position": 10
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Gebrauchte Fahrräder Berlin (Gefa Berlin):** This place aims to keep costs low by operating out of a warehouse with no official opening hours or internet sales",
+            "position": 11
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They have regular warehouse sales when they have enough selection, with prices generally ranging from €100 to €300, many under €200",
+            "position": 12
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Their next warehouse sale is on Saturday, July 5, 2025, from 12:00 to 16:00",
+            "position": 13
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Bikeopia:** They specialize in quality used high-end bikes, particularly 80s and 90s vintage models in great condition",
+            "position": 14
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Their prices range from €400 to €1500, and they offer a 6-month warranty on all bikes",
+            "position": 15
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **BIKE A-WAY Berlin:** They salvage and fix up discarded bikes, selling them at fair prices with a 1-year warranty on used bikes",
+            "position": 16
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They also have new bikes and offer a large assortment of single-speed, cross, urban, city, and used racing bikes",
+            "position": 17
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Decathlon:** Decathlon stores in Berlin offer \"Second Use\" bicycles, which are returned, tried out, or bought back from other customers",
+            "position": 18
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "These bikes are inspected by their experts and offered at a fair price, with some being almost new with minor scratches",
+            "position": 19
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "You also get a 30-day exchange policy, similar to new products",
+            "position": 20
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Kleinanzeigen (formerly eBay Kleinanzeigen):** This classifieds website is often recommended for finding used bikes",
+            "position": 21
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Hashims gebräuchte Fahrräder:** This shop on Hobrechtstrasse x Sonnenallee has been recommended for affordable bikes",
+            "position": 22
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**2",
+            "position": 23
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Things to Consider When Buying a Used Bike** \n\n * **Inspect the bike thoroughly:** Always test ride the bike before buying it",
+            "position": 24
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Check the brakes, gears, frame (for cracks), and wheels (for straightness)",
+            "position": 25
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be old, expensive, and often stolen",
+            "position": 26
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Official sales contracts are provided at markets like Fietsenbörse, which helps ensure you're not buying a stolen bike",
+            "position": 27
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "* **Get it fitted and adjusted:** After buying a used bike, consider having it fitted and adjusted at a bike shop for a smoother and more comfortable ride",
+            "position": 28
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**3",
+            "position": 29
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "New Affordable Bikes** \n\n * While often more expensive, some new bike retailers like **Decathlon** and **Stadler** can offer good value for money, especially if you're looking for a bike with no gears",
+            "position": 30
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Keep in mind that prices and availability can vary, so it's a good idea to visit a few places or check online listings to compare options",
+            "position": 31
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "To find the cheapest bicycle in Berlin, your best options will likely be through second-hand markets and shops that specialize in used bikes",
+            "position": 32
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Here's a breakdown of where to look:\n\n**1",
+            "position": 33
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Second-hand Bike Markets and Stores:**\n\n*   **Fietsenbörse:** This is Berlin's largest bike market, held monthly on Winterfeldtplatz (Schöneberg)",
+            "position": 34
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "It features over 600 second-hand bikes from private sellers and dealers, offering a wide range of types and prices",
+            "position": 35
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "You can compare prices, test ride bikes, and get independent advice",
+            "position": 36
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "The market usually takes place every four weeks from March to October",
+            "position": 37
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Berliner Fahrradmarkt:** Started as a small flea market, it has grown into one of Berlin's largest platforms for used bicycles, with four locations in 2025: Kreuzkölln, Moabit, Prenzlauer Berg, and Neukölln",
+            "position": 38
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They offer free and independent on-site purchasing advice and test rides",
+            "position": 39
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **bikePARK – Fahrrad Outlet Berlin:** Located in the heart of Berlin (Friedrichstraße 246), this outlet has over 300 used bicycles with prices starting from €39",
+            "position": 40
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They offer a large selection of various bike types and all used bikes are professionally repaired and maintained",
+            "position": 41
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Gebrauchte Fahrräder Berlin (Gefa Berlin):** This business focuses on keeping costs low to offer affordable used bicycles",
+            "position": 42
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They operate through regular warehouse sales when they have enough selection",
+            "position": 43
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Prices typically range between €100 and €300, with many under €200",
+            "position": 44
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Their next warehouse sale is Saturday, July 5, 2025, from 12:00 to 16:00",
+            "position": 45
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bikeopia:** They specialize in quality used high-end bikes, particularly 80s and 90s vintage models, at affordable prices",
+            "position": 46
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Their prices range from €400 to €1500, and they offer a 6-month warranty on all bikes",
+            "position": 47
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **BIKE A-WAY Berlin:** This shop aims to give new life to old bikes by fixing them up and selling them at fair prices",
+            "position": 48
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They offer a 1-year warranty on used bikes and have a range of city bikes, urban bikes, and used racers",
+            "position": 49
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Radwelt:** You can find new and used bicycles at their Friedrichshain and Mitte locations",
+            "position": 50
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They emphasize providing checked, functional, and legitimate bikes with proper invoices and warranties",
+            "position": 51
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Used bikes can start from €150",
+            "position": 52
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Decathlon:** Decathlon stores in Berlin offer \"Second Use\" products, which are returned, tried, or re-purchased bicycles",
+            "position": 53
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "These are inspected by their experts and offered at a fair price, sometimes being nearly new with minor signs of use",
+            "position": 54
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They offer the same legal conditions, warranty, and guarantee rights as new products",
+            "position": 55
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**2",
+            "position": 56
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Online Marketplaces:**\n\n*   **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin",
+            "position": 57
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **\"Sell Your Bike Berlin\" Facebook group:** This group has over 30,000 members and can be a good source for used bikes",
+            "position": 58
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Things to Consider for the Cheapest Option:**\n\n*   **Used vs",
+            "position": 59
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "New:** Buying a used bike is almost always cheaper than buying a new one",
+            "position": 60
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Condition:** Be aware that bikes bought at very low prices online or at some markets might need significant, costly repairs",
+            "position": 61
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "It's always recommended to test ride a used bike and check its condition before buying",
+            "position": 62
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike Markets vs",
+            "position": 63
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Shops:** Bike markets often offer a wider selection and the ability to compare prices from various sellers (dealers, tinkerers, and private individuals), and you can test ride bikes on-site",
+            "position": 64
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Shops specializing in used bikes often provide a warranty and ensure the bikes are in good working order",
+            "position": 65
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Auctions:** Toll office auctions for lost and found bicycles are another option where you might find bikes to bid on",
+            "position": 66
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "By exploring these options, you're likely to find a bicycle that fits your budget in Berlin",
+            "position": 67
+          }
+        ],
+        "domain_citations": 0,
+        "competitor_citations": 67,
+        "total_citations": 67,
+        "domain_share": 0,
+        "first_mention_position": null,
+        "performance_rating": "absent"
+      },
+      "best bikes for cycling in Europe": {
+        "domain_mentions": [],
+        "competitor_mentions": [
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Europe offers a wide variety of cycling routes, from leisurely rides through vineyards to challenging mountain passes, meaning the \"best\" bike depends heavily on the type of cycling you plan to do",
+            "position": 1
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Here's a breakdown of bike types and popular models suitable for cycling in Europe:\n\n**1",
+            "position": 2
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Touring Bikes**\nTouring bikes are designed for long-distance comfort and carrying luggage, making them ideal for multi-day cycling trips across Europe",
+            "position": 3
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are robust, reliable, and can handle various terrains, from paved roads to gravel paths",
+            "position": 4
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Characteristics:**\n    *   Durable steel or aluminum frames",
+            "position": 5
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Comfortable, upright riding position",
+            "position": 6
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Typically equipped with a hub dynamo, LED lights, mudguards, and stable luggage carriers",
+            "position": 7
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Wide gear range for tackling varied terrain",
+            "position": 8
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Often have disc brakes for reliable stopping power in all weather conditions",
+            "position": 9
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Popular Models:**\n    *   **Cube Touring Pro:** Known for being a great value and widely available in Europe",
+            "position": 10
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "It features flat handlebars, an adjustable stem, and front suspension",
+            "position": 11
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Ridgeback Expedition:** A strong contender for best value expedition touring bike, designed for long-haul trips",
+            "position": 12
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Ridgeback Panorama:** A classic touring bike with a durable steel frame and disc brakes",
+            "position": 13
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Surly Disc Trucker:** A popular and well-tested long-distance touring bike",
+            "position": 14
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Kona Sutra:** A high-end touring bike offering superb performance and comfort",
+            "position": 15
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Genesis Tour De Fer 30:** A versatile and durable steel touring bike with powerful disc brakes and wide-ranging gears",
+            "position": 16
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Decathlon Riverside Touring 520",
+            "position": 17
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**\n    *   **Fuji Touring LTD/Disc LTD",
+            "position": 18
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**\n    *   **Oxford Bike Works Expedition",
+            "position": 19
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**\n    *   **Fairlight Cycles Faran 2",
+            "position": 20
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "0:** A versatile option for bikepacking or touring",
+            "position": 21
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Cinelli HoBootleg:** An Italian-designed touring bike",
+            "position": 22
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Trek 520 Disc/Trek 920",
+            "position": 23
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**\n\n**2",
+            "position": 24
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Hybrid Bikes**\nHybrid bikes blend features of mountain and road bikes, offering a good balance of comfort, performance, and versatility",
+            "position": 25
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are suitable for long-distance touring on paved surfaces and can handle easy trails",
+            "position": 26
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Characteristics:**\n    *   Sturdier than road bikes with wider rims",
+            "position": 27
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Often have flat handlebars and an upright sitting position",
+            "position": 28
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Typically have 18-27 gears",
+            "position": 29
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Good for commuting, leisure rides, and varied terrain",
+            "position": 30
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Popular Models:**\n    *   **Cannondale Quick Series (e",
+            "position": 31
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "g",
+            "position": 32
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": ", Quick 3, Quick Disc 3):** Praised for smooth rides, sporty aesthetics, and hydraulic disc brakes",
+            "position": 33
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Specialized Sirrus (e",
+            "position": 34
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "g",
+            "position": 35
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": ", Sirrus 2",
+            "position": 36
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "0, Sirrus X 5",
+            "position": 37
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "0):** Known for comfort, especially on rougher roads, and versatility",
+            "position": 38
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fuji Traverse:** A \"dual-sport\" hybrid suitable for city commuting and trails",
+            "position": 39
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Merida Speeder 200:** A lightweight hybrid that offers a fast ride",
+            "position": 40
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Orbea Vector 15:** A highly recommended workhorse hybrid",
+            "position": 41
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Ridgeback Speed",
+            "position": 42
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**\n    *   **Marin Larkspur 2",
+            "position": 43
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**\n    *   **Ribble Hybrid AL",
+            "position": 44
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**\n    *   **Giant ToughRoad SLR 2:** Best for riding off-road",
+            "position": 45
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Boardman HYB 8",
+            "position": 46
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "8:** Offers good value with a sporty geometry",
+            "position": 47
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**3",
+            "position": 48
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Road Bikes**\nRoad bikes are designed for speed and efficiency on paved surfaces",
+            "position": 49
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are lighter and typically have more gears than other bike types, making them suitable for challenging rides and covering long distances quickly",
+            "position": 50
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Characteristics:**\n    *   Lightweight frames",
+            "position": 51
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Larger wheels and typically 20 or more gears",
+            "position": 52
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Designed for speed and efficiency on roads",
+            "position": 53
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Some models offer features for comfort over longer distances",
+            "position": 54
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Popular Models:**\n    *   **Cannondale Synapse 2 RLE:** A versatile road bike designed for long days of riding with a micro-suspension system for comfort",
+            "position": 55
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Colnago V4:** A high-performance road bike ideal for technical riding and climbs",
+            "position": 56
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **BMC Roadmachine AMP TWO (E-Bike):** An electric road bike that provides pedal assistance for increased speed and endurance",
+            "position": 57
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Specialized S-Works Tarmac SL8:** A high-performing race bike that blends aerodynamics, stiffness, and comfort",
+            "position": 58
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Cervélo R5:** An excellent climbing bike that also descends confidently and offers comfort for long rides",
+            "position": 59
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Giant Defy Advanced:** Known for comfort, sensible geometry, and versatility, ideal for endurance riding",
+            "position": 60
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Merida Scultura Endurance 4000:** A top-performing long-distance road bike with a comfortable ride position",
+            "position": 61
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Polygon Strattos S8X:** Offers great value with a carbon frame, fork, wheels, and a Shimano Ultegra Di2 drivetrain",
+            "position": 62
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Electric Bikes (E-Bikes)**\nE-bikes are available for many cycling routes in Europe and can make cycling more accessible by providing a pedal assist",
+            "position": 63
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are a good option for mixed-fitness groups or for tackling more challenging routes",
+            "position": 64
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Choosing the Best Bike:**\nConsider the following when selecting a bike for your European cycling adventure:\n*   **Terrain:** Are you sticking to paved roads, or do you plan to explore gravel paths and off-road trails?\n*   **Distance:** Are you doing short day trips or multi-day tours?\n*   **Luggage:** Do you need to carry a lot of gear?\n*   **Fitness Level:** Are you looking for a challenging ride or something more relaxed?\n*   **Comfort:** How important is an upright riding position and shock absorption?\n\nEurope offers numerous well-developed cycling routes, including sections of the EuroVelo network, which can span entire continents",
+            "position": 65
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Popular routes include the Alpe-Adria Bicycle Route, the Danube Cycle Path, the Loire by Bike, the Rhine Cycle Route, and the Elbe Cycle Route",
+            "position": 66
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "The best bike for cycling in Europe depends on the type of terrain you'll encounter and your cycling style",
+            "position": 67
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Touring bikes and endurance road bikes are generally recommended for their comfort, durability, and ability to carry gear",
+            "position": 68
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Types of Bikes for European Cycling:**\n\n*   **Touring Bikes:** These are designed for long-distance travel and carrying heavy loads",
+            "position": 69
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are known for their robustness, reliability, and comfortable geometry",
+            "position": 70
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Many come with pre-installed rack and mudguard mounts",
+            "position": 71
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Pros:** Durable, stable with loads, comfortable for long distances, often have wider gear ranges for varied terrain",
+            "position": 72
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Cons:** Can be heavier and less agile than road bikes",
+            "position": 73
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Examples:** Fairlight Cycles Faran 2",
+            "position": 74
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "0, Kinesis GTD v2, Spa Cycles Wayfarer, Marin Headlands 1, Ridgeback Tour, Ridgeback Expedition, Temple Cycles Classic Tour, Surly Disc Trucker, Kona Sutra, Genesis Tour de Fer 30, Trek 520, Decathlon Riverside Touring 520",
+            "position": 75
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Endurance Road Bikes:** These bikes offer a balance of speed and comfort, with a more relaxed geometry than race-oriented road bikes",
+            "position": 76
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are suitable for long rides on paved roads and often have clearance for wider tires",
+            "position": 77
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Pros:** Faster and lighter than touring bikes, comfortable for long distances on paved roads",
+            "position": 78
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Cons:** May not handle heavy loads or rough terrain as well as touring bikes",
+            "position": 79
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Examples:** Giant Defy Advanced, Specialized Roubaix SL8 Sport 105, Canyon Endurace CFR AXS, Merida Scultura Endurance 4000, Specialized Allez (good budget option), Trek Domane AL 2 Gen 4",
+            "position": 80
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Hybrid Bikes:** These combine features of mountain and road bikes, making them versatile for long-distance touring on paved surfaces",
+            "position": 81
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They typically have flat handlebars and some suspension",
+            "position": 82
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Pros:** Good for varied surfaces, comfortable upright position",
+            "position": 83
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Cons:** Not as fast as road bikes on pavement, not as capable as mountain bikes on very rough terrain",
+            "position": 84
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Gravel Bikes:** Ideal if your route includes unpaved roads, gravel paths, or light off-road sections, which can be found on some EuroVelo routes",
+            "position": 85
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Pros:** Versatile, handle varied terrain well, comfortable",
+            "position": 86
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Cons:** Can be slower on smooth pavement compared to a dedicated road bike",
+            "position": 87
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Electric Bikes (E-bikes):** A good option for making cycling easier, especially if you're cycling with people of different fitness levels or tackling challenging routes",
+            "position": 88
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Important Considerations for Cycling in Europe:**\n\n*   **Terrain:** European cycling routes vary greatly, from paved roads to gravel paths and even some rougher terrain on routes like the EuroVelo paths",
+            "position": 89
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Load Capacity:** If you plan to carry a lot of gear, consider a bike with rack and fender mounts",
+            "position": 90
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Many touring bikes come with these as standard",
+            "position": 91
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Brakes:** Hydraulic disc brakes offer superior stopping power, especially in wet conditions, which can be beneficial for touring with loads or on varied terrain",
+            "position": 92
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Handlebars:** Drop bars offer more hand positions, which can be beneficial on long tours, while flat bars might feel more natural if you're used to mountain biking",
+            "position": 93
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Budget:** Touring bikes can range in price, with good value options available",
+            "position": 94
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Ultimately, the \"best\" bike is one that fits your personal preferences, the demands of your chosen route, and your budget",
+            "position": 95
+          }
+        ],
+        "domain_citations": 0,
+        "competitor_citations": 95,
+        "total_citations": 95,
+        "domain_share": 0,
+        "first_mention_position": null,
+        "performance_rating": "absent"
+      },
+      "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet": {
+        "domain_mentions": [],
+        "competitor_mentions": [
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Es ist toll, dass Sie mit dem Radfahren anfangen möchten! Um Rennräder und Helme in Deutschland zu kaufen, haben Sie verschiedene Möglichkeiten, sowohl online als auch in physischen Geschäften",
+            "position": 1
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Rennräder kaufen:**\n\n*   **Online-Shops:**\n    *   **BIKE24** bietet eine große Auswahl an Rennrädern und verspricht einen Großteil der Montage vorab zu übernehmen, sodass Sie das Rad zu Hause schnell zusammenbauen können",
+            "position": 2
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Sie bieten auch einen Guide zur Bestimmung der richtigen Rahmengröße an",
+            "position": 3
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fahrrad XXL** ist ebenfalls eine gute Option mit einer der größten Auswahlen in Deutschland und einem Filialnetz für Beratung",
+            "position": 4
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike-Discount** hat eine breite Palette an Rennrädern aus verschiedenen Materialien wie Stahl, Aluminium und Carbon",
+            "position": 5
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Biketime",
+            "position": 6
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "de** bietet Rennräder online an und hat auch einen Laden in Hannover, wo Sie Probefahrten vereinbaren können",
+            "position": 7
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **BikeExchange** ist ein großer Fahrradmarktplatz in Deutschland, auf dem Sie Rennräder von verschiedenen Händlern finden können",
+            "position": 8
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Wichtige Überlegungen beim Rennradkauf:**\n    *   **Rahmengröße:** Achten Sie unbedingt auf die richtige Rahmengröße",
+            "position": 9
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Online-Shops bieten oft Anleitungen zur Bestimmung der Größe",
+            "position": 10
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Material:** Rennräder gibt es mit Rahmen aus Stahl, Aluminium oder Carbon, die jeweils unterschiedliche Eigenschaften und Vorteile bieten",
+            "position": 11
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bremsen:** Scheibenbremsen bieten mehr Sicherheit, besonders bei Bergfahrten, sind aber auch schwerer als Felgenbremsen",
+            "position": 12
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Gewicht:** Rennräder sind auf maximale Geschwindigkeit ausgelegt und dementsprechend leicht",
+            "position": 13
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Das Gewicht liegt normalerweise zwischen sechs und neun Kilogramm ohne Zubehör",
+            "position": 14
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Fahrradhelme kaufen:**\n\n*   **Online-Shops:**\n    *   **BIKE24** bietet eine große Auswahl an Fahrradhelmen verschiedener Marken und für verschiedene Einsatzzwecke (z",
+            "position": 15
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "B",
+            "position": 16
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Rennradhelme, Mountainbike-Helme)",
+            "position": 17
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Decathlon** führt ebenfalls eine Auswahl an Fahrradhelmen für Damen, Herren und Kinder",
+            "position": 18
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Rose Bikes** hat Rennradhelme in verschiedenen Preisklassen, von günstigen Einsteigermodellen bis zu High-End-Helmen, und bietet Modelle mit aerodynamischem Design",
+            "position": 19
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike-Discount** ist auch eine Option für den Online-Kauf von Rennradhelmen",
+            "position": 20
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fahrrad",
+            "position": 21
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "de** bietet eine Vielzahl von Rennradhelmen an, darunter Marken wie ABUS und Giro",
+            "position": 22
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Kaufland",
+            "position": 23
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "de** listet ebenfalls verschiedene Fahrradhelme von Marken wie ABUS und ALPINA Sports",
+            "position": 24
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Physische Geschäfte:**\n    *   **Zweirad-Center Stadler** hat 22 Filialen in Deutschland und Österreich und bietet eine große Auswahl an Rennradhelmen",
+            "position": 25
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Rose Bikes** hat auch physische Stores in Bocholt und München",
+            "position": 26
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Viele der genannten Online-Händler wie Fahrrad XXL und Biketime",
+            "position": 27
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "de haben auch stationäre Geschäfte oder Partnerfilialen",
+            "position": 28
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Wichtige Überlegungen beim Helm-Kauf:**\n    *   **Sicherheitsstandards:** In Deutschland müssen Fahrradhelme bestimmten Prüfnormen entsprechen",
+            "position": 29
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Achten Sie auf Helme mit MIPS-System (Multi-directional Impact Protection System), die zusätzlichen Schutz bei Rotationskräften bieten können",
+            "position": 30
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Passform:** Der Helm sollte bequem sitzen und gut an den Kopf angepasst sein",
+            "position": 31
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Einsatzzweck:** Es gibt spezielle Helme für Rennräder, die auf Aerodynamik und geringes Gewicht ausgelegt sind",
+            "position": 32
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Austausch:** Fahrradhelme sind Einwegprodukte und sollten nach einem Aufprall oder Sturz ausgetauscht werden",
+            "position": 33
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Der ADFC empfiehlt einen Austausch alle 3 bis 5 Jahre, da das Material durch äußere Einflüsse spröde werden kann",
+            "position": 34
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Viel Spaß beim Radfahren!",
+            "position": 35
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Radfahren ist eine großartige Aktivität! Wenn Sie in Deutschland ein Fahrrad für die Straße, einen Fahrradtrainer und einen Helm kaufen möchten, haben Sie verschiedene Möglichkeiten:\n\n**Fahrräder und Fahrradgeschäfte in Deutschland:**\n\nIn Deutschland gibt es zahlreiche Fahrradgeschäfte und Online-Shops, bei denen Sie Fahrräder kaufen können",
+            "position": 36
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Hier sind einige der größten Anbieter und wichtige Punkte, die Sie beachten sollten:\n\n*   **Große Fahrradhändler mit Filialen und Online-Shops:**\n    *   **Zweirad Stadler:** Dieses familiengeführte Unternehmen bietet eine riesige Auswahl an Fahrrädern und E-Bikes in seinen Filialen in ganz Deutschland sowie online an",
+            "position": 37
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Sie werben mit einem Einkaufserlebnis, das einer permanenten Fahrradmesse gleicht, und bieten eine große Auswahl an Top-Marken wie Scott, Bulls, Pegasus, Cannondale, KTM und Dynamics",
+            "position": 38
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fahrrad XXL:** Mit 19 großen Stores deutschlandweit und einem Online-Shop prägt Fahrrad XXL die Branche seit Jahrzehnten",
+            "position": 39
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Sie bieten Erlebniswelten mit Indoor-Radstrecken und Testsimulatoren",
+            "position": 40
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Sie haben über 300",
+            "position": 41
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "000 sofort verfügbare Artikel von über 300 Marken",
+            "position": 42
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Das Radhaus:** Dieses Unternehmen im Großraum Berlin gehört zu den größten Fahrrad- und E-Bike-Händlern in Deutschland",
+            "position": 43
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Sie haben 8 Filialen und einen Online-Shop mit hochwertigen Rädern von Marken wie Bulls Bikes, KTM Fahrräder und Flyer Pedelecs",
+            "position": 44
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **MHW Bike-House GmbH:** Eines der führenden Fahrrad-Center in Süddeutschland mit über 35 Jahren Erfahrung",
+            "position": 45
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Sie haben über 10",
+            "position": 46
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "000 Fahrräder auf Lager, darunter Rennräder, Mountainbikes (MTB), Fullys und Hardtails, und bieten Qualitätsprodukte von Top-Herstellern",
+            "position": 47
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Rose Bikes:** Bietet Fahrräder, Ausrüstung und Zubehör online und in seinen Stores in Bocholt und München an",
+            "position": 48
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike24:** Ein großer Online-Shop, der Fahrräder, E-Bikes und Zubehör anbietet",
+            "position": 49
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Decathlon:** Bietet ebenfalls eine Auswahl an Fahrrädern und Zubehör an",
+            "position": 50
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fahrrad",
+            "position": 51
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "de:** Ein Online-Shop, der sich auf Fahrräder und Zubehör spezialisiert hat",
+            "position": 52
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **RABE Bike:** Bietet eine riesige Auswahl an Bikes & E-Bikes von Top-Marken wie CUBE, KTM, Cannondale und Giant",
+            "position": 53
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **MEGA Bike:** Ein Fahrrad-Fachmarkt mit Online-Shop",
+            "position": 54
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fahrradtypen für die Straße:**\n    *   Für das Fahren auf der Straße eignen sich in der Regel **Rennräder** oder **Trekkingräder**",
+            "position": 55
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Rennräder sind auf Geschwindigkeit ausgelegt, während Trekkingräder vielseitiger sind und sich auch für längere Touren eignen",
+            "position": 56
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Citybikes** sind ideal für den urbanen Gebrauch",
+            "position": 57
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Gravelbikes** sind eine Mischung aus Rennrad und Mountainbike und eignen sich für verschiedene Untergründe, einschließlich Straße und Schotter",
+            "position": 58
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Fahrradtrainer:**\n\nEin Fahrradtrainer ermöglicht es Ihnen, Ihr Fahrrad auch drinnen zu nutzen, wenn das Wetter schlecht ist oder Sie einfach zu Hause trainieren möchten",
+            "position": 59
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Typen von Fahrradtrainern:**\n    *   **Wheel-On Trainer:** Hier wird das Hinterrad des Fahrrads in den Trainer eingespannt",
+            "position": 60
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Der Widerstand wird von einer Rolleneinheit reguliert",
+            "position": 61
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Direktantriebstrainer:** Das Hinterrad wird entfernt und das Fahrrad direkt auf den Trainer montiert",
+            "position": 62
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Dies bietet oft ein realistischeres Fahrgefühl und ist leiser",
+            "position": 63
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Freie Rollen:** Bei dieser Art von Trainer steht das komplette Fahrrad auf drei Walzen und beide Räder sind frei drehbar",
+            "position": 64
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Dies erfordert mehr Balance und Übung, bietet aber ein sehr natürliches Fahrgefühl",
+            "position": 65
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Smart Bikes (Indoor-Bikes):** Dies sind eigenständige, stationäre Fahrräder, die oft viele smarte Funktionen und ein authentisches Fahrgefühl bieten",
+            "position": 66
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Wo Sie Fahrradtrainer kaufen können:**\n    *   Fahrradfachgeschäfte wie Zweirad Stadler, Rose Bikes und Decathlon bieten Fahrradtrainer an",
+            "position": 67
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Online-Händler wie OTTO, eBay und Bike24 führen ebenfalls Fahrradtrainer",
+            "position": 68
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   Achten Sie auf Modelle mit einstellbarem Widerstand und gegebenenfalls smarten Funktionen, die eine Verbindung zu Trainings-Apps ermöglichen",
+            "position": 69
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Fahrradhelme:**\n\nEin Fahrradhelm ist unerlässlich für Ihre Sicherheit",
+            "position": 70
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "In Deutschland müssen alle verkauften Helme bestimmte Prüfnormen erfüllen",
+            "position": 71
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Wichtige Aspekte beim Kauf eines Helms:**\n    *   **Passform:** Der Helm muss richtig sitzen und darf nicht wackeln",
+            "position": 72
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Sicherheitsstandards:** Achten Sie auf Helme, die den geltenden Sicherheitsstandards entsprechen",
+            "position": 73
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Einige Hersteller bieten zusätzliche Schutzmaßnahmen wie MIPS (Multi-directional Impact Protection System) an, das die Einwirkung von Rotationskräften bei Unfällen reduzieren kann",
+            "position": 74
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Einsatzzweck:** Es gibt spezielle Helme für verschiedene Fahrradtypen, z",
+            "position": 75
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "B",
+            "position": 76
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Rennradhelme, MTB-Helme, Cityhelme oder E-Bike-Helme",
+            "position": 77
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "E-Bike-Helme haben oft eine größere Schutzfläche an Hinterkopf und Schläfe",
+            "position": 78
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Austausch:** Ein Fahrradhelm ist ein Einwegprodukt und sollte nach einem Aufprall oder einem Sturz aus größerer Höhe ersetzt werden",
+            "position": 79
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Der ADFC empfiehlt, den Helm alle 3 bis 5 Jahre zu ersetzen, da das Material mit der Zeit spröde werden kann",
+            "position": 80
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Wo Sie Fahrradhelme kaufen können:**\n    *   Fahrradfachgeschäfte und Online-Shops wie Bike24, Decathlon, Rose Bikes, Kaufland",
+            "position": 81
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "de und Zweirad-Stadler bieten eine große Auswahl an Helmen von Marken wie Uvex, Abus, Giro, Bell und Lazer an",
+            "position": 82
+          }
+        ],
+        "domain_citations": 0,
+        "competitor_citations": 82,
+        "total_citations": 82,
+        "domain_share": 0,
+        "first_mention_position": null,
+        "performance_rating": "absent"
+      },
+      "best bikes for cycling in Berlin": {
+        "domain_mentions": [],
+        "competitor_mentions": [
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Berlin is a very bike-friendly city with a flat landscape and an extensive network of bike paths, making it an excellent place for cycling",
+            "position": 1
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "The city has been investing significantly in cycling infrastructure, including protected bike lanes and planned \"cycle superhighways\" to connect suburbs to the city center",
+            "position": 2
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "When choosing a bike for Berlin, consider your typical routes and needs:\n\n**Types of Bikes Recommended for Berlin:**\n\n*   **Hybrid Bikes:** These are often recommended as a versatile option for Berlin",
+            "position": 3
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are good for both city riding and can handle gravel or sandy trails found outside the city, such as in Brandenburg",
+            "position": 4
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They offer a relaxed riding position while still allowing for good speed",
+            "position": 5
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Some hybrid models come equipped with features like racks, lights, and mudguards, making them practical for commuting and various weather conditions",
+            "position": 6
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **City Bikes/Urban Bikes/Commuter Bikes:** These bikes are specifically designed for urban environments, prioritizing comfort and practicality",
+            "position": 7
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They typically have a comfortable, upright seating position, simple gear systems, and essential safety features",
+            "position": 8
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Many come fully equipped for road traffic and all weather conditions",
+            "position": 9
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   The MOD Berlin step-thru is an example of an electric commuter bike designed for urban use, featuring integrated lights, fenders, and a rear rack",
+            "position": 10
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   The Pedal Messenger 3 Berlin is a low-maintenance option with a stylish, retro fixie look, featuring a 3-speed internal hub and reliable brakes",
+            "position": 11
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Trekking Bikes:** Similar to hybrid bikes, trekking bikes are known for their sturdiness and ability to handle various conditions",
+            "position": 12
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are often equipped with mudguards, dynamo lights, and a rear rack, making them very practical for daily use in Berlin",
+            "position": 13
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Folding Bikes:** These are excellent for commuters in Berlin due to their portability",
+            "position": 14
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They can be easily folded to a compact size, making them convenient for transport on public transit (which often requires a separate ticket for unfolded bikes) or for storage in smaller apartments",
+            "position": 15
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Brompton folding bikes are particularly noted for their quality, practicality, and compact fold",
+            "position": 16
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Roadsters (Dutch-style bikes):** These bikes offer a very comfortable, upright riding position, ideal for relaxed cycling and sightseeing",
+            "position": 17
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They often accommodate baskets or child seats",
+            "position": 18
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Electric Bikes (E-bikes):** E-bikes are becoming increasingly popular and can be a great option for effortless commuting or longer rides, especially if you want assistance with hills or carrying cargo",
+            "position": 19
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Cargo Bikes:** If you need to transport children or heavy loads, cargo bikes (known as \"Lastenrad\" in Berlin) are a good solution and are increasingly used as a climate-friendly alternative to cars",
+            "position": 20
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Some districts even offer free cargo bike rentals",
+            "position": 21
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Racing Bikes (Fixies/Single Speed):** While popular for their speed and light weight, especially vintage models, fixies and single-speed bikes may not be ideal for all riders as they often lack brakes or gears",
+            "position": 22
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Important Considerations for Cycling in Berlin:**\n\n*   **Bike Requirements:** Your bike must have a white front light, a red rear light (non-blinking), reflectors, a bell, and working brakes",
+            "position": 23
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Lights must be StVZO-compliant to avoid blinding others",
+            "position": 24
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Road Rules:** You must ride on the street or designated bike paths (with blue signs), not on sidewalks (unless accompanying children up to 10 years old)",
+            "position": 25
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "You must stop at red lights and cannot use your phone while riding",
+            "position": 26
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Headphones are permitted if the music is not too loud and you can still hear sirens",
+            "position": 27
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Public Transport:** You can take your bike on regional trains, S-Bahn, subways, and trams in marked carriages, but typically need a separate bicycle ticket",
+            "position": 28
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Fully folded bikes are usually considered hand luggage and can be taken free of charge",
+            "position": 29
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Bikes are not allowed on buses",
+            "position": 30
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike Theft:** Bike theft is a concern in Berlin",
+            "position": 31
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Folding bikes offer an advantage as they can be easily brought indoors",
+            "position": 32
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Consider bicycle registration and bike theft insurance",
+            "position": 33
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Where to Buy/Rent Bikes in Berlin:**\n\n*   **New Bikes:** Independent bike shops offer personalized advice and good service",
+            "position": 34
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Large stores like Décathlon, Stadler, and Radhaus have more selection",
+            "position": 35
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "ROSE Bikes in Berlin offers test rides and professional advice",
+            "position": 36
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Used Bikes:** You can find used bikes at the Berliner Fahrradmarkt, Fietsenbörse, or through classified ads websites like Kleinanzeigen",
+            "position": 37
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Be cautious of stolen bikes and always check the bike thoroughly before buying",
+            "position": 38
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Rentals:** Services like Nextbike and Call a Bike offer regular bikes for short-term rentals, and others like Lime, Dott, and Bolt offer electric bikes",
+            "position": 39
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "You can also rent bikes for longer periods, with maintenance and repairs often included",
+            "position": 40
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Berlin is a very bike-friendly city with flat terrain and an extensive network of bike lanes, making it ideal for cycling",
+            "position": 41
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "The best bike for cycling in Berlin depends on your individual needs, how often you plan to ride, the distances you'll cover, and your budget",
+            "position": 42
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Here are some types of bikes well-suited for Berlin and factors to consider:\n\n**1",
+            "position": 43
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "City Bikes/Urban Bikes/Commuter Bikes:**\n*   **Characteristics:** These bikes are designed for comfort and practicality in urban environments",
+            "position": 44
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They typically feature an upright riding position for better visibility, simple gear systems, and come equipped with essential safety features like lights, a bell, and reflectors",
+            "position": 45
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Pros:** Excellent for daily commutes, running errands, and leisurely rides through the city",
+            "position": 46
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They offer a comfortable riding experience and are often equipped for all weather conditions",
+            "position": 47
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Considerations:** Look for durable components and a solid frame",
+            "position": 48
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**2",
+            "position": 49
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Hybrid Bikes/Trekking Bikes:**\n*   **Characteristics:** These bikes combine features of road and mountain bikes, offering versatility for both paved roads and light off-road trails",
+            "position": 50
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Trekking bikes are known for being sturdy and often come fitted with mudguards, dynamo lights, and a rear rack, making them very practical",
+            "position": 51
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Pros:** A good all-around option if you plan to cycle within Berlin and also venture out to the Brandenburg countryside, which might have gravel or sandy trails",
+            "position": 52
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They offer a relaxed riding position while still allowing for good speed",
+            "position": 53
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Considerations:** Hybrid bikes can be a great compromise if you want something faster than a city bike but more robust than a racing bike for varied terrain",
+            "position": 54
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**3",
+            "position": 55
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "E-Bikes (Electric Bikes):**\n*   **Characteristics:** E-bikes provide an electric assist, making it easier to cover longer distances or navigate with less physical exertion",
+            "position": 56
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are becoming increasingly popular for urban mobility and are available in various styles, including city, SUV, and folding e-bikes",
+            "position": 57
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Pros:** Ideal for those who want to explore more of Berlin with less effort, especially for longer distances or if you want to reduce physical strain",
+            "position": 58
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are also a sustainable transportation option",
+            "position": 59
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Considerations:** E-bikes tend to be more expensive than traditional bikes",
+            "position": 60
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "You can rent them for a test ride before committing to a purchase",
+            "position": 61
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**4",
+            "position": 62
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Folding Bikes:**\n*   **Characteristics:** These bikes can be quickly and easily folded into a compact size, making them highly portable",
+            "position": 63
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Pros:** Excellent for commuters who combine cycling with public transport (U-Bahn, S-Bahn, trams, regional trains), as they are easy to carry on and off",
+            "position": 64
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They are also a good option for those with limited storage space at home or work, and offer a deterrent against theft as you can bring them indoors",
+            "position": 65
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Popular Models:** Brompton folding bikes are a well-known option, praised for their quality, practicality, and design",
+            "position": 66
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Other Bike Types:**\n*   **Racing Bikes:** Lightweight and fast, good for speed and long distances, but with single or fixed gears, they require less maintenance",
+            "position": 67
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Be aware that narrow tires might be more susceptible to punctures on Berlin's streets",
+            "position": 68
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Cargo Bikes (Lastenrad):** Designed for transporting children or heavy loads, these are a good car alternative in a flat city like Berlin",
+            "position": 69
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Dutch Bikes:** Offer a relaxed and upright riding position, with built-in mudguards and chain protectors, making them easy to get on and off",
+            "position": 70
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Mountain Bikes:** While not the most popular for city riding, they are sturdy and can be adapted with features like mudguards and racks",
+            "position": 71
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Where to Buy or Rent a Bike in Berlin:**\n*   **New Bikes:** Visit independent bike shops for personalized advice and good service",
+            "position": 72
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Larger stores like Décathlon also offer options",
+            "position": 73
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "A decent new bike can cost around 400-500 Euros",
+            "position": 74
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Used Bikes:** Look for second-hand bikes on platforms like eBay Kleinanzeigen or at monthly bicycle markets such as Berliner Fahrradmarkt and Fietsenbörse",
+            "position": 75
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Be cautious of flea markets, as bikes there can be old, overpriced, or stolen",
+            "position": 76
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike Rentals and Sharing:**\n    *   **Bike Sharing:** Services like Nextbike and LimeBike (electric bicycles) offer convenient rentals via apps for short-term use, with bikes available throughout the city",
+            "position": 77
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Tier also offers e-bike rentals",
+            "position": 78
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike Rental Shops:** Many shops throughout Berlin offer bike rentals, including e-bikes, city bikes, and trekking bikes",
+            "position": 79
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Unlimited Biking and Urban Bike Berlin are examples of rental providers",
+            "position": 80
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike Subscriptions:** Companies like Swapfiets offer monthly bike subscriptions that include a bike and free repairs/maintenance",
+            "position": 81
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Important Considerations for Cycling in Berlin:**\n*   **Bike Requirements:** By law, your bike must have a bell, working front (white) and back (red) lights, front and back reflectors, spoke reflectors, and pedal reflectors",
+            "position": 82
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Theft:** Bicycle theft is unfortunately high in Berlin, so consider investing in a good lock or opting for a folding bike that you can take indoors",
+            "position": 83
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Bike registration and insurance are also options",
+            "position": 84
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Traffic:** While Berlin is bike-friendly, be aware that cycling in the city can sometimes involve navigating busy intersections and sharing space with cars, buses, and trams",
+            "position": 85
+          }
+        ],
+        "domain_citations": 0,
+        "competitor_citations": 85,
+        "total_citations": 85,
+        "domain_share": 0,
+        "first_mention_position": null,
+        "performance_rating": "absent"
+      },
+      "cycle fast; city bikes; berlin": {
+        "domain_mentions": [],
+        "competitor_mentions": [
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "For fast city cycling in Berlin, you'll want a bike that is lightweight, agile, and durable enough to handle urban environments",
+            "position": 1
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Several options and retailers in Berlin cater to this need",
+            "position": 2
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Types of Fast City Bikes:**\n\n*   **Light City Bikes:** These bikes, like the Veloretti Berlin (11",
+            "position": 3
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "7 kg), are designed for quick movement and easy handling, often featuring aluminum frames",
+            "position": 4
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They prioritize being lightweight and effortless to maneuver",
+            "position": 5
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Singlespeed and Fixed Gear Bikes:** Known for their minimalistic design and low maintenance, these bikes are ideal for urban spaces and can offer a fast, direct riding experience",
+            "position": 6
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Commuter Bikes with Internal Hub Gears:** These offer less maintenance than traditional derailleur systems and can be quite efficient for city commuting",
+            "position": 7
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "The Pedal Messenger 3 Berlin, for example, has a Shimano Nexus 3-speed internal hub and a lightweight steel frame",
+            "position": 8
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Gravel Bikes:** While designed for varied terrain, gravel bikes are also recommended for commuting in Berlin due to their versatility, ability to handle wet and slippery roads, and comfort on uneven surfaces",
+            "position": 9
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Electric City Bikes (E-bikes):** For an extra boost and effortless navigation, especially if you want to travel fast without as much physical exertion, lightweight urban e-bikes are an excellent choice",
+            "position": 10
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "The MOD Berlin 3 is a powerful commuter e-bike with a lightweight design and dual suspension, capable of speeds up to 28 MPH",
+            "position": 11
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "BZEN Bikes also offers super-light urban e-bikes (starting at 14",
+            "position": 12
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "5 kg) with good range for city commuting",
+            "position": 13
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Brompton Electric folding bikes are also a lightweight e-bike option",
+            "position": 14
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "**Where to Find Them in Berlin:**\n\n*   **Bike Punk Berlin:** This shop offers a diverse selection of complete bikes, including agile singlespeed and fixed gear bikes, as well as robust gravel and all-road bikes",
+            "position": 15
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They focus on high-quality brands like Bombtrack, Brother Cycles, and Cinelli",
+            "position": 16
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They also have a showroom in Berlin-Kreuzberg for test rides",
+            "position": 17
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fahrradstation:** As one of Berlin's oldest bike stores, Fahrradstation offers a wide range of new and used city bikes, touring bikes, and e-bikes",
+            "position": 18
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They also provide rentals, repairs, and guided tours",
+            "position": 19
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Urban Bike Berlin:** This store offers city, trekking, gravel, and mountain bikes, along with a large selection of e-bikes for test rides and purchase",
+            "position": 20
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They also offer bike leasing and sell both new and \"young used\" bikes with a warranty",
+            "position": 21
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Trek Bicycle Berlin-Mitte:** Trek offers various city and hybrid bikes, including their Verve and FX Sport models",
+            "position": 22
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They also provide 24-hour service turnaround for bikes of any brand",
+            "position": 23
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Auftragsrad:** This dealer in Berlin partners with Desiknio Cycles, a brand known for its high-performance, lightweight urban e-bikes and stylish city cruisers",
+            "position": 24
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Swapfiets:** If you prefer a subscription model, Swapfiets offers high-quality city bikes and e-bikes in Berlin with free check-ups and repairs included in a monthly fee",
+            "position": 25
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "When choosing a bike for fast city riding in Berlin, consider factors like maintenance (hub gears are often recommended for lower maintenance), durability for varied road surfaces, and the inclusion of practical features like integrated lights and fenders",
+            "position": 26
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "For cycling quickly through Berlin, you'll want a city bike that is lightweight, agile, and well-suited for urban environments",
+            "position": 27
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Here's a breakdown of options and places to find them: \n\n ### Types of Fast City Bikes \n\n *   **Lightweight City Bikes:** Bikes like the Veloretti Berlin are designed for speed and easy handling in the city, weighing around 11",
+            "position": 28
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "7 kg due to their aluminum frames",
+            "position": 29
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They often feature a retro racing look and can come with a single-speed internal hub for lower maintenance",
+            "position": 30
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Commuter E-Bikes:** For an extra boost and effortless navigation, especially if you encounter varied terrain or want to cover longer distances quickly, consider a lightweight urban electric bike",
+            "position": 31
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "Models like the MOD Berlin 3 are designed for performance with powerful torque-sensing electric systems and lightweight designs",
+            "position": 32
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "The Brompton Electric is another option, known for being a lightweight e-bike that is also foldable",
+            "position": 33
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Trekking Bikes:** These are versatile and durable, suitable for both daily commutes and longer tours, offering a good balance of speed and comfort",
+            "position": 34
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They often come with features like aluminum frames, suspension forks, and multi-speed gear systems",
+            "position": 35
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Gravel Bikes:** While primarily designed for mixed terrain, gravel bikes are also recommended for commuting in Berlin due to their ability to handle various road conditions, including wet and slippery surfaces",
+            "position": 36
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Vintage Racers/Road Bikes:** Some shops specialize in refurbished vintage road bikes that can be fast and stylish for city riding",
+            "position": 37
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "### Features to Look For: \n\n *   **Lightweight Frame:** An aluminum frame makes the bike easier to lift and maneuver, which is ideal for quick city riding",
+            "position": 38
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Low Maintenance:** Features like hub gears (internal gear hubs) are often recommended for city commuting as they require less maintenance than traditional derailleur systems",
+            "position": 39
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Durable Tires:** Puncture-proof or robust tires are beneficial for urban environments",
+            "position": 40
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Integrated Features:** Fenders, integrated lights, and racks can add practicality for daily use",
+            "position": 41
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Adjustability:** Bikes with adjustable seat posts, handlebars, and stems allow you to customize your riding position for comfort and efficiency, whether you prefer an upright or sportier stance",
+            "position": 42
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "### Where to Find Fast City Bikes in Berlin: \n\n *   **Specialized Bike Shops:** \n    *   **Veloretti Berlin:** Offers lightweight city bikes designed for speed",
+            "position": 43
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **MOD Bikes:** Features the MOD Berlin 3, a powerful commuter e-bike",
+            "position": 44
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike Punk Shop:** Offers a wide selection of city, urban, and commuter bikes, emphasizing comfort and style for fast, flexible, and eco-conscious travel",
+            "position": 45
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They have a showroom in Berlin-Kreuzberg",
+            "position": 46
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **The Urban Mobility Store:** A Brompton folding bike specialist in Berlin-Schöneberg, offering various Brompton lines, including the lightweight and high-performance P Line, and the Brompton Electric",
+            "position": 47
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Fahrradstation Berlin:** One of the oldest bike stores in Berlin, offering new and used city bikes, touring bikes, and e-bikes, along with rentals and repairs",
+            "position": 48
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They have centrally located stores",
+            "position": 49
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Urban Bike Berlin:** Recommends city bikes for affordable rides and trekking, gravel, and mountain bikes for longer, sportier tours",
+            "position": 50
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "They also offer a large selection of e-bikes",
+            "position": 51
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bikeopia:** Specializes in quality used high-end bikes, including vintage racers and city bikes, offering a 6-month warranty",
+            "position": 52
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Steel Vintage Bikes:** Offers vintage and modern road bikes, gravel bikes, city bicycles, and e-bikes, with workshop services in Berlin Mitte",
+            "position": 53
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Just Bikes:** Offers Airtracks city bikes for men and women",
+            "position": 54
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Bike Rental and Subscription Services:** \n    *   **Swapfiets:** Offers bike subscriptions in Berlin for a fixed monthly fee, including maintenance and repairs, with options for classic city bikes and e-bikes",
+            "position": 55
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Free Berlin Tours:** Provides bike rentals, including \"comfy yet dynamic\" city bikes and \"flexible, fast and totally durable\" trekking bikes",
+            "position": 56
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "### Considerations for Cycling in Berlin: \n\n *   **Theft:** Bike theft can be an issue in Berlin, so investing in a proper lock is highly recommended",
+            "position": 57
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Road Conditions:** Berlin's surfaces can be varied, so bikes with good suspension or broader tires can enhance comfort",
+            "position": 58
+          },
+          {
+            "sentence": "gemini-2.5-flash_response",
+            "domain": "*   **Legal Requirements:** Ensure your bike has a bell, working front and back lights (white front, red back), and reflectors on the front, back, and spokes if you plan to ride on public roads",
+            "position": 59
+          }
+        ],
+        "domain_citations": 0,
+        "competitor_citations": 59,
+        "total_citations": 59,
+        "domain_share": 0,
+        "first_mention_position": null,
+        "performance_rating": "absent"
+      }
+    },
+    "gemini_analysis": {
+      "poor_performance_analysis": {
+        "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet": {
+          "performance_rating": "poor",
+          "performance_score": 11,
+          "min_citation_rank": 11,
+          "total_citations": 2,
+          "all_citations": [
+            11,
+            23
+          ],
+          "competitor_count": 10,
+          "competitor_info": [
+            "Domain bike24.de was cited for query 'Rennrad kaufen Deutschland' with content: \"Sie bieten auch einen Guide zur Bestimmung der richtigen Rahmengröße an.\"",
+            "Domain fahrrad-xxl.de was cited for query 'Rennrad kaufen Deutschland' with content: \"*   **Fahrrad XXL** ist ebenfalls eine gute Option mit einer der größten Auswahlen in Deutschland und einem Filialnetz für Beratung.\"",
+            "Domain bike-discount.de was cited for query 'Rennrad kaufen Deutschland' with content: \"*   **Bike-Discount** hat eine breite Palette an Rennrädern aus verschiedenen Materialien wie Stahl, Aluminium und Carbon.\"",
+            "Domain bikeexchange.de was cited for query 'Rennrad kaufen Deutschland' with content: \"*   **BikeExchange** ist ein großer Fahrradmarktplatz in Deutschland, auf dem Sie Rennräder von verschiedenen Händlern finden können.\"",
+            "Domain bike24.de was cited for query 'Fahrradhelm kaufen Deutschland' with content: \"*   **Online-Shops:**\n    *   **BIKE24** bietet eine große Auswahl an Fahrradhelmen verschiedener Marken und für verschiedene Einsatzzwecke (z.B. Rennradhelme, Mountainbike-Helme).\""
+          ],
+          "gemini_analysis": "Decathlon.de likely lacked specific content detailing a broad selection of road bikes, guidance on choosing the right size, or a comprehensive range of helmets, which were key features highlighted by the higher-ranking competitors."
+        }
+      },
+      "has_poor_performance": true,
+      "total_poor_performance_cases": 1
+    },
+    "domain_detailed_stats": {
+      "total_appearances": 1,
+      "total_citations": 2,
+      "retrieval_rate": 0.05555555555555555,
+      "usage_rate": 1,
+      "avg_citation_rank": 17,
+      "min_citation_rank": 11,
+      "prompt_appearances": [
+        "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+      ],
+      "query_appearances": [
+        "Fahrradhelm kaufen Deutschland"
+      ],
+      "citation_positions": [
+        11,
+        23
+      ]
+    },
+    "intersecting_queries": {},
+    "recommendations": [
+      "Decathlon.de likely lacked specific content detailing a broad selection of road bikes, guidance on choosing the right size, or a comprehensive range of helmets, which were key features highlighted by the higher-ranking competitors."
+    ],
+    "competitive_insights": {
+      "market_position": "emerging_player",
+      "key_competitors": [
+        {
+          "domain": "reddit.com",
+          "frequency": 9
+        },
+        {
+          "domain": "fahrrad-xxl.de",
+          "frequency": 3
+        },
+        {
+          "domain": "fahrrad.de",
+          "frequency": 3
+        },
+        {
+          "domain": "veloretti.com",
+          "frequency": 3
+        },
+        {
+          "domain": "swapfiets.de",
+          "frequency": 3
+        }
+      ],
+      "competitive_advantages": [
+        "High citation conversion rate"
+      ],
+      "improvement_areas": [
+        "Citation ranking optimization needed",
+        "Search visibility expansion needed"
+      ]
+    }
+  },
+  "error": null,
+  "metadata": {
+    "target_domain": "decathlon.de",
+    "experiment_files": [
+      "gemini_experiment_results.json"
+    ],
+    "total_prompts_analyzed": 5,
+    "has_gemini_api": true,
+    "has_response_chunks": true,
+    "analysis_timestamp": null
+  }
+}

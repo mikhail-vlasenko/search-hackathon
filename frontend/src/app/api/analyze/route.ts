@@ -23,121 +23,121 @@ function transformPythonResponseToAnalysis(
   // Extract data from new Python API response format
   const data = pythonResponse.data || {};
   const intersectingQueries = data.intersecting_queries || {};
+  const queryFrequencyStats = data.query_frequency_stats || {};
+  const queryDetails = queryFrequencyStats.query_details || {};
 
   // Extract domain from URL for matching
   const targetDomain = extractDomain(websiteUrl);
 
-  // Create analysis results for each query in intersecting_queries
+  // Create analysis results for each query in query_frequency_stats
   let queryIndex = 0;
-  Object.entries(intersectingQueries).forEach(
-    ([query, queryData]: [string, any]) => {
-      // Find which prompts this query belongs to
-      const relatedPrompts = prompts.filter(
-        (prompt) =>
-          queryData.prompts && queryData.prompts.includes(prompt.prompt)
+  Object.entries(queryDetails).forEach(([query, queryData]: [string, any]) => {
+    // Find which prompts this query belongs to
+    const relatedPrompts = prompts.filter(
+      (prompt) => queryData.prompts && queryData.prompts.includes(prompt.prompt)
+    );
+
+    // If no related prompts found, try to match with any prompt for backwards compatibility
+    const prompt = relatedPrompts.length > 0 ? relatedPrompts[0] : prompts[0];
+
+    // Get frequency data from query_frequency_stats
+    const frequency = queryData.frequency || 1;
+    const promptCount =
+      queryData.unique_prompts || queryData.prompts?.length || 1;
+
+    // Check if target domain appears in this query from intersecting_queries
+    const intersectingQueryData = intersectingQueries[query];
+    const domainsWithCitations =
+      intersectingQueryData?.domains_with_citations || {};
+    const domainEntries = Object.entries(domainsWithCitations);
+
+    // Find target domain in various formats
+    const targetDomainEntry = domainEntries.find(([domain]) => {
+      const cleanDomain = domain
+        .replace(/^https?:\/\//, "")
+        .replace(/^www\./, "");
+      return (
+        cleanDomain === targetDomain ||
+        cleanDomain.includes(targetDomain) ||
+        targetDomain.includes(cleanDomain)
       );
+    });
 
-      // If no related prompts found, try to match with any prompt for backwards compatibility
-      const prompt = relatedPrompts.length > 0 ? relatedPrompts[0] : prompts[0];
-
-      // Count how many prompts this query appears in
-      const promptCount = queryData.prompts ? queryData.prompts.length : 1;
-
-      // Check if target domain appears in this query
-      const domainsWithCitations = queryData.domains_with_citations || {};
-      const domainEntries = Object.entries(domainsWithCitations);
-
-      // Find target domain in various formats
-      const targetDomainEntry = domainEntries.find(([domain]) => {
-        const cleanDomain = domain
-          .replace(/^https?:\/\//, "")
-          .replace(/^www\./, "");
-        return (
-          cleanDomain === targetDomain ||
-          cleanDomain.includes(targetDomain) ||
-          targetDomain.includes(cleanDomain)
-        );
-      });
-
-      const isMentioned = !!targetDomainEntry;
-      const citations = (
-        targetDomainEntry ? targetDomainEntry[1] : []
-      ) as number[];
-      const averageRanking =
-        isMentioned && citations.length > 0
-          ? citations.reduce((sum: number, rank: number) => sum + rank, 0) /
-            citations.length
-          : 0;
-
-      // Calculate metrics
-      const totalDomains = queryData.total_domains || 0;
-      const totalSearches = queryData.frequency || 1;
-      const appearsInSearches = isMentioned ? 1 : 0;
-      const visibility = isMentioned
-        ? Math.max(10, 100 - averageRanking * 10)
+    const isMentioned = !!targetDomainEntry;
+    const citations = (
+      targetDomainEntry ? targetDomainEntry[1] : []
+    ) as number[];
+    const averageRanking =
+      isMentioned && citations.length > 0
+        ? citations.reduce((sum: number, rank: number) => sum + rank, 0) /
+          citations.length
         : 0;
 
-      // Create citation distribution data for sparkline
-      const citationDistribution: Array<{ position: number; count: number }> =
-        [];
-      const userDomainPositions: number[] = [];
+    // Calculate metrics
+    const totalDomains = intersectingQueryData?.total_domains || 0;
+    const totalSearches = frequency; // Use frequency from query_frequency_stats
+    const appearsInSearches = isMentioned ? 1 : 0;
+    const visibility = isMentioned
+      ? Math.max(10, 100 - averageRanking * 10)
+      : 0;
 
-      if (queryData.domains_with_citations) {
-        // Count citations at each position
-        const positionCounts: { [position: number]: number } = {};
+    // Create citation distribution data for sparkline
+    const citationDistribution: Array<{ position: number; count: number }> = [];
+    const userDomainPositions: number[] = [];
 
-        Object.entries(queryData.domains_with_citations).forEach(
-          ([domain, citations]) => {
-            const cleanDomain = domain
-              .replace(/^https?:\/\//, "")
-              .replace(/^www\./, "");
-            const isUserDomain =
-              cleanDomain === targetDomain ||
-              cleanDomain.includes(targetDomain) ||
-              targetDomain.includes(cleanDomain);
+    if (intersectingQueryData?.domains_with_citations) {
+      // Count citations at each position
+      const positionCounts: { [position: number]: number } = {};
 
-            (citations as number[]).forEach((position) => {
-              positionCounts[position] = (positionCounts[position] || 0) + 1;
+      Object.entries(intersectingQueryData.domains_with_citations).forEach(
+        ([domain, citations]) => {
+          const cleanDomain = domain
+            .replace(/^https?:\/\//, "")
+            .replace(/^www\./, "");
+          const isUserDomain =
+            cleanDomain === targetDomain ||
+            cleanDomain.includes(targetDomain) ||
+            targetDomain.includes(cleanDomain);
 
-              if (isUserDomain) {
-                userDomainPositions.push(position);
-              }
-            });
-          }
-        );
+          (citations as number[]).forEach((position) => {
+            positionCounts[position] = (positionCounts[position] || 0) + 1;
 
-        // Convert to array format for sparkline
-        const maxPosition = Math.max(
-          ...Object.keys(positionCounts).map(Number)
-        );
-        for (let i = 1; i <= maxPosition; i++) {
-          citationDistribution.push({
-            position: i,
-            count: positionCounts[i] || 0,
+            if (isUserDomain) {
+              userDomainPositions.push(position);
+            }
           });
         }
+      );
+
+      // Convert to array format for sparkline
+      const maxPosition = Math.max(...Object.keys(positionCounts).map(Number));
+      for (let i = 1; i <= maxPosition; i++) {
+        citationDistribution.push({
+          position: i,
+          count: positionCounts[i] || 0,
+        });
       }
-
-      results.push({
-        id: `query-${queryIndex}`,
-        query: query,
-        prompt: prompt?.prompt || "Unknown prompt",
-        isMentioned,
-        averageRanking: Math.round(averageRanking * 10) / 10,
-        totalSearches,
-        appearsInSearches,
-        totalSources: totalDomains,
-        visibility: Math.round(visibility),
-        promptCount,
-        category: prompt?.category || "General",
-        timestamp: new Date(),
-        citationDistribution,
-        userDomainPositions,
-      });
-
-      queryIndex++;
     }
-  );
+
+    results.push({
+      id: `query-${queryIndex}`,
+      query: query,
+      prompt: prompt?.prompt || "Unknown prompt",
+      isMentioned,
+      averageRanking: Math.round(averageRanking * 10) / 10,
+      totalSearches,
+      appearsInSearches,
+      totalSources: totalDomains,
+      visibility: Math.round(visibility),
+      promptCount,
+      category: prompt?.category || "General",
+      timestamp: new Date(),
+      citationDistribution,
+      userDomainPositions,
+    });
+
+    queryIndex++;
+  });
 
   // Calculate aggregate metrics
   const totalQueries = results.length;

@@ -87,22 +87,43 @@ async function writeToCache(
 }
 
 export async function POST(request: NextRequest) {
+  const hardcodedPrompts = [
+    "cheapest bicycle to buy in berlin",
+    "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+    "best bikes for cycling in Berlin",
+    "best bikes for cycling near Berlin",
+    "best bikes for cycling in Europe",
+    "cycle fast; city bikes; berlin",
+  ];
+
+  const generatedPrompts: GeneratedPrompt[] = hardcodedPrompts.map(
+    (prompt: string, index: number) => ({
+      id: (index + 1).toString(),
+      prompt: prompt,
+      category: "Cycling",
+      selected: true,
+      queries: [prompt], // Include the prompt itself as a query variation
+    })
+  );
+  return NextResponse.json({ prompts: generatedPrompts });
+
   try {
-    const { url } = await request.json();
+    // const { url } = await request.json();
+    const url = "buying bikes berlin";
 
     if (!url) {
       return NextResponse.json({ error: "URL is required" }, { status: 400 });
     }
 
     // Validate URL format
-    try {
-      new URL(url);
-    } catch {
-      return NextResponse.json(
-        { error: "Invalid URL format" },
-        { status: 400 }
-      );
-    }
+    // try {
+    //   new URL(url.startsWith("http") ? url : `https://${url}`);
+    // } catch {
+    //   return NextResponse.json(
+    //     { error: "Invalid URL format" },
+    //     { status: 400 }
+    //   );
+    // }
 
     console.log(`Starting content extraction for: ${url}`);
 
@@ -123,15 +144,15 @@ export async function POST(request: NextRequest) {
       const crawler = new CheerioCrawler({
         // Allow more requests for thorough crawling
         maxRequestsPerCrawl: 5,
-        requestHandlerTimeoutSecs: 60,
-        // Add retry logic for failed requests
-        maxRequestRetries: 2,
-        // Set concurrent requests to 1 to be respectful
-        maxConcurrency: 1,
-        // Follow redirects
-        ignoreSslErrors: true,
-        // Add additional options for better compatibility
-        additionalMimeTypes: ["text/html", "application/xhtml+xml"],
+        // requestHandlerTimeoutSecs: 60,
+        // // Add retry logic for failed requests
+        // maxRequestRetries: 2,
+        // // Set concurrent requests to 1 to be respectful
+        // maxConcurrency: 1,
+        // // Follow redirects
+        // ignoreSslErrors: true,
+        // // Add additional options for better compatibility
+        // additionalMimeTypes: ["text/html", "application/xhtml+xml"],
         preNavigationHooks: [
           async ({ request }) => {
             console.log(`Attempting to crawl: ${request.url}`);
@@ -284,32 +305,37 @@ export async function POST(request: NextRequest) {
         crawlSuccessful = true;
       } catch (fetchError) {
         console.error("Fallback fetch also failed:", fetchError);
-        return NextResponse.json(
-          {
-            error:
-              "Failed to crawl the website. The site may be blocking requests, may not be accessible, or may have anti-bot protection. Please try a different URL or contact support.",
-          },
-          { status: 500 }
+        console.log(
+          "All crawling methods failed, generating prompts based on URL only"
         );
+
+        // Final fallback: generate prompts based on URL only
+        crawlSuccessful = false;
+        extractedContent = "";
+        pageTitle = "";
+        pageDescription = "";
       }
     }
 
-    if (!extractedContent) {
-      return NextResponse.json(
-        { error: "No content could be extracted from the website" },
-        { status: 400 }
-      );
+    // Check if we have content or if we need to proceed with URL-only analysis
+    const hasContent = extractedContent && extractedContent.trim().length > 0;
+
+    if (!hasContent) {
+      console.log("No content extracted, proceeding with URL-only analysis");
     }
 
     // Truncate content if too long (OpenAI has token limits)
     const maxContentLength = 8000; // Conservative limit to stay within token bounds
-    const truncatedContent =
-      extractedContent.length > maxContentLength
+    const truncatedContent = hasContent
+      ? extractedContent.length > maxContentLength
         ? extractedContent.substring(0, maxContentLength) + "..."
-        : extractedContent;
+        : extractedContent
+      : "";
 
     console.log(
-      `Sending ${truncatedContent.length} characters to OpenAI for analysis`
+      hasContent
+        ? `Sending ${truncatedContent.length} characters to OpenAI for analysis`
+        : `Generating prompts based on URL only: ${url}`
     );
 
     // Step 3: Use OpenAI to generate realistic AI search queries
@@ -329,20 +355,30 @@ AI search tools differ from traditional search engines in several key ways:
 5. Queries tend to be more specific and context-rich
 6. Users often ask follow-up questions in a conversational manner
 
-Your task is to analyze the provided website content and generate 5-8 realistic queries that potential customers might ask AI search tools when looking for information related to this business/website.
+Your task is to generate 5-8 realistic queries that potential customers might ask AI search tools when looking for information related to this business/website.
 
-Focus on:
+${
+  hasContent
+    ? `You will be provided with website content to analyze. Focus on:
 - What services/products this business offers
 - What problems they solve
 - What industry they're in
 - What makes them unique or valuable
-- What questions their target audience would ask
+- What questions their target audience would ask`
+    : `You will only have the website URL to work with. Based on the domain name, path, and any clues in the URL structure, make educated inferences about:
+- What type of business this might be
+- What industry they're likely in
+- What services they might offer
+- What problems they might solve
+- What questions users might ask when looking for this type of business`
+}
 
 Generate queries that sound natural and conversational, as if someone was actually talking to an AI assistant.`,
           },
           {
             role: "user",
-            content: `Please analyze this website content and generate 5-8 realistic AI search queries that potential customers might use to find businesses like this:
+            content: hasContent
+              ? `Please analyze this website content and generate 5-8 realistic AI search queries that potential customers might use to find businesses like this:
 
 Website: ${url}
 Title: ${pageTitle}
@@ -365,7 +401,36 @@ Return the response as a JSON object with this exact structure:
 
 Categories should be logical groupings like: "Services", "Solutions", "Comparison", "Implementation", "Pricing", "Industry", "Best Practices", etc.
 
-Make sure each prompt sounds like a natural question someone would ask an AI assistant, not keyword searches.`,
+Make sure each prompt sounds like a natural question someone would ask an AI assistant, not keyword searches.`
+              : `Please analyze this website URL and generate 5-8 realistic AI search queries that potential customers might use to find businesses like this:
+
+Website: ${url}
+
+Note: Website content could not be accessed, so please base your analysis on the URL structure, domain name, and any other clues you can infer from the URL itself.
+
+For example:
+- If the URL contains "marketing" or "agency", assume it's a marketing business
+- If it contains "restaurant" or "food", assume it's food-related
+- If it contains "tech" or "software", assume it's technology-related
+- Use the domain name and path to infer the business type and industry
+
+Return the response as a JSON object with this exact structure:
+{
+  "prompts": [
+    {
+      "id": "1",
+      "prompt": "the actual query text",
+      "category": "category name",
+      "queries": ["related query variation 1", "related query variation 2", "related query variation 3"]
+    }
+  ]
+}
+
+Categories should be logical groupings like: "Services", "Solutions", "Comparison", "Implementation", "Pricing", "Industry", "Best Practices", etc.
+
+Make sure each prompt sounds like a natural question someone would ask an AI assistant, not keyword searches.
+
+Generate relevant, realistic queries even with limited information.`,
           },
         ],
         temperature: 0.7,
