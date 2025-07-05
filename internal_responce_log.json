@@ -5,109 +5,695 @@
       "gemini-2.5-flash": [
         {
           "model": "gemini-2.5-flash",
-          "response": "The cheapest bicycles in Berlin are typically found through second-hand options. Here's a breakdown of where to look: \n\n **1. Second-Hand Markets & Shops** \n\n * **Fietsenb\u00f6rse:** This is Berlin's largest bike market, held monthly on Winterfeldtplatz in Sch\u00f6neberg. It features over 600 used bikes from private sellers and dealers, offering a wide range of types and prices. You can test ride bikes and get independent advice from specialists. \n * **Berliner Fahrradmarkt:** This market, which started in 2015, is another large platform for used bicycles with multiple locations in 2025 (Kreuzk\u00f6lln, Moabit, Prenzlauer Berg, Neuk\u00f6lln). They offer free and independent on-site purchasing advice and test rides. \n * **bikePARK - Fahrrad Outlet Berlin:** Located in the heart of Berlin, bikePARK has over 300 used bicycles starting from \u20ac39. They offer a large selection of various types of bikes, all professionally repaired and maintained. \n * **Gebrauchte Fahrr\u00e4der Berlin (Gefa Berlin):** This place focuses on keeping costs low by operating primarily through regular warehouse sales. Their bikes typically range from \u20ac100 to \u20ac300, with many under \u20ac200. \n * **Bikeopia:** Specializes in quality used high-end bikes, particularly 80s and 90s vintage models. Their prices range from \u20ac400 to \u20ac1500, and they offer a 6-month warranty on all bikes. \n * **Radwelt:** Offers both new and used bicycles at their Friedrichshain and Mitte locations. They ensure that all used bikes are checked, functional, and come with a proper invoice and warranty. Used bikes here can start from \u20ac150. \n * **BIKE A-WAY Berlin:** They salvage and repair discarded bikes, offering quality second-hand bikes with a 1-year warranty at affordable prices. They have a large assortment of serviced used bikes, including racers, city bikes, and urban bikes. \n * **Decathlon:** Their \"Second Use\" program offers returned, tried-out, or bought-back bicycles at fair prices. These bikes are inspected by their experts and may have minor signs of use. You also get the same legal conditions, warranty, and guarantee rights as new products. \n\n **2. Online Marketplaces & Other Options** \n\n * **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin. \n * **Facebook groups:** \"Sell Your Bike Berlin\" is a Facebook group with over 30,000 members where you might find bikes for sale. \n * **Toll office auctions:** Regular auctions for lost and found bicycles are held where you can bid online. \n\n **Important Considerations for Used Bikes:** \n\n * **Inspect the bike thoroughly:** Always test ride the bike before buying it. Check the brakes, gears, frame, and wheels. \n * **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be too old, overpriced, and often stolen. \n * **Professional inspection:** Even if you buy a used bike, it's recommended to get it fitted and adjusted at a bike shop for a smoother and more comfortable ride. \n\n For new bikes, Decathlon is generally considered to offer good value for the price.",
+          "response": "To find the cheapest bicycle in Berlin, your best bet is to explore options for used bikes or look into bicycle outlets.\n\nHere are some places to consider:\n\n**1. Used Bicycle Shops & Markets:**\n\n*   **bikePARK - Fahrrad Outlet Berlin:** This store offers a large selection of used bikes starting from \u20ac39. They have over 300 used bikes, including Holland bikes, racing bikes, vintage bikes, mountain bikes, and e-bikes. All used bikes are professionally repaired and maintained.\n*   **Radwelt Berlin (Friedrichshain and Mitte):** Radwelt offers both new and used bicycles. Their used bikes are inspected and repaired in their workshop, ensuring they are in good working order. Prices for good used bikes can start from \u20ac150.\n*   **Bikeopia:** This shop specializes in quality used high-end bikes, including vintage racers and city bikes. While they offer good value, their prices typically range from \u20ac400 to \u20ac1500.\n*   **Berliner Fahrradmarkt:** This bicycle market is held at various locations (Kreuzk\u00f6lln, Moabit, Prenzlauer Berg, Neuk\u00f6lln) from March to October. It's a great place to find a wide selection of used bikes from private sellers and dealers. Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods.\n*   **Decathlon Stores:** Decathlon offers \"Second Use\" products, which are returned or previously used bikes that have been inspected by their experts. These can be a good option for a quality used bike at a fair price.\n*   **Online Marketplaces:** Websites like eBay Kleinanzeigen are often recommended for finding used bikes directly from private sellers. However, it's crucial to be cautious and check the seller's history. Always try the bike before you buy it and check the brakes, gears, frame, and wheels.\n\n**2. Bicycle Outlets and Budget-Friendly New Bikes:**\n\n*   **Fahrrad Outlet Berlin (Radwelt):** This outlet offers new bicycles with minor defects or paint damage at discounted prices. The inventory changes daily.\n*   **Fahrradoutlet.berlin:** They sell new bicycles and e-bikes from insolvencies and overstock at very affordable prices. They have three locations in Berlin (Mitte, Friedrichshain, and K\u00f6penick).\n*   **Budget-Bikes:** This store focuses on offering new bicycles and e-bikes at attractive prices.\n*   **Decathlon:** Decathlon is generally considered a good option for new bikes that offer good value for the price.\n*   **Stadler:** Stadler is a large bicycle store with a wide selection, and they are known for recommending bikes that fit your budget.\n\n**Tips for finding the cheapest bike:**\n\n*   **Consider used bikes:** Second-hand bikes are almost always cheaper than new ones and can be a sustainable choice.\n*   **Be prepared to visit multiple shops:** The inventory of used bikes and outlet deals changes frequently, so it's worth checking different locations.\n*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you.\n*   **Check for basic functionality:** Ensure the brakes work, gears shift smoothly, the frame isn't cracked, and wheels are straight.\n*   **Ask about warranties or return policies:** Some shops offer warranties on used bikes. Bikeopia, for example, offers a 6-month warranty on all bikes.\n*   **Attend bicycle auctions:** The police and BVG (Berlin's public transport company) sometimes hold auctions for unclaimed bicycles, with prices starting as low as \u20ac5-\u20ac15 for good bikes.",
           "web_searches": {
-            "cheapest bicycle shops in Berlin": {
-              "https://fietsenboerse.de": {
+            "g\u00fcnstige Fahrr\u00e4der Berlin": {
+              "https://bikeparkberlin.de/": {
                 "citations": [
-                  1
+                  1,
+                  14
                 ],
                 "contents": [
-                  "You can test ride bikes and get independent advice from specialists."
+                  "All used bikes are professionally repaired and maintained.",
+                  "*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you."
                 ]
               },
-              "https://www.visitberlin.de/en/event/berlin-bicycle-market": {
+              "https://radwelt.berlin/fahrrad-kaufen/gebrauchte-fahrraeder-berlin": {
                 "citations": [
-                  2
+                  2,
+                  13
                 ],
                 "contents": [
-                  "They offer free and independent on-site purchasing advice and test rides."
-                ]
-              },
-              "https://bikeparkberlin.de": {
-                "citations": [
-                  3
-                ],
-                "contents": [
-                  "They offer a large selection of various types of bikes, all professionally repaired and maintained."
-                ]
-              },
-              "https://xn--gebrauchte-fahrrder-berlin-vhc.de": {
-                "citations": [
-                  4
-                ],
-                "contents": [
-                  "Their bikes typically range from \u20ac100 to \u20ac300, with many under \u20ac200."
+                  "Prices for good used bikes can start from \u20ac150.",
+                  "*   **Consider used bikes:** Second-hand bikes are almost always cheaper than new ones and can be a sustainable choice."
                 ]
               },
               "https://bikeopia.com": {
                 "citations": [
+                  3,
+                  16
+                ],
+                "contents": [
+                  "While they offer good value, their prices typically range from \u20ac400 to \u20ac1500.",
+                  "Bikeopia, for example, offers a 6-month warranty on all bikes."
+                ]
+              },
+              "https://berlinerfahrradmarkt.de/fahrraeder/fahrrad-kaufen": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods."
+                ]
+              },
+              "https://visitberlin.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods."
+                ]
+              },
+              "https://www.decathlon.de/Gebrauchtes-Fahrrad-kaufen-Berlin_lp-U7Q3Q0": {
+                "citations": [
                   5
                 ],
                 "contents": [
-                  "Their prices range from \u20ac400 to \u20ac1500, and they offer a 6-month warranty on all bikes."
+                  "These can be a good option for a quality used bike at a fair price."
                 ]
               },
-              "https://radwelt.berlin": {
+              "https://reddit.com": {
                 "citations": [
                   6
                 ],
                 "contents": [
-                  "Used bikes here can start from \u20ac150."
+                  "However, it's crucial to be cautious and check the seller's history."
                 ]
               },
-              "https://bikeawayberlin.de": {
+              "https://allaboutberlin.com": {
                 "citations": [
-                  7
-                ],
-                "contents": [
-                  "They have a large assortment of serviced used bikes, including racers, city bikes, and urban bikes."
-                ]
-              },
-              "https://decathlon.de": {
-                "citations": [
-                  8
-                ],
-                "contents": [
-                  "You also get the same legal conditions, warranty, and guarantee rights as new products."
-                ]
-              },
-              "https://allaboutberlin.com/guides/bicycle-in-berlin#buying-a-stolen-bicycle": {
-                "citations": [
-                  9,
-                  10,
+                  7,
                   11,
-                  12,
-                  13,
                   14,
                   15
                 ],
                 "contents": [
-                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
-                  "* **Facebook groups:** \"Sell Your Bike Berlin\" is a Facebook group with over 30,000 members where you might find bikes for sale.",
-                  "* **Toll office auctions:** Regular auctions for lost and found bicycles are held where you can bid online.",
-                  "Check the brakes, gears, frame, and wheels.",
-                  "* **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be too old, overpriced, and often stolen.",
-                  "* **Professional inspection:** Even if you buy a used bike, it's recommended to get it fitted and adjusted at a bike shop for a smoother and more comfortable ride.",
-                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                  "Always try the bike before you buy it and check the brakes, gears, frame, and wheels.",
+                  "*   **Decathlon:** Decathlon is generally considered a good option for new bikes that offer good value for the price.",
+                  "*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you.",
+                  "*   **Check for basic functionality:** Ensure the brakes work, gears shift smoothly, the frame isn't cracked, and wheels are straight."
+                ]
+              },
+              "https://radwelt.berlin/fahrrad-outlet-berlin": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "The inventory changes daily."
+                ]
+              },
+              "https://fahrradoutlet.berlin": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "The inventory changes daily."
+                ]
+              },
+              "https://fahrradoutlet.berlin/?srsltid=AfmBOorY7zx7pxVIluA4g8ckBJowPIRHN8Jy2K1s0aRHIui2qGtJv_6L": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "They have three locations in Berlin (Mitte, Friedrichshain, and K\u00f6penick)."
+                ]
+              },
+              "https://budget-bikes.de": {
+                "citations": [
+                  10
+                ],
+                "contents": [
+                  "*   **Budget-Bikes:** This store focuses on offering new bicycles and e-bikes at attractive prices."
+                ]
+              },
+              "https://settle-in-berlin.com": {
+                "citations": [
+                  12,
+                  17
+                ],
+                "contents": [
+                  "*   **Stadler:** Stadler is a large bicycle store with a wide selection, and they are known for recommending bikes that fit your budget.",
+                  "*   **Attend bicycle auctions:** The police and BVG (Berlin's public transport company) sometimes hold auctions for unclaimed bicycles, with prices starting as low as \u20ac5-\u20ac15 for good bikes."
+                ]
+              }
+            },
+            "cheapest bicycle shops Berlin": {
+              "https://bikeparkberlin.de": {
+                "citations": [
+                  1,
+                  14
+                ],
+                "contents": [
+                  "All used bikes are professionally repaired and maintained.",
+                  "*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you."
+                ]
+              },
+              "https://radwelt.berlin": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "The inventory changes daily."
+                ]
+              },
+              "https://bikeopia.com": {
+                "citations": [
+                  3,
+                  16
+                ],
+                "contents": [
+                  "While they offer good value, their prices typically range from \u20ac400 to \u20ac1500.",
+                  "Bikeopia, for example, offers a 6-month warranty on all bikes."
+                ]
+              },
+              "https://berlinerfahrradmarkt.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods."
+                ]
+              },
+              "https://visitberlin.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "These can be a good option for a quality used bike at a fair price."
                 ]
               },
               "https://www.reddit.com/r/berlin/comments/mnk3fl/affordable_bicycle_shops_in_berlin/": {
                 "citations": [
+                  6,
+                  11
+                ],
+                "contents": [
+                  "However, it's crucial to be cautious and check the seller's history.",
+                  "*   **Decathlon:** Decathlon is generally considered a good option for new bikes that offer good value for the price."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/telvbw/buying_a_used_bike_in_berlin/": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "However, it's crucial to be cautious and check the seller's history."
+                ]
+              },
+              "https://allaboutberlin.com/guides/bicycle-in-berlin#buying-a-stolen-bicycle": {
+                "citations": [
+                  7,
+                  11,
+                  14,
                   15
                 ],
                 "contents": [
-                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                  "Always try the bike before you buy it and check the brakes, gears, frame, and wheels.",
+                  "*   **Decathlon:** Decathlon is generally considered a good option for new bikes that offer good value for the price.",
+                  "*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you.",
+                  "*   **Check for basic functionality:** Ensure the brakes work, gears shift smoothly, the frame isn't cracked, and wheels are straight."
+                ]
+              },
+              "https://fahrradoutlet.berlin": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "They have three locations in Berlin (Mitte, Friedrichshain, and K\u00f6penick)."
+                ]
+              },
+              "https://budget-bikes.de": {
+                "citations": [
+                  10
+                ],
+                "contents": [
+                  "*   **Budget-Bikes:** This store focuses on offering new bicycles and e-bikes at attractive prices."
+                ]
+              },
+              "https://settle-in-berlin.com": {
+                "citations": [
+                  12,
+                  17
+                ],
+                "contents": [
+                  "*   **Stadler:** Stadler is a large bicycle store with a wide selection, and they are known for recommending bikes that fit your budget.",
+                  "*   **Attend bicycle auctions:** The police and BVG (Berlin's public transport company) sometimes hold auctions for unclaimed bicycles, with prices starting as low as \u20ac5-\u20ac15 for good bikes."
+                ]
+              }
+            },
+            "second hand bikes Berlin": {
+              "https://bikeparkberlin.de": {
+                "citations": [
+                  1,
+                  14
+                ],
+                "contents": [
+                  "All used bikes are professionally repaired and maintained.",
+                  "*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you."
+                ]
+              },
+              "https://radwelt.berlin": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "The inventory changes daily."
+                ]
+              },
+              "https://bikeopia.com/": {
+                "citations": [
+                  3,
+                  16
+                ],
+                "contents": [
+                  "While they offer good value, their prices typically range from \u20ac400 to \u20ac1500.",
+                  "Bikeopia, for example, offers a 6-month warranty on all bikes."
+                ]
+              },
+              "https://berlinerfahrradmarkt.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods."
+                ]
+              },
+              "https://www.visitberlin.de/en/event/berlin-bicycle-market": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "These can be a good option for a quality used bike at a fair price."
+                ]
+              },
+              "https://reddit.com": {
+                "citations": [
+                  6,
+                  11
+                ],
+                "contents": [
+                  "However, it's crucial to be cautious and check the seller's history.",
+                  "*   **Decathlon:** Decathlon is generally considered a good option for new bikes that offer good value for the price."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/telvbw/buying_a_used_bike_in_berlin/": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "However, it's crucial to be cautious and check the seller's history."
+                ]
+              },
+              "https://allaboutberlin.com": {
+                "citations": [
+                  7,
+                  11,
+                  14,
+                  15
+                ],
+                "contents": [
+                  "Always try the bike before you buy it and check the brakes, gears, frame, and wheels.",
+                  "*   **Decathlon:** Decathlon is generally considered a good option for new bikes that offer good value for the price.",
+                  "*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you.",
+                  "*   **Check for basic functionality:** Ensure the brakes work, gears shift smoothly, the frame isn't cracked, and wheels are straight."
+                ]
+              },
+              "https://fahrradoutlet.berlin": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "They have three locations in Berlin (Mitte, Friedrichshain, and K\u00f6penick)."
+                ]
+              },
+              "https://budget-bikes.de": {
+                "citations": [
+                  10
+                ],
+                "contents": [
+                  "*   **Budget-Bikes:** This store focuses on offering new bicycles and e-bikes at attractive prices."
+                ]
+              },
+              "https://settle-in-berlin.com": {
+                "citations": [
+                  12,
+                  17
+                ],
+                "contents": [
+                  "*   **Stadler:** Stadler is a large bicycle store with a wide selection, and they are known for recommending bikes that fit your budget.",
+                  "*   **Attend bicycle auctions:** The police and BVG (Berlin's public transport company) sometimes hold auctions for unclaimed bicycles, with prices starting as low as \u20ac5-\u20ac15 for good bikes."
+                ]
+              }
+            },
+            "budget bikes Berlin": {
+              "https://bikeparkberlin.de": {
+                "citations": [
+                  1,
+                  14
+                ],
+                "contents": [
+                  "All used bikes are professionally repaired and maintained.",
+                  "*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you."
+                ]
+              },
+              "https://radwelt.berlin": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "The inventory changes daily."
+                ]
+              },
+              "https://bikeopia.com": {
+                "citations": [
+                  3,
+                  16
+                ],
+                "contents": [
+                  "While they offer good value, their prices typically range from \u20ac400 to \u20ac1500.",
+                  "Bikeopia, for example, offers a 6-month warranty on all bikes."
+                ]
+              },
+              "https://berlinerfahrradmarkt.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods."
+                ]
+              },
+              "https://visitberlin.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "These can be a good option for a quality used bike at a fair price."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/mnk3fl/affordable_bicycle_shops_in_berlin/": {
+                "citations": [
+                  6,
+                  11
+                ],
+                "contents": [
+                  "However, it's crucial to be cautious and check the seller's history.",
+                  "*   **Decathlon:** Decathlon is generally considered a good option for new bikes that offer good value for the price."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/telvbw/buying_a_used_bike_in_berlin/": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "However, it's crucial to be cautious and check the seller's history."
+                ]
+              },
+              "https://allaboutberlin.com/guides/bicycle-in-berlin": {
+                "citations": [
+                  7,
+                  11,
+                  14,
+                  15
+                ],
+                "contents": [
+                  "Always try the bike before you buy it and check the brakes, gears, frame, and wheels.",
+                  "*   **Decathlon:** Decathlon is generally considered a good option for new bikes that offer good value for the price.",
+                  "*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you.",
+                  "*   **Check for basic functionality:** Ensure the brakes work, gears shift smoothly, the frame isn't cracked, and wheels are straight."
+                ]
+              },
+              "https://fahrradoutlet.berlin": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "They have three locations in Berlin (Mitte, Friedrichshain, and K\u00f6penick)."
+                ]
+              },
+              "https://budget-bikes.de": {
+                "citations": [
+                  10
+                ],
+                "contents": [
+                  "*   **Budget-Bikes:** This store focuses on offering new bicycles and e-bikes at attractive prices."
+                ]
+              },
+              "https://settle-in-berlin.com": {
+                "citations": [
+                  12,
+                  17
+                ],
+                "contents": [
+                  "*   **Stadler:** Stadler is a large bicycle store with a wide selection, and they are known for recommending bikes that fit your budget.",
+                  "*   **Attend bicycle auctions:** The police and BVG (Berlin's public transport company) sometimes hold auctions for unclaimed bicycles, with prices starting as low as \u20ac5-\u20ac15 for good bikes."
+                ]
+              }
+            },
+            "gebrauchtfahrr\u00e4der Berlin": {
+              "https://bikeparkberlin.de/": {
+                "citations": [
+                  1,
+                  14
+                ],
+                "contents": [
+                  "All used bikes are professionally repaired and maintained.",
+                  "*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you."
+                ]
+              },
+              "https://radwelt.berlin/fahrrad-kaufen/gebrauchte-fahrraeder-berlin": {
+                "citations": [
+                  2,
+                  13
+                ],
+                "contents": [
+                  "Prices for good used bikes can start from \u20ac150.",
+                  "*   **Consider used bikes:** Second-hand bikes are almost always cheaper than new ones and can be a sustainable choice."
+                ]
+              },
+              "https://bikeopia.com": {
+                "citations": [
+                  3,
+                  16
+                ],
+                "contents": [
+                  "While they offer good value, their prices typically range from \u20ac400 to \u20ac1500.",
+                  "Bikeopia, for example, offers a 6-month warranty on all bikes."
+                ]
+              },
+              "https://berlinerfahrradmarkt.de/fahrraeder/fahrrad-verkaufen": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods."
+                ]
+              },
+              "https://visitberlin.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "Test rides are possible, and the market cooperates with the Berlin police to prevent the sale of stolen goods."
+                ]
+              },
+              "https://www.decathlon.de/Gebrauchtes-Fahrrad-kaufen-Berlin_lp-U7Q3Q0": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "These can be a good option for a quality used bike at a fair price."
+                ]
+              },
+              "https://reddit.com": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "However, it's crucial to be cautious and check the seller's history."
+                ]
+              },
+              "https://allaboutberlin.com": {
+                "citations": [
+                  7,
+                  11,
+                  14,
+                  15
+                ],
+                "contents": [
+                  "Always try the bike before you buy it and check the brakes, gears, frame, and wheels.",
+                  "*   **Decathlon:** Decathlon is generally considered a good option for new bikes that offer good value for the price.",
+                  "*   **Test ride the bike:** Always test the bike before buying it to ensure it's in good working condition and comfortable for you.",
+                  "*   **Check for basic functionality:** Ensure the brakes work, gears shift smoothly, the frame isn't cracked, and wheels are straight."
+                ]
+              },
+              "https://radwelt.berlin/fahrrad-outlet-berlin": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "The inventory changes daily."
+                ]
+              },
+              "https://fahrradoutlet.berlin": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "They have three locations in Berlin (Mitte, Friedrichshain, and K\u00f6penick)."
+                ]
+              },
+              "https://budget-bikes.de": {
+                "citations": [
+                  10
+                ],
+                "contents": [
+                  "*   **Budget-Bikes:** This store focuses on offering new bicycles and e-bikes at attractive prices."
+                ]
+              },
+              "https://settle-in-berlin.com": {
+                "citations": [
+                  12,
+                  17
+                ],
+                "contents": [
+                  "*   **Stadler:** Stadler is a large bicycle store with a wide selection, and they are known for recommending bikes that fit your budget.",
+                  "*   **Attend bicycle auctions:** The police and BVG (Berlin's public transport company) sometimes hold auctions for unclaimed bicycles, with prices starting as low as \u20ac5-\u20ac15 for good bikes."
+                ]
+              }
+            }
+          },
+          "success": true,
+          "run_number": 1
+        },
+        {
+          "model": "gemini-2.5-flash",
+          "response": "To find the cheapest bicycle in Berlin, your best bet is to look for used bikes rather than new ones. Here's a breakdown of where to search: \n\n ### Second-Hand Bicycle Markets & Shops: \n\n * **Fietsenb\u00f6rse:** This is Berlin's largest bike market, held monthly on Winterfeldtplatz in Sch\u00f6neberg. You'll find over 600 used bikes from both private sellers and dealers, allowing for price comparison and test rides. They also offer independent advice and provide an official sales contract. \n * **Berliner Fahrradmarkt:** This market has grown into one of Berlin's largest platforms for used bicycles, with multiple locations in 2025 including Kreuzk\u00f6lln, Moabit, Prenzlauer Berg, and Neuk\u00f6lln. They offer a huge selection and even have a repair station where you can get small repairs done for a donation. \n * **bikePARK - Fahrrad Outlet Berlin:** Located on Friedrichstra\u00dfe, this outlet has over 300 used bicycles starting from \u20ac39. They offer a variety of bikes, including Dutch bikes, racing bikes, mountain bikes, and city bikes, all professionally repaired and maintained. You can also test ride bikes before buying. \n * **Radwelt:** With locations in Friedrichshain and Mitte, Radwelt offers both new and used bicycles. They emphasize providing checked, functional bikes with a guaranteed origin, proper receipts, and warranty. Used bikes here can start from around \u20ac150. \n * **BIKE A-WAY Berlin:** This shop focuses on \"reanimating\" discarded bikes, fixing them up with quality parts, and selling them with a 1-year warranty at affordable prices. They offer various types of serviced used bikes ready to ride. \n * **Decathlon:** Decathlon stores in Berlin (like Alexanderplatz, Sch\u00f6neweide, Steglitz, Wilmersdorf, Gesundbrunnen, Gropius) offer \"Second Use\" bicycles. These are returned or previously owned bikes that have been inspected by their experts, often with only minor signs of use, and come with the same legal conditions and warranty as new bikes. \n * **Bikeopia:** While their prices for used bikes range from \u20ac400 to \u20ac1500, Bikeopia specializes in quality used high-end and vintage bikes from the 80s and 90s that are in great condition. They offer a 6-month warranty and emphasize that their bikes are legitimate and registered with the police, helping you avoid hidden problems common with cheaper online or market finds. \n * **Smaller, Independent Bike Shops:** Many smaller shops around Berlin sell second-hand bikes, often in the \u20ac150-\u20ac250 range. You can often spot them by bikes with price tags displayed outside. \n\n ### Online & Other Options: \n\n * **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin. However, be cautious and check the seller's history. \n * **Facebook Groups:** Groups like \"Sell Your Bike Berlin\" (with over 30,000 members) can be a good resource. \n * **Toll Office Auctions:** There are regular auctions for lost and found bicycles where you can bid online. \n\n ### Tips for Buying a Used Bicycle: \n\n * **Test Ride:** Always try the bike before you buy it to check brakes, gears, frame, and wheels. \n * **Check Condition:** Even if buying used, ensure the bike is functional and safe. Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired. \n * **Ask for Advice:** At bike markets, you can often get independent advice from specialists. \n * **Get a Sales Contract:** This is especially important at markets like Fietsenb\u00f6rse, where you'll receive an official proof of purchase. \n\n By exploring these options, particularly the dedicated second-hand markets and shops, you significantly increase your chances of finding an affordable bicycle in Berlin.",
+          "web_searches": {
+            "gebrauchtfahrrad Berlin": {
+              "https://fietsenboerse.de": {
+                "citations": [
+                  1,
+                  15,
+                  16
+                ],
+                "contents": [
+                  "They also offer independent advice and provide an official sales contract.",
+                  "* **Ask for Advice:** At bike markets, you can often get independent advice from specialists.",
+                  "* **Get a Sales Contract:** This is especially important at markets like Fietsenb\u00f6rse, where you'll receive an official proof of purchase."
+                ]
+              },
+              "https://bikeparkberlin.de/": {
+                "citations": [
+                  3,
+                  14
+                ],
+                "contents": [
+                  "You can also test ride bikes before buying.",
+                  "Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired."
+                ]
+              },
+              "https://visitberlin.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation."
+                ]
+              },
+              "https://berlinerfahrradmarkt.de/": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation."
+                ]
+              },
+              "https://allaboutberlin.com": {
+                "citations": [
+                  2,
+                  9,
+                  11,
+                  12,
+                  13
+                ],
+                "contents": [
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation.",
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
+                  "* **Facebook Groups:** Groups like \"Sell Your Bike Berlin\" (with over 30,000 members) can be a good resource.",
+                  "* **Toll Office Auctions:** There are regular auctions for lost and found bicycles where you can bid online.",
+                  "* **Test Ride:** Always try the bike before you buy it to check brakes, gears, frame, and wheels."
+                ]
+              },
+              "https://radwelt.berlin/fahrrad-kaufen/gebrauchte-fahrraeder-berlin": {
+                "citations": [
+                  4,
+                  14
+                ],
+                "contents": [
+                  "Used bikes here can start from around \u20ac150.",
+                  "Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired."
+                ]
+              },
+              "https://bikeawayberlin.de": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "They offer various types of serviced used bikes ready to ride."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "These are returned or previously owned bikes that have been inspected by their experts, often with only minor signs of use, and come with the same legal conditions and warranty as new bikes."
+                ]
+              },
+              "https://bikeopia.com": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "They offer a 6-month warranty and emphasize that their bikes are legitimate and registered with the police, helping you avoid hidden problems common with cheaper online or market finds."
+                ]
+              },
+              "https://reddit.com": {
+                "citations": [
+                  8,
+                  9
+                ],
+                "contents": [
+                  "You can often spot them by bikes with price tags displayed outside.",
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin."
                 ]
               }
             },
             "second-hand bicycles Berlin": {
               "https://fietsenboerse.de/en/second-hand-bikes/berlin": {
                 "citations": [
-                  1
+                  1,
+                  15,
+                  16
                 ],
                 "contents": [
-                  "You can test ride bikes and get independent advice from specialists."
+                  "They also offer independent advice and provide an official sales contract.",
+                  "* **Ask for Advice:** At bike markets, you can often get independent advice from specialists.",
+                  "* **Get a Sales Contract:** This is especially important at markets like Fietsenb\u00f6rse, where you'll receive an official proof of purchase."
                 ]
               },
               "https://www.berlin.de/en/shopping/markets/flea-markets/7403870-2983302-fietsenboerse-bicycle-market.en.html": {
@@ -115,7 +701,7 @@
                   1
                 ],
                 "contents": [
-                  "You can test ride bikes and get independent advice from specialists."
+                  "They also offer independent advice and provide an official sales contract."
                 ]
               },
               "https://www.visitberlin.de/en/event/berlin-bicycle-market": {
@@ -123,101 +709,117 @@
                   2
                 ],
                 "contents": [
-                  "They offer free and independent on-site purchasing advice and test rides."
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation."
+                ]
+              },
+              "https://berlinerfahrradmarkt.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation."
+                ]
+              },
+              "https://allaboutberlin.com": {
+                "citations": [
+                  2,
+                  9,
+                  11,
+                  12,
+                  13
+                ],
+                "contents": [
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation.",
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
+                  "* **Facebook Groups:** Groups like \"Sell Your Bike Berlin\" (with over 30,000 members) can be a good resource.",
+                  "* **Toll Office Auctions:** There are regular auctions for lost and found bicycles where you can bid online.",
+                  "* **Test Ride:** Always try the bike before you buy it to check brakes, gears, frame, and wheels."
                 ]
               },
               "https://bikeparkberlin.de": {
                 "citations": [
-                  3
+                  3,
+                  14
                 ],
                 "contents": [
-                  "They offer a large selection of various types of bikes, all professionally repaired and maintained."
+                  "You can also test ride bikes before buying.",
+                  "Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired."
                 ]
               },
-              "https://xn--gebrauchte-fahrrder-berlin-vhc.de": {
+              "https://radwelt.berlin": {
                 "citations": [
-                  4
+                  4,
+                  14
                 ],
                 "contents": [
-                  "Their bikes typically range from \u20ac100 to \u20ac300, with many under \u20ac200."
+                  "Used bikes here can start from around \u20ac150.",
+                  "Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired."
+                ]
+              },
+              "https://www.bikeawayberlin.de/": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "They offer various types of serviced used bikes ready to ride."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "These are returned or previously owned bikes that have been inspected by their experts, often with only minor signs of use, and come with the same legal conditions and warranty as new bikes."
                 ]
               },
               "https://bikeopia.com/": {
                 "citations": [
-                  5
-                ],
-                "contents": [
-                  "Their prices range from \u20ac400 to \u20ac1500, and they offer a 6-month warranty on all bikes."
-                ]
-              },
-              "https://radwelt.berlin": {
-                "citations": [
-                  6
-                ],
-                "contents": [
-                  "Used bikes here can start from \u20ac150."
-                ]
-              },
-              "https://www.bikeawayberlin.de/": {
-                "citations": [
                   7
                 ],
                 "contents": [
-                  "They have a large assortment of serviced used bikes, including racers, city bikes, and urban bikes."
+                  "They offer a 6-month warranty and emphasize that their bikes are legitimate and registered with the police, helping you avoid hidden problems common with cheaper online or market finds."
                 ]
               },
-              "https://decathlon.de": {
+              "https://www.reddit.com/r/berlin/comments/telvbw/buying_a_used_bike_in_berlin/": {
                 "citations": [
-                  8
+                  7,
+                  10
                 ],
                 "contents": [
-                  "You also get the same legal conditions, warranty, and guarantee rights as new products."
-                ]
-              },
-              "https://allaboutberlin.com": {
-                "citations": [
-                  9,
-                  10,
-                  11,
-                  12,
-                  13,
-                  14,
-                  15
-                ],
-                "contents": [
-                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
-                  "* **Facebook groups:** \"Sell Your Bike Berlin\" is a Facebook group with over 30,000 members where you might find bikes for sale.",
-                  "* **Toll office auctions:** Regular auctions for lost and found bicycles are held where you can bid online.",
-                  "Check the brakes, gears, frame, and wheels.",
-                  "* **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be too old, overpriced, and often stolen.",
-                  "* **Professional inspection:** Even if you buy a used bike, it's recommended to get it fitted and adjusted at a bike shop for a smoother and more comfortable ride.",
-                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                  "They offer a 6-month warranty and emphasize that their bikes are legitimate and registered with the police, helping you avoid hidden problems common with cheaper online or market finds.",
+                  "However, be cautious and check the seller's history."
                 ]
               },
               "https://reddit.com": {
                 "citations": [
-                  15
+                  8,
+                  9
                 ],
                 "contents": [
-                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                  "You can often spot them by bikes with price tags displayed outside.",
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin."
                 ]
               }
             },
-            "affordable bikes Berlin": {
+            "budget bicycles Berlin": {
               "https://fietsenboerse.de": {
                 "citations": [
-                  1
+                  1,
+                  15,
+                  16
                 ],
                 "contents": [
-                  "You can test ride bikes and get independent advice from specialists."
+                  "They also offer independent advice and provide an official sales contract.",
+                  "* **Ask for Advice:** At bike markets, you can often get independent advice from specialists.",
+                  "* **Get a Sales Contract:** This is especially important at markets like Fietsenb\u00f6rse, where you'll receive an official proof of purchase."
                 ]
               },
               "https://www.bikeawayberlin.de/": {
                 "citations": [
-                  7
+                  5
                 ],
                 "contents": [
-                  "They have a large assortment of serviced used bikes, including racers, city bikes, and urban bikes."
+                  "They offer various types of serviced used bikes ready to ride."
                 ]
               },
               "https://visitberlin.de": {
@@ -225,93 +827,109 @@
                   2
                 ],
                 "contents": [
-                  "They offer free and independent on-site purchasing advice and test rides."
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation."
                 ]
               },
-              "https://bikeparkberlin.de": {
+              "https://berlinerfahrradmarkt.de": {
                 "citations": [
-                  3
+                  2
                 ],
                 "contents": [
-                  "They offer a large selection of various types of bikes, all professionally repaired and maintained."
-                ]
-              },
-              "https://xn--gebrauchte-fahrrder-berlin-vhc.de": {
-                "citations": [
-                  4
-                ],
-                "contents": [
-                  "Their bikes typically range from \u20ac100 to \u20ac300, with many under \u20ac200."
-                ]
-              },
-              "https://bikeopia.com": {
-                "citations": [
-                  5
-                ],
-                "contents": [
-                  "Their prices range from \u20ac400 to \u20ac1500, and they offer a 6-month warranty on all bikes."
-                ]
-              },
-              "https://radwelt.berlin": {
-                "citations": [
-                  6
-                ],
-                "contents": [
-                  "Used bikes here can start from \u20ac150."
-                ]
-              },
-              "https://decathlon.de": {
-                "citations": [
-                  8
-                ],
-                "contents": [
-                  "You also get the same legal conditions, warranty, and guarantee rights as new products."
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation."
                 ]
               },
               "https://allaboutberlin.com/guides/bicycle-in-berlin": {
                 "citations": [
+                  2,
                   9,
-                  10,
                   11,
                   12,
-                  13,
-                  14,
-                  15
+                  13
                 ],
                 "contents": [
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation.",
                   "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
-                  "* **Facebook groups:** \"Sell Your Bike Berlin\" is a Facebook group with over 30,000 members where you might find bikes for sale.",
-                  "* **Toll office auctions:** Regular auctions for lost and found bicycles are held where you can bid online.",
-                  "Check the brakes, gears, frame, and wheels.",
-                  "* **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be too old, overpriced, and often stolen.",
-                  "* **Professional inspection:** Even if you buy a used bike, it's recommended to get it fitted and adjusted at a bike shop for a smoother and more comfortable ride.",
-                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                  "* **Facebook Groups:** Groups like \"Sell Your Bike Berlin\" (with over 30,000 members) can be a good resource.",
+                  "* **Toll Office Auctions:** There are regular auctions for lost and found bicycles where you can bid online.",
+                  "* **Test Ride:** Always try the bike before you buy it to check brakes, gears, frame, and wheels."
+                ]
+              },
+              "https://bikeparkberlin.de": {
+                "citations": [
+                  3,
+                  14
+                ],
+                "contents": [
+                  "You can also test ride bikes before buying.",
+                  "Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired."
+                ]
+              },
+              "https://radwelt.berlin": {
+                "citations": [
+                  4,
+                  14
+                ],
+                "contents": [
+                  "Used bikes here can start from around \u20ac150.",
+                  "Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "These are returned or previously owned bikes that have been inspected by their experts, often with only minor signs of use, and come with the same legal conditions and warranty as new bikes."
+                ]
+              },
+              "https://bikeopia.com/": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "They offer a 6-month warranty and emphasize that their bikes are legitimate and registered with the police, helping you avoid hidden problems common with cheaper online or market finds."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/telvbw/buying_a_used_bike_in_berlin/": {
+                "citations": [
+                  7,
+                  10
+                ],
+                "contents": [
+                  "They offer a 6-month warranty and emphasize that their bikes are legitimate and registered with the police, helping you avoid hidden problems common with cheaper online or market finds.",
+                  "However, be cautious and check the seller's history."
                 ]
               },
               "https://www.reddit.com/r/berlin/comments/mnk3fl/affordable_bicycle_shops_in_berlin/": {
                 "citations": [
-                  15
+                  8,
+                  9
                 ],
                 "contents": [
-                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                  "You can often spot them by bikes with price tags displayed outside.",
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin."
                 ]
               }
             },
-            "Gebrauchtfahrrad Berlin": {
-              "https://fietsenboerse.de": {
+            "cheapest bicycle shops Berlin": {
+              "https://fietsenboerse.de/en/second-hand-bikes/berlin": {
+                "citations": [
+                  1,
+                  15,
+                  16
+                ],
+                "contents": [
+                  "They also offer independent advice and provide an official sales contract.",
+                  "* **Ask for Advice:** At bike markets, you can often get independent advice from specialists.",
+                  "* **Get a Sales Contract:** This is especially important at markets like Fietsenb\u00f6rse, where you'll receive an official proof of purchase."
+                ]
+              },
+              "https://berlin.de": {
                 "citations": [
                   1
                 ],
                 "contents": [
-                  "You can test ride bikes and get independent advice from specialists."
-                ]
-              },
-              "https://bikeparkberlin.de/": {
-                "citations": [
-                  3
-                ],
-                "contents": [
-                  "They offer a large selection of various types of bikes, all professionally repaired and maintained."
+                  "They also offer independent advice and provide an official sales contract."
                 ]
               },
               "https://visitberlin.de": {
@@ -319,586 +937,1366 @@
                   2
                 ],
                 "contents": [
-                  "They offer free and independent on-site purchasing advice and test rides."
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation."
                 ]
               },
-              "https://www.xn--gebrauchte-fahrrder-berlin-vhc.de/": {
+              "https://berlinerfahrradmarkt.de": {
                 "citations": [
-                  4
+                  2
                 ],
                 "contents": [
-                  "Their bikes typically range from \u20ac100 to \u20ac300, with many under \u20ac200."
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation."
                 ]
               },
-              "https://bikeopia.com": {
+              "https://allaboutberlin.com/guides/bicycle-in-berlin#buying-a-stolen-bicycle": {
                 "citations": [
-                  5
+                  2,
+                  9,
+                  11,
+                  12,
+                  13
                 ],
                 "contents": [
-                  "Their prices range from \u20ac400 to \u20ac1500, and they offer a 6-month warranty on all bikes."
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation.",
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
+                  "* **Facebook Groups:** Groups like \"Sell Your Bike Berlin\" (with over 30,000 members) can be a good resource.",
+                  "* **Toll Office Auctions:** There are regular auctions for lost and found bicycles where you can bid online.",
+                  "* **Test Ride:** Always try the bike before you buy it to check brakes, gears, frame, and wheels."
                 ]
               },
-              "https://radwelt.berlin/fahrrad-kaufen/gebrauchte-fahrraeder-berlin": {
+              "https://bikeparkberlin.de": {
                 "citations": [
-                  6
+                  3,
+                  14
                 ],
                 "contents": [
-                  "Used bikes here can start from \u20ac150."
+                  "You can also test ride bikes before buying.",
+                  "Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired."
+                ]
+              },
+              "https://radwelt.berlin": {
+                "citations": [
+                  4,
+                  14
+                ],
+                "contents": [
+                  "Used bikes here can start from around \u20ac150.",
+                  "Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired."
                 ]
               },
               "https://bikeawayberlin.de": {
                 "citations": [
-                  7
+                  5
                 ],
                 "contents": [
-                  "They have a large assortment of serviced used bikes, including racers, city bikes, and urban bikes."
+                  "They offer various types of serviced used bikes ready to ride."
                 ]
               },
               "https://decathlon.de": {
                 "citations": [
-                  8
+                  6
                 ],
                 "contents": [
-                  "You also get the same legal conditions, warranty, and guarantee rights as new products."
+                  "These are returned or previously owned bikes that have been inspected by their experts, often with only minor signs of use, and come with the same legal conditions and warranty as new bikes."
+                ]
+              },
+              "https://bikeopia.com": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "They offer a 6-month warranty and emphasize that their bikes are legitimate and registered with the police, helping you avoid hidden problems common with cheaper online or market finds."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/telvbw/buying_a_used_bike_in_berlin/": {
+                "citations": [
+                  7,
+                  10
+                ],
+                "contents": [
+                  "They offer a 6-month warranty and emphasize that their bikes are legitimate and registered with the police, helping you avoid hidden problems common with cheaper online or market finds.",
+                  "However, be cautious and check the seller's history."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/mnk3fl/affordable_bicycle_shops_in_berlin/": {
+                "citations": [
+                  8,
+                  9
+                ],
+                "contents": [
+                  "You can often spot them by bikes with price tags displayed outside.",
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin."
+                ]
+              }
+            },
+            "affordable bikes Berlin online": {
+              "https://fietsenboerse.de/en/second-hand-bikes/berlin": {
+                "citations": [
+                  1,
+                  15,
+                  16
+                ],
+                "contents": [
+                  "They also offer independent advice and provide an official sales contract.",
+                  "* **Ask for Advice:** At bike markets, you can often get independent advice from specialists.",
+                  "* **Get a Sales Contract:** This is especially important at markets like Fietsenb\u00f6rse, where you'll receive an official proof of purchase."
+                ]
+              },
+              "https://berlin.de": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "They also offer independent advice and provide an official sales contract."
+                ]
+              },
+              "https://visitberlin.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation."
+                ]
+              },
+              "https://berlinerfahrradmarkt.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation."
                 ]
               },
               "https://allaboutberlin.com": {
                 "citations": [
+                  2,
                   9,
-                  10,
                   11,
                   12,
-                  13,
-                  14,
-                  15
+                  13
                 ],
                 "contents": [
+                  "They offer a huge selection and even have a repair station where you can get small repairs done for a donation.",
                   "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin.",
-                  "* **Facebook groups:** \"Sell Your Bike Berlin\" is a Facebook group with over 30,000 members where you might find bikes for sale.",
-                  "* **Toll office auctions:** Regular auctions for lost and found bicycles are held where you can bid online.",
-                  "Check the brakes, gears, frame, and wheels.",
-                  "* **Beware of stolen bikes:** Be cautious when buying from flea markets, as bikes there can be too old, overpriced, and often stolen.",
-                  "* **Professional inspection:** Even if you buy a used bike, it's recommended to get it fitted and adjusted at a bike shop for a smoother and more comfortable ride.",
-                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                  "* **Facebook Groups:** Groups like \"Sell Your Bike Berlin\" (with over 30,000 members) can be a good resource.",
+                  "* **Toll Office Auctions:** There are regular auctions for lost and found bicycles where you can bid online.",
+                  "* **Test Ride:** Always try the bike before you buy it to check brakes, gears, frame, and wheels."
                 ]
               },
-              "https://reddit.com": {
+              "https://bikeparkberlin.de": {
                 "citations": [
-                  15
+                  3,
+                  14
                 ],
                 "contents": [
-                  "For new bikes, Decathlon is generally considered to offer good value for the price."
+                  "You can also test ride bikes before buying.",
+                  "Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired."
+                ]
+              },
+              "https://radwelt.berlin": {
+                "citations": [
+                  4,
+                  14
+                ],
+                "contents": [
+                  "Used bikes here can start from around \u20ac150.",
+                  "Some shops, like Radwelt and bikePARK, specifically mention their bikes are checked and repaired."
+                ]
+              },
+              "https://www.bikeawayberlin.de/": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "They offer various types of serviced used bikes ready to ride."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  6
+                ],
+                "contents": [
+                  "These are returned or previously owned bikes that have been inspected by their experts, often with only minor signs of use, and come with the same legal conditions and warranty as new bikes."
+                ]
+              },
+              "https://bikeopia.com/": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "They offer a 6-month warranty and emphasize that their bikes are legitimate and registered with the police, helping you avoid hidden problems common with cheaper online or market finds."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/telvbw/buying_a_used_bike_in_berlin/": {
+                "citations": [
+                  7,
+                  10
+                ],
+                "contents": [
+                  "They offer a 6-month warranty and emphasize that their bikes are legitimate and registered with the police, helping you avoid hidden problems common with cheaper online or market finds.",
+                  "However, be cautious and check the seller's history."
+                ]
+              },
+              "https://www.reddit.com/r/berlin/comments/mnk3fl/affordable_bicycle_shops_in_berlin/": {
+                "citations": [
+                  8,
+                  9
+                ],
+                "contents": [
+                  "You can often spot them by bikes with price tags displayed outside.",
+                  "* **eBay Kleinanzeigen:** This classifieds website is a popular place to find many used bikes in Berlin."
                 ]
               }
             }
           },
           "success": true,
-          "run_number": 1
+          "run_number": 2
         }
       ]
     },
     "summary": {
       "gemini-2.5-flash": {
-        "total_runs": 1,
-        "successful_runs": 1,
+        "total_runs": 2,
+        "successful_runs": 2,
         "success_rate": 1.0,
-        "total_web_searches": 4,
-        "unique_web_searches": 4,
+        "total_web_searches": 10,
+        "unique_web_searches": 9,
         "web_search_queries": [
-          "cheapest bicycle shops in Berlin",
+          "g\u00fcnstige Fahrr\u00e4der Berlin",
+          "cheapest bicycle shops Berlin",
+          "second hand bikes Berlin",
+          "budget bikes Berlin",
+          "gebrauchtfahrr\u00e4der Berlin",
+          "gebrauchtfahrrad Berlin",
           "second-hand bicycles Berlin",
-          "affordable bikes Berlin",
-          "Gebrauchtfahrrad Berlin"
+          "budget bicycles Berlin",
+          "affordable bikes Berlin online"
         ]
       }
     }
   },
   {
-    "prompt": "cycling good, where to buy cycling machine deutschalnd",
+    "prompt": "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
     "results": {
       "gemini-2.5-flash": [
         {
           "model": "gemini-2.5-flash",
-          "response": "In Deutschland gibt es verschiedene M\u00f6glichkeiten, Standfahrr\u00e4der zu kaufen, die oft als Ergometer, Heimtrainer oder Indoor Cycles bezeichnet werden. Hier sind einige der besten Anlaufstellen: \n\n **Online-Shops:** \n\n * **Sport- und Fitnessfachh\u00e4ndler:** \n * **Fitshop** (ehemals Sport-Tiedje) ist \"Europas Nr. 1 f\u00fcr Heimfitness\" und wurde mehrfach als bester Online-Shop f\u00fcr Fitnessger\u00e4te ausgezeichnet. Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an. \n * **Gorilla Sports** hat ebenfalls Fahrradtrainer in seinem Online-Shop, teilweise mit versandkostenfreier Lieferung innerhalb Deutschlands. \n * **BIKE24** bietet eine Auswahl an Hometrainern, Rollentrainern und Ergometern sowie passendes Zubeh\u00f6r an. \n * **HAMMER Fitnessger\u00e4te** f\u00fchrt verschiedene Heimtrainer und Fitnessbikes f\u00fcr das Training zu Hause. \n\n * **Gro\u00dfe Online-Warenh\u00e4user:** \n * **Lidl.de** bietet hochwertige Ergometer, Fahrradtrainer und Crosstrainer an. \n * **MediaMarkt** hat ebenfalls Ergometer und Heimtrainer in seinem Online-Shop. \n * **Kaufland.de** f\u00fchrt eine Auswahl an Ergometern und Heimtrainern. \n\n * **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an. \n * **Das Radhaus** ist einer der gr\u00f6\u00dften Fahrrad- und E-Bike-H\u00e4ndler in Deutschland und hat neben Fahrr\u00e4dern auch Heimtrainer im Sortiment. \n * **MHW Bike-House** bietet ebenfalls ein umfangreiches Sortiment an Fahrr\u00e4dern und Zubeh\u00f6r in S\u00fcddeutschland an. \n * **Zweirad Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Online-Shop und Filialen in Deutschland, das eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes bietet. \n * **B.O.C.** ist ein Fahrrad Online Shop mit 49 Filialen in Deutschland, der eine gro\u00dfe Auswahl und schnellen Versand bietet. \n\n **Wichtige Hinweise zum Kauf:** \n\n * **Ergometer vs. Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht. \n * **Schwungmasse:** Das Gewicht der Schwungmasse allein ist nicht das einzige entscheidende Kriterium; die Qualit\u00e4t des gesamten Widerstandssystems ist wichtiger. \n * **App-Kompatibilit\u00e4t:** Viele moderne Heimtrainer und Ergometer verf\u00fcgen \u00fcber Bluetooth, um sich mit Trainings-Apps zu verbinden und so neue Trainingsm\u00f6glichkeiten zu er\u00f6ffnen. \n * **Komfort:** Achten Sie auf ergonomisch einstellbare S\u00e4ttel und Lenker f\u00fcr eine bequeme Sitzposition, besonders bei l\u00e4ngeren Trainingseinheiten. \n\n Es wird empfohlen, die Produktbeschreibungen genau zu lesen und gegebenenfalls Kundenbewertungen zu ber\u00fccksichtigen, um das passende Ger\u00e4t f\u00fcr Ihre Bed\u00fcrfnisse zu finden.",
+          "response": "Es ist gro\u00dfartig, dass Sie mit dem Radfahren beginnen m\u00f6chten! Hier sind einige Informationen dar\u00fcber, wo Sie in Deutschland Fahrr\u00e4der und Helme kaufen k\u00f6nnen:\n\n**Wo man Fahrr\u00e4der (Rennr\u00e4der f\u00fcr die Stra\u00dfe) kaufen kann:**\n\n*   **Online-Shops:**\n    *   **BIKE24:** Bietet eine gro\u00dfe Auswahl an Fahrr\u00e4dern und Zubeh\u00f6r, darunter auch Rennr\u00e4der.\n    *   **Fahrrad.de:** Ein Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern, Zubeh\u00f6r und Kleidung.\n    *   **Rose Bikes:** Bietet eine gro\u00dfe Auswahl an Fahrr\u00e4dern und Fahrradhelmen, mit der M\u00f6glichkeit, online oder in ihren Stores in Bocholt und M\u00fcnchen zu kaufen.\n    *   **Bike-Discount:** Hier k\u00f6nnen Sie Fahrr\u00e4der g\u00fcnstig online kaufen und von einer gro\u00dfen Auswahl profitieren.\n    *   **Fahrrad XXL:** Ein Online-Shop mit einer sehr gro\u00dfen Auswahl an Fahrr\u00e4dern.\n    *   **B.O.C.:** Ein Online-Fahrradshop mit 49 Filialen in Deutschland.\n*   **Station\u00e4re Gesch\u00e4fte:**\n    *   **B.O.C.:** Hat 49 Filialen in ganz Deutschland.\n    *   **Zweirad Stadler:** Verf\u00fcgt \u00fcber 22 Filialen in Deutschland und \u00d6sterreich.\n    *   **Rose Stores:** Befinden sich in Bocholt und M\u00fcnchen.\n    *   Viele kleinere, unabh\u00e4ngige Fahrradgesch\u00e4fte in Ihrer N\u00e4he.\n\n**Wo man Helme kaufen kann:**\n\nEs ist sehr wichtig, einen Helm zu tragen, um Ihren Kopf beim Radfahren zu sch\u00fctzen. In Deutschland m\u00fcssen Helme bestimmten Pr\u00fcfnormen entsprechen, um verkauft werden zu d\u00fcrfen.\n\n*   **Online-Shops:**\n    *   **BIKE24:** Bietet eine gro\u00dfe Auswahl an Fahrradhelmen, einschlie\u00dflich Rennradhelmen, von Top-Marken.\n    *   **Decathlon:** Bietet Fahrradhelme f\u00fcr Damen, Herren und Kinder an.\n    *   **Rose Bikes:** Hat eine gro\u00dfe Auswahl an Fahrradhelmen f\u00fcr verschiedene Einsatzbereiche, wie Rennradhelme, MTB-Helme und Cityhelme.\n    *   **Bike-Discount:** Hier k\u00f6nnen Sie Rennradhelme online bestellen.\n    *   **Fahrrad.de:** Bietet Rennradhelme f\u00fcr Damen und Herren an.\n    *   **Kaufland.de:** Bietet ebenfalls eine Auswahl an Fahrradhelmen an.\n*   **Station\u00e4re Gesch\u00e4fte:**\n    *   **Zweirad Stadler:** Hier finden Sie eine Auswahl an Fahrradhelmen.\n    *   **B.O.C.:** Bietet Helme an.\n    *   **Rose Stores:** Helme k\u00f6nnen auch vor Ort in den Rose Stores gekauft werden.\n    *   Andere Fahrradgesch\u00e4fte in Ihrer N\u00e4he.\n\n**Wichtige Hinweise zum Fahrradhelm:**\n\n*   **Sicherheitsstandards:** Alle in Deutschland verkauften Helme m\u00fcssen Sicherheitsstandards erf\u00fcllen.\n*   **MIPS:** Einige Helme verf\u00fcgen \u00fcber das MIPS-System (Multi-directional Impact Protection System), das Rotationskr\u00e4fte bei Unf\u00e4llen reduzieren kann und so das Risiko von Gehirnersch\u00fctterungen minimiert.\n*   **Austausch:** Ein Fahrradhelm ist ein Einwegprodukt. Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist. Der ADFC (Allgemeiner Deutscher Fahrrad-Club) empfiehlt, den Helm alle 3 bis 5 Jahre zu ersetzen, da das Material durch \u00e4u\u00dfere Einfl\u00fcsse spr\u00f6de werden kann.\n*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che).\n\nViel Spa\u00df beim Radfahren!",
           "web_searches": {
-            "Fahrradtrainer kaufen Deutschland": {
-              "https://fitshop.de": {
+            "Fahrradhelm kaufen Deutschland": {
+              "https://www.bike24.de/fahrradhelme.html": {
                 "citations": [
-                  1
+                  10,
+                  11,
+                  20,
+                  21,
+                  22,
+                  24
                 ],
                 "contents": [
-                  "Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an."
-                ]
-              },
-              "https://gorillasports.de": {
-                "citations": [
-                  2
-                ],
-                "contents": [
-                  "* **Gorilla Sports** hat ebenfalls Fahrradtrainer in seinem Online-Shop, teilweise mit versandkostenfreier Lieferung innerhalb Deutschlands."
+                  "In Deutschland m\u00fcssen Helme bestimmten Pr\u00fcfnormen entsprechen, um verkauft werden zu d\u00fcrfen.",
+                  "*   **Online-Shops:**\n    *   **BIKE24:** Bietet eine gro\u00dfe Auswahl an Fahrradhelmen, einschlie\u00dflich Rennradhelmen, von Top-Marken.",
+                  "*   **Sicherheitsstandards:** Alle in Deutschland verkauften Helme m\u00fcssen Sicherheitsstandards erf\u00fcllen.",
+                  "*   **MIPS:** Einige Helme verf\u00fcgen \u00fcber das MIPS-System (Multi-directional Impact Protection System), das Rotationskr\u00e4fte bei Unf\u00e4llen reduzieren kann und so das Risiko von Gehirnersch\u00fctterungen minimiert.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
                 ]
               },
               "https://bike24.de": {
                 "citations": [
-                  3
+                  1
                 ],
                 "contents": [
-                  "* **BIKE24** bietet eine Auswahl an Hometrainern, Rollentrainern und Ergometern sowie passendes Zubeh\u00f6r an."
+                  "*   **Online-Shops:**\n    *   **BIKE24:** Bietet eine gro\u00dfe Auswahl an Fahrr\u00e4dern und Zubeh\u00f6r, darunter auch Rennr\u00e4der."
                 ]
               },
-              "https://www.hammer.de/ausdauertraining/heimtrainer-ergometer.html#buying-hometrainer": {
+              "https://fahrrad.de": {
                 "citations": [
-                  4,
-                  13
+                  2,
+                  15,
+                  21,
+                  22
                 ],
                 "contents": [
-                  "* **HAMMER Fitnessger\u00e4te** f\u00fchrt verschiedene Heimtrainer und Fitnessbikes f\u00fcr das Training zu Hause.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht."
+                  "*   **Fahrrad.de:** Ein Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern, Zubeh\u00f6r und Kleidung.",
+                  "*   **Fahrrad.de:** Bietet Rennradhelme f\u00fcr Damen und Herren an.",
+                  "*   **MIPS:** Einige Helme verf\u00fcgen \u00fcber das MIPS-System (Multi-directional Impact Protection System), das Rotationskr\u00e4fte bei Unf\u00e4llen reduzieren kann und so das Risiko von Gehirnersch\u00fctterungen minimiert.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist."
                 ]
               },
-              "https://www.lidl.de/h/heimtrainer/h10006884": {
+              "https://www.fahrrad.de/collections/fahrradhelme": {
                 "citations": [
-                  5,
+                  2
+                ],
+                "contents": [
+                  "*   **Fahrrad.de:** Ein Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern, Zubeh\u00f6r und Kleidung."
+                ]
+              },
+              "https://www.rosebikes.de/bekleidung/fahrradhelme/rennradhelme": {
+                "citations": [
+                  3,
                   13,
-                  15
+                  21,
+                  22,
+                  24
                 ],
                 "contents": [
-                  "* **Gro\u00dfe Online-Warenh\u00e4user:** \n * **Lidl.de** bietet hochwertige Ergometer, Fahrradtrainer und Crosstrainer an.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
-                  "* **App-Kompatibilit\u00e4t:** Viele moderne Heimtrainer und Ergometer verf\u00fcgen \u00fcber Bluetooth, um sich mit Trainings-Apps zu verbinden und so neue Trainingsm\u00f6glichkeiten zu er\u00f6ffnen."
+                  "*   **Rose Bikes:** Bietet eine gro\u00dfe Auswahl an Fahrr\u00e4dern und Fahrradhelmen, mit der M\u00f6glichkeit, online oder in ihren Stores in Bocholt und M\u00fcnchen zu kaufen.",
+                  "*   **Rose Bikes:** Hat eine gro\u00dfe Auswahl an Fahrradhelmen f\u00fcr verschiedene Einsatzbereiche, wie Rennradhelme, MTB-Helme und Cityhelme.",
+                  "*   **MIPS:** Einige Helme verf\u00fcgen \u00fcber das MIPS-System (Multi-directional Impact Protection System), das Rotationskr\u00e4fte bei Unf\u00e4llen reduzieren kann und so das Risiko von Gehirnersch\u00fctterungen minimiert.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
                 ]
               },
-              "https://www.mediamarkt.de/de/category/heimtrainer-ergometer-8003.html": {
+              "https://rosebikes.de": {
                 "citations": [
-                  6,
+                  3,
+                  9,
                   13,
-                  16
+                  19,
+                  24
                 ],
                 "contents": [
-                  "* **MediaMarkt** hat ebenfalls Ergometer und Heimtrainer in seinem Online-Shop.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
-                  "* **Komfort:** Achten Sie auf ergonomisch einstellbare S\u00e4ttel und Lenker f\u00fcr eine bequeme Sitzposition, besonders bei l\u00e4ngeren Trainingseinheiten."
+                  "*   **Rose Bikes:** Bietet eine gro\u00dfe Auswahl an Fahrr\u00e4dern und Fahrradhelmen, mit der M\u00f6glichkeit, online oder in ihren Stores in Bocholt und M\u00fcnchen zu kaufen.",
+                  "*   **Rose Stores:** Befinden sich in Bocholt und M\u00fcnchen.",
+                  "*   **Rose Bikes:** Hat eine gro\u00dfe Auswahl an Fahrradhelmen f\u00fcr verschiedene Einsatzbereiche, wie Rennradhelme, MTB-Helme und Cityhelme.",
+                  "*   **Rose Stores:** Helme k\u00f6nnen auch vor Ort in den Rose Stores gekauft werden.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
                 ]
               },
-              "https://kaufland.de": {
+              "https://bike-discount.de": {
                 "citations": [
-                  7
+                  4
                 ],
                 "contents": [
-                  "* **Kaufland.de** f\u00fchrt eine Auswahl an Ergometern und Heimtrainern."
+                  "*   **Bike-Discount:** Hier k\u00f6nnen Sie Fahrr\u00e4der g\u00fcnstig online kaufen und von einer gro\u00dfen Auswahl profitieren."
                 ]
               },
-              "https://fahrrad-xxl.de": {
+              "https://www.fahrrad-xxl.de/fahrradzubehoer/fahrradhelme/": {
                 "citations": [
-                  8
+                  5
                 ],
                 "contents": [
-                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
-                ]
-              },
-              "https://das-radhaus.de": {
-                "citations": [
-                  9
-                ],
-                "contents": [
-                  "* **Das Radhaus** ist einer der gr\u00f6\u00dften Fahrrad- und E-Bike-H\u00e4ndler in Deutschland und hat neben Fahrr\u00e4dern auch Heimtrainer im Sortiment."
-                ]
-              },
-              "https://mhw-bike.de": {
-                "citations": [
-                  10
-                ],
-                "contents": [
-                  "* **MHW Bike-House** bietet ebenfalls ein umfangreiches Sortiment an Fahrr\u00e4dern und Zubeh\u00f6r in S\u00fcddeutschland an."
-                ]
-              },
-              "https://zweirad-stadler.de": {
-                "citations": [
-                  11
-                ],
-                "contents": [
-                  "* **Zweirad Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Online-Shop und Filialen in Deutschland, das eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes bietet."
+                  "*   **Fahrrad XXL:** Ein Online-Shop mit einer sehr gro\u00dfen Auswahl an Fahrr\u00e4dern."
                 ]
               },
               "https://boc24.de": {
                 "citations": [
+                  6,
+                  7,
+                  18
+                ],
+                "contents": [
+                  "*   **B.O.C.:** Ein Online-Fahrradshop mit 49 Filialen in Deutschland.",
+                  "*   **Station\u00e4re Gesch\u00e4fte:**\n    *   **B.O.C.:** Hat 49 Filialen in ganz Deutschland.",
+                  "*   **B.O.C.:** Bietet Helme an."
+                ]
+              },
+              "https://zweirad-stadler.de": {
+                "citations": [
+                  17,
+                  22,
+                  23,
+                  24
+                ],
+                "contents": [
+                  "*   **Station\u00e4re Gesch\u00e4fte:**\n    *   **Zweirad Stadler:** Hier finden Sie eine Auswahl an Fahrradhelmen.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist.",
+                  "Der ADFC (Allgemeiner Deutscher Fahrrad-Club) empfiehlt, den Helm alle 3 bis 5 Jahre zu ersetzen, da das Material durch \u00e4u\u00dfere Einfl\u00fcsse spr\u00f6de werden kann.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
+                ]
+              },
+              "https://www.decathlon.de/alle-sportarten-a-z/fahrrad-welt/fahrrad-helme": {
+                "citations": [
                   12
                 ],
                 "contents": [
-                  "** ist ein Fahrrad Online Shop mit 49 Filialen in Deutschland, der eine gro\u00dfe Auswahl und schnellen Versand bietet."
+                  "*   **Decathlon:** Bietet Fahrradhelme f\u00fcr Damen, Herren und Kinder an."
+                ]
+              },
+              "https://kaufland.de": {
+                "citations": [
+                  16
+                ],
+                "contents": [
+                  "*   **Kaufland.de:** Bietet ebenfalls eine Auswahl an Fahrradhelmen an."
                 ]
               }
             },
-            "Wo kann man in Deutschland Fahrradergometer kaufen?": {
-              "https://www.fitshop.de/ergometer?srsltid=AfmBOopzUVLz7gbs-Zevl6BSD0KdypyvtqOEUnVi9zWvMkIDzEF6kRxw": {
+            "Fahrrad kaufen Deutschland": {
+              "https://www.bike24.de/fahrrad.html": {
+                "citations": [
+                  1
+                ],
+                "contents": [
+                  "*   **Online-Shops:**\n    *   **BIKE24:** Bietet eine gro\u00dfe Auswahl an Fahrr\u00e4dern und Zubeh\u00f6r, darunter auch Rennr\u00e4der."
+                ]
+              },
+              "https://www.fahrrad.de/": {
+                "citations": [
+                  2,
+                  15,
+                  21,
+                  22
+                ],
+                "contents": [
+                  "*   **Fahrrad.de:** Ein Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern, Zubeh\u00f6r und Kleidung.",
+                  "*   **Fahrrad.de:** Bietet Rennradhelme f\u00fcr Damen und Herren an.",
+                  "*   **MIPS:** Einige Helme verf\u00fcgen \u00fcber das MIPS-System (Multi-directional Impact Protection System), das Rotationskr\u00e4fte bei Unf\u00e4llen reduzieren kann und so das Risiko von Gehirnersch\u00fctterungen minimiert.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist."
+                ]
+              },
+              "https://fahrrad.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "*   **Fahrrad.de:** Ein Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern, Zubeh\u00f6r und Kleidung."
+                ]
+              },
+              "https://rosebikes.de": {
+                "citations": [
+                  3,
+                  9,
+                  13,
+                  19,
+                  24
+                ],
+                "contents": [
+                  "*   **Rose Bikes:** Bietet eine gro\u00dfe Auswahl an Fahrr\u00e4dern und Fahrradhelmen, mit der M\u00f6glichkeit, online oder in ihren Stores in Bocholt und M\u00fcnchen zu kaufen.",
+                  "*   **Rose Stores:** Befinden sich in Bocholt und M\u00fcnchen.",
+                  "*   **Rose Bikes:** Hat eine gro\u00dfe Auswahl an Fahrradhelmen f\u00fcr verschiedene Einsatzbereiche, wie Rennradhelme, MTB-Helme und Cityhelme.",
+                  "*   **Rose Stores:** Helme k\u00f6nnen auch vor Ort in den Rose Stores gekauft werden.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
+                ]
+              },
+              "https://bike-discount.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "*   **Bike-Discount:** Hier k\u00f6nnen Sie Fahrr\u00e4der g\u00fcnstig online kaufen und von einer gro\u00dfen Auswahl profitieren."
+                ]
+              },
+              "https://www.fahrrad-xxl.de/fahrraeder/radgroesse.28-zoll/": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "*   **Fahrrad XXL:** Ein Online-Shop mit einer sehr gro\u00dfen Auswahl an Fahrr\u00e4dern."
+                ]
+              },
+              "https://boc24.de/collections/fahrrad-vorderraeder": {
+                "citations": [
+                  6,
+                  7,
+                  18
+                ],
+                "contents": [
+                  "*   **B.O.C.:** Ein Online-Fahrradshop mit 49 Filialen in Deutschland.",
+                  "*   **Station\u00e4re Gesch\u00e4fte:**\n    *   **B.O.C.:** Hat 49 Filialen in ganz Deutschland.",
+                  "*   **B.O.C.:** Bietet Helme an."
+                ]
+              },
+              "https://zweirad-stadler.de": {
+                "citations": [
+                  17,
+                  22,
+                  23,
+                  24
+                ],
+                "contents": [
+                  "*   **Station\u00e4re Gesch\u00e4fte:**\n    *   **Zweirad Stadler:** Hier finden Sie eine Auswahl an Fahrradhelmen.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist.",
+                  "Der ADFC (Allgemeiner Deutscher Fahrrad-Club) empfiehlt, den Helm alle 3 bis 5 Jahre zu ersetzen, da das Material durch \u00e4u\u00dfere Einfl\u00fcsse spr\u00f6de werden kann.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
+                ]
+              },
+              "https://bike24.de": {
+                "citations": [
+                  10,
+                  11,
+                  20,
+                  21,
+                  22,
+                  24
+                ],
+                "contents": [
+                  "In Deutschland m\u00fcssen Helme bestimmten Pr\u00fcfnormen entsprechen, um verkauft werden zu d\u00fcrfen.",
+                  "*   **Online-Shops:**\n    *   **BIKE24:** Bietet eine gro\u00dfe Auswahl an Fahrradhelmen, einschlie\u00dflich Rennradhelmen, von Top-Marken.",
+                  "*   **Sicherheitsstandards:** Alle in Deutschland verkauften Helme m\u00fcssen Sicherheitsstandards erf\u00fcllen.",
+                  "*   **MIPS:** Einige Helme verf\u00fcgen \u00fcber das MIPS-System (Multi-directional Impact Protection System), das Rotationskr\u00e4fte bei Unf\u00e4llen reduzieren kann und so das Risiko von Gehirnersch\u00fctterungen minimiert.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  12
+                ],
+                "contents": [
+                  "*   **Decathlon:** Bietet Fahrradhelme f\u00fcr Damen, Herren und Kinder an."
+                ]
+              },
+              "https://kaufland.de": {
+                "citations": [
+                  16
+                ],
+                "contents": [
+                  "*   **Kaufland.de:** Bietet ebenfalls eine Auswahl an Fahrradhelmen an."
+                ]
+              }
+            },
+            "Fahrradgesch\u00e4ft Deutschland Rennr\u00e4der Helme": {
+              "https://www.bike24.de/radfahren/bekleidung/fahrradhelme/rennradhelme": {
                 "citations": [
                   1,
+                  11
+                ],
+                "contents": [
+                  "*   **Online-Shops:**\n    *   **BIKE24:** Bietet eine gro\u00dfe Auswahl an Fahrr\u00e4dern und Zubeh\u00f6r, darunter auch Rennr\u00e4der.",
+                  "*   **Online-Shops:**\n    *   **BIKE24:** Bietet eine gro\u00dfe Auswahl an Fahrradhelmen, einschlie\u00dflich Rennradhelmen, von Top-Marken."
+                ]
+              },
+              "https://bike24.de": {
+                "citations": [
+                  10,
+                  11,
+                  20,
+                  21,
+                  22,
+                  24
+                ],
+                "contents": [
+                  "In Deutschland m\u00fcssen Helme bestimmten Pr\u00fcfnormen entsprechen, um verkauft werden zu d\u00fcrfen.",
+                  "*   **Online-Shops:**\n    *   **BIKE24:** Bietet eine gro\u00dfe Auswahl an Fahrradhelmen, einschlie\u00dflich Rennradhelmen, von Top-Marken.",
+                  "*   **Sicherheitsstandards:** Alle in Deutschland verkauften Helme m\u00fcssen Sicherheitsstandards erf\u00fcllen.",
+                  "*   **MIPS:** Einige Helme verf\u00fcgen \u00fcber das MIPS-System (Multi-directional Impact Protection System), das Rotationskr\u00e4fte bei Unf\u00e4llen reduzieren kann und so das Risiko von Gehirnersch\u00fctterungen minimiert.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
+                ]
+              },
+              "https://www.fahrrad.de/collections/rennradhelme": {
+                "citations": [
+                  2,
+                  15,
+                  21,
+                  22
+                ],
+                "contents": [
+                  "*   **Fahrrad.de:** Ein Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern, Zubeh\u00f6r und Kleidung.",
+                  "*   **Fahrrad.de:** Bietet Rennradhelme f\u00fcr Damen und Herren an.",
+                  "*   **MIPS:** Einige Helme verf\u00fcgen \u00fcber das MIPS-System (Multi-directional Impact Protection System), das Rotationskr\u00e4fte bei Unf\u00e4llen reduzieren kann und so das Risiko von Gehirnersch\u00fctterungen minimiert.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist."
+                ]
+              },
+              "https://fahrrad.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "*   **Fahrrad.de:** Ein Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern, Zubeh\u00f6r und Kleidung."
+                ]
+              },
+              "https://www.rosebikes.de/bekleidung/fahrradhelme/rennradhelme": {
+                "citations": [
+                  3,
                   13,
+                  21,
+                  22,
+                  24
+                ],
+                "contents": [
+                  "*   **Rose Bikes:** Bietet eine gro\u00dfe Auswahl an Fahrr\u00e4dern und Fahrradhelmen, mit der M\u00f6glichkeit, online oder in ihren Stores in Bocholt und M\u00fcnchen zu kaufen.",
+                  "*   **Rose Bikes:** Hat eine gro\u00dfe Auswahl an Fahrradhelmen f\u00fcr verschiedene Einsatzbereiche, wie Rennradhelme, MTB-Helme und Cityhelme.",
+                  "*   **MIPS:** Einige Helme verf\u00fcgen \u00fcber das MIPS-System (Multi-directional Impact Protection System), das Rotationskr\u00e4fte bei Unf\u00e4llen reduzieren kann und so das Risiko von Gehirnersch\u00fctterungen minimiert.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
+                ]
+              },
+              "https://rosebikes.de": {
+                "citations": [
+                  3,
+                  9,
+                  13,
+                  19,
+                  24
+                ],
+                "contents": [
+                  "*   **Rose Bikes:** Bietet eine gro\u00dfe Auswahl an Fahrr\u00e4dern und Fahrradhelmen, mit der M\u00f6glichkeit, online oder in ihren Stores in Bocholt und M\u00fcnchen zu kaufen.",
+                  "*   **Rose Stores:** Befinden sich in Bocholt und M\u00fcnchen.",
+                  "*   **Rose Bikes:** Hat eine gro\u00dfe Auswahl an Fahrradhelmen f\u00fcr verschiedene Einsatzbereiche, wie Rennradhelme, MTB-Helme und Cityhelme.",
+                  "*   **Rose Stores:** Helme k\u00f6nnen auch vor Ort in den Rose Stores gekauft werden.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
+                ]
+              },
+              "https://www.bike-discount.de/de/bike/fahrradbekleidung/herren/helme/rennrad-helme": {
+                "citations": [
+                  4,
                   14
                 ],
                 "contents": [
-                  "Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
-                  "* **Schwungmasse:** Das Gewicht der Schwungmasse allein ist nicht das einzige entscheidende Kriterium; die Qualit\u00e4t des gesamten Widerstandssystems ist wichtiger."
+                  "*   **Bike-Discount:** Hier k\u00f6nnen Sie Fahrr\u00e4der g\u00fcnstig online kaufen und von einer gro\u00dfen Auswahl profitieren.",
+                  "*   **Bike-Discount:** Hier k\u00f6nnen Sie Rennradhelme online bestellen."
                 ]
               },
-              "https://fitshop.de": {
+              "https://bike-discount.de": {
                 "citations": [
-                  1
+                  4
                 ],
                 "contents": [
-                  "Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an."
+                  "*   **Bike-Discount:** Hier k\u00f6nnen Sie Fahrr\u00e4der g\u00fcnstig online kaufen und von einer gro\u00dfen Auswahl profitieren."
                 ]
               },
-              "https://gorillasports.de": {
+              "https://www.fahrrad-xxl.de/fahrradzubehoer/fahrradhelme/rennrad-helme/": {
                 "citations": [
-                  2
+                  5
                 ],
                 "contents": [
-                  "* **Gorilla Sports** hat ebenfalls Fahrradtrainer in seinem Online-Shop, teilweise mit versandkostenfreier Lieferung innerhalb Deutschlands."
-                ]
-              },
-              "https://bike24.de": {
-                "citations": [
-                  3
-                ],
-                "contents": [
-                  "* **BIKE24** bietet eine Auswahl an Hometrainern, Rollentrainern und Ergometern sowie passendes Zubeh\u00f6r an."
-                ]
-              },
-              "https://hammer.de": {
-                "citations": [
-                  4,
-                  13
-                ],
-                "contents": [
-                  "* **HAMMER Fitnessger\u00e4te** f\u00fchrt verschiedene Heimtrainer und Fitnessbikes f\u00fcr das Training zu Hause.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht."
-                ]
-              },
-              "https://www.lidl.de/h/heimtrainer/h10006884": {
-                "citations": [
-                  5,
-                  13,
-                  15
-                ],
-                "contents": [
-                  "* **Gro\u00dfe Online-Warenh\u00e4user:** \n * **Lidl.de** bietet hochwertige Ergometer, Fahrradtrainer und Crosstrainer an.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
-                  "* **App-Kompatibilit\u00e4t:** Viele moderne Heimtrainer und Ergometer verf\u00fcgen \u00fcber Bluetooth, um sich mit Trainings-Apps zu verbinden und so neue Trainingsm\u00f6glichkeiten zu er\u00f6ffnen."
-                ]
-              },
-              "https://www.mediamarkt.de/de/category/heimtrainer-ergometer-8003.html": {
-                "citations": [
-                  6,
-                  13,
-                  16
-                ],
-                "contents": [
-                  "* **MediaMarkt** hat ebenfalls Ergometer und Heimtrainer in seinem Online-Shop.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
-                  "* **Komfort:** Achten Sie auf ergonomisch einstellbare S\u00e4ttel und Lenker f\u00fcr eine bequeme Sitzposition, besonders bei l\u00e4ngeren Trainingseinheiten."
-                ]
-              },
-              "https://www.kaufland.de/c/ergometer/~69104/": {
-                "citations": [
-                  7
-                ],
-                "contents": [
-                  "* **Kaufland.de** f\u00fchrt eine Auswahl an Ergometern und Heimtrainern."
-                ]
-              },
-              "https://www.fahrrad-xxl.de/fitness/ergometer/": {
-                "citations": [
-                  8
-                ],
-                "contents": [
-                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
-                ]
-              },
-              "https://fahrrad-xxl.de": {
-                "citations": [
-                  8
-                ],
-                "contents": [
-                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
-                ]
-              },
-              "https://das-radhaus.de": {
-                "citations": [
-                  9
-                ],
-                "contents": [
-                  "* **Das Radhaus** ist einer der gr\u00f6\u00dften Fahrrad- und E-Bike-H\u00e4ndler in Deutschland und hat neben Fahrr\u00e4dern auch Heimtrainer im Sortiment."
-                ]
-              },
-              "https://mhw-bike.de": {
-                "citations": [
-                  10
-                ],
-                "contents": [
-                  "* **MHW Bike-House** bietet ebenfalls ein umfangreiches Sortiment an Fahrr\u00e4dern und Zubeh\u00f6r in S\u00fcddeutschland an."
-                ]
-              },
-              "https://shop.zweirad-stadler.de/heimsport/fitnessgeraete-fuer-ausdauertraining/ergometer/?srsltid=AfmBOoojpI9OEE18CUUBSS197F1TGA-qnZAUkoF4qOeyQuNz3CBRvnWc": {
-                "citations": [
-                  11
-                ],
-                "contents": [
-                  "* **Zweirad Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Online-Shop und Filialen in Deutschland, das eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes bietet."
+                  "*   **Fahrrad XXL:** Ein Online-Shop mit einer sehr gro\u00dfen Auswahl an Fahrr\u00e4dern."
                 ]
               },
               "https://boc24.de": {
                 "citations": [
-                  12
-                ],
-                "contents": [
-                  "** ist ein Fahrrad Online Shop mit 49 Filialen in Deutschland, der eine gro\u00dfe Auswahl und schnellen Versand bietet."
-                ]
-              }
-            },
-            "Welche Fahrradtrainingsger\u00e4te gibt es in Deutschland?": {
-              "https://fitshop.de": {
-                "citations": [
-                  1
-                ],
-                "contents": [
-                  "Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an."
-                ]
-              },
-              "https://gorillasports.de": {
-                "citations": [
-                  2
-                ],
-                "contents": [
-                  "* **Gorilla Sports** hat ebenfalls Fahrradtrainer in seinem Online-Shop, teilweise mit versandkostenfreier Lieferung innerhalb Deutschlands."
-                ]
-              },
-              "https://www.bike24.de/heimtrainer.html": {
-                "citations": [
-                  3
-                ],
-                "contents": [
-                  "* **BIKE24** bietet eine Auswahl an Hometrainern, Rollentrainern und Ergometern sowie passendes Zubeh\u00f6r an."
-                ]
-              },
-              "https://hammer.de": {
-                "citations": [
-                  4,
-                  13
-                ],
-                "contents": [
-                  "* **HAMMER Fitnessger\u00e4te** f\u00fchrt verschiedene Heimtrainer und Fitnessbikes f\u00fcr das Training zu Hause.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht."
-                ]
-              },
-              "https://www.lidl.de/h/heimtrainer/h10006884": {
-                "citations": [
-                  5,
-                  13,
-                  15
-                ],
-                "contents": [
-                  "* **Gro\u00dfe Online-Warenh\u00e4user:** \n * **Lidl.de** bietet hochwertige Ergometer, Fahrradtrainer und Crosstrainer an.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
-                  "* **App-Kompatibilit\u00e4t:** Viele moderne Heimtrainer und Ergometer verf\u00fcgen \u00fcber Bluetooth, um sich mit Trainings-Apps zu verbinden und so neue Trainingsm\u00f6glichkeiten zu er\u00f6ffnen."
-                ]
-              },
-              "https://www.mediamarkt.de/de/category/heimtrainer-ergometer-8003.html": {
-                "citations": [
                   6,
-                  13,
-                  16
+                  7,
+                  18
                 ],
                 "contents": [
-                  "* **MediaMarkt** hat ebenfalls Ergometer und Heimtrainer in seinem Online-Shop.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
-                  "* **Komfort:** Achten Sie auf ergonomisch einstellbare S\u00e4ttel und Lenker f\u00fcr eine bequeme Sitzposition, besonders bei l\u00e4ngeren Trainingseinheiten."
+                  "*   **B.O.C.:** Ein Online-Fahrradshop mit 49 Filialen in Deutschland.",
+                  "*   **Station\u00e4re Gesch\u00e4fte:**\n    *   **B.O.C.:** Hat 49 Filialen in ganz Deutschland.",
+                  "*   **B.O.C.:** Bietet Helme an."
                 ]
               },
-              "https://www.kaufland.de/c/ergometer/~69104/": {
+              "https://shop.zweirad-stadler.de/fahrrad-bekleidung/helme-kaufen/rennrad-helme/?srsltid=AfmBOopLgW4wF0Pl86Vy5cMkCcejQeJD8Rkpm7YIIw4x6rjf2wVCxyzg": {
                 "citations": [
-                  7
+                  8,
+                  17,
+                  24
                 ],
                 "contents": [
-                  "* **Kaufland.de** f\u00fchrt eine Auswahl an Ergometern und Heimtrainern."
+                  "*   **Zweirad Stadler:** Verf\u00fcgt \u00fcber 22 Filialen in Deutschland und \u00d6sterreich.",
+                  "*   **Station\u00e4re Gesch\u00e4fte:**\n    *   **Zweirad Stadler:** Hier finden Sie eine Auswahl an Fahrradhelmen.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
                 ]
               },
-              "https://fahrrad-xxl.de": {
-                "citations": [
-                  8
-                ],
-                "contents": [
-                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
-                ]
-              },
-              "https://das-radhaus.de": {
-                "citations": [
-                  9
-                ],
-                "contents": [
-                  "* **Das Radhaus** ist einer der gr\u00f6\u00dften Fahrrad- und E-Bike-H\u00e4ndler in Deutschland und hat neben Fahrr\u00e4dern auch Heimtrainer im Sortiment."
-                ]
-              },
-              "https://mhw-bike.de": {
-                "citations": [
-                  10
-                ],
-                "contents": [
-                  "* **MHW Bike-House** bietet ebenfalls ein umfangreiches Sortiment an Fahrr\u00e4dern und Zubeh\u00f6r in S\u00fcddeutschland an."
-                ]
-              },
-              "https://zweirad-stadler.de": {
-                "citations": [
-                  11
-                ],
-                "contents": [
-                  "* **Zweirad Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Online-Shop und Filialen in Deutschland, das eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes bietet."
-                ]
-              },
-              "https://boc24.de": {
+              "https://decathlon.de": {
                 "citations": [
                   12
                 ],
                 "contents": [
-                  "** ist ein Fahrrad Online Shop mit 49 Filialen in Deutschland, der eine gro\u00dfe Auswahl und schnellen Versand bietet."
-                ]
-              }
-            },
-            "Deutschland Fahrradgesch\u00e4fte": {
-              "https://fitshop.de": {
-                "citations": [
-                  1
-                ],
-                "contents": [
-                  "Sie bieten eine gro\u00dfe Auswahl an Ergometern und Heimtrainern von verschiedenen Marken wie cardiostrong, Kettler, Horizon Fitness und Taurus an."
-                ]
-              },
-              "https://gorillasports.de": {
-                "citations": [
-                  2
-                ],
-                "contents": [
-                  "* **Gorilla Sports** hat ebenfalls Fahrradtrainer in seinem Online-Shop, teilweise mit versandkostenfreier Lieferung innerhalb Deutschlands."
-                ]
-              },
-              "https://www.megabike24.de/": {
-                "citations": [
-                  3
-                ],
-                "contents": [
-                  "* **BIKE24** bietet eine Auswahl an Hometrainern, Rollentrainern und Ergometern sowie passendes Zubeh\u00f6r an."
-                ]
-              },
-              "https://hammer.de": {
-                "citations": [
-                  4,
-                  13
-                ],
-                "contents": [
-                  "* **HAMMER Fitnessger\u00e4te** f\u00fchrt verschiedene Heimtrainer und Fitnessbikes f\u00fcr das Training zu Hause.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht."
-                ]
-              },
-              "https://lidl.de": {
-                "citations": [
-                  5,
-                  13,
-                  15
-                ],
-                "contents": [
-                  "* **Gro\u00dfe Online-Warenh\u00e4user:** \n * **Lidl.de** bietet hochwertige Ergometer, Fahrradtrainer und Crosstrainer an.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
-                  "* **App-Kompatibilit\u00e4t:** Viele moderne Heimtrainer und Ergometer verf\u00fcgen \u00fcber Bluetooth, um sich mit Trainings-Apps zu verbinden und so neue Trainingsm\u00f6glichkeiten zu er\u00f6ffnen."
-                ]
-              },
-              "https://mediamarkt.de": {
-                "citations": [
-                  6,
-                  13,
-                  16
-                ],
-                "contents": [
-                  "* **MediaMarkt** hat ebenfalls Ergometer und Heimtrainer in seinem Online-Shop.",
-                  "Heimtrainer:** W\u00e4hrend die Begriffe oft synonym verwendet werden, bieten Ergometer eine pr\u00e4zisere Widerstandsmessung in Watt, was ein zielgerichteteres Training nach Pulswerten erm\u00f6glicht.",
-                  "* **Komfort:** Achten Sie auf ergonomisch einstellbare S\u00e4ttel und Lenker f\u00fcr eine bequeme Sitzposition, besonders bei l\u00e4ngeren Trainingseinheiten."
+                  "*   **Decathlon:** Bietet Fahrradhelme f\u00fcr Damen, Herren und Kinder an."
                 ]
               },
               "https://kaufland.de": {
                 "citations": [
-                  7
+                  16
                 ],
                 "contents": [
-                  "* **Kaufland.de** f\u00fchrt eine Auswahl an Ergometern und Heimtrainern."
+                  "*   **Kaufland.de:** Bietet ebenfalls eine Auswahl an Fahrradhelmen an."
                 ]
               },
-              "https://www.fahrrad-xxl.de/": {
+              "https://zweirad-stadler.de": {
                 "citations": [
-                  8
+                  17,
+                  22,
+                  23,
+                  24
                 ],
                 "contents": [
-                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
-                ]
-              },
-              "https://fahrrad-xxl.de": {
-                "citations": [
-                  8
-                ],
-                "contents": [
-                  "* **Spezialisierte Fahrrad-Online-Shops:** \n * **Fahrrad XXL** hat eine gro\u00dfe Auswahl an Ergometern und Heimtrainern und bietet auch eine pers\u00f6nliche Beratung an."
-                ]
-              },
-              "https://www.das-radhaus.de/?srsltid=AfmBOoqtTeO2IGnhjVnIg3_y0iylQL8LKqEEHxBQVrcKUnBZrYqHs8EU": {
-                "citations": [
-                  9
-                ],
-                "contents": [
-                  "* **Das Radhaus** ist einer der gr\u00f6\u00dften Fahrrad- und E-Bike-H\u00e4ndler in Deutschland und hat neben Fahrr\u00e4dern auch Heimtrainer im Sortiment."
-                ]
-              },
-              "https://mhw-bike.de": {
-                "citations": [
-                  10
-                ],
-                "contents": [
-                  "* **MHW Bike-House** bietet ebenfalls ein umfangreiches Sortiment an Fahrr\u00e4dern und Zubeh\u00f6r in S\u00fcddeutschland an."
-                ]
-              },
-              "https://shop.zweirad-stadler.de/?srsltid=AfmBOoqo0vqvLzox8rCnykkRms9lWUCmc7_vF_MOoEpUfBfkGDwdWYWV": {
-                "citations": [
-                  11
-                ],
-                "contents": [
-                  "* **Zweirad Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Online-Shop und Filialen in Deutschland, das eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes bietet."
-                ]
-              },
-              "https://boc24.de/?srsltid=AfmBOooACw-6l8GqGZTbX3OvcxDKo280X8pOkdQmJg7W2kLQAYx_grqM": {
-                "citations": [
-                  12
-                ],
-                "contents": [
-                  "** ist ein Fahrrad Online Shop mit 49 Filialen in Deutschland, der eine gro\u00dfe Auswahl und schnellen Versand bietet."
+                  "*   **Station\u00e4re Gesch\u00e4fte:**\n    *   **Zweirad Stadler:** Hier finden Sie eine Auswahl an Fahrradhelmen.",
+                  "Nach einem Aufprall muss er ausgetauscht werden, da die Schutzfunktion nicht mehr gew\u00e4hrleistet ist.",
+                  "Der ADFC (Allgemeiner Deutscher Fahrrad-Club) empfiehlt, den Helm alle 3 bis 5 Jahre zu ersetzen, da das Material durch \u00e4u\u00dfere Einfl\u00fcsse spr\u00f6de werden kann.",
+                  "*   **Spezielle Helme:** Es gibt verschiedene Arten von Helmen f\u00fcr unterschiedliche Zwecke, z.B. Rennradhelme (leicht und gut bel\u00fcftet), Mountainbike-Helme (mehr Schutz im Hinterkopf- und Schl\u00e4fenbereich) und E-Bike-Helme (oft mit gr\u00f6\u00dferer Schutzfl\u00e4che)."
                 ]
               }
             }
           },
           "success": true,
           "run_number": 1
+        },
+        {
+          "model": "gemini-2.5-flash",
+          "response": "Es ist toll, dass du mit dem Radfahren anfangen m\u00f6chtest! Hier sind einige Informationen, wo du in Deutschland Fahrr\u00e4der, Fahrradtrainer und Helme kaufen kannst:\n\n**Fahrr\u00e4der f\u00fcr die Stra\u00dfe:**\n\nDu kannst Fahrr\u00e4der in Deutschland sowohl in Online-Shops als auch in station\u00e4ren Gesch\u00e4ften kaufen.\n\n*   **Online-Shops:**\n    *   **Fahrrad XXL** bietet eine gro\u00dfe Auswahl an sofort verf\u00fcgbaren Fahrr\u00e4dern von \u00fcber 300 Marken und verf\u00fcgt auch \u00fcber Filialen in Deutschland.\n    *   **B.O.C.** ist ein weiterer Online-Shop mit 49 Filialen in Deutschland.\n    *   **BIKE24** hat ebenfalls eine gro\u00dfe Auswahl an Fahrr\u00e4dern und bietet die M\u00f6glichkeit der Finanzierung an.\n    *   **fahrrad.de** ist ein Online-Shop, der Fahrr\u00e4der, Zubeh\u00f6r und Kleidung anbietet, mit Filialen und Service vor Ort.\n    *   **Das Radhaus** bietet hochwertige Fahrr\u00e4der und E-Bikes online und in 8 Filialen im Gro\u00dfraum Berlin an.\n    *   **RABE Bike** hat 10 Standorte in Bayern und einen Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern und E-Bikes von Top-Marken.\n    *   **Bike-Discount** bietet Fahrr\u00e4der mit Best-Price-Garantie an.\n    *   **Zweirad-Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Standorten in ganz Deutschland und einem Online-Shop, der eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes f\u00fchrt.\n    *   **vit:bikes** hat 28 Standorte in Deutschland und bietet pers\u00f6nliche Beratung und 3D-Scanning, um das passende E-Bike zu finden.\n\n*   **Arten von Fahrr\u00e4dern f\u00fcr die Stra\u00dfe:**\n    *   **Rennr\u00e4der** sind f\u00fcr den Radsport auf der Stra\u00dfe konzipiert.\n    *   **Trekkingr\u00e4der** eignen sich f\u00fcr Freizeit, Stadt und Touren.\n    *   **Citybikes** sind ideal f\u00fcr den urbanen Einsatz.\n    *   **Crossr\u00e4der** und **Fitnessbikes** sind weitere Optionen.\n\n**Fahrradtrainer (Heimtrainer):**\n\nFahrradtrainer, auch Hometrainer oder Ergometer genannt, erm\u00f6glichen es dir, drinnen Rad zu fahren.\n\n*   **Online-Shops:**\n    *   **Gorilla Sports** bietet Fahrradtrainer g\u00fcnstig online an.\n    *   **BIKE24** f\u00fchrt Hometrainer, Rollentrainer, Ergometer und passendes Zubeh\u00f6r.\n    *   **Lidl.de** bietet Heimtrainer und Ergometer an.\n    *   **Fahrrad XXL** hat ebenfalls Heimtrainer im Angebot.\n    *   **HAMMER Fitnessger\u00e4te** verkauft Hometrainer und Heimtrainer-Fahrr\u00e4der.\n\n*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung.\n    *   **Indoor Cycling Bikes** sind ebenfalls eine Option f\u00fcr das Training in den eigenen vier W\u00e4nden.\n    *   **Rollentrainer** sind eine weitere Art von Heimtrainern.\n\n**Fahrradhelme:**\n\nDas Tragen eines Fahrradhelms ist sehr wichtig f\u00fcr deine Sicherheit.\n\n*   **Online-Shops und Gesch\u00e4fte:**\n    *   **Zweirad-Stadler** bietet Fahrradhelme g\u00fcnstig online an.\n    *   **BIKE24** f\u00fchrt Fahrradhelme von Top-Marken und erkl\u00e4rt die Sicherheitsstandards.\n    *   **Decathlon** hat eine Auswahl an Fahrradhelmen f\u00fcr Damen, Herren und Kinder.\n    *   **ROSE** bietet Fahrradhelme f\u00fcr verschiedene Einsatzbereiche wie Rennrad, MTB, Gravel und E-Bike an.\n    *   **Kaufland.de** hat ebenfalls Fahrradhelme im Sortiment.\n\n*   **Wichtige Hinweise zu Fahrradhelmen:**\n    *   In Deutschland m\u00fcssen Helme bestimmten Pr\u00fcfnormen entsprechen.\n    *   Der ADFC (Allgemeiner Deutscher Fahrrad-Club) empfiehlt, Helme alle 3 bis 5 Jahre zu ersetzen.\n    *   Nach einem Sturz auf den Helm oder einem Aufprall sollte der Helm immer ausgetauscht werden, da die Sicherheit nicht mehr gew\u00e4hrleistet ist.\n    *   Es gibt Helme mit zus\u00e4tzlichen Schutzma\u00dfnahmen wie MIPS, die Rotationskr\u00e4fte bei einem Aufprall reduzieren k\u00f6nnen.\n    *   F\u00fcr E-Bikes bis 25 km/h reicht ein normaler Fahrradhelm aus, spezielle E-Bike-Helme bieten jedoch oft eine gr\u00f6\u00dfere Schutzfl\u00e4che.\n\nViel Spa\u00df beim Radfahren!",
+          "web_searches": {
+            "Fahrradgesch\u00e4fte Deutschland": {
+              "https://www.fahrrad-xxl.de/fahrraeder/": {
+                "citations": [
+                  1,
+                  11,
+                  13
+                ],
+                "contents": [
+                  "*   **Online-Shops:**\n    *   **Fahrrad XXL** bietet eine gro\u00dfe Auswahl an sofort verf\u00fcgbaren Fahrr\u00e4dern von \u00fcber 300 Marken und verf\u00fcgt auch \u00fcber Filialen in Deutschland.",
+                  "*   **Trekkingr\u00e4der** eignen sich f\u00fcr Freizeit, Stadt und Touren.",
+                  "*   **Crossr\u00e4der** und **Fitnessbikes** sind weitere Optionen."
+                ]
+              },
+              "https://boc24.de/?srsltid=AfmBOoo82z85vVmHJpQ8A-8Q712rSQkEkxVZyLmTGoLGl5ABUzwTknUi": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "** ist ein weiterer Online-Shop mit 49 Filialen in Deutschland."
+                ]
+              },
+              "https://bike24.de": {
+                "citations": [
+                  23,
+                  27,
+                  29,
+                  30
+                ],
+                "contents": [
+                  "*   **BIKE24** f\u00fchrt Fahrradhelme von Top-Marken und erkl\u00e4rt die Sicherheitsstandards.",
+                  "*   **Wichtige Hinweise zu Fahrradhelmen:**\n    *   In Deutschland m\u00fcssen Helme bestimmten Pr\u00fcfnormen entsprechen.",
+                  "*   Nach einem Sturz auf den Helm oder einem Aufprall sollte der Helm immer ausgetauscht werden, da die Sicherheit nicht mehr gew\u00e4hrleistet ist.",
+                  "*   Es gibt Helme mit zus\u00e4tzlichen Schutzma\u00dfnahmen wie MIPS, die Rotationskr\u00e4fte bei einem Aufprall reduzieren k\u00f6nnen."
+                ]
+              },
+              "https://www.fahrrad.de/": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "*   **fahrrad.de** ist ein Online-Shop, der Fahrr\u00e4der, Zubeh\u00f6r und Kleidung anbietet, mit Filialen und Service vor Ort."
+                ]
+              },
+              "https://www.das-radhaus.de/?srsltid=AfmBOopN2nPQ8xb-WhQgihQUSmy3rLOiVPrLIOOnzMHzVe3nmVd5pZnM": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "*   **Das Radhaus** bietet hochwertige Fahrr\u00e4der und E-Bikes online und in 8 Filialen im Gro\u00dfraum Berlin an."
+                ]
+              },
+              "https://www.rabe-bike.de/": {
+                "citations": [
+                  6,
+                  10,
+                  11
+                ],
+                "contents": [
+                  "*   **RABE Bike** hat 10 Standorte in Bayern und einen Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern und E-Bikes von Top-Marken.",
+                  "*   **Arten von Fahrr\u00e4dern f\u00fcr die Stra\u00dfe:**\n    *   **Rennr\u00e4der** sind f\u00fcr den Radsport auf der Stra\u00dfe konzipiert.",
+                  "*   **Trekkingr\u00e4der** eignen sich f\u00fcr Freizeit, Stadt und Touren."
+                ]
+              },
+              "https://bike-discount.de": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "*   **Bike-Discount** bietet Fahrr\u00e4der mit Best-Price-Garantie an."
+                ]
+              },
+              "https://shop.zweirad-stadler.de/?srsltid=AfmBOorp72YujyQA0fyuY6P6CTxzq8kQHQroku0KDh-NMV0CfSUpG_ng": {
+                "citations": [
+                  8
+                ],
+                "contents": [
+                  "*   **Zweirad-Stadler** ist ein gro\u00dfes Fahrradgesch\u00e4ft mit Standorten in ganz Deutschland und einem Online-Shop, der eine riesige Auswahl an Fahrr\u00e4dern und E-Bikes f\u00fchrt."
+                ]
+              },
+              "https://vitbikes.de": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "*   **vit:bikes** hat 28 Standorte in Deutschland und bietet pers\u00f6nliche Beratung und 3D-Scanning, um das passende E-Bike zu finden."
+                ]
+              },
+              "https://gorillasports.de": {
+                "citations": [
+                  14,
+                  19,
+                  20
+                ],
+                "contents": [
+                  "*   **Online-Shops:**\n    *   **Gorilla Sports** bietet Fahrradtrainer g\u00fcnstig online an.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung.",
+                  "*   **Indoor Cycling Bikes** sind ebenfalls eine Option f\u00fcr das Training in den eigenen vier W\u00e4nden."
+                ]
+              },
+              "https://lidl.de": {
+                "citations": [
+                  16,
+                  19
+                ],
+                "contents": [
+                  "*   **Lidl.de** bietet Heimtrainer und Ergometer an.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung."
+                ]
+              },
+              "https://fahrrad-xxl.de": {
+                "citations": [
+                  17
+                ],
+                "contents": [
+                  "*   **Fahrrad XXL** hat ebenfalls Heimtrainer im Angebot."
+                ]
+              },
+              "https://hammer.de": {
+                "citations": [
+                  18,
+                  19
+                ],
+                "contents": [
+                  "*   **HAMMER Fitnessger\u00e4te** verkauft Hometrainer und Heimtrainer-Fahrr\u00e4der.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung."
+                ]
+              },
+              "https://zweirad-stadler.de": {
+                "citations": [
+                  22,
+                  28,
+                  29,
+                  31
+                ],
+                "contents": [
+                  "*   **Online-Shops und Gesch\u00e4fte:**\n    *   **Zweirad-Stadler** bietet Fahrradhelme g\u00fcnstig online an.",
+                  "*   Der ADFC (Allgemeiner Deutscher Fahrrad-Club) empfiehlt, Helme alle 3 bis 5 Jahre zu ersetzen.",
+                  "*   Nach einem Sturz auf den Helm oder einem Aufprall sollte der Helm immer ausgetauscht werden, da die Sicherheit nicht mehr gew\u00e4hrleistet ist.",
+                  "*   F\u00fcr E-Bikes bis 25 km/h reicht ein normaler Fahrradhelm aus, spezielle E-Bike-Helme bieten jedoch oft eine gr\u00f6\u00dfere Schutzfl\u00e4che."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  24
+                ],
+                "contents": [
+                  "*   **Decathlon** hat eine Auswahl an Fahrradhelmen f\u00fcr Damen, Herren und Kinder."
+                ]
+              },
+              "https://rosebikes.de": {
+                "citations": [
+                  25
+                ],
+                "contents": [
+                  "*   **ROSE** bietet Fahrradhelme f\u00fcr verschiedene Einsatzbereiche wie Rennrad, MTB, Gravel und E-Bike an."
+                ]
+              },
+              "https://kaufland.de": {
+                "citations": [
+                  26
+                ],
+                "contents": [
+                  "*   **Kaufland.de** hat ebenfalls Fahrradhelme im Sortiment."
+                ]
+              }
+            },
+            "Fahrradhelm kaufen Deutschland": {
+              "https://www.fahrrad-xxl.de/fahrradzubehoer/fahrradhelme/": {
+                "citations": [
+                  1,
+                  11,
+                  13
+                ],
+                "contents": [
+                  "*   **Online-Shops:**\n    *   **Fahrrad XXL** bietet eine gro\u00dfe Auswahl an sofort verf\u00fcgbaren Fahrr\u00e4dern von \u00fcber 300 Marken und verf\u00fcgt auch \u00fcber Filialen in Deutschland.",
+                  "*   **Trekkingr\u00e4der** eignen sich f\u00fcr Freizeit, Stadt und Touren.",
+                  "*   **Crossr\u00e4der** und **Fitnessbikes** sind weitere Optionen."
+                ]
+              },
+              "https://boc24.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "** ist ein weiterer Online-Shop mit 49 Filialen in Deutschland."
+                ]
+              },
+              "https://bike24.de": {
+                "citations": [
+                  15,
+                  21
+                ],
+                "contents": [
+                  "*   **BIKE24** f\u00fchrt Hometrainer, Rollentrainer, Ergometer und passendes Zubeh\u00f6r.",
+                  "*   **Rollentrainer** sind eine weitere Art von Heimtrainern."
+                ]
+              },
+              "https://www.fahrrad.de/collections/fahrradhelme": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "*   **fahrrad.de** ist ein Online-Shop, der Fahrr\u00e4der, Zubeh\u00f6r und Kleidung anbietet, mit Filialen und Service vor Ort."
+                ]
+              },
+              "https://das-radhaus.de": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "*   **Das Radhaus** bietet hochwertige Fahrr\u00e4der und E-Bikes online und in 8 Filialen im Gro\u00dfraum Berlin an."
+                ]
+              },
+              "https://rabe-bike.de": {
+                "citations": [
+                  6,
+                  10,
+                  11
+                ],
+                "contents": [
+                  "*   **RABE Bike** hat 10 Standorte in Bayern und einen Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern und E-Bikes von Top-Marken.",
+                  "*   **Arten von Fahrr\u00e4dern f\u00fcr die Stra\u00dfe:**\n    *   **Rennr\u00e4der** sind f\u00fcr den Radsport auf der Stra\u00dfe konzipiert.",
+                  "*   **Trekkingr\u00e4der** eignen sich f\u00fcr Freizeit, Stadt und Touren."
+                ]
+              },
+              "https://bike-discount.de": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "*   **Bike-Discount** bietet Fahrr\u00e4der mit Best-Price-Garantie an."
+                ]
+              },
+              "https://zweirad-stadler.de": {
+                "citations": [
+                  22,
+                  28,
+                  29,
+                  31
+                ],
+                "contents": [
+                  "*   **Online-Shops und Gesch\u00e4fte:**\n    *   **Zweirad-Stadler** bietet Fahrradhelme g\u00fcnstig online an.",
+                  "*   Der ADFC (Allgemeiner Deutscher Fahrrad-Club) empfiehlt, Helme alle 3 bis 5 Jahre zu ersetzen.",
+                  "*   Nach einem Sturz auf den Helm oder einem Aufprall sollte der Helm immer ausgetauscht werden, da die Sicherheit nicht mehr gew\u00e4hrleistet ist.",
+                  "*   F\u00fcr E-Bikes bis 25 km/h reicht ein normaler Fahrradhelm aus, spezielle E-Bike-Helme bieten jedoch oft eine gr\u00f6\u00dfere Schutzfl\u00e4che."
+                ]
+              },
+              "https://vitbikes.de": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "*   **vit:bikes** hat 28 Standorte in Deutschland und bietet pers\u00f6nliche Beratung und 3D-Scanning, um das passende E-Bike zu finden."
+                ]
+              },
+              "https://gorillasports.de": {
+                "citations": [
+                  14,
+                  19,
+                  20
+                ],
+                "contents": [
+                  "*   **Online-Shops:**\n    *   **Gorilla Sports** bietet Fahrradtrainer g\u00fcnstig online an.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung.",
+                  "*   **Indoor Cycling Bikes** sind ebenfalls eine Option f\u00fcr das Training in den eigenen vier W\u00e4nden."
+                ]
+              },
+              "https://lidl.de": {
+                "citations": [
+                  16,
+                  19
+                ],
+                "contents": [
+                  "*   **Lidl.de** bietet Heimtrainer und Ergometer an.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung."
+                ]
+              },
+              "https://fahrrad-xxl.de": {
+                "citations": [
+                  17
+                ],
+                "contents": [
+                  "*   **Fahrrad XXL** hat ebenfalls Heimtrainer im Angebot."
+                ]
+              },
+              "https://hammer.de": {
+                "citations": [
+                  18,
+                  19
+                ],
+                "contents": [
+                  "*   **HAMMER Fitnessger\u00e4te** verkauft Hometrainer und Heimtrainer-Fahrr\u00e4der.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung."
+                ]
+              },
+              "https://www.bike24.de/fahrradhelme.html": {
+                "citations": [
+                  23,
+                  27,
+                  29,
+                  30
+                ],
+                "contents": [
+                  "*   **BIKE24** f\u00fchrt Fahrradhelme von Top-Marken und erkl\u00e4rt die Sicherheitsstandards.",
+                  "*   **Wichtige Hinweise zu Fahrradhelmen:**\n    *   In Deutschland m\u00fcssen Helme bestimmten Pr\u00fcfnormen entsprechen.",
+                  "*   Nach einem Sturz auf den Helm oder einem Aufprall sollte der Helm immer ausgetauscht werden, da die Sicherheit nicht mehr gew\u00e4hrleistet ist.",
+                  "*   Es gibt Helme mit zus\u00e4tzlichen Schutzma\u00dfnahmen wie MIPS, die Rotationskr\u00e4fte bei einem Aufprall reduzieren k\u00f6nnen."
+                ]
+              },
+              "https://www.decathlon.de/alle-sportarten-a-z/fahrrad-welt/fahrrad-helme": {
+                "citations": [
+                  24
+                ],
+                "contents": [
+                  "*   **Decathlon** hat eine Auswahl an Fahrradhelmen f\u00fcr Damen, Herren und Kinder."
+                ]
+              },
+              "https://www.rosebikes.de/bekleidung/fahrradhelme": {
+                "citations": [
+                  25
+                ],
+                "contents": [
+                  "*   **ROSE** bietet Fahrradhelme f\u00fcr verschiedene Einsatzbereiche wie Rennrad, MTB, Gravel und E-Bike an."
+                ]
+              },
+              "https://kaufland.de": {
+                "citations": [
+                  26
+                ],
+                "contents": [
+                  "*   **Kaufland.de** hat ebenfalls Fahrradhelme im Sortiment."
+                ]
+              }
+            },
+            "Fahrrad kaufen Deutschland": {
+              "https://www.fahrrad-xxl.de/fahrraeder/radgroesse.28-zoll/": {
+                "citations": [
+                  1,
+                  11,
+                  13
+                ],
+                "contents": [
+                  "*   **Online-Shops:**\n    *   **Fahrrad XXL** bietet eine gro\u00dfe Auswahl an sofort verf\u00fcgbaren Fahrr\u00e4dern von \u00fcber 300 Marken und verf\u00fcgt auch \u00fcber Filialen in Deutschland.",
+                  "*   **Trekkingr\u00e4der** eignen sich f\u00fcr Freizeit, Stadt und Touren.",
+                  "*   **Crossr\u00e4der** und **Fitnessbikes** sind weitere Optionen."
+                ]
+              },
+              "https://boc24.de/collections/fahrrad-vorderraeder": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "** ist ein weiterer Online-Shop mit 49 Filialen in Deutschland."
+                ]
+              },
+              "https://www.bike24.de/fahrrad.html": {
+                "citations": [
+                  3,
+                  12,
+                  13
+                ],
+                "contents": [
+                  "*   **BIKE24** hat ebenfalls eine gro\u00dfe Auswahl an Fahrr\u00e4dern und bietet die M\u00f6glichkeit der Finanzierung an.",
+                  "*   **Citybikes** sind ideal f\u00fcr den urbanen Einsatz.",
+                  "*   **Crossr\u00e4der** und **Fitnessbikes** sind weitere Optionen."
+                ]
+              },
+              "https://www.fahrrad.de/": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "*   **fahrrad.de** ist ein Online-Shop, der Fahrr\u00e4der, Zubeh\u00f6r und Kleidung anbietet, mit Filialen und Service vor Ort."
+                ]
+              },
+              "https://das-radhaus.de": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "*   **Das Radhaus** bietet hochwertige Fahrr\u00e4der und E-Bikes online und in 8 Filialen im Gro\u00dfraum Berlin an."
+                ]
+              },
+              "https://rabe-bike.de": {
+                "citations": [
+                  6,
+                  10,
+                  11
+                ],
+                "contents": [
+                  "*   **RABE Bike** hat 10 Standorte in Bayern und einen Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern und E-Bikes von Top-Marken.",
+                  "*   **Arten von Fahrr\u00e4dern f\u00fcr die Stra\u00dfe:**\n    *   **Rennr\u00e4der** sind f\u00fcr den Radsport auf der Stra\u00dfe konzipiert.",
+                  "*   **Trekkingr\u00e4der** eignen sich f\u00fcr Freizeit, Stadt und Touren."
+                ]
+              },
+              "https://bike-discount.de": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "*   **Bike-Discount** bietet Fahrr\u00e4der mit Best-Price-Garantie an."
+                ]
+              },
+              "https://zweirad-stadler.de": {
+                "citations": [
+                  22,
+                  28,
+                  29,
+                  31
+                ],
+                "contents": [
+                  "*   **Online-Shops und Gesch\u00e4fte:**\n    *   **Zweirad-Stadler** bietet Fahrradhelme g\u00fcnstig online an.",
+                  "*   Der ADFC (Allgemeiner Deutscher Fahrrad-Club) empfiehlt, Helme alle 3 bis 5 Jahre zu ersetzen.",
+                  "*   Nach einem Sturz auf den Helm oder einem Aufprall sollte der Helm immer ausgetauscht werden, da die Sicherheit nicht mehr gew\u00e4hrleistet ist.",
+                  "*   F\u00fcr E-Bikes bis 25 km/h reicht ein normaler Fahrradhelm aus, spezielle E-Bike-Helme bieten jedoch oft eine gr\u00f6\u00dfere Schutzfl\u00e4che."
+                ]
+              },
+              "https://vitbikes.de": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "*   **vit:bikes** hat 28 Standorte in Deutschland und bietet pers\u00f6nliche Beratung und 3D-Scanning, um das passende E-Bike zu finden."
+                ]
+              },
+              "https://gorillasports.de": {
+                "citations": [
+                  14,
+                  19,
+                  20
+                ],
+                "contents": [
+                  "*   **Online-Shops:**\n    *   **Gorilla Sports** bietet Fahrradtrainer g\u00fcnstig online an.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung.",
+                  "*   **Indoor Cycling Bikes** sind ebenfalls eine Option f\u00fcr das Training in den eigenen vier W\u00e4nden."
+                ]
+              },
+              "https://bike24.de": {
+                "citations": [
+                  23,
+                  27,
+                  29,
+                  30
+                ],
+                "contents": [
+                  "*   **BIKE24** f\u00fchrt Fahrradhelme von Top-Marken und erkl\u00e4rt die Sicherheitsstandards.",
+                  "*   **Wichtige Hinweise zu Fahrradhelmen:**\n    *   In Deutschland m\u00fcssen Helme bestimmten Pr\u00fcfnormen entsprechen.",
+                  "*   Nach einem Sturz auf den Helm oder einem Aufprall sollte der Helm immer ausgetauscht werden, da die Sicherheit nicht mehr gew\u00e4hrleistet ist.",
+                  "*   Es gibt Helme mit zus\u00e4tzlichen Schutzma\u00dfnahmen wie MIPS, die Rotationskr\u00e4fte bei einem Aufprall reduzieren k\u00f6nnen."
+                ]
+              },
+              "https://lidl.de": {
+                "citations": [
+                  16,
+                  19
+                ],
+                "contents": [
+                  "*   **Lidl.de** bietet Heimtrainer und Ergometer an.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung."
+                ]
+              },
+              "https://fahrrad-xxl.de": {
+                "citations": [
+                  17
+                ],
+                "contents": [
+                  "*   **Fahrrad XXL** hat ebenfalls Heimtrainer im Angebot."
+                ]
+              },
+              "https://hammer.de": {
+                "citations": [
+                  18,
+                  19
+                ],
+                "contents": [
+                  "*   **HAMMER Fitnessger\u00e4te** verkauft Hometrainer und Heimtrainer-Fahrr\u00e4der.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  24
+                ],
+                "contents": [
+                  "*   **Decathlon** hat eine Auswahl an Fahrradhelmen f\u00fcr Damen, Herren und Kinder."
+                ]
+              },
+              "https://rosebikes.de": {
+                "citations": [
+                  25
+                ],
+                "contents": [
+                  "*   **ROSE** bietet Fahrradhelme f\u00fcr verschiedene Einsatzbereiche wie Rennrad, MTB, Gravel und E-Bike an."
+                ]
+              },
+              "https://kaufland.de": {
+                "citations": [
+                  26
+                ],
+                "contents": [
+                  "*   **Kaufland.de** hat ebenfalls Fahrradhelme im Sortiment."
+                ]
+              }
+            },
+            "Fahrradtrainer kaufen Deutschland": {
+              "https://fahrrad-xxl.de": {
+                "citations": [
+                  17
+                ],
+                "contents": [
+                  "*   **Fahrrad XXL** hat ebenfalls Heimtrainer im Angebot."
+                ]
+              },
+              "https://boc24.de": {
+                "citations": [
+                  2
+                ],
+                "contents": [
+                  "** ist ein weiterer Online-Shop mit 49 Filialen in Deutschland."
+                ]
+              },
+              "https://www.bike24.de/heimtrainer.html": {
+                "citations": [
+                  15,
+                  21
+                ],
+                "contents": [
+                  "*   **BIKE24** f\u00fchrt Hometrainer, Rollentrainer, Ergometer und passendes Zubeh\u00f6r.",
+                  "*   **Rollentrainer** sind eine weitere Art von Heimtrainern."
+                ]
+              },
+              "https://fahrrad.de": {
+                "citations": [
+                  4
+                ],
+                "contents": [
+                  "*   **fahrrad.de** ist ein Online-Shop, der Fahrr\u00e4der, Zubeh\u00f6r und Kleidung anbietet, mit Filialen und Service vor Ort."
+                ]
+              },
+              "https://das-radhaus.de": {
+                "citations": [
+                  5
+                ],
+                "contents": [
+                  "*   **Das Radhaus** bietet hochwertige Fahrr\u00e4der und E-Bikes online und in 8 Filialen im Gro\u00dfraum Berlin an."
+                ]
+              },
+              "https://rabe-bike.de": {
+                "citations": [
+                  6,
+                  10,
+                  11
+                ],
+                "contents": [
+                  "*   **RABE Bike** hat 10 Standorte in Bayern und einen Online-Shop mit einer gro\u00dfen Auswahl an Fahrr\u00e4dern und E-Bikes von Top-Marken.",
+                  "*   **Arten von Fahrr\u00e4dern f\u00fcr die Stra\u00dfe:**\n    *   **Rennr\u00e4der** sind f\u00fcr den Radsport auf der Stra\u00dfe konzipiert.",
+                  "*   **Trekkingr\u00e4der** eignen sich f\u00fcr Freizeit, Stadt und Touren."
+                ]
+              },
+              "https://bike-discount.de": {
+                "citations": [
+                  7
+                ],
+                "contents": [
+                  "*   **Bike-Discount** bietet Fahrr\u00e4der mit Best-Price-Garantie an."
+                ]
+              },
+              "https://zweirad-stadler.de": {
+                "citations": [
+                  22,
+                  28,
+                  29,
+                  31
+                ],
+                "contents": [
+                  "*   **Online-Shops und Gesch\u00e4fte:**\n    *   **Zweirad-Stadler** bietet Fahrradhelme g\u00fcnstig online an.",
+                  "*   Der ADFC (Allgemeiner Deutscher Fahrrad-Club) empfiehlt, Helme alle 3 bis 5 Jahre zu ersetzen.",
+                  "*   Nach einem Sturz auf den Helm oder einem Aufprall sollte der Helm immer ausgetauscht werden, da die Sicherheit nicht mehr gew\u00e4hrleistet ist.",
+                  "*   F\u00fcr E-Bikes bis 25 km/h reicht ein normaler Fahrradhelm aus, spezielle E-Bike-Helme bieten jedoch oft eine gr\u00f6\u00dfere Schutzfl\u00e4che."
+                ]
+              },
+              "https://vitbikes.de": {
+                "citations": [
+                  9
+                ],
+                "contents": [
+                  "*   **vit:bikes** hat 28 Standorte in Deutschland und bietet pers\u00f6nliche Beratung und 3D-Scanning, um das passende E-Bike zu finden."
+                ]
+              },
+              "https://gorillasports.de": {
+                "citations": [
+                  14,
+                  19,
+                  20
+                ],
+                "contents": [
+                  "*   **Online-Shops:**\n    *   **Gorilla Sports** bietet Fahrradtrainer g\u00fcnstig online an.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung.",
+                  "*   **Indoor Cycling Bikes** sind ebenfalls eine Option f\u00fcr das Training in den eigenen vier W\u00e4nden."
+                ]
+              },
+              "https://www.lidl.de/h/heimtrainer/h10006884": {
+                "citations": [
+                  16,
+                  19
+                ],
+                "contents": [
+                  "*   **Lidl.de** bietet Heimtrainer und Ergometer an.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung."
+                ]
+              },
+              "https://www.hammer.de/ausdauertraining/heimtrainer-ergometer.html#benefits": {
+                "citations": [
+                  18,
+                  19
+                ],
+                "contents": [
+                  "*   **HAMMER Fitnessger\u00e4te** verkauft Hometrainer und Heimtrainer-Fahrr\u00e4der.",
+                  "*   **Arten von Fahrradtrainern:**\n    *   **Ergometer** sind Heimtrainer mit einstellbarer Wattzahl und oft genauer bei der Messung der Leistung."
+                ]
+              },
+              "https://bike24.de": {
+                "citations": [
+                  23,
+                  27,
+                  29,
+                  30
+                ],
+                "contents": [
+                  "*   **BIKE24** f\u00fchrt Fahrradhelme von Top-Marken und erkl\u00e4rt die Sicherheitsstandards.",
+                  "*   **Wichtige Hinweise zu Fahrradhelmen:**\n    *   In Deutschland m\u00fcssen Helme bestimmten Pr\u00fcfnormen entsprechen.",
+                  "*   Nach einem Sturz auf den Helm oder einem Aufprall sollte der Helm immer ausgetauscht werden, da die Sicherheit nicht mehr gew\u00e4hrleistet ist.",
+                  "*   Es gibt Helme mit zus\u00e4tzlichen Schutzma\u00dfnahmen wie MIPS, die Rotationskr\u00e4fte bei einem Aufprall reduzieren k\u00f6nnen."
+                ]
+              },
+              "https://decathlon.de": {
+                "citations": [
+                  24
+                ],
+                "contents": [
+                  "*   **Decathlon** hat eine Auswahl an Fahrradhelmen f\u00fcr Damen, Herren und Kinder."
+                ]
+              },
+              "https://rosebikes.de": {
+                "citations": [
+                  25
+                ],
+                "contents": [
+                  "*   **ROSE** bietet Fahrradhelme f\u00fcr verschiedene Einsatzbereiche wie Rennrad, MTB, Gravel und E-Bike an."
+                ]
+              },
+              "https://kaufland.de": {
+                "citations": [
+                  26
+                ],
+                "contents": [
+                  "*   **Kaufland.de** hat ebenfalls Fahrradhelme im Sortiment."
+                ]
+              }
+            }
+          },
+          "success": true,
+          "run_number": 2
         }
       ]
     },
     "summary": {
       "gemini-2.5-flash": {
-        "total_runs": 1,
-        "successful_runs": 1,
+        "total_runs": 2,
+        "successful_runs": 2,
         "success_rate": 1.0,
-        "total_web_searches": 4,
-        "unique_web_searches": 4,
+        "total_web_searches": 7,
+        "unique_web_searches": 5,
         "web_search_queries": [
-          "Fahrradtrainer kaufen Deutschland",
-          "Wo kann man in Deutschland Fahrradergometer kaufen?",
-          "Welche Fahrradtrainingsger\u00e4te gibt es in Deutschland?",
-          "Deutschland Fahrradgesch\u00e4fte"
+          "Fahrradhelm kaufen Deutschland",
+          "Fahrrad kaufen Deutschland",
+          "Fahrradgesch\u00e4ft Deutschland Rennr\u00e4der Helme",
+          "Fahrradgesch\u00e4fte Deutschland",
+          "Fahrradtrainer kaufen Deutschland"
         ]
       }
     }

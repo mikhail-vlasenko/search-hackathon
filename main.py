@@ -9,6 +9,7 @@ import re
 import os
 from typing import List, Dict, Any
 import time
+import random
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from googlesearch import search
 from urllib.parse import urlparse
@@ -92,6 +93,10 @@ def search_and_match_domains(
 
     except Exception as e:
         print(f"Error searching for query '{query}': {e}")
+        # Add randomized delay to avoid rate limiting
+        delay = random.uniform(1, 5)
+        print(f"Adding {delay:.2f}s delay after error")
+        time.sleep(delay)
         return {}
 
 
@@ -139,36 +144,55 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
                         chunk_citations[chunk_idx].append(citation_idx)
                         chunk_contents[chunk_idx].append(support.segment.text)
 
-        # Now attribute domains to queries by searching
+        # Now attribute domains to queries by searching (parallelized)
         result = {}
 
-        for query in all_queries:
-            print(f"Searching for: {query}")
+        # Use ThreadPoolExecutor to parallelize Google searches
+        with ThreadPoolExecutor(max_workers=min(len(all_queries), 5)) as executor:
+            # Submit all search tasks
+            future_to_query = {
+                executor.submit(
+                    search_and_match_domains, query, chunk_domains, chunk_uri
+                ): query
+                for query in all_queries
+            }
 
-            # Search Google and match domains
-            url_to_url = search_and_match_domains(query, chunk_domains, chunk_uri)
+            # Collect results as they complete
+            for future in as_completed(future_to_query):
+                query = future_to_query[future]
+                print(f"Searching for: {query}")
 
-            query_results = {}
+                try:
+                    url_to_url = future.result()
+                    query_results = {}
 
-            # For each chunk, check if we found a matching URL
-            for chunk_idx, chunk in enumerate(chunks):
-                domain = chunk_domains[chunk_idx]
-                url = chunk_uri[chunk_idx]
-                grounding_uri = chunk_uri[chunk_idx]
-                print(f"The grounding uri is {grounding_uri}")
-                citations = chunk_citations.get(chunk_idx, [])
-                contents = chunk_contents.get(chunk_idx, [])
-                refs = {"citations": citations, "contents": contents}
+                    # For each chunk, check if we found a matching URL
+                    for chunk_idx, chunk in enumerate(chunks):
+                        domain = chunk_domains[chunk_idx]
+                        url = chunk_uri[chunk_idx]
+                        grounding_uri = chunk_uri[chunk_idx]
+                        print(f"The grounding uri is {grounding_uri}")
+                        citations = chunk_citations.get(chunk_idx, [])
+                        contents = chunk_contents.get(chunk_idx, [])
+                        refs = {"citations": citations, "contents": contents}
 
-                if url in url_to_url:
-                    # Found a matching URL from Google search
-                    url = url_to_url[url]
-                    query_results[url] = refs
-                else:
-                    # No matching URL found, use a placeholder
-                    query_results[f"https://{domain}"] = refs
+                        if url in url_to_url:
+                            # Found a matching URL from Google search
+                            url = url_to_url[url]
+                            query_results[url] = refs
+                        else:
+                            # No matching URL found, use a placeholder
+                            query_results[f"https://{domain}"] = refs
 
-            result[query] = query_results
+                    result[query] = query_results
+
+                except Exception as e:
+                    print(f"Error searching for query '{query}': {e}")
+                    # Add randomized delay to avoid rate limiting
+                    delay = random.uniform(1, 5)
+                    print(f"Adding {delay:.2f}s delay before next request")
+                    time.sleep(delay)
+                    result[query] = {}
 
         return result
 
@@ -268,6 +292,7 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
         response = client.models.generate_content(
             model=model_name, contents=prompt, config=config
         )
+        print(f"Got response from the {model_name} {prompt}")
 
         search_citations = {}
         for i in range(5):
@@ -298,7 +323,7 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
 def run_all_gemini_models(
     prompt: str,
     api_key: str = None,
-    runs_per_model: int = 1,
+    runs_per_model: int = 2,
     project_id: str = None,
     location: str = "global",
     engine_id: str = None,
@@ -339,7 +364,7 @@ def run_all_gemini_models(
     results = {}
 
     for model_name in models:
-        print(f"Running experiments with {model_name}...")
+        print(f"Running experiments with {model_name} on {prompt}...")
         model_results = []
 
         # Use ThreadPoolExecutor for parallel execution
@@ -362,32 +387,43 @@ def run_all_gemini_models(
                 futures.append((future, run_num))
 
             for future, run_num in futures:
-                try:
-                    result = future.result(timeout=300)
-                    result["run_number"] = run_num + 1
-                    model_results.append(result)
+                for attempt_idx in range(3):
+                    try:
+                        result = future.result(timeout=300)
+                        result["run_number"] = run_num + 1
+                        model_results.append(result)
 
-                    if result["success"]:
-                        print(
-                            f"  Run {run_num + 1}: Found {len(result['web_searches'])} web searches"
-                        )
-                    else:
-                        print(
-                            f"  Run {run_num + 1}: Failed - {result.get('error', 'Unknown error')}"
-                        )
+                        print(f"{prompt}:")
+                        if result["success"]:
+                            print(
+                                f"  Run {run_num + 1}: Found {len(result['web_searches'])} web searches"
+                            )
+                            break
+                        else:
+                            print(
+                                f"  Run {run_num + 1}: Failed - {result.get('error', 'Unknown error')}"
+                            )
+                            print("Retrying....")
 
-                except Exception as e:
-                    print(f"  Run {run_num + 1}: Timeout or error - {str(e)}")
-                    model_results.append(
-                        {
-                            "model": model_name,
-                            "run_number": run_num + 1,
-                            "response_text": "",
-                            "web_searches": [],
-                            "success": False,
-                            "error": str(e),
-                        }
-                    )
+                    except Exception as e:
+                        print(f"  Run {run_num + 1}: Timeout or error - {str(e)}")
+                        # Add randomized delay to avoid rate limiting
+                        delay = random.uniform(1, 3)
+                        print(f"Adding {delay:.2f}s delay before retry")
+                        time.sleep(delay)
+                        model_results.append(
+                            {
+                                "model": model_name,
+                                "run_number": run_num + 1,
+                                "response_text": "",
+                                "web_searches": [],
+                                "success": False,
+                                "error": str(e),
+                            }
+                        )
+                        warnings.warn(
+                            f"Retrying; it was a total failure btw: {tb.format_exception(e)}"
+                        )
 
         results[model_name] = model_results
         time.sleep(1)  # Brief pause between models
@@ -447,13 +483,16 @@ def respond(prompts):
                     warnings.warn(
                         f"FUCK FUCK FUCK FUCK FUCK - stuff is breaking very badly, probably rate limiting or whatever? {tb.format_exception(e)}"
                     )
-                time.sleep(1)
+                # Add randomized delay to avoid rate limiting
+                delay = random.uniform(3, 10)
+                print(f"Adding {delay:.2f}s delay before retry")
+                time.sleep(delay)
         return None
 
     all_results = []
     with ThreadPoolExecutor(max_workers=len(prompts)) as executor:
         futures = [executor.submit(process_prompt, prompt) for prompt in prompts]
-        
+
         for future in as_completed(futures):
             result = future.result()
             if result:
@@ -472,6 +511,6 @@ if __name__ == "__main__":
     respond(
         [
             "cheapest bicycle to buy in berlin",
-            "cycling good, where to buy cycling machine deutschalnd",
+            "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
         ]
     )
