@@ -56,6 +56,12 @@ export default function ResultsStep({
         cell: createCellRenderer.truncatedText(50),
         size: 300,
       },
+      // {
+      //   accessorKey: "prompt",
+      //   header: "Prompt",
+      //   cell: createCellRenderer.truncatedText(30),
+      //   size: 300,
+      // },
       {
         accessorKey: "category",
         header: "Category",
@@ -342,54 +348,32 @@ export default function ResultsStep({
     isMentioned: result.isMentioned,
   }));
 
-  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884D8"];
-
   return (
     <div className="space-y-6">
       {/* KPI Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Queries</CardTitle>
-            <Search className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{analysis.totalQueries}</div>
-            <p className="text-xs text-muted-foreground">
-              AI search queries analyzed
-            </p>
-          </CardContent>
-        </Card>
-
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              Mentioned Queries
+              Query Mentions
             </CardTitle>
-            <TrendingUp className="h-4 w-4 text-green-500" />
+            <Search className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-green-600">
-              {analysis.results.filter((r) => r.isMentioned).length}
+            <div className="flex items-center justify-between">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-600">
+                  {analysis.results.filter((r) => r.isMentioned).length}
+                </div>
+                <p className="text-xs text-muted-foreground">Mentioned</p>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-red-600">
+                  {analysis.results.filter((r) => !r.isMentioned).length}
+                </div>
+                <p className="text-xs text-muted-foreground">Not Mentioned</p>
+              </div>
             </div>
-            <p className="text-xs text-muted-foreground">
-              Queries with mentions
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Not Mentioned</CardTitle>
-            <Target className="h-4 w-4 text-red-500" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-red-600">
-              {analysis.results.filter((r) => !r.isMentioned).length}
-            </div>
-            <p className="text-xs text-muted-foreground">
-              Queries without mentions
-            </p>
           </CardContent>
         </Card>
 
@@ -416,139 +400,20 @@ export default function ResultsStep({
         </Card>
       </div>
 
-      {/* Main Content Tabs */}
-      <Tabs defaultValue="table" className="space-y-4">
-        <div className="flex justify-between items-center">
-          <TabsList>
-            <TabsTrigger value="table">Query Analysis</TabsTrigger>
-            <TabsTrigger value="charts">Visualizations</TabsTrigger>
-          </TabsList>
-          <Button onClick={onNewAnalysis} variant="outline">
-            <RefreshCw className="mr-2 h-4 w-4" />
-            New Analysis
-          </Button>
-        </div>
-
-        <TabsContent value="table" className="space-y-4">
-          <DataTable
-            columns={columns}
-            data={analysis.results}
-            renderRowDetails={renderRowDetails}
-            initialSorting={[{ id: "mentionCount", desc: true }]}
-            getRowClassName={(row) => {
-              const result = row.original as AnalysisResult;
-              return result.isMentioned === false
-                ? "bg-red-50 border-red-200"
-                : "";
-            }}
-          />
-        </TabsContent>
-
-        <TabsContent value="charts" className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Favorability vs Mentions</CardTitle>
-                <CardDescription>
-                  Relationship between favorability score and mention count
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ResponsiveContainer width="100%" height={300}>
-                  <LineChart data={performanceData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="query" />
-                    <YAxis />
-                    <Tooltip />
-                    <Line
-                      type="monotone"
-                      dataKey="favorabilityScore"
-                      stroke="#8884d8"
-                      name="Favorability Score"
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="mentionCount"
-                      stroke="#ff7300"
-                      name="Mention Count"
-                      yAxisId="right"
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Competitor Analysis</CardTitle>
-                <CardDescription>
-                  Comparison with average competitor performance
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ResponsiveContainer width="100%" height={300}>
-                  <PieChart>
-                    <Pie
-                      data={[
-                        {
-                          name: "Below Competitor Avg",
-                          value: performanceData.filter(
-                            (d) => d.mentionCount < d.competitorAverage
-                          ).length,
-                          color: "#FF8042",
-                        },
-                        {
-                          name: "Above Competitor Avg",
-                          value: performanceData.filter(
-                            (d) => d.mentionCount >= d.competitorAverage
-                          ).length,
-                          color: "#00C49F",
-                        },
-                      ]}
-                      cx="50%"
-                      cy="50%"
-                      labelLine={false}
-                      label={({ name, value }) => `${name}: ${value}`}
-                      outerRadius={80}
-                      fill="#8884d8"
-                      dataKey="value"
-                    >
-                      <Cell fill="#00C49F" />
-                      <Cell fill="#FF8042" />
-                    </Pie>
-                    <Tooltip />
-                  </PieChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
-
-            <Card className="md:col-span-2">
-              <CardHeader>
-                <CardTitle>Average Favorability by Category</CardTitle>
-                <CardDescription>
-                  How well your content performs across different topic
-                  categories
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ResponsiveContainer width="100%" height={300}>
-                  <BarChart data={categoryData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="category" />
-                    <YAxis />
-                    <Tooltip />
-                    <Bar
-                      dataKey="avgFavorability"
-                      fill="#8884d8"
-                      name="Avg Favorability"
-                    />
-                  </BarChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
-          </div>
-        </TabsContent>
-      </Tabs>
+      <div className="max-w-full overflow-x-auto">
+        <DataTable
+          columns={columns}
+          data={analysis.results}
+          renderRowDetails={renderRowDetails}
+          initialSorting={[{ id: "mentionCount", desc: true }]}
+          getRowClassName={(row) => {
+            const result = row.original as AnalysisResult;
+            return result.isMentioned === false
+              ? "bg-red-50 border-red-200"
+              : "";
+          }}
+        />
+      </div>
     </div>
   );
 }

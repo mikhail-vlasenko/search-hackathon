@@ -116,7 +116,7 @@ export default function AnalyticsPage() {
               : -100; // -100% if not mentioned
             const favorabilityScore = isMentioned
               ? Math.floor(Math.random() * 40) + 60 // 60-100 if mentioned
-              : Math.floor(Math.random() * 30) + 10; // 10-40 if not mentioned
+              : 0; // 10-40 if not mentioned
             const totalSources = Math.floor(Math.random() * 15) + 5; // 5-20 sources
 
             return {
