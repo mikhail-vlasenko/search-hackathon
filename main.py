@@ -312,7 +312,6 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
             tools=[grounding_tool],
             max_output_tokens=2048,
             temperature=0.1,
-            seed=123,
             thinking_config=types.ThinkingConfig(
                 thinking_budget=0
             ),  # Disable thinking for speed
@@ -357,7 +356,7 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
 def run_all_gemini_models(
     prompt: str,
     api_key: str = None,
-    runs_per_model: int = 1,
+    runs_per_model: int = 3,
     project_id: str = None,
     location: str = "global",
     engine_id: str = None,
