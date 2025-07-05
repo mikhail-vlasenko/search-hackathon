@@ -22,7 +22,6 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip,
   ResponsiveContainer,
   PieChart,
   Pie,
@@ -36,7 +35,21 @@ import {
   Calendar,
   Target,
   BarChart3,
+  Lightbulb,
+  AlertTriangle,
+  CheckCircle,
+  ArrowUp,
+  FileText,
+  Link,
+  Users,
+  Hash,
 } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface ResultsStepProps {
   analysis: WebsiteAnalysis;
@@ -52,18 +65,54 @@ export default function ResultsStep({
     () => [
       {
         accessorKey: "query",
-        header: "Query",
+        header: () => (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="">Query</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>The search query used to test AI search engines</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ),
         cell: createCellRenderer.truncatedText(50),
         size: 300,
       },
       {
         accessorKey: "category",
-        header: "Category",
+        header: () => (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="">Category</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>The topic category this query belongs to</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ),
         cell: createCellRenderer.badge("secondary"),
       },
       {
         accessorKey: "isMentioned",
-        header: "Domain Found",
+        header: () => (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="">Domain Found</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>
+                  Whether your domain appears in AI search results for this
+                  query
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ),
         cell: (info: any) => {
           const isMentioned = info.getValue() as boolean;
           return isMentioned ? (
@@ -77,7 +126,21 @@ export default function ResultsStep({
       },
       {
         accessorKey: "averageRanking",
-        header: "Avg Ranking",
+        header: () => (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="">Avg Ranking</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>
+                  Average citation ranking position when your domain appears
+                  (lower is better)
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ),
         cell: (info: any) => {
           const ranking = info.getValue() as number;
           if (ranking === 0) {
@@ -98,7 +161,21 @@ export default function ResultsStep({
       },
       {
         accessorKey: "appearsInSearches",
-        header: "Search Coverage",
+        header: () => (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="">Search Coverage</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>
+                  How many related searches your domain appears in vs total
+                  searches performed
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ),
         cell: (info: any) => {
           const row = info.row.original as AnalysisResult;
           const coverage = row.appearsInSearches;
@@ -121,7 +198,18 @@ export default function ResultsStep({
       },
       {
         accessorKey: "totalSources",
-        header: "Total Sources",
+        header: () => (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="">Total Sources</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Total number of sources found across all related searches</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ),
         cell: (info: any) => {
           const sources = info.getValue() as number;
           return <span className="text-gray-700">{sources}</span>;
@@ -306,6 +394,113 @@ export default function ResultsStep({
     );
   };
 
+  // Generate actionable advice based on analysis results
+  const generateActionableAdvice = () => {
+    const notMentioned = analysis.results.filter((r) => !r.isMentioned);
+    const poorlyRanked = analysis.results.filter(
+      (r) => r.isMentioned && r.averageRanking > 5
+    );
+    const lowCoverage = analysis.results.filter(
+      (r) => r.isMentioned && (r.appearsInSearches / r.totalSearches) * 100 < 50
+    );
+    const wellPerforming = analysis.results.filter(
+      (r) =>
+        r.isMentioned &&
+        r.averageRanking <= 3 &&
+        (r.appearsInSearches / r.totalSearches) * 100 >= 80
+    );
+
+    const advice = [];
+
+    // Critical Issues
+    if (notMentioned.length > 0) {
+      advice.push({
+        type: "critical",
+        title: "Missing Domain Coverage",
+        description: `Your domain doesn't appear in ${notMentioned.length} out of ${analysis.results.length} AI search queries.`,
+        actions: [
+          "Create comprehensive content targeting these specific query topics",
+          "Ensure your content directly answers the questions users are asking",
+          "Optimize meta descriptions and titles for better AI search comprehension",
+          "Add structured data markup to help AI understand your content context",
+        ],
+        priority: "High",
+        impact: "High Visibility Increase",
+      });
+    }
+
+    // Ranking Issues
+    if (poorlyRanked.length > 0) {
+      advice.push({
+        type: "warning",
+        title: "Poor Ranking Performance",
+        description: `Your domain appears but ranks poorly (position 6+) in ${poorlyRanked.length} queries.`,
+        actions: [
+          "Improve content quality and depth for better authority signals",
+          "Add more relevant internal and external links",
+          "Update content with latest information and statistics",
+          "Enhance content structure with clear headings and bullet points",
+        ],
+        priority: "Medium",
+        impact: "Better Positioning",
+      });
+    }
+
+    // Coverage Issues
+    if (lowCoverage.length > 0) {
+      advice.push({
+        type: "warning",
+        title: "Limited Search Coverage",
+        description: `Your domain has low search coverage in ${lowCoverage.length} query areas.`,
+        actions: [
+          "Expand content to cover related subtopics and use cases",
+          "Create content clusters around main topics",
+          "Add FAQ sections addressing common user questions",
+          "Develop topic pillar pages with comprehensive information",
+        ],
+        priority: "Medium",
+        impact: "Broader Reach",
+      });
+    }
+
+    // Success Stories
+    if (wellPerforming.length > 0) {
+      advice.push({
+        type: "success",
+        title: "Strong Performance Areas",
+        description: `Your domain performs excellently in ${wellPerforming.length} query areas.`,
+        actions: [
+          "Maintain and regularly update high-performing content",
+          "Use successful content as templates for other topics",
+          "Create more content in categories where you excel",
+          "Monitor these pages for any ranking drops",
+        ],
+        priority: "Low",
+        impact: "Maintain Excellence",
+      });
+    }
+
+    // General Recommendations
+    advice.push({
+      type: "info",
+      title: "General AI Search Optimization",
+      description:
+        "Strategic recommendations to improve overall AI search performance.",
+      actions: [
+        "Regularly monitor AI search trends and update content accordingly",
+        "Focus on creating authoritative, well-researched content",
+        "Implement consistent internal linking strategies",
+        "Consider creating dedicated landing pages for each major topic area",
+      ],
+      priority: "Medium",
+      impact: "Long-term Growth",
+    });
+
+    return advice;
+  };
+
+  const actionableAdvice = generateActionableAdvice();
+
   // Prepare data for charts
   // const categoryData = analysis.results.reduce((acc, result) => {
   //   const existing = acc.find((item) => item.category === result.category);
@@ -335,83 +530,130 @@ export default function ResultsStep({
 
   return (
     <div className="space-y-6">
-      {/* KPI Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Domain Coverage
-            </CardTitle>
-            <Search className="h-4 w-4 text-muted-foreground" />
+      {/* Compact KPI Card */}
+      <div className="flex justify-start">
+        <Card className="w-fit">
+          <CardHeader>
+            <CardTitle className="text-lg">Performance Overview</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex items-center justify-between">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-600">
-                  {analysis.results.filter((r) => r.isMentioned).length}
+            <div className="flex items-center gap-8">
+              {/* Domain Coverage */}
+              <div className="flex items-center gap-3">
+                <Search className="h-full text-muted-foreground" />
+                <div className="text-center">
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <div className="text-sm font-medium text-muted-foreground ">
+                          Domain Coverage
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>
+                          How many queries your domain appears in vs queries
+                          where it's missing
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                  <div className="flex items-center gap-2 mt-1">
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-green-600">
+                        {analysis.results.filter((r) => r.isMentioned).length}
+                      </div>
+                      <p className="text-xs text-muted-foreground">Found</p>
+                    </div>
+                    <div className="text-gray-400">/</div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-red-600">
+                        {analysis.results.filter((r) => !r.isMentioned).length}
+                      </div>
+                      <p className="text-xs text-muted-foreground">Missing</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-xs text-muted-foreground">Found</p>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-red-600">
-                  {analysis.results.filter((r) => !r.isMentioned).length}
+
+              {/* Avg Ranking */}
+              <div className="flex items-center gap-3">
+                <Hash className="h-full text-muted-foreground" />
+                <div className="text-center">
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <div className="text-sm font-medium text-muted-foreground ">
+                          Avg Ranking
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>
+                          Average citation ranking across all queries where your
+                          domain appears (lower is better)
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                  <div className="text-lg font-bold mt-1">
+                    {(() => {
+                      const rankedResults = analysis.results.filter(
+                        (r) => r.averageRanking > 0
+                      );
+                      if (rankedResults.length === 0) return "N/A";
+                      const avgRanking =
+                        rankedResults.reduce(
+                          (sum, r) => sum + r.averageRanking,
+                          0
+                        ) / rankedResults.length;
+                      return `#${avgRanking.toFixed(1)}`;
+                    })()}
+                  </div>
+                  <p className="text-xs text-muted-foreground">Citation rank</p>
                 </div>
-                <p className="text-xs text-muted-foreground">Not Found</p>
+              </div>
+
+              {/* Search Coverage */}
+              <div className="flex items-center gap-3">
+                <BarChart3 className="h-full text-muted-foreground" />
+                <div className="text-center">
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <div className="text-sm font-medium text-muted-foreground ">
+                          Search Coverage
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>
+                          Percentage of related searches where your domain
+                          appears across all queries
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                  <div className="text-lg font-bold mt-1">
+                    {(() => {
+                      const totalSearches = analysis.results.reduce(
+                        (sum, r) => sum + r.totalSearches,
+                        0
+                      );
+                      const totalAppearances = analysis.results.reduce(
+                        (sum, r) => sum + r.appearsInSearches,
+                        0
+                      );
+                      return totalSearches > 0
+                        ? `${((totalAppearances / totalSearches) * 100).toFixed(
+                            0
+                          )}%`
+                        : "0%";
+                    })()}
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Overall coverage
+                  </p>
+                </div>
               </div>
             </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Avg Ranking</CardTitle>
-            <Eye className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">
-              {(() => {
-                const rankedResults = analysis.results.filter(
-                  (r) => r.averageRanking > 0
-                );
-                if (rankedResults.length === 0) return "N/A";
-                const avgRanking =
-                  rankedResults.reduce((sum, r) => sum + r.averageRanking, 0) /
-                  rankedResults.length;
-                return `#${avgRanking.toFixed(1)}`;
-              })()}
-            </div>
-            <p className="text-xs text-muted-foreground">
-              Average citation ranking
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Search Coverage
-            </CardTitle>
-            <BarChart3 className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">
-              {(() => {
-                const totalSearches = analysis.results.reduce(
-                  (sum, r) => sum + r.totalSearches,
-                  0
-                );
-                const totalAppearances = analysis.results.reduce(
-                  (sum, r) => sum + r.appearsInSearches,
-                  0
-                );
-                return totalSearches > 0
-                  ? `${((totalAppearances / totalSearches) * 100).toFixed(0)}%`
-                  : "0%";
-              })()}
-            </div>
-            <p className="text-xs text-muted-foreground">
-              Overall search coverage
-            </p>
           </CardContent>
         </Card>
       </div>
@@ -428,8 +670,92 @@ export default function ResultsStep({
               ? "bg-red-50 border-red-200"
               : "";
           }}
+          maxHeight="50vh"
         />
       </div>
+
+      {/* Actionable Advice Section */}
+      <Card>
+        <CardHeader>
+          <div className="flex items-center space-x-2">
+            <Lightbulb className="h-5 w-5 text-yellow-500" />
+            <CardTitle className="text-lg">Recommendations</CardTitle>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {actionableAdvice.map((advice, index) => (
+              <div
+                key={index}
+                className="border rounded-lg p-3 space-y-2 min-w-[300px] flex-shrink-0"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex items-center space-x-2">
+                    {advice.type === "critical" && (
+                      <AlertTriangle className="h-4 w-4 text-red-500 flex-shrink-0" />
+                    )}
+                    {advice.type === "warning" && (
+                      <Target className="h-4 w-4 text-orange-500 flex-shrink-0" />
+                    )}
+                    {advice.type === "success" && (
+                      <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                    )}
+                    {advice.type === "info" && (
+                      <Lightbulb className="h-4 w-4 text-blue-500 flex-shrink-0" />
+                    )}
+                    <div>
+                      <h4 className="font-semibold text-sm text-gray-900">
+                        {advice.title}
+                      </h4>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-end space-y-1">
+                    <Badge
+                      variant={
+                        advice.priority === "High"
+                          ? "destructive"
+                          : advice.priority === "Medium"
+                          ? "default"
+                          : "secondary"
+                      }
+                      className="text-xs"
+                    >
+                      {advice.priority}
+                    </Badge>
+                  </div>
+                </div>
+
+                <p className="text-xs text-gray-600">{advice.description}</p>
+
+                <div className="space-y-1">
+                  <h5 className="font-medium text-xs text-gray-800 flex items-center space-x-1">
+                    <ArrowUp className="h-3 w-3" />
+                    <span>Actions:</span>
+                  </h5>
+                  <ul className="space-y-1">
+                    {advice.actions.slice(0, 3).map((action, actionIndex) => (
+                      <li
+                        key={actionIndex}
+                        className="flex items-start space-x-1 text-xs"
+                      >
+                        <span className="text-gray-400 mt-0.5">•</span>
+                        <span className="text-gray-700 line-clamp-2">
+                          {action}
+                        </span>
+                      </li>
+                    ))}
+                    {advice.actions.length > 3 && (
+                      <li className="text-xs text-gray-500 italic">
+                        +{advice.actions.length - 3} more actions...
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }
