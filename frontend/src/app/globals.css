@@ -125,11 +125,25 @@
   .animate-fadeIn {
     animation: fadeIn 0.2s ease-in-out;
   }
+  .animate-fadeInPrompt {
+    animation: fadeInPrompt 0.4s cubic-bezier(0.4,0,0.2,1) both;
+  }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
       transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInPrompt {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
     }
     to {
       opacity: 1;

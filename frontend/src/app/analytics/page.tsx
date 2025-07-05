@@ -114,7 +114,14 @@ export default function AnalyticsPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen w-full flex items-center justify-center transition-opacity duration-300 relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/group-2.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading prompts...</p>
@@ -155,13 +162,26 @@ export default function AnalyticsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 animate-fadeIn">
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className={`min-h-screen w-full flex items-center justify-center transition-opacity duration-300 relative overflow-hidden`}
+      style={
+        currentStep === "prompts" || currentStep === "analyzing"
+          ? {
+              backgroundImage: "url('/group-2.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }
+          : {}
+      }
+    >
+      <main className={`w-full flex flex-col items-center justify-center min-h-screen ${currentStep === 'results' ? 'pt-20' : ''}`}>
         {currentStep === "prompts" && (
           <PromptsStep
             prompts={generatedPrompts}
             onConfirm={handlePromptsConfirm}
             onBack={handleBack}
+            logoUrl={websiteUrl ? `https://logo.clearbit.com/${websiteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}` : undefined}
+            domain={websiteUrl ? websiteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '').split('/')[0] : undefined}
           />
         )}
 
