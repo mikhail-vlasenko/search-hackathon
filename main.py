@@ -425,9 +425,9 @@ def main():
     prompt = "What are the best AI SEO companies in Germany right now?"
 
     # Google Cloud configuration for Google Search model
-    project_id = os.getenv("GOOGLE_CLOUD_PROJECT")
-    location = os.getenv("GOOGLE_CLOUD_LOCATION", "global")
-    engine_id = os.getenv("GOOGLE_CLOUD_ENGINE_ID")
+    project_id = None  # os.getenv("GOOGLE_CLOUD_PROJECT")
+    location = "global"  # os.getenv("GOOGLE_CLOUD_LOCATION", "global")
+    engine_id = None  # os.getenv("GOOGLE_CLOUD_ENGINE_ID")
 
     try:
         # Run experiments
