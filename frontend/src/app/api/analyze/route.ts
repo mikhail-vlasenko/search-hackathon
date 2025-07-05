@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { GeneratedPrompt, WebsiteAnalysis, AnalysisResult } from "@/lib/types";
+import fs from "fs";
 
 // Function to extract domain from URL
 function extractDomain(url: string): string {
@@ -22,8 +23,6 @@ function transformPythonResponseToAnalysis(
   // Extract data from new Python API response format
   const data = pythonResponse.data || {};
   const intersectingQueries = data.intersecting_queries || {};
-  const domainStats = data.domain_detailed_stats || {};
-  const queryFrequencyStats = data.query_frequency_stats || {};
 
   // Extract domain from URL for matching
   const targetDomain = extractDomain(websiteUrl);
@@ -215,6 +214,11 @@ export async function POST(request: NextRequest) {
 
       const pythonResponse = await response.json();
       console.log(JSON.stringify(pythonResponse, null, 2));
+      // Write to file
+      fs.writeFileSync(
+        "pythonResponse.json",
+        JSON.stringify(pythonResponse, null, 2)
+      );
 
       if (!pythonResponse.success) {
         throw new Error(`Python API returned error: ${pythonResponse.error}`);

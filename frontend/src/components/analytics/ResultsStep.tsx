@@ -647,229 +647,286 @@ export default function ResultsStep({
   //   isMentioned: result.isMentioned,
   // }));
 
+  // Prepare data for pie chart
+  const domainCoverageData = [
+    {
+      name: "Found",
+      value: analysis.results.filter((r) => r.isMentioned).length,
+      color: "#16a34a", // green-600
+    },
+    {
+      name: "Missing",
+      value: analysis.results.filter((r) => !r.isMentioned).length,
+      color: "#dc2626", // red-600
+    },
+  ];
+
   return (
     <div className="space-y-6">
-      {/* Compact Overview */}
-      <Card>
-        <CardHeader className="pb-2">
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-lg">Performance Overview</CardTitle>
-            {apiResponse?.data?.competitive_insights && (
-              <div className="flex items-center space-x-1">
-                <Users className="h-4 w-4 text-blue-500" />
-                <span className="text-sm font-medium text-gray-700">
-                  Competitive Insights
-                </span>
-              </div>
-            )}
-          </div>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          <div className="grid grid-cols-2 gap-6">
-            {/* Performance Metrics Column */}
-            <div className="space-y-4">
-              {/* Domain Coverage */}
-              <div className="space-y-1">
-                <h3 className="text-sm font-medium text-gray-700">
-                  How many queries is your domain found in?
-                </h3>
-                <div className="flex items-center pl-2 gap-2">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">
-                      {analysis.results.filter((r) => r.isMentioned).length}
-                    </div>
-                    <p className="text-xs text-muted-foreground">Found</p>
-                  </div>
-                  <div className="text-gray-300 text-lg font-light">/</div>
-                  <div className="">
-                    <div className="text-2xl font-bold text-red-600">
-                      {analysis.results.filter((r) => !r.isMentioned).length}
-                    </div>
-                    <p className="text-xs text-muted-foreground">Missing</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Avg Ranking */}
-              <div className="space-y-1">
-                <h3 className="text-sm font-medium text-gray-700">
-                  How well does your domain rank?
-                </h3>
-                <div className="pl-2">
-                  <div className="text-2xl font-bold text-blue-600">
-                    {(() => {
-                      const rankedResults = analysis.results.filter(
-                        (r) => r.averageRanking > 0
-                      );
-                      if (rankedResults.length === 0) return "N/A";
-                      const avgRanking =
-                        rankedResults.reduce(
-                          (sum, r) => sum + r.averageRanking,
-                          0
-                        ) / rankedResults.length;
-                      return `#${avgRanking.toFixed(1)}`;
-                    })()}
-                  </div>
-                  <p className="text-xs text-muted-foreground">
-                    Average citation position
-                  </p>
-                </div>
-              </div>
+      {/* Top Row - Overview and Pie Chart */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Compact Overview */}
+        <Card>
+          <CardHeader className="pb-2">
+            <div className="flex items-center justify-between">
+              <CardTitle className="text-lg">Performance Overview</CardTitle>
             </div>
-
-            {/* Competitive Insights Column */}
-            {apiResponse?.data?.competitive_insights && (
-              <div className="flex flex-col gap-2">
-                {/* Competitive Advantages */}
-                {apiResponse.data.competitive_insights.competitive_advantages
-                  ?.length > 0 && (
-                  <div className="space-y-1">
-                    <h4 className="font-medium text-xs text-gray-900 flex items-center space-x-1">
-                      <CheckCircle className="h-3 w-3 text-green-500" />
-                      <span>Competitive Advantages</span>
-                    </h4>
-                    <div className="flex flex-wrap gap-1">
-                      {apiResponse.data.competitive_insights.competitive_advantages
-                        .slice(0, 3)
-                        .map((advantage: string, index: number) => (
-                          <Badge
-                            key={index}
-                            variant="default"
-                            className="text-xs px-1 py-0"
-                          >
-                            {advantage}
-                          </Badge>
-                        ))}
-                      {apiResponse.data.competitive_insights
-                        .competitive_advantages.length > 3 && (
-                        <span className="text-xs text-gray-500">
-                          +{" "}
-                          {apiResponse.data.competitive_insights
-                            .competitive_advantages.length - 3}{" "}
-                          more
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                )}
-
-                {/* Improvement Areas */}
-                {apiResponse.data.competitive_insights.improvement_areas
-                  ?.length > 0 && (
-                  <div className="space-y-1">
-                    <h4 className="font-medium text-xs text-gray-900 flex items-center space-x-1">
-                      <Target className="h-3 w-3 text-orange-500" />
-                      <span>Improvement Areas</span>
-                    </h4>
-                    <div className="flex flex-wrap gap-1">
-                      {apiResponse.data.competitive_insights.improvement_areas
-                        .slice(0, 3)
-                        .map((area: string, index: number) => (
-                          <Badge
-                            key={index}
-                            variant="outline"
-                            className="text-xs px-1 py-0"
-                          >
-                            {area}
-                          </Badge>
-                        ))}
-                      {apiResponse.data.competitive_insights.improvement_areas
-                        .length > 3 && (
-                        <span className="text-xs text-gray-500">
-                          +{" "}
-                          {apiResponse.data.competitive_insights
-                            .improvement_areas.length - 3}{" "}
-                          more
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                )}
-
-                {/* Key Competitors */}
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <div className="flex w-full gap-6">
+              {/* Performance Metrics Column */}
+              <div className="space-y-4 flex-1">
+                {/* Domain Coverage */}
                 <div className="space-y-1">
-                  <h4 className="font-medium text-xs text-gray-900 flex items-center space-x-1">
-                    <Link className="h-3 w-3 text-blue-500" />
-                    <span>Top Competitors</span>
-                  </h4>
-                  {apiResponse.data.competitive_insights.key_competitors
-                    ?.length > 0 ? (
-                    <div className="space-y-1">
-                      {apiResponse.data.competitive_insights.key_competitors
-                        .slice(0, 3)
-                        .map((competitor: any, index: number) => {
-                          const domain = competitor.domain.replace(
-                            /^https?:\/\//,
-                            ""
-                          );
-                          const frequency = competitor.frequency;
-                          const isStrong = frequency >= 5;
-                          const isModerate = frequency >= 3 && frequency < 5;
-
-                          return (
-                            <div
-                              key={index}
-                              className="flex items-center justify-between p-1 bg-gray-50 rounded text-xs"
-                            >
-                              <div className="flex items-center space-x-1">
-                                <div
-                                  className={`h-1.5 w-1.5 rounded-full ${
-                                    isStrong
-                                      ? "bg-red-500"
-                                      : isModerate
-                                      ? "bg-yellow-500"
-                                      : "bg-green-500"
-                                  }`}
-                                />
-                                <span className="font-medium truncate max-w-[120px]">
-                                  {domain}
-                                </span>
-                              </div>
-                              <div className="flex items-center space-x-1">
-                                <Badge
-                                  variant={
-                                    isStrong
-                                      ? "destructive"
-                                      : isModerate
-                                      ? "default"
-                                      : "secondary"
-                                  }
-                                  className="text-xs px-1 py-0"
-                                >
-                                  {frequency}
-                                </Badge>
-                                <span className="text-xs text-gray-500">
-                                  {isStrong
-                                    ? "Strong"
-                                    : isModerate
-                                    ? "Moderate"
-                                    : "Weak"}
-                                </span>
-                              </div>
-                            </div>
-                          );
-                        })}
-                      {apiResponse.data.competitive_insights.key_competitors
-                        .length > 3 && (
-                        <div className="text-xs text-gray-500 text-center">
-                          +{" "}
-                          {apiResponse.data.competitive_insights.key_competitors
-                            .length - 3}{" "}
-                          more competitors
-                        </div>
-                      )}
+                  <h3 className="text-sm font-medium text-gray-700">
+                    How many queries is your domain found in?
+                  </h3>
+                  <div className="flex items-center pl-2 gap-2">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600">
+                        {analysis.results.filter((r) => r.isMentioned).length}
+                      </div>
+                      <p className="text-xs text-muted-foreground">Found</p>
                     </div>
-                  ) : (
-                    <p className="text-xs text-gray-500">
-                      No competitor data available
+                    <div className="text-gray-300 text-lg font-light">/</div>
+                    <div className="">
+                      <div className="text-2xl font-bold text-red-600">
+                        {analysis.results.filter((r) => !r.isMentioned).length}
+                      </div>
+                      <p className="text-xs text-muted-foreground">Missing</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Avg Ranking */}
+                <div className="space-y-1">
+                  <h3 className="text-sm font-medium text-gray-700">
+                    How well does your domain rank?
+                  </h3>
+                  <div className="pl-2">
+                    <div className="text-2xl font-bold text-blue-600">
+                      {(() => {
+                        const rankedResults = analysis.results.filter(
+                          (r) => r.averageRanking > 0
+                        );
+                        if (rankedResults.length === 0) return "N/A";
+                        const avgRanking =
+                          rankedResults.reduce(
+                            (sum, r) => sum + r.averageRanking,
+                            0
+                          ) / rankedResults.length;
+                        return `#${avgRanking.toFixed(1)}`;
+                      })()}
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Average citation position
                     </p>
-                  )}
+                  </div>
                 </div>
               </div>
-            )}
+
+              {/* Competitive Insights Column */}
+              {apiResponse?.data?.competitive_insights && (
+                <div className="flex gap-2 flex-1">
+                  <div className="flex flex-col gap-6 mr-6">
+                    {/* Competitive Advantages */}
+                    {apiResponse.data.competitive_insights
+                      .competitive_advantages?.length > 0 && (
+                      <div className="space-y-1">
+                        <h4 className="font-medium text-xs text-gray-900 flex items-center space-x-1">
+                          <CheckCircle className="h-3 w-3 text-green-500" />
+                          <span>Competitive Advantages</span>
+                        </h4>
+                        <div className="flex flex-wrap gap-1">
+                          {apiResponse.data.competitive_insights.competitive_advantages
+                            .slice(0, 3)
+                            .map((advantage: string, index: number) => (
+                              <Badge
+                                key={index}
+                                variant="default"
+                                className="text-xs px-1 py-0"
+                              >
+                                {advantage}
+                              </Badge>
+                            ))}
+                          {apiResponse.data.competitive_insights
+                            .competitive_advantages.length > 3 && (
+                            <span className="text-xs text-gray-500">
+                              +{" "}
+                              {apiResponse.data.competitive_insights
+                                .competitive_advantages.length - 3}{" "}
+                              more
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                    {/* Improvement Areas */}
+                    {apiResponse.data.competitive_insights.improvement_areas
+                      ?.length > 0 && (
+                      <div className="space-y-1">
+                        <h4 className="font-medium text-xs text-gray-900 flex items-center space-x-1">
+                          <Target className="h-3 w-3 text-orange-500" />
+                          <span>Improvement Areas</span>
+                        </h4>
+                        <div className="flex flex-col gap-1">
+                          {apiResponse.data.competitive_insights.improvement_areas
+                            .slice(0, 3)
+                            .map((area: string, index: number) => (
+                              <Badge
+                                key={index}
+                                variant="outline"
+                                className="text-xs px-1 py-0"
+                              >
+                                {area}
+                              </Badge>
+                            ))}
+                          {apiResponse.data.competitive_insights
+                            .improvement_areas.length > 3 && (
+                            <span className="text-xs text-gray-500">
+                              +{" "}
+                              {apiResponse.data.competitive_insights
+                                .improvement_areas.length - 3}{" "}
+                              more
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Key Competitors */}
+                  <div className="space-y-1 flex-1">
+                    <h4 className="font-medium text-xs text-gray-900 flex items-center space-x-1">
+                      <Link className="h-3 w-3 text-blue-500" />
+                      <span>Top Competitors</span>
+                    </h4>
+                    {apiResponse.data.competitive_insights.key_competitors
+                      ?.length > 0 ? (
+                      <div className="space-y-1">
+                        {apiResponse.data.competitive_insights.key_competitors
+                          .slice(0, 3)
+                          .map((competitor: any, index: number) => {
+                            const domain = competitor.domain.replace(
+                              /^https?:\/\//,
+                              ""
+                            );
+                            const frequency = competitor.frequency;
+                            const isStrong = frequency >= 5;
+                            const isModerate = frequency >= 3 && frequency < 5;
+
+                            return (
+                              <div
+                                key={index}
+                                className="flex items-center justify-between p-1 bg-gray-50 rounded text-xs"
+                              >
+                                <div className="flex items-center space-x-1">
+                                  <div
+                                    className={`h-1.5 w-1.5 rounded-full ${
+                                      isStrong
+                                        ? "bg-red-500"
+                                        : isModerate
+                                        ? "bg-yellow-500"
+                                        : "bg-green-500"
+                                    }`}
+                                  />
+                                  <span className="font-medium truncate max-w-[120px]">
+                                    {domain}
+                                  </span>
+                                </div>
+                                <div className="flex items-center space-x-1">
+                                  <Badge
+                                    variant={
+                                      isStrong
+                                        ? "destructive"
+                                        : isModerate
+                                        ? "default"
+                                        : "secondary"
+                                    }
+                                    className="text-xs px-1 py-0"
+                                  >
+                                    {frequency}
+                                  </Badge>
+                                  <span className="text-xs text-gray-500">
+                                    {isStrong
+                                      ? "Strong"
+                                      : isModerate
+                                      ? "Moderate"
+                                      : "Weak"}
+                                  </span>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        {apiResponse.data.competitive_insights.key_competitors
+                          .length > 3 && (
+                          <div className="text-xs text-gray-500 text-center">
+                            +{" "}
+                            {apiResponse.data.competitive_insights
+                              .key_competitors.length - 3}{" "}
+                            more competitors
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <p className="text-xs text-gray-500">
+                        No competitor data available
+                      </p>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Domain Coverage Pie Chart */}
+        <div className="max-w-sm">
+          <div className="mb-3">
+            <h3 className="text-lg font-semibold">Domain Coverage</h3>
+            <p className="text-sm text-gray-600">
+              Distribution of queries where your domain appears
+            </p>
           </div>
-        </CardContent>
-      </Card>
+          <div className="flex items-center justify-center h-48">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={domainCoverageData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={60}
+                  innerRadius={30}
+                  paddingAngle={2}
+                  dataKey="value"
+                  label={({ name, value, percent }) =>
+                    `${name}: ${value} (${((percent || 0) * 100).toFixed(0)}%)`
+                  }
+                  labelLine={false}
+                >
+                  {domainCoverageData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <div className="flex justify-center space-x-4 mt-2">
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-green-600 rounded-full"></div>
+              <span className="text-sm font-medium">
+                Found ({domainCoverageData[0].value})
+              </span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-red-600 rounded-full"></div>
+              <span className="text-sm font-medium">
+                Missing ({domainCoverageData[1].value})
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="max-w-full overflow-x-auto">
         <DataTable

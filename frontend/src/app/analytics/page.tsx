@@ -166,7 +166,7 @@ export default function AnalyticsPage() {
 
   return (
     <div
-      className={`min-h-screen w-full flex items-center justify-center transition-opacity duration-300 relative overflow-hidden`}
+      className={`min-h-screen w-full flex items-center justify-center transition-opacity duration-300 relative overflow-hidden bg-gray-50`}
       style={
         currentStep === "prompts" || currentStep === "analyzing"
           ? {
