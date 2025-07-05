@@ -56,12 +56,6 @@ export default function ResultsStep({
         cell: createCellRenderer.truncatedText(50),
         size: 300,
       },
-      // {
-      //   accessorKey: "prompt",
-      //   header: "Prompt",
-      //   cell: createCellRenderer.truncatedText(30),
-      //   size: 300,
-      // },
       {
         accessorKey: "category",
         header: "Category",
@@ -69,7 +63,7 @@ export default function ResultsStep({
       },
       {
         accessorKey: "isMentioned",
-        header: "Mentioned",
+        header: "Domain Found",
         cell: (info: any) => {
           const isMentioned = info.getValue() as boolean;
           return isMentioned ? (
@@ -82,59 +76,45 @@ export default function ResultsStep({
         },
       },
       {
-        accessorKey: "mentionCount",
-        header: "Mentions",
+        accessorKey: "averageRanking",
+        header: "Avg Ranking",
         cell: (info: any) => {
-          const count = info.getValue() as number;
-          return count === 0 ? (
-            <span className="font-bold text-red-600 bg-red-50 px-2 py-1 rounded">
-              0
-            </span>
-          ) : (
-            <span className="font-bold text-green-600">{count}</span>
-          );
-        },
-      },
-      {
-        accessorKey: "favorabilityScore",
-        header: "Favorability",
-        cell: (info: any) => {
-          const score = info.getValue() as number;
+          const ranking = info.getValue() as number;
+          if (ranking === 0) {
+            return <span className="text-gray-400">N/A</span>;
+          }
           const colorClass =
-            score >= 70
+            ranking <= 3
               ? "text-green-600"
-              : score >= 50
+              : ranking <= 5
               ? "text-yellow-600"
               : "text-red-600";
           return (
-            <span className={`font-medium ${colorClass}`}>{score}/100</span>
+            <span className={`font-bold ${colorClass}`}>
+              #{ranking.toFixed(1)}
+            </span>
           );
         },
       },
       {
-        accessorKey: "competitorAverage",
-        header: "Competitor Avg",
+        accessorKey: "appearsInSearches",
+        header: "Search Coverage",
         cell: (info: any) => {
-          const avg = info.getValue() as number;
-          return <span className="text-gray-600">{avg}</span>;
-        },
-      },
-      {
-        accessorKey: "percentageDifference",
-        header: "vs Competitors",
-        cell: (info: any) => {
-          const diff = info.getValue() as number;
+          const row = info.row.original as AnalysisResult;
+          const coverage = row.appearsInSearches;
+          const total = row.totalSearches;
+          const percentage = total > 0 ? (coverage / total) * 100 : 0;
+
           const colorClass =
-            diff > 0
+            percentage >= 80
               ? "text-green-600"
-              : diff < 0
-              ? "text-red-600"
-              : "text-gray-600";
-          const prefix = diff > 0 ? "+" : "";
+              : percentage >= 50
+              ? "text-yellow-600"
+              : "text-red-600";
+
           return (
             <span className={`font-medium ${colorClass}`}>
-              {prefix}
-              {diff}%
+              {coverage}/{total} ({percentage.toFixed(0)}%)
             </span>
           );
         },
@@ -174,11 +154,11 @@ export default function ResultsStep({
         <div className="grid grid-cols-2 gap-4">
           <div>
             <h4 className="font-medium text-sm text-muted-foreground mb-2">
-              Mention Performance
+              Domain Performance
             </h4>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span className="text-sm">Mentioned</span>
+                <span className="text-sm">Domain Found</span>
                 {result.isMentioned ? (
                   <Badge
                     variant="default"
@@ -193,29 +173,48 @@ export default function ResultsStep({
                 )}
               </div>
               <div className="flex justify-between">
-                <span className="text-sm">Mention Count</span>
+                <span className="text-sm">Average Ranking</span>
                 <span
                   className={`text-sm font-medium ${
-                    result.mentionCount === 0
-                      ? "text-red-600"
-                      : "text-green-600"
-                  }`}
-                >
-                  {result.mentionCount}
-                </span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-sm">Favorability Score</span>
-                <span
-                  className={`text-sm font-medium ${
-                    result.favorabilityScore >= 70
+                    result.averageRanking === 0
+                      ? "text-gray-400"
+                      : result.averageRanking <= 3
                       ? "text-green-600"
-                      : result.favorabilityScore >= 50
+                      : result.averageRanking <= 5
                       ? "text-yellow-600"
                       : "text-red-600"
                   }`}
                 >
-                  {result.favorabilityScore}/100
+                  {result.averageRanking === 0
+                    ? "N/A"
+                    : `#${result.averageRanking.toFixed(1)}`}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Search Coverage</span>
+                <span
+                  className={`text-sm font-medium ${
+                    result.totalSearches === 0
+                      ? "text-gray-400"
+                      : (result.appearsInSearches / result.totalSearches) *
+                          100 >=
+                        80
+                      ? "text-green-600"
+                      : (result.appearsInSearches / result.totalSearches) *
+                          100 >=
+                        50
+                      ? "text-yellow-600"
+                      : "text-red-600"
+                  }`}
+                >
+                  {result.appearsInSearches}/{result.totalSearches} (
+                  {result.totalSearches > 0
+                    ? (
+                        (result.appearsInSearches / result.totalSearches) *
+                        100
+                      ).toFixed(0)
+                    : 0}
+                  %)
                 </span>
               </div>
               <div className="flex justify-between">
@@ -228,34 +227,19 @@ export default function ResultsStep({
           </div>
           <div>
             <h4 className="font-medium text-sm text-muted-foreground mb-2">
-              Competitive Analysis
+              Search Metrics
             </h4>
             <div className="space-y-3">
-              <div className="flex justify-between">
-                <span className="text-sm">Competitor Avg</span>
-                <span className="text-sm font-medium text-gray-600">
-                  {result.competitorAverage}
-                </span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-sm">vs Competitors</span>
-                <span
-                  className={`text-sm font-medium ${
-                    result.percentageDifference > 0
-                      ? "text-green-600"
-                      : result.percentageDifference < 0
-                      ? "text-red-600"
-                      : "text-gray-600"
-                  }`}
-                >
-                  {result.percentageDifference > 0 ? "+" : ""}
-                  {result.percentageDifference}%
-                </span>
-              </div>
               <div className="flex justify-between">
                 <span className="text-sm">Total Sources</span>
                 <span className="text-sm font-medium text-gray-700">
                   {result.totalSources}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Visibility</span>
+                <span className="text-sm font-medium text-gray-700">
+                  {result.visibility}%
                 </span>
               </div>
             </div>
@@ -281,37 +265,38 @@ export default function ResultsStep({
               <div className="flex items-start space-x-2 text-sm">
                 <Target className="h-4 w-4 text-red-500 mt-0.5" />
                 <span>
-                  Create content specifically targeting this query to get
-                  mentioned in AI search results
+                  Your domain doesn't appear in AI search results for this query
+                  - create targeted content to increase visibility
+                </span>
+              </div>
+            )}
+            {result.isMentioned && result.averageRanking > 5 && (
+              <div className="flex items-start space-x-2 text-sm">
+                <Target className="h-4 w-4 text-orange-500 mt-0.5" />
+                <span>
+                  Your domain appears but ranks low - optimize content quality
+                  and relevance to improve ranking
                 </span>
               </div>
             )}
             {result.isMentioned &&
-              result.mentionCount < result.competitorAverage && (
+              (result.appearsInSearches / result.totalSearches) * 100 < 50 && (
                 <div className="flex items-start space-x-2 text-sm">
-                  <Target className="h-4 w-4 text-orange-500 mt-0.5" />
+                  <Eye className="h-4 w-4 text-blue-500 mt-0.5" />
                   <span>
-                    Optimize content to increase mention frequency and beat
-                    competitors
+                    Low search coverage - expand content to appear in more
+                    related searches
                   </span>
                 </div>
               )}
-            {result.favorabilityScore < 50 && (
-              <div className="flex items-start space-x-2 text-sm">
-                <Eye className="h-4 w-4 text-blue-500 mt-0.5" />
-                <span>
-                  Low favorability score - improve content quality and relevance
-                </span>
-              </div>
-            )}
             {result.isMentioned &&
-              result.mentionCount >= result.competitorAverage &&
-              result.favorabilityScore >= 70 && (
+              result.averageRanking <= 3 &&
+              (result.appearsInSearches / result.totalSearches) * 100 >= 80 && (
                 <div className="flex items-start space-x-2 text-sm">
                   <TrendingUp className="h-4 w-4 text-green-500 mt-0.5" />
                   <span>
-                    Excellent performance! Maintain content quality and monitor
-                    competition
+                    Excellent performance! Your domain ranks well and appears
+                    consistently - maintain content quality
                   </span>
                 </div>
               )}
@@ -322,31 +307,31 @@ export default function ResultsStep({
   };
 
   // Prepare data for charts
-  const categoryData = analysis.results.reduce((acc, result) => {
-    const existing = acc.find((item) => item.category === result.category);
-    if (existing) {
-      existing.count += 1;
-      existing.avgFavorability =
-        (existing.avgFavorability + result.favorabilityScore) / 2;
-      existing.avgMentions = (existing.avgMentions + result.mentionCount) / 2;
-    } else {
-      acc.push({
-        category: result.category,
-        count: 1,
-        avgFavorability: result.favorabilityScore,
-        avgMentions: result.mentionCount,
-      });
-    }
-    return acc;
-  }, [] as { category: string; count: number; avgFavorability: number; avgMentions: number }[]);
+  // const categoryData = analysis.results.reduce((acc, result) => {
+  //   const existing = acc.find((item) => item.category === result.category);
+  //   if (existing) {
+  //     existing.count += 1;
+  //     existing.avgFavorability =
+  //       (existing.avgFavorability + result.favorabilityScore) / 2;
+  //     existing.avgMentions = (existing.avgMentions + result.mentionCount) / 2;
+  //   } else {
+  //     acc.push({
+  //       category: result.category,
+  //       count: 1,
+  //       avgFavorability: result.favorabilityScore,
+  //       avgMentions: result.mentionCount,
+  //     });
+  //   }
+  //   return acc;
+  // }, [] as { category: string; count: number; avgFavorability: number; avgMentions: number }[]);
 
-  const performanceData = analysis.results.map((result, index) => ({
-    query: `Q${index + 1}`,
-    favorabilityScore: result.favorabilityScore,
-    mentionCount: result.mentionCount,
-    competitorAverage: result.competitorAverage,
-    isMentioned: result.isMentioned,
-  }));
+  // const performanceData = analysis.results.map((result, index) => ({
+  //   query: `Q${index + 1}`,
+  //   favorabilityScore: result.favorabilityScore,
+  //   mentionCount: result.mentionCount,
+  //   competitorAverage: result.competitorAverage,
+  //   isMentioned: result.isMentioned,
+  // }));
 
   return (
     <div className="space-y-6">
@@ -355,7 +340,7 @@ export default function ResultsStep({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              Query Mentions
+              Domain Coverage
             </CardTitle>
             <Search className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
@@ -365,13 +350,13 @@ export default function ResultsStep({
                 <div className="text-2xl font-bold text-green-600">
                   {analysis.results.filter((r) => r.isMentioned).length}
                 </div>
-                <p className="text-xs text-muted-foreground">Mentioned</p>
+                <p className="text-xs text-muted-foreground">Found</p>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-red-600">
                   {analysis.results.filter((r) => !r.isMentioned).length}
                 </div>
-                <p className="text-xs text-muted-foreground">Not Mentioned</p>
+                <p className="text-xs text-muted-foreground">Not Found</p>
               </div>
             </div>
           </CardContent>
@@ -379,22 +364,53 @@ export default function ResultsStep({
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Avg Favorability
-            </CardTitle>
+            <CardTitle className="text-sm font-medium">Avg Ranking</CardTitle>
             <Eye className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
-              {Math.round(
-                analysis.results.reduce(
-                  (sum, r) => sum + r.favorabilityScore,
-                  0
-                ) / analysis.results.length
-              )}
+              {(() => {
+                const rankedResults = analysis.results.filter(
+                  (r) => r.averageRanking > 0
+                );
+                if (rankedResults.length === 0) return "N/A";
+                const avgRanking =
+                  rankedResults.reduce((sum, r) => sum + r.averageRanking, 0) /
+                  rankedResults.length;
+                return `#${avgRanking.toFixed(1)}`;
+              })()}
             </div>
             <p className="text-xs text-muted-foreground">
-              Average favorability score
+              Average citation ranking
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">
+              Search Coverage
+            </CardTitle>
+            <BarChart3 className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">
+              {(() => {
+                const totalSearches = analysis.results.reduce(
+                  (sum, r) => sum + r.totalSearches,
+                  0
+                );
+                const totalAppearances = analysis.results.reduce(
+                  (sum, r) => sum + r.appearsInSearches,
+                  0
+                );
+                return totalSearches > 0
+                  ? `${((totalAppearances / totalSearches) * 100).toFixed(0)}%`
+                  : "0%";
+              })()}
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Overall search coverage
             </p>
           </CardContent>
         </Card>
@@ -405,7 +421,7 @@ export default function ResultsStep({
           columns={columns}
           data={analysis.results}
           renderRowDetails={renderRowDetails}
-          initialSorting={[{ id: "mentionCount", desc: true }]}
+          initialSorting={[{ id: "averageRanking", desc: false }]}
           getRowClassName={(row) => {
             const result = row.original as AnalysisResult;
             return result.isMentioned === false
