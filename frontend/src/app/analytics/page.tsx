@@ -15,6 +15,7 @@ export default function AnalyticsPage() {
   );
   const [analysisResults, setAnalysisResults] =
     useState<WebsiteAnalysis | null>(null);
+  const [apiResponse, setApiResponse] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -86,6 +87,7 @@ export default function AnalyticsPage() {
 
       const data = await response.json();
       setAnalysisResults(data.analysis);
+      setApiResponse(data.apiResponse);
       setCurrentStep("results");
     } catch (err) {
       console.error("Error analyzing website:", err);
@@ -170,6 +172,7 @@ export default function AnalyticsPage() {
         {currentStep === "results" && analysisResults && (
           <ResultsStep
             analysis={analysisResults}
+            apiResponse={apiResponse}
             onNewAnalysis={handleNewAnalysis}
           />
         )}

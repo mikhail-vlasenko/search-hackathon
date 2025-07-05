@@ -54,11 +54,13 @@ import {
 interface ResultsStepProps {
   analysis: WebsiteAnalysis;
   onNewAnalysis: () => void;
+  apiResponse?: any; // Add optional API response to access recommendations and competitive insights
 }
 
 export default function ResultsStep({
   analysis,
   onNewAnalysis,
+  apiResponse,
 }: ResultsStepProps) {
   // Define columns for the DataTable
   const columns = useMemo<ColumnDef<AnalysisResult>[]>(
@@ -394,107 +396,99 @@ export default function ResultsStep({
     );
   };
 
-  // Generate actionable advice based on analysis results
+  // Generate actionable advice based on analysis results and API response
   const generateActionableAdvice = () => {
-    const notMentioned = analysis.results.filter((r) => !r.isMentioned);
-    const poorlyRanked = analysis.results.filter(
-      (r) => r.isMentioned && r.averageRanking > 5
-    );
-    const lowCoverage = analysis.results.filter(
-      (r) => r.isMentioned && (r.appearsInSearches / r.totalSearches) * 100 < 50
-    );
-    const wellPerforming = analysis.results.filter(
-      (r) =>
-        r.isMentioned &&
-        r.averageRanking <= 3 &&
-        (r.appearsInSearches / r.totalSearches) * 100 >= 80
-    );
-
     const advice = [];
 
-    // Critical Issues
-    if (notMentioned.length > 0) {
-      advice.push({
-        type: "critical",
-        title: "Missing Domain Coverage",
-        description: `Your domain doesn't appear in ${notMentioned.length} out of ${analysis.results.length} AI search queries.`,
-        actions: [
-          "Create comprehensive content targeting these specific query topics",
-          "Ensure your content directly answers the questions users are asking",
-          "Optimize meta descriptions and titles for better AI search comprehension",
-          "Add structured data markup to help AI understand your content context",
-        ],
-        priority: "High",
-        impact: "High Visibility Increase",
+    // Use API recommendations if available
+    if (apiResponse?.data?.recommendations) {
+      apiResponse.data.recommendations.forEach((rec: string, index: number) => {
+        advice.push({
+          type: rec.includes("Low")
+            ? "warning"
+            : rec.includes("Excellent")
+            ? "success"
+            : "info",
+          title: `API Recommendation ${index + 1}`,
+          description: rec,
+          actions: [
+            rec.includes("SEO")
+              ? "Improve SEO and content relevance"
+              : rec.includes("content quality")
+              ? "Focus on improving content quality and authority"
+              : rec.includes("content quality")
+              ? "Maintain current content quality and SEO strategy"
+              : "Follow the specific guidance provided",
+          ],
+          priority: rec.includes("Low") ? "High" : "Medium",
+          impact: rec.includes("Low")
+            ? "High Visibility Increase"
+            : "Performance Improvement",
+        });
       });
     }
 
-    // Ranking Issues
-    if (poorlyRanked.length > 0) {
+    // Add competitive insights if available
+    if (apiResponse?.data?.competitive_insights) {
+      const insights = apiResponse.data.competitive_insights;
+
       advice.push({
-        type: "warning",
-        title: "Poor Ranking Performance",
-        description: `Your domain appears but ranks poorly (position 6+) in ${poorlyRanked.length} queries.`,
+        type: "info",
+        title: "Market Position Analysis",
+        description: `Your market position is assessed as: ${insights.market_position?.replace(
+          "_",
+          " "
+        )}`,
         actions: [
-          "Improve content quality and depth for better authority signals",
-          "Add more relevant internal and external links",
-          "Update content with latest information and statistics",
-          "Enhance content structure with clear headings and bullet points",
+          ...(insights.improvement_areas || []).map(
+            (area: string) => `Address: ${area}`
+          ),
+          ...(insights.competitive_advantages || []).map(
+            (adv: string) => `Leverage: ${adv}`
+          ),
         ],
         priority: "Medium",
-        impact: "Better Positioning",
+        impact: "Strategic Positioning",
       });
     }
 
-    // Coverage Issues
-    if (lowCoverage.length > 0) {
-      advice.push({
-        type: "warning",
-        title: "Limited Search Coverage",
-        description: `Your domain has low search coverage in ${lowCoverage.length} query areas.`,
-        actions: [
-          "Expand content to cover related subtopics and use cases",
-          "Create content clusters around main topics",
-          "Add FAQ sections addressing common user questions",
-          "Develop topic pillar pages with comprehensive information",
-        ],
-        priority: "Medium",
-        impact: "Broader Reach",
-      });
-    }
+    // Fallback to original analysis if no API recommendations
+    if (advice.length === 0) {
+      const notMentioned = analysis.results.filter((r) => !r.isMentioned);
+      const poorlyRanked = analysis.results.filter(
+        (r) => r.isMentioned && r.averageRanking > 5
+      );
 
-    // Success Stories
-    if (wellPerforming.length > 0) {
-      advice.push({
-        type: "success",
-        title: "Strong Performance Areas",
-        description: `Your domain performs excellently in ${wellPerforming.length} query areas.`,
-        actions: [
-          "Maintain and regularly update high-performing content",
-          "Use successful content as templates for other topics",
-          "Create more content in categories where you excel",
-          "Monitor these pages for any ranking drops",
-        ],
-        priority: "Low",
-        impact: "Maintain Excellence",
-      });
-    }
+      if (notMentioned.length > 0) {
+        advice.push({
+          type: "critical",
+          title: "Missing Domain Coverage",
+          description: `Your domain doesn't appear in ${notMentioned.length} out of ${analysis.results.length} AI search queries.`,
+          actions: [
+            "Create comprehensive content targeting these specific query topics",
+            "Ensure your content directly answers the questions users are asking",
+            "Optimize meta descriptions and titles for better AI search comprehension",
+          ],
+          priority: "High",
+          impact: "High Visibility Increase",
+        });
+      }
 
-    // General Recommendations
-    advice.push({
-      type: "info",
-      title: "General AI Search Optimization",
-      description:
-        "Strategic recommendations to improve overall AI search performance.",
-      actions: [
-        "Regularly monitor AI search trends and update content accordingly",
-        "Focus on creating authoritative, well-researched content",
-        "Implement consistent internal linking strategies",
-        "Consider creating dedicated landing pages for each major topic area",
-      ],
-      priority: "Medium",
-      impact: "Long-term Growth",
-    });
+      if (poorlyRanked.length > 0) {
+        advice.push({
+          type: "warning",
+          title: "Poor Ranking Performance",
+          description: `Your domain appears but ranks poorly (position 6+) in ${poorlyRanked.length} queries.`,
+          actions: [
+            "Improve content quality and depth for better authority signals",
+            "Add more relevant internal and external links",
+            "Update content with latest information and statistics",
+          ],
+          priority: "Medium",
+          impact: "Better Positioning",
+        });
+      }
+    }
 
     return advice;
   };
@@ -673,6 +667,126 @@ export default function ResultsStep({
           maxHeight="50vh"
         />
       </div>
+
+      {/* Competitive Insights Section */}
+      {apiResponse?.data?.competitive_insights && (
+        <Card>
+          <CardHeader>
+            <div className="flex items-center space-x-2">
+              <Users className="h-5 w-5 text-blue-500" />
+              <CardTitle className="text-lg">Competitive Insights</CardTitle>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Market Position */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-sm text-gray-900">
+                  Market Position
+                </h4>
+                <div className="flex items-center space-x-2">
+                  <Badge
+                    variant={
+                      apiResponse.data.competitive_insights.market_position ===
+                      "market_leader"
+                        ? "default"
+                        : apiResponse.data.competitive_insights
+                            .market_position === "strong_competitor"
+                        ? "secondary"
+                        : "outline"
+                    }
+                  >
+                    {apiResponse.data.competitive_insights.market_position?.replace(
+                      "_",
+                      " "
+                    )}
+                  </Badge>
+                </div>
+
+                {/* Competitive Advantages */}
+                {apiResponse.data.competitive_insights.competitive_advantages
+                  ?.length > 0 && (
+                  <div className="space-y-2">
+                    <h5 className="font-medium text-xs text-gray-800">
+                      Competitive Advantages
+                    </h5>
+                    <ul className="space-y-1">
+                      {apiResponse.data.competitive_insights.competitive_advantages.map(
+                        (advantage: string, index: number) => (
+                          <li
+                            key={index}
+                            className="flex items-start space-x-1 text-xs"
+                          >
+                            <CheckCircle className="h-3 w-3 text-green-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">{advantage}</span>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Improvement Areas */}
+                {apiResponse.data.competitive_insights.improvement_areas
+                  ?.length > 0 && (
+                  <div className="space-y-2">
+                    <h5 className="font-medium text-xs text-gray-800">
+                      Improvement Areas
+                    </h5>
+                    <ul className="space-y-1">
+                      {apiResponse.data.competitive_insights.improvement_areas.map(
+                        (area: string, index: number) => (
+                          <li
+                            key={index}
+                            className="flex items-start space-x-1 text-xs"
+                          >
+                            <Target className="h-3 w-3 text-orange-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">{area}</span>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              {/* Key Competitors */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-sm text-gray-900">
+                  Key Competitors
+                </h4>
+                {apiResponse.data.competitive_insights.key_competitors?.length >
+                0 ? (
+                  <div className="space-y-2">
+                    {apiResponse.data.competitive_insights.key_competitors
+                      .slice(0, 5)
+                      .map((competitor: any, index: number) => (
+                        <div
+                          key={index}
+                          className="flex items-center justify-between p-2 bg-gray-50 rounded-lg"
+                        >
+                          <div className="flex items-center space-x-2">
+                            <Link className="h-4 w-4 text-gray-400" />
+                            <span className="text-sm font-medium">
+                              {competitor.domain.replace(/^https?:\/\//, "")}
+                            </span>
+                          </div>
+                          <Badge variant="outline" className="text-xs">
+                            {competitor.frequency} mentions
+                          </Badge>
+                        </div>
+                      ))}
+                  </div>
+                ) : (
+                  <p className="text-sm text-gray-500">
+                    No competitor data available
+                  </p>
+                )}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Actionable Advice Section */}
       <Card>

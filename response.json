@@ -1,0 +1,391 @@
+{
+  "success": true,
+  "data": {
+    "overview": {
+      "total_prompts": 2,
+      "total_queries": 16,
+      "total_unique_domains": 46
+    },
+    "query_frequency_stats": {
+      "total_queries": 16,
+      "unique_queries": 8,
+      "query_details": {
+        "cheapest bicycle shops in Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.125,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd"
+          ],
+          "unique_prompts": 2
+        },
+        "second-hand bicycles Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.125,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd"
+          ],
+          "unique_prompts": 2
+        },
+        "affordable bikes Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.125,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd"
+          ],
+          "unique_prompts": 2
+        },
+        "Gebrauchtfahrrad Berlin": {
+          "frequency": 2,
+          "frequency_rate": 0.125,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd"
+          ],
+          "unique_prompts": 2
+        },
+        "Fahrradtrainer kaufen Deutschland": {
+          "frequency": 2,
+          "frequency_rate": 0.125,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd"
+          ],
+          "unique_prompts": 2
+        },
+        "Wo kann man in Deutschland Fahrradergometer kaufen?": {
+          "frequency": 2,
+          "frequency_rate": 0.125,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd"
+          ],
+          "unique_prompts": 2
+        },
+        "Welche Fahrradtrainingsgeräte gibt es in Deutschland?": {
+          "frequency": 2,
+          "frequency_rate": 0.125,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd"
+          ],
+          "unique_prompts": 2
+        },
+        "Deutschland Fahrradgeschäfte": {
+          "frequency": 2,
+          "frequency_rate": 0.125,
+          "prompts": [
+            "cheapest bicycle to buy in berlin",
+            "cycling good, where to buy cycling machine deutschalnd"
+          ],
+          "unique_prompts": 2
+        }
+      },
+      "most_common_queries": [
+        ["cheapest bicycle shops in Berlin", 2],
+        ["second-hand bicycles Berlin", 2],
+        ["affordable bikes Berlin", 2],
+        ["Gebrauchtfahrrad Berlin", 2],
+        ["Fahrradtrainer kaufen Deutschland", 2],
+        ["Wo kann man in Deutschland Fahrradergometer kaufen?", 2],
+        ["Welche Fahrradtrainingsgeräte gibt es in Deutschland?", 2],
+        ["Deutschland Fahrradgeschäfte", 2]
+      ]
+    },
+    "prompt_stats": {
+      "cheapest bicycle to buy in berlin": {
+        "total_queries": 8,
+        "unique_domains": 46,
+        "total_citations": 138,
+        "domains_with_citations": 46,
+        "avg_citations_per_query": 17.25
+      },
+      "cycling good, where to buy cycling machine deutschalnd": {
+        "total_queries": 8,
+        "unique_domains": 46,
+        "total_citations": 138,
+        "domains_with_citations": 46,
+        "avg_citations_per_query": 17.25
+      }
+    },
+    "domain_analysis": {
+      "total_appearances": 0,
+      "total_citations": 0,
+      "retrieval_rate": 0,
+      "usage_rate": 0,
+      "avg_citation_rank": 0,
+      "min_citation_rank": null,
+      "prompt_appearances": [],
+      "query_appearances": [],
+      "citation_positions": []
+    },
+    "domain_detailed_stats": {
+      "total_appearances": 0,
+      "total_citations": 0,
+      "retrieval_rate": 0,
+      "usage_rate": 0,
+      "avg_citation_rank": 0,
+      "min_citation_rank": null,
+      "prompt_appearances": [],
+      "query_appearances": [],
+      "citation_positions": []
+    },
+    "intersecting_queries": {
+      "cheapest bicycle shops in Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 10,
+        "domains_with_citations": {
+          "https://fietsenboerse.de": [1],
+          "https://www.visitberlin.de/en/event/berlin-bicycle-market": [2],
+          "https://bikeparkberlin.de": [3],
+          "https://xn--gebrauchte-fahrrder-berlin-vhc.de": [4],
+          "https://bikeopia.com": [5],
+          "https://radwelt.berlin": [6],
+          "https://bikeawayberlin.de": [7],
+          "https://decathlon.de": [8],
+          "https://allaboutberlin.com/guides/bicycle-in-berlin#buying-a-stolen-bicycle": [
+            9, 10, 11, 12, 13, 14, 15
+          ],
+          "https://www.reddit.com/r/berlin/comments/mnk3fl/affordable_bicycle_shops_in_berlin/": [
+            15
+          ]
+        }
+      },
+      "second-hand bicycles Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 11,
+        "domains_with_citations": {
+          "https://fietsenboerse.de/en/second-hand-bikes/berlin": [1],
+          "https://www.berlin.de/en/shopping/markets/flea-markets/7403870-2983302-fietsenboerse-bicycle-market.en.html": [
+            1
+          ],
+          "https://www.visitberlin.de/en/event/berlin-bicycle-market": [2],
+          "https://bikeparkberlin.de": [3],
+          "https://xn--gebrauchte-fahrrder-berlin-vhc.de": [4],
+          "https://bikeopia.com/": [5],
+          "https://radwelt.berlin": [6],
+          "https://www.bikeawayberlin.de/": [7],
+          "https://decathlon.de": [8],
+          "https://allaboutberlin.com": [9, 10, 11, 12, 13, 14, 15],
+          "https://reddit.com": [15]
+        }
+      },
+      "affordable bikes Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 10,
+        "domains_with_citations": {
+          "https://fietsenboerse.de": [1],
+          "https://www.bikeawayberlin.de/": [7],
+          "https://visitberlin.de": [2],
+          "https://bikeparkberlin.de": [3],
+          "https://xn--gebrauchte-fahrrder-berlin-vhc.de": [4],
+          "https://bikeopia.com": [5],
+          "https://radwelt.berlin": [6],
+          "https://decathlon.de": [8],
+          "https://allaboutberlin.com/guides/bicycle-in-berlin": [
+            9, 10, 11, 12, 13, 14, 15
+          ],
+          "https://www.reddit.com/r/berlin/comments/mnk3fl/affordable_bicycle_shops_in_berlin/": [
+            15
+          ]
+        }
+      },
+      "Gebrauchtfahrrad Berlin": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 10,
+        "domains_with_citations": {
+          "https://fietsenboerse.de": [1],
+          "https://bikeparkberlin.de/": [3],
+          "https://visitberlin.de": [2],
+          "https://www.xn--gebrauchte-fahrrder-berlin-vhc.de/": [4],
+          "https://bikeopia.com": [5],
+          "https://radwelt.berlin/fahrrad-kaufen/gebrauchte-fahrraeder-berlin": [
+            6
+          ],
+          "https://bikeawayberlin.de": [7],
+          "https://decathlon.de": [8],
+          "https://allaboutberlin.com": [9, 10, 11, 12, 13, 14, 15],
+          "https://reddit.com": [15]
+        }
+      },
+      "Fahrradtrainer kaufen Deutschland": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 12,
+        "domains_with_citations": {
+          "https://fitshop.de": [1],
+          "https://gorillasports.de": [2],
+          "https://bike24.de": [3],
+          "https://www.hammer.de/ausdauertraining/heimtrainer-ergometer.html#buying-hometrainer": [
+            4, 13
+          ],
+          "https://www.lidl.de/h/heimtrainer/h10006884": [13, 5, 15],
+          "https://www.mediamarkt.de/de/category/heimtrainer-ergometer-8003.html": [
+            16, 13, 6
+          ],
+          "https://kaufland.de": [7],
+          "https://fahrrad-xxl.de": [8],
+          "https://das-radhaus.de": [9],
+          "https://mhw-bike.de": [10],
+          "https://zweirad-stadler.de": [11],
+          "https://boc24.de": [12]
+        }
+      },
+      "Wo kann man in Deutschland Fahrradergometer kaufen?": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 14,
+        "domains_with_citations": {
+          "https://www.fitshop.de/ergometer?srsltid=AfmBOopzUVLz7gbs-Zevl6BSD0KdypyvtqOEUnVi9zWvMkIDzEF6kRxw": [
+            1, 13, 14
+          ],
+          "https://fitshop.de": [1],
+          "https://gorillasports.de": [2],
+          "https://bike24.de": [3],
+          "https://hammer.de": [4, 13],
+          "https://www.lidl.de/h/heimtrainer/h10006884": [13, 5, 15],
+          "https://www.mediamarkt.de/de/category/heimtrainer-ergometer-8003.html": [
+            16, 13, 6
+          ],
+          "https://www.kaufland.de/c/ergometer/~69104/": [7],
+          "https://www.fahrrad-xxl.de/fitness/ergometer/": [8],
+          "https://fahrrad-xxl.de": [8],
+          "https://das-radhaus.de": [9],
+          "https://mhw-bike.de": [10],
+          "https://shop.zweirad-stadler.de/heimsport/fitnessgeraete-fuer-ausdauertraining/ergometer/?srsltid=AfmBOoojpI9OEE18CUUBSS197F1TGA-qnZAUkoF4qOeyQuNz3CBRvnWc": [
+            11
+          ],
+          "https://boc24.de": [12]
+        }
+      },
+      "Welche Fahrradtrainingsgeräte gibt es in Deutschland?": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 12,
+        "domains_with_citations": {
+          "https://fitshop.de": [1],
+          "https://gorillasports.de": [2],
+          "https://www.bike24.de/heimtrainer.html": [3],
+          "https://hammer.de": [4, 13],
+          "https://www.lidl.de/h/heimtrainer/h10006884": [13, 5, 15],
+          "https://www.mediamarkt.de/de/category/heimtrainer-ergometer-8003.html": [
+            16, 13, 6
+          ],
+          "https://www.kaufland.de/c/ergometer/~69104/": [7],
+          "https://fahrrad-xxl.de": [8],
+          "https://das-radhaus.de": [9],
+          "https://mhw-bike.de": [10],
+          "https://zweirad-stadler.de": [11],
+          "https://boc24.de": [12]
+        }
+      },
+      "Deutschland Fahrradgeschäfte": {
+        "frequency": 2,
+        "unique_prompts": 2,
+        "prompts": [
+          "cycling good, where to buy cycling machine deutschalnd",
+          "cheapest bicycle to buy in berlin"
+        ],
+        "total_domains": 13,
+        "domains_with_citations": {
+          "https://fitshop.de": [1],
+          "https://gorillasports.de": [2],
+          "https://www.megabike24.de/": [3],
+          "https://hammer.de": [4, 13],
+          "https://lidl.de": [13, 5, 15],
+          "https://mediamarkt.de": [16, 13, 6],
+          "https://kaufland.de": [7],
+          "https://www.fahrrad-xxl.de/": [8],
+          "https://fahrrad-xxl.de": [8],
+          "https://www.das-radhaus.de/?srsltid=AfmBOoqtTeO2IGnhjVnIg3_y0iylQL8LKqEEHxBQVrcKUnBZrYqHs8EU": [
+            9
+          ],
+          "https://mhw-bike.de": [10],
+          "https://shop.zweirad-stadler.de/?srsltid=AfmBOoqo0vqvLzox8rCnykkRms9lWUCmc7_vF_MOoEpUfBfkGDwdWYWV": [
+            11
+          ],
+          "https://boc24.de/?srsltid=AfmBOooACw-6l8GqGZTbX3OvcxDKo280X8pOkdQmJg7W2kLQAYx_grqM": [
+            12
+          ]
+        }
+      }
+    },
+    "recommendations": [
+      "Low retrieval rate: Consider improving SEO and content relevance to appear in more search results",
+      "Low usage rate: Focus on improving content quality and authority to increase citation likelihood",
+      "Excellent citation positioning: Maintain current content quality and SEO strategy"
+    ],
+    "competitive_insights": {
+      "market_position": "emerging_player",
+      "key_competitors": [
+        {
+          "domain": "https://decathlon.de",
+          "frequency": 8
+        },
+        {
+          "domain": "https://fitshop.de",
+          "frequency": 8
+        },
+        {
+          "domain": "https://gorillasports.de",
+          "frequency": 8
+        },
+        {
+          "domain": "https://fahrrad-xxl.de",
+          "frequency": 8
+        },
+        {
+          "domain": "https://mhw-bike.de",
+          "frequency": 8
+        }
+      ],
+      "competitive_advantages": ["Strong citation positioning"],
+      "improvement_areas": [
+        "Content authority enhancement required",
+        "Search visibility expansion needed"
+      ]
+    }
+  },
+  "error": null,
+  "metadata": {
+    "target_domain": "fietsenboerse.de",
+    "experiment_files": ["gemini_experiment_results.json"],
+    "total_prompts_analyzed": 2,
+    "has_gemini_api": true,
+    "analysis_timestamp": null
+  }
+}

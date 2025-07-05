@@ -4,11 +4,87 @@ import { CheerioCrawler } from "@crawlee/cheerio";
 import { Readability } from "@mozilla/readability";
 import { JSDOM } from "jsdom";
 import OpenAI from "openai";
+import fs from "fs/promises";
+import path from "path";
+import crypto from "crypto";
 
 // Initialize OpenAI client
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+// Cache configuration
+const CACHE_DIR = path.join(process.cwd(), ".cache", "prompts");
+const CACHE_EXPIRY_HOURS = 24; // Cache expires after 24 hours
+
+// Helper function to generate cache key from URL
+function generateCacheKey(url: string): string {
+  return crypto.createHash("md5").update(url).digest("hex");
+}
+
+// Helper function to get cache file path
+function getCacheFilePath(cacheKey: string): string {
+  return path.join(CACHE_DIR, `${cacheKey}.json`);
+}
+
+// Helper function to read from cache
+async function readFromCache(url: string): Promise<GeneratedPrompt[] | null> {
+  try {
+    const cacheKey = generateCacheKey(url);
+    const cacheFilePath = getCacheFilePath(cacheKey);
+
+    // Check if cache file exists
+    const stats = await fs.stat(cacheFilePath);
+
+    // Check if cache is expired
+    const now = new Date();
+    const cacheTime = new Date(stats.mtime);
+    const hoursDiff = (now.getTime() - cacheTime.getTime()) / (1000 * 60 * 60);
+
+    if (hoursDiff > CACHE_EXPIRY_HOURS) {
+      console.log(`Cache expired for ${url}`);
+      return null;
+    }
+
+    // Read and parse cache file
+    const cacheData = await fs.readFile(cacheFilePath, "utf-8");
+    const cachedResult = JSON.parse(cacheData);
+
+    console.log(`Cache hit for ${url}`);
+    return cachedResult.prompts;
+  } catch (error) {
+    // Cache miss or error reading cache
+    console.log(`Cache miss for ${url}`);
+    return null;
+  }
+}
+
+// Helper function to write to cache
+async function writeToCache(
+  url: string,
+  prompts: GeneratedPrompt[]
+): Promise<void> {
+  try {
+    const cacheKey = generateCacheKey(url);
+    const cacheFilePath = getCacheFilePath(cacheKey);
+
+    // Ensure cache directory exists
+    await fs.mkdir(CACHE_DIR, { recursive: true });
+
+    // Write cache data
+    const cacheData = {
+      url,
+      timestamp: new Date().toISOString(),
+      prompts,
+    };
+
+    await fs.writeFile(cacheFilePath, JSON.stringify(cacheData, null, 2));
+    console.log(`Cached results for ${url}`);
+  } catch (error) {
+    console.error(`Failed to write cache for ${url}:`, error);
+    // Don't throw error - caching is not critical
+  }
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -30,18 +106,35 @@ export async function POST(request: NextRequest) {
 
     console.log(`Starting content extraction for: ${url}`);
 
+    // Check cache first
+    const cachedPrompts = await readFromCache(url);
+    if (cachedPrompts) {
+      console.log(`Returning cached results for: ${url}`);
+      return NextResponse.json({ prompts: cachedPrompts });
+    }
+
     // Step 1: Crawl the website using Crawlee
     let extractedContent = "";
     let pageTitle = "";
     let pageDescription = "";
+    let crawlSuccessful = false;
 
     try {
       const crawler = new CheerioCrawler({
-        // Respect robots.txt and rate limiting
-        maxRequestsPerCrawl: 1,
-        requestHandlerTimeoutSecs: 30,
+        // Allow more requests for thorough crawling
+        maxRequestsPerCrawl: 5,
+        requestHandlerTimeoutSecs: 60,
+        // Add retry logic for failed requests
+        maxRequestRetries: 2,
+        // Set concurrent requests to 1 to be respectful
+        maxConcurrency: 1,
+        // Follow redirects
+        ignoreSslErrors: true,
+        // Add additional options for better compatibility
+        additionalMimeTypes: ["text/html", "application/xhtml+xml"],
         preNavigationHooks: [
           async ({ request }) => {
+            console.log(`Attempting to crawl: ${request.url}`);
             // Set headers before the request
             request.headers = {
               "User-Agent":
@@ -56,11 +149,19 @@ export async function POST(request: NextRequest) {
           },
         ],
         async requestHandler({ $, request, body }) {
-          console.log(`Successfully crawled: ${request.url}`);
+          console.log(
+            `Successfully crawled: ${request.url} (Status: ${request.state})`
+          );
+          console.log(`Response body length: ${body.length}`);
+
+          crawlSuccessful = true;
 
           // Extract basic page info
           pageTitle = $("title").text().trim() || "";
           pageDescription = $('meta[name="description"]').attr("content") || "";
+
+          console.log(`Page title: ${pageTitle}`);
+          console.log(`Page description: ${pageDescription}`);
 
           // Step 2: Use Mozilla Readability to extract main content
           try {
@@ -80,32 +181,117 @@ export async function POST(request: NextRequest) {
             if (article && article.textContent) {
               extractedContent = article.textContent.trim();
               console.log(
-                `Extracted ${extractedContent.length} characters of content`
+                `Extracted ${extractedContent.length} characters of content using Readability`
               );
             } else {
               // Fallback: use Cheerio to extract text content
               console.log("Readability failed, using fallback text extraction");
               extractedContent = $("body").text().replace(/\s+/g, " ").trim();
+              console.log(
+                `Extracted ${extractedContent.length} characters of content using Cheerio fallback`
+              );
             }
           } catch (readabilityError) {
             console.warn("Readability extraction failed:", readabilityError);
             // Fallback: use Cheerio to extract text content
             extractedContent = $("body").text().replace(/\s+/g, " ").trim();
+            console.log(
+              `Extracted ${extractedContent.length} characters of content using Cheerio fallback after error`
+            );
           }
+        },
+        async failedRequestHandler({ request, error }) {
+          console.error(`Request failed for ${request.url}:`, error);
+          console.error(`Error details:`, error);
         },
       });
 
       // Run the crawler
-      await crawler.run([url]);
+      console.log(`Starting crawler for URL: ${url}`);
+      const result = await crawler.run([url]);
+      console.log(`Crawler finished. Result:`, result);
+
+      // Check if crawling was successful
+      if (!crawlSuccessful) {
+        console.error(
+          "Crawler completed but no successful requests were processed"
+        );
+        throw new Error("No successful requests were processed by the crawler");
+      }
     } catch (crawlError) {
       console.error("Crawling failed:", crawlError);
-      return NextResponse.json(
-        {
-          error:
-            "Failed to crawl the website. The site may be blocking requests or may not be accessible.",
-        },
-        { status: 500 }
-      );
+      console.error("Error details:", crawlError);
+
+      // Try a simple fetch as fallback
+      console.log("Attempting simple fetch as fallback...");
+      try {
+        const response = await fetch(url, {
+          headers: {
+            "User-Agent":
+              "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+            Accept:
+              "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+          },
+          redirect: "follow",
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const html = await response.text();
+        console.log(`Fallback fetch succeeded, got ${html.length} characters`);
+
+        // Parse with JSDOM and extract content
+        const dom = new JSDOM(html, { url });
+        const document = dom.window.document;
+
+        pageTitle = document.title || "";
+        const metaDescription = document.querySelector(
+          'meta[name="description"]'
+        );
+        pageDescription = metaDescription?.getAttribute("content") || "";
+
+        // Try Readability
+        try {
+          const reader = new Readability(document, {
+            keepClasses: false,
+            classesToPreserve: [],
+          });
+          const article = reader.parse();
+
+          if (article && article.textContent) {
+            extractedContent = article.textContent.trim();
+            console.log(
+              `Fallback: Extracted ${extractedContent.length} characters using Readability`
+            );
+          } else {
+            extractedContent =
+              document.body?.textContent?.replace(/\s+/g, " ").trim() || "";
+            console.log(
+              `Fallback: Extracted ${extractedContent.length} characters using textContent`
+            );
+          }
+        } catch (readabilityError) {
+          console.warn("Fallback readability failed:", readabilityError);
+          extractedContent =
+            document.body?.textContent?.replace(/\s+/g, " ").trim() || "";
+          console.log(
+            `Fallback: Extracted ${extractedContent.length} characters using textContent after error`
+          );
+        }
+
+        crawlSuccessful = true;
+      } catch (fetchError) {
+        console.error("Fallback fetch also failed:", fetchError);
+        return NextResponse.json(
+          {
+            error:
+              "Failed to crawl the website. The site may be blocking requests, may not be accessible, or may have anti-bot protection. Please try a different URL or contact support.",
+          },
+          { status: 500 }
+        );
+      }
     }
 
     if (!extractedContent) {
@@ -222,6 +408,9 @@ Make sure each prompt sounds like a natural question someone would ask an AI ass
       );
 
       console.log(`Generated ${generatedPrompts.length} prompts`);
+
+      // Cache the generated prompts
+      await writeToCache(url, generatedPrompts);
 
       return NextResponse.json({ prompts: generatedPrompts });
     } catch (openaiError) {
