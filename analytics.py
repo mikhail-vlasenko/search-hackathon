@@ -3,6 +3,38 @@ from typing import Dict, List, Tuple, Any
 import json
 import os
 import requests
+from urllib.parse import urlparse
+
+
+def extract_domain_from_url(url: str) -> str:
+    """
+    Extract domain name from a URL.
+    
+    Args:
+        url: Full URL (e.g., "https://radwelt.berlin/fahrrad-kaufen/gebrauchte-fahrraeder-berlin")
+        
+    Returns:
+        Domain name (e.g., "radwelt.berlin")
+    """
+    try:
+        if not url:
+            return ""
+        
+        # Handle URLs that don't have a scheme
+        if not url.startswith(('http://', 'https://')):
+            url = 'https://' + url
+        
+        parsed = urlparse(url)
+        domain = parsed.netloc.lower()
+        
+        # Remove www. prefix if present
+        if domain.startswith('www.'):
+            domain = domain[4:]
+        
+        return domain
+    except Exception:
+        # If URL parsing fails, return the original URL cleaned up
+        return url.replace('https://', '').replace('http://', '').replace('www.', '').split('/')[0].lower()
 
 
 def load_and_process_experiment_results(file_path: str) -> Tuple[Dict[str, Dict[str, Dict[str, List[int]]]], Dict[str, Dict[str, List[str]]]]:
@@ -41,7 +73,10 @@ def load_and_process_experiment_results(file_path: str) -> Tuple[Dict[str, Dict[
                         if isinstance(web_searches, dict):
                             for query, domains in web_searches.items():
                                 if isinstance(domains, dict):
-                                    for domain, citations_data in domains.items():
+                                    for domain_url, citations_data in domains.items():
+                                        # Extract domain name from URL
+                                        domain = extract_domain_from_url(domain_url)
+                                        
                                         if isinstance(citations_data, dict):
                                             # New format: {"citations": [...], "contents": [...]}
                                             citations = citations_data.get('citations', [])
@@ -64,7 +99,10 @@ def load_and_process_experiment_results(file_path: str) -> Tuple[Dict[str, Dict[
                 if query not in search_analytics_data[prompt]:
                     search_analytics_data[prompt][query] = {}
                 
-                for domain, citations in domains.items():
+                for domain_url, citations in domains.items():
+                    # Extract domain name from URL
+                    domain = extract_domain_from_url(domain_url)
+                    
                     # Remove duplicates and sort
                     unique_citations = sorted(list(set(citations)))
                     if domain not in search_analytics_data[prompt][query]:
@@ -112,7 +150,10 @@ def load_multiple_experiment_files(file_paths: List[str]) -> Tuple[Dict[str, Dic
                 if query not in combined_search_data[prompt]:
                     combined_search_data[prompt][query] = {}
                 
-                for domain, citations in domains.items():
+                for domain_url, citations in domains.items():
+                    # Extract domain name from URL (in case it hasn't been processed yet)
+                    domain = extract_domain_from_url(domain_url)
+                    
                     if domain not in combined_search_data[prompt][query]:
                         combined_search_data[prompt][query][domain] = []
                     combined_search_data[prompt][query][domain].extend(citations)
@@ -240,7 +281,10 @@ def demo_with_experiment_file(file_path: str, domain_of_interest: str = None):
     # Analyze intersecting queries
     analytics.print_intersecting_queries_analysis()
     
-    # Generate comprehensive report
+    # Print poor performance analysis with Gemini insights
+    analytics.print_poor_performance_analysis(domain_of_interest)
+    
+    # Generate comprehensive report (now includes Gemini analysis)
     report = analytics.generate_comprehensive_report(domain_of_interest)
     
     print(f"\n💡 KEY INSIGHTS FOR {domain_of_interest}")
@@ -258,10 +302,14 @@ def demo_with_experiment_file(file_path: str, domain_of_interest: str = None):
         print(f"   • Average Citation Rank: {domain_stats['avg_citation_rank']:.2f}")
         print(f"   • Total Citations: {domain_stats['total_citations']}")
     
-    print(f"\n📋 RECOMMENDATIONS:")
-    print(f"   • Analyze query patterns to identify optimization opportunities")
-    print(f"   • Focus on improving performance in underperforming queries")
-    print(f"   • Consider content optimization to improve citation rankings")
+    # Print Gemini insights summary if available
+    if 'gemini_analysis' in report:
+        gemini_data = report['gemini_analysis']
+        print(f"\n🤖 GEMINI AI INSIGHTS:")
+        print(f"   • Performance Issues Found: {len(gemini_data)}")
+        if gemini_data:
+            print(f"   • AI recommendations available for improvement strategies")
+    
 
 
 class SearchAnalytics:
@@ -412,6 +460,13 @@ class SearchAnalytics:
         
         if domain_of_interest:
             report['domain_analysis'] = self.calculate_domain_stats(domain_of_interest)
+            
+            # Add response chunks analysis if available
+            if self.response_chunks:
+                report['response_chunks_analysis'] = self.analyze_response_chunks(domain_of_interest)
+                
+            # Add Gemini analysis for poor performance cases
+            report['gemini_analysis'] = self.analyze_poor_performance(domain_of_interest)
         
         return report
     
@@ -563,7 +618,7 @@ class SearchAnalytics:
         else:
             return 'poor'
     
-    def call_gemini_analysis(self, prompt: str, domain_of_interest: str, competitor_sentences: List[str]) -> str:
+    def call_gemini_analysis(self, prompt: str, domain_of_interest: str, competitor_info: List[str]) -> str:
         """
         Call Gemini API to analyze why competitors ranked higher
         """
@@ -573,80 +628,152 @@ class SearchAnalytics:
         
         # Prepare the analysis prompt for Gemini
         analysis_prompt = f"""
-        Analyze why competing domains ranked higher than {domain_of_interest} in this AI search response.
+        Analyze why competing domains ranked higher than {domain_of_interest} in AI search results.
 
-        User Query: {prompt}
+        User Query/Prompt: {prompt}
 
-        Competitor statements that ranked higher:
-        {chr(10).join(f"- {sentence}" for sentence in competitor_sentences)}
+        Competitor ranking data:
+        {chr(10).join(f"- {info}" for info in competitor_info)}
 
-        Please briefly explain (2-3 sentences) what key advantages or features these competitors demonstrated that made them rank higher than {domain_of_interest}. Focus on specific capabilities, market position, or features mentioned.
+        Please briefly explain (2-3 sentences) what competitive advantages or factors might have caused these domains to rank higher than {domain_of_interest}. Consider factors like:
+        - Domain authority and trust
+        - Content relevance and quality
+        - Technical SEO factors
+        - Brand recognition
+        - User engagement metrics
+
+        Focus on actionable insights that could help improve {domain_of_interest}'s ranking.
         """
         
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-latest:generateContent?key={api_key}"
-        
-        payload = {
-            "contents": [{
-                "parts": [{
-                    "text": analysis_prompt
-                }]
-            }]
-        }
-        
-        headers = {
-            "Content-Type": "application/json"
-        }
-        
         try:
-            response = requests.post(url, json=payload, headers=headers)
-            response.raise_for_status()
+            # Use the same genai library approach as in main.py
+            from google import genai
+            from google.genai import types
             
-            result = response.json()
-            if 'candidates' in result and len(result['candidates']) > 0:
-                return result['candidates'][0]['content']['parts'][0]['text']
-            else:
-                return "ERROR: No response from Gemini API"
-                
-        except requests.RequestException as e:
-            return f"ERROR: API request failed - {str(e)}"
-        except (KeyError, IndexError) as e:
-            return f"ERROR: Invalid response format - {str(e)}"
+            client = genai.Client()
+            
+            # Configure generation settings (no grounding needed for analysis)
+            config = types.GenerateContentConfig(
+                max_output_tokens=1024,
+                thinking_config=types.ThinkingConfig(
+                    thinking_budget=0
+                ),  # Disable thinking for speed
+            )
+            
+            response = client.models.generate_content(
+                model="gemini-2.5-flash", 
+                contents=analysis_prompt, 
+                config=config
+            )
+            
+            return response.text
+            
+        except Exception as e:
+            return f"ERROR: Gemini API call failed - {str(e)}"
     
     def analyze_poor_performance(self, domain_of_interest: str) -> Dict[str, Any]:
         """
-        Identify prompts where domain performed poorly and get Gemini analysis
+        Identify the worst 3 prompts where domain performed poorly and get Gemini analysis.
+        
+        Ranking criteria (worst to best):
+        1. Domain was retrieved but got no citations (empty list [])
+        2. Domain was cited but the lowest citation number is highest (e.g., [5, 6] is worse than [3, 8])
         """
-        chunk_analysis = self.analyze_response_chunks(domain_of_interest)
+        # Collect performance data for each prompt
+        prompt_performance = []
+        
+        for prompt, queries in self.data.items():
+            domain_appeared = False
+            all_citations = []
+            
+            # Check all queries in this prompt for the target domain
+            for query, domains in queries.items():
+                if domain_of_interest in domains:
+                    domain_appeared = True
+                    citations = domains[domain_of_interest]
+                    all_citations.extend(citations)
+            
+            if domain_appeared:
+                if not all_citations:
+                    # Domain retrieved but no citations - worst case
+                    performance_score = float('inf')
+                    min_citation_rank = None
+                else:
+                    # Domain cited - use minimum citation rank as performance score
+                    min_citation_rank = min(all_citations)
+                    performance_score = min_citation_rank
+                
+                prompt_performance.append({
+                    'prompt': prompt,
+                    'performance_score': performance_score,
+                    'min_citation_rank': min_citation_rank,
+                    'all_citations': all_citations,
+                    'total_citations': len(all_citations)
+                })
+        
+        # Sort by performance score (higher is worse, inf is worst)
+        prompt_performance.sort(key=lambda x: x['performance_score'], reverse=True)
+        
+        # Take the worst 3 prompts
+        worst_prompts = prompt_performance[:3]
+        
         poor_performance_analysis = {}
         
-        for prompt, analysis in chunk_analysis.items():
-            if analysis['performance_rating'] in ['poor', 'absent']:
-                # Get competitor sentences that ranked higher
-                competitor_sentences = []
-                for competitor in analysis['competitor_mentions'][:5]:  # Top 5 competitors
-                    competitor_sentences.append(competitor['sentence'])
-                
-                if competitor_sentences:
-                    gemini_analysis = self.call_gemini_analysis(
-                        prompt, 
-                        domain_of_interest, 
-                        competitor_sentences
-                    )
-                    
-                    poor_performance_analysis[prompt] = {
-                        'performance_rating': analysis['performance_rating'],
-                        'domain_citations': analysis['domain_citations'],
-                        'competitor_citations': analysis['competitor_citations'],
-                        'domain_share': analysis['domain_share'],
-                        'competitor_sentences': competitor_sentences,
-                        'gemini_analysis': gemini_analysis
-                    }
+        for prompt_data in worst_prompts:
+            prompt = prompt_data['prompt']
+            
+            # Get competitor information from this prompt
+            competitor_domains = []
+            for query, domains in self.data[prompt].items():
+                for domain, citations in domains.items():
+                    if domain != domain_of_interest and citations:
+                        # Find competitors that ranked better than our domain
+                        if prompt_data['min_citation_rank'] is None or min(citations) < prompt_data['performance_score']:
+                            competitor_domains.append({
+                                'domain': domain,
+                                'query': query,
+                                'best_citation': min(citations),
+                                'all_citations': citations
+                            })
+            
+            # Create competitor info for Gemini analysis
+            competitor_info = []
+            for comp in competitor_domains[:5]:  # Top 5 competitors
+                competitor_info.append(f"Domain {comp['domain']} ranked at position {comp['best_citation']} for query: {comp['query']}")
+            
+            if competitor_info:
+                gemini_analysis = self.call_gemini_analysis(
+                    prompt, 
+                    domain_of_interest, 
+                    competitor_info
+                )
+            else:
+                gemini_analysis = "No competitor data available for analysis"
+            
+            # Determine performance rating
+            if prompt_data['min_citation_rank'] is None:
+                performance_rating = 'absent'
+            elif prompt_data['min_citation_rank'] >= 5:
+                performance_rating = 'poor'
+            else:
+                performance_rating = 'suboptimal'
+            
+            poor_performance_analysis[prompt] = {
+                'performance_rating': performance_rating,
+                'performance_score': prompt_data['performance_score'],
+                'min_citation_rank': prompt_data['min_citation_rank'],
+                'total_citations': prompt_data['total_citations'],
+                'all_citations': prompt_data['all_citations'],
+                'competitor_count': len(competitor_domains),
+                'competitor_info': competitor_info,
+                'gemini_analysis': gemini_analysis
+            }
         
         return poor_performance_analysis
     
     def print_poor_performance_analysis(self, domain_of_interest: str):
         """
-        Print detailed analysis of poor performance cases with Gemini insights
+        Print detailed analysis of the worst 3 performing prompts with Gemini insights
         """
         poor_performance = self.analyze_poor_performance(domain_of_interest)
         
@@ -654,66 +781,35 @@ class SearchAnalytics:
             print(f"\n🎉 No poor performance cases found for {domain_of_interest}!")
             return
         
-        print(f"\n🔍 POOR PERFORMANCE ANALYSIS FOR {domain_of_interest}")
+        print(f"\n🔍 WORST 3 PROMPTS ANALYSIS FOR {domain_of_interest}")
         print("=" * 80)
         
-        for prompt, analysis in poor_performance.items():
+        # Sort by performance score to show worst first
+        sorted_prompts = sorted(poor_performance.items(), 
+                              key=lambda x: x[1]['performance_score'], 
+                              reverse=True)
+        
+        for i, (prompt, analysis) in enumerate(sorted_prompts, 1):
             short_prompt = prompt[:100] + "..." if len(prompt) > 100 else prompt
-            print(f"\n📉 Prompt: {short_prompt}")
+            print(f"\n📉 #{i} WORST PROMPT: {short_prompt}")
             print(f"   Performance Rating: {analysis['performance_rating'].upper()}")
-            print(f"   Domain Citations: {analysis['domain_citations']}")
-            print(f"   Competitor Citations: {analysis['competitor_citations']}")
-            print(f"   Domain Share: {analysis['domain_share']:.2%}")
+            
+            if analysis['min_citation_rank'] is None:
+                print(f"   Citation Status: RETRIEVED BUT NO CITATIONS")
+            else:
+                print(f"   Best Citation Rank: {analysis['min_citation_rank']}")
+                print(f"   All Citations: {analysis['all_citations']}")
+            
+            print(f"   Total Citations: {analysis['total_citations']}")
+            print(f"   Competitors Found: {analysis['competitor_count']}")
             
             print(f"\n   🤖 Gemini Analysis:")
             print(f"   {analysis['gemini_analysis']}")
             
-            print(f"\n   🏆 Top Competitor Statements:")
-            for i, sentence in enumerate(analysis['competitor_sentences'][:3], 1):
-                print(f"   {i}. {sentence}")
+            print(f"\n   🏆 Top Competitor Information:")
+            for j, info in enumerate(analysis['competitor_info'][:3], 1):
+                print(f"   {j}. {info}")
             print()
-
-
-# Legacy demo function - now uses hardcoded data for backward compatibility
-def demo_with_api():
-    """
-    Demonstrate the analytics system with hardcoded data (for backward compatibility)
-    """
-    print("⚠️  This function uses hardcoded demo data.")
-    print("💡 For real experiment analysis, use demo_with_experiment_file() instead.")
-    print("=" * 60)
-    
-    # Create some sample data for demonstration
-    sample_data = {
-        "What are the best AI SEO tools?": {
-            "best ai seo tools": {
-                "https://peeq.ai": [1, 3],
-                "https://surfer.com": [2],
-                "https://marketmuse.com": [4, 5]
-            },
-            "ai content optimization": {
-                "https://peeq.ai": [1],
-                "https://surfer.com": [2, 3],
-                "https://clearscope.io": [4]
-            }
-        }
-    }
-    
-    analytics = SearchAnalytics(sample_data, {})
-    
-    print("\n🎯 SAMPLE ANALYSIS")
-    print("=" * 40)
-    
-    # Analyze a sample domain
-    domain_of_interest = "https://peeq.ai"
-    analytics.print_domain_analysis(domain_of_interest)
-    
-    # Generate report
-    report = analytics.generate_comprehensive_report(domain_of_interest)
-    print(f"\n📊 SAMPLE REPORT")
-    print(f"Total Prompts: {report['overview']['total_prompts']}")
-    print(f"Total Queries: {report['overview']['total_queries']}")
-    print(f"Unique Domains: {report['overview']['total_unique_domains']}")
 
 
 def main():

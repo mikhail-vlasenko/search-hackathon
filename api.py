@@ -55,6 +55,7 @@ async def analyze_domain_performance(request: AnalysisRequest):
         - Query analysis
         - Performance insights
         - Recommendations
+        - Gemini AI-powered competitive analysis
     """
     try:
         # Determine which experiment files to use
@@ -93,12 +94,28 @@ async def analyze_domain_performance(request: AnalysisRequest):
         # Initialize analytics
         analytics = SearchAnalytics(search_data, response_chunks)
         
-        # Generate comprehensive report
+        # Generate comprehensive report (now includes Gemini analysis automatically)
         report = analytics.generate_comprehensive_report(request.target_domain)
         
         # Add additional analysis specific to the domain
         domain_stats = analytics.calculate_domain_stats(request.target_domain)
         intersecting_queries = analytics.analyze_intersecting_queries()
+        
+        # Extract Gemini analysis from the comprehensive report
+        gemini_analysis_from_report = report.get('gemini_analysis', {})
+        
+        # Format Gemini analysis for API response
+        gemini_analysis = {
+            "poor_performance_analysis": gemini_analysis_from_report,
+            "has_poor_performance": len(gemini_analysis_from_report) > 0,
+            "total_poor_performance_cases": len(gemini_analysis_from_report)
+        }
+        
+        # Add notes about availability of features
+        if not response_chunks:
+            gemini_analysis["note"] = "No AI response chunks available for detailed Gemini analysis"
+        elif not os.getenv('GEMINI_API_KEY'):
+            gemini_analysis["note"] = "GEMINI_API_KEY not set - Gemini analysis may contain error messages"
         
         # Prepare metadata
         metadata = {
@@ -106,15 +123,17 @@ async def analyze_domain_performance(request: AnalysisRequest):
             "experiment_files": experiment_files,
             "total_prompts_analyzed": len(search_data),
             "has_gemini_api": bool(os.getenv('GEMINI_API_KEY')),
+            "has_response_chunks": bool(response_chunks),
             "analysis_timestamp": None  # Could add timestamp if needed
         }
         
-        # Enhanced response with additional insights
+        # Enhanced response with additional insights including Gemini analysis
         enhanced_report = {
             **report,
             "domain_detailed_stats": domain_stats,
             "intersecting_queries": intersecting_queries,
-            "recommendations": generate_recommendations(domain_stats, report),
+            "gemini_analysis": gemini_analysis,
+            "recommendations": generate_recommendations(domain_stats, report, gemini_analysis),
             "competitive_insights": generate_competitive_insights(analytics, request.target_domain)
         }
         
@@ -134,29 +153,29 @@ async def analyze_domain_performance(request: AnalysisRequest):
             detail=f"Internal server error during analysis: {str(e)}"
         )
 
-def generate_recommendations(domain_stats: Dict[str, Any], report: Dict[str, Any]) -> List[str]:
-    """Generate actionable recommendations based on analysis results"""
+def generate_recommendations(domain_stats: Dict[str, Any], report: Dict[str, Any], gemini_analysis: Dict[str, Any]) -> List[str]:
+    """Generate actionable recommendations based on Gemini analysis of poor performers"""
     recommendations = []
     
-    # Retrieval rate recommendations
-    if domain_stats.get('retrieval_rate', 0) < 0.5:
-        recommendations.append("Low retrieval rate: Consider improving SEO and content relevance to appear in more search results")
+    # Only include Gemini AI-powered analysis recommendations for poor performers
+    if gemini_analysis.get('has_poor_performance', False):
+        poor_performance_analysis = gemini_analysis.get('poor_performance_analysis', {})
+        
+        # Extract specific recommendations from Gemini analysis
+        for query, analysis in poor_performance_analysis.items():
+            if isinstance(analysis, dict) and 'gemini_analysis' in analysis:
+                # Extract actionable insights from the Gemini analysis text
+                analysis_text = analysis['gemini_analysis']
+                if analysis_text and not analysis_text.startswith('ERROR'):
+                    # Truncate query for readability
+                    short_query = query[:100] + "..." if len(query) > 100 else query
+                    recommendations.append(f"Query '{short_query}': {analysis_text}")
+            elif isinstance(analysis, str) and not analysis.startswith('ERROR'):
+                short_query = query[:100] + "..." if len(query) > 100 else query
+                recommendations.append(f"Query '{short_query}': {analysis}")
     
-    # Usage rate recommendations  
-    if domain_stats.get('usage_rate', 0) < 0.7:
-        recommendations.append("Low usage rate: Focus on improving content quality and authority to increase citation likelihood")
-    
-    # Citation rank recommendations
-    avg_rank = domain_stats.get('avg_citation_rank', 0)
-    if avg_rank > 3:
-        recommendations.append("High average citation rank: Optimize content for better positioning in search results")
-    elif avg_rank < 2:
-        recommendations.append("Excellent citation positioning: Maintain current content quality and SEO strategy")
-    
-    # Query frequency recommendations
-    query_stats = report.get('query_frequency_stats', {})
-    if query_stats.get('unique_queries', 0) < 5:
-        recommendations.append("Limited query diversity: Consider expanding content to cover more search topics")
+    if not recommendations:
+        recommendations.append("No poor performance cases identified by Gemini analysis")
     
     return recommendations
 
