@@ -23,8 +23,19 @@ def decode_uri(uri: str):
         uri = uri.replace("gs://", "https://storage.googleapis.com/", 1).replace(
             " ", "%20"
         )
-    response = requests.get(uri)
-    return response.url
+    url = uri
+    for i in range(3):
+        try:
+            url = requests.get(uri).url
+            break
+        except Exception as e:
+            time.sleep(1.5)
+            try:
+                return e.request
+            except Exception as e:
+                pass
+            pass
+    return url
 
 
 def get_domain_from_title(title: str) -> str:
@@ -152,7 +163,7 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
         result = {}
 
         # Use ThreadPoolExecutor to parallelize Google searches
-        with ThreadPoolExecutor(max_workers=min(len(all_queries), 10)) as executor:
+        with ThreadPoolExecutor(max_workers=min(len(all_queries), 5)) as executor:
             # Submit all search tasks
             future_to_query = {
                 executor.submit(
@@ -400,7 +411,7 @@ def run_all_gemini_models(
             for future, run_num in futures:
                 for attempt_idx in range(3):
                     try:
-                        result = future.result(timeout=300)
+                        result = future.result(timeout=120)
                         result["run_number"] = run_num + 1
                         model_results.append(result)
 
@@ -523,5 +534,8 @@ if __name__ == "__main__":
         [
             "cheapest bicycle to buy in berlin",
             "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
+            "best bikes for cycling in Berlin",
+            "best bikes for cycling in Europe",
+            "cycle fast; city bikes; berlin",
         ]
     )
