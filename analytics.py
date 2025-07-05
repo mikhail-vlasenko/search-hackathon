@@ -318,6 +318,9 @@ def demo_with_experiment_file(file_path: str, domain_of_interest: str = None):
     # Analyze the loaded data
     analytics.print_domain_analysis(domain_of_interest)
     
+    # Print query-level analysis
+    analytics.print_query_analysis(domain_of_interest)
+    
     # Analyze intersecting queries
     analytics.print_intersecting_queries_analysis()
     
@@ -341,6 +344,29 @@ def demo_with_experiment_file(file_path: str, domain_of_interest: str = None):
         print(f"   • Domain Usage Rate: {domain_stats['usage_rate']:.2%}")
         print(f"   • Average Citation Rank: {domain_stats['avg_citation_rank']:.2f}")
         print(f"   • Total Citations: {domain_stats['total_citations']}")
+    
+    if 'query_analysis' in report:
+        query_stats = report['query_analysis']
+        total_queries = len(query_stats)
+        retrieved_queries = sum(1 for q in query_stats.values() if q['target_domain_retrieved'])
+        cited_queries = sum(1 for q in query_stats.values() if q['target_domain_cited'])
+        
+        print(f"   • Query-Level Performance:")
+        print(f"     - Total Unique Queries: {total_queries}")
+        print(f"     - Queries with Target Retrieved: {retrieved_queries} ({retrieved_queries/total_queries:.1%})")
+        print(f"     - Queries with Target Cited: {cited_queries} ({cited_queries/total_queries:.1%})")
+        
+        # Find top performing query
+        best_query = None
+        best_rank = float('inf')
+        for query, stats in query_stats.items():
+            if stats['best_citation_rank'] is not None and stats['best_citation_rank'] < best_rank:
+                best_rank = stats['best_citation_rank']
+                best_query = query
+        
+        if best_query:
+            short_query = best_query[:50] + "..." if len(best_query) > 50 else best_query
+            print(f"     - Best Performing Query: '{short_query}' (rank {best_rank})")
     
     # Print Gemini insights summary if available
     if 'gemini_analysis' in report:
@@ -482,6 +508,111 @@ class SearchAnalytics:
         
         return prompt_stats
     
+    def analyze_queries_with_target_domain(self, domain_of_interest: str) -> Dict[str, Any]:
+        """
+        Analyze each query to show target domain retrieval status, total sources, and prompt counts
+        """
+        query_analysis = {}
+        
+        for prompt, queries in self.data.items():
+            for query, domains in queries.items():
+                if query not in query_analysis:
+                    query_analysis[query] = {
+                        'target_domain_retrieved': False,
+                        'target_domain_cited': False,
+                        'total_sources': 0,
+                        'prompts_using_query': [],
+                        'all_domains': set(),
+                        'target_domain_citations': []
+                    }
+                
+                # Track which prompts use this query
+                if prompt not in query_analysis[query]['prompts_using_query']:
+                    query_analysis[query]['prompts_using_query'].append(prompt)
+                
+                # Count total sources for this query instance
+                query_analysis[query]['total_sources'] += len(domains)
+                query_analysis[query]['all_domains'].update(domains.keys())
+                
+                # Check if target domain was retrieved
+                if domain_of_interest in domains:
+                    query_analysis[query]['target_domain_retrieved'] = True
+                    citations = domains[domain_of_interest]['citations']
+                    query_analysis[query]['target_domain_citations'].extend(citations)
+                    
+                    # Check if target domain was actually cited
+                    if citations:
+                        query_analysis[query]['target_domain_cited'] = True
+        
+        # Process final statistics
+        for query, stats in query_analysis.items():
+            stats['prompt_count'] = len(stats['prompts_using_query'])
+            stats['unique_prompts'] = len(set(stats['prompts_using_query']))
+            stats['total_unique_sources'] = len(stats['all_domains'])
+            stats['avg_sources_per_prompt'] = stats['total_sources'] / stats['prompt_count']
+            
+            # Target domain citation statistics
+            if stats['target_domain_citations']:
+                stats['best_citation_rank'] = min(stats['target_domain_citations'])
+                stats['avg_citation_rank'] = sum(stats['target_domain_citations']) / len(stats['target_domain_citations'])
+                stats['total_citations'] = len(stats['target_domain_citations'])
+            else:
+                stats['best_citation_rank'] = None
+                stats['avg_citation_rank'] = None
+                stats['total_citations'] = 0
+            
+            # Convert sets to lists for JSON serialization
+            stats['all_domains'] = list(stats['all_domains'])
+        
+        return query_analysis
+    
+    def print_query_analysis(self, domain_of_interest: str):
+        """
+        Print detailed analysis of each query with target domain info
+        """
+        query_analysis = self.analyze_queries_with_target_domain(domain_of_interest)
+        
+        print(f"\n=== QUERY-LEVEL ANALYSIS FOR {domain_of_interest} ===")
+        print(f"Total Unique Queries: {len(query_analysis)}")
+        print("=" * 80)
+        
+        # Sort queries by whether target domain was retrieved, then by prompt count
+        sorted_queries = sorted(query_analysis.items(), 
+                              key=lambda x: (x[1]['target_domain_retrieved'], x[1]['prompt_count']), 
+                              reverse=True)
+        
+        for i, (query, stats) in enumerate(sorted_queries, 1):
+            print(f"\n📋 #{i} Query: '{query}'")
+            print(f"   Used in {stats['prompt_count']} prompts ({stats['unique_prompts']} unique)")
+            print(f"   Total Sources: {stats['total_sources']} (avg: {stats['avg_sources_per_prompt']:.1f} per prompt)")
+            print(f"   Unique Sources: {stats['total_unique_sources']}")
+            
+            # Target domain status
+            if stats['target_domain_retrieved']:
+                print(f"   🎯 Target Domain: ✅ RETRIEVED")
+                if stats['target_domain_cited']:
+                    print(f"      └── ✅ CITED ({stats['total_citations']} citations)")
+                    print(f"      └── Best Rank: {stats['best_citation_rank']}")
+                    print(f"      └── Avg Rank: {stats['avg_citation_rank']:.1f}")
+                else:
+                    print(f"      └── ❌ NOT CITED (retrieved but no citations)")
+            else:
+                print(f"   🎯 Target Domain: ❌ NOT RETRIEVED")
+            
+            # Show prompts using this query
+            if len(stats['prompts_using_query']) > 1:
+                print(f"   📝 Prompts using this query:")
+                for j, prompt in enumerate(stats['prompts_using_query'], 1):
+                    short_prompt = prompt[:70] + "..." if len(prompt) > 70 else prompt
+                    print(f"      {j}. {short_prompt}")
+            
+            # Show top domains for this query
+            if stats['all_domains']:
+                print(f"   🌐 Top domains for this query:")
+                for j, domain in enumerate(stats['all_domains'][:5], 1):
+                    status = "⭐" if domain == domain_of_interest else "🔸"
+                    print(f"      {status} {domain}")
+    
     def generate_comprehensive_report(self, domain_of_interest: str = None) -> Dict[str, Any]:
         """
         Generate a comprehensive analytics report
@@ -502,6 +633,7 @@ class SearchAnalytics:
         
         if domain_of_interest:
             report['domain_analysis'] = self.calculate_domain_stats(domain_of_interest)
+            report['query_analysis'] = self.analyze_queries_with_target_domain(domain_of_interest)
             
             # Add response chunks analysis if available
             if self.response_chunks:

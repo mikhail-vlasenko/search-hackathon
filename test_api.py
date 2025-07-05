@@ -40,6 +40,10 @@ def test_custom_domain():
             # Show key metrics
             if result.get('data'):
                 data = result['data']
+                # Dump the full response to JSON for debugging
+                print(f"\n🔍 Full API Response (JSON):")
+                with open('response2.json', 'w') as f:
+                    json.dump(result, f, indent=2, ensure_ascii=False)
                 domain_stats = data.get('domain_detailed_stats', {})
                 
                 print(f"\n📊 Results for {custom_domain}:")
