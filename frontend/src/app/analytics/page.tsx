@@ -179,7 +179,7 @@ export default function AnalyticsPage() {
       }
     >
       <main
-        className={`w-full flex flex-col items-center justify-center min-h-screen ${
+        className={`w-full container flex flex-col items-center justify-center min-h-screen ${
           currentStep === "results" ? "pt-20" : ""
         }`}
       >
