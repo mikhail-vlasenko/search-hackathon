@@ -167,7 +167,6 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
 
             result[query] = query_results
 
-        breakpoint()
         return result
 
     except Exception as e:
