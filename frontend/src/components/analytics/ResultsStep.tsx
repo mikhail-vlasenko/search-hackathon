@@ -524,9 +524,10 @@ export default function ResultsStep({
 
   return (
     <div className="space-y-6">
-      {/* Compact KPI Card */}
-      <div className="flex justify-start">
-        <Card className="w-fit">
+      {/* Top Row: Performance Overview and Competitive Insights */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Performance Overview */}
+        <Card>
           <CardHeader>
             <CardTitle className="text-lg">Performance Overview</CardTitle>
           </CardHeader>
@@ -650,6 +651,141 @@ export default function ResultsStep({
             </div>
           </CardContent>
         </Card>
+
+        {/* Competitive Insights */}
+        {apiResponse?.data?.competitive_insights && (
+          <Card>
+            <CardHeader>
+              <div className="flex items-center space-x-2">
+                <Users className="h-5 w-5 text-blue-500" />
+                <CardTitle className="text-lg">Competitive Insights</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2">
+                <div>
+                  {/* Competitive Advantages */}
+                  {apiResponse.data.competitive_insights.competitive_advantages
+                    ?.length > 0 && (
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-sm text-gray-900 flex items-center space-x-1">
+                        <CheckCircle className="h-4 w-4 text-green-500" />
+                        <span>Competitive Advantages</span>
+                      </h4>
+                      <div className="flex flex-wrap gap-1">
+                        {apiResponse.data.competitive_insights.competitive_advantages
+                          .slice(0, 3)
+                          .map((advantage: string, index: number) => (
+                            <Badge
+                              key={index}
+                              variant="default"
+                              className="text-xs"
+                            >
+                              {advantage}
+                            </Badge>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+                  {/* Improvement Areas */}
+                  {apiResponse.data.competitive_insights.improvement_areas
+                    ?.length > 0 && (
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-sm text-gray-900 flex items-center space-x-1">
+                        <Target className="h-4 w-4 text-orange-500" />
+                        <span>Improvement Areas</span>
+                      </h4>
+                      <div className="flex flex-wrap gap-1">
+                        {apiResponse.data.competitive_insights.improvement_areas
+                          .slice(0, 3)
+                          .map((area: string, index: number) => (
+                            <Badge
+                              key={index}
+                              variant="outline"
+                              className="text-xs"
+                            >
+                              {area}
+                            </Badge>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Key Competitors */}
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-sm text-gray-900 flex items-center space-x-1">
+                    <Link className="h-4 w-4 text-blue-500" />
+                    <span>Top Competitors</span>
+                  </h4>
+                  {apiResponse.data.competitive_insights.key_competitors
+                    ?.length > 0 ? (
+                    <div className="space-y-2">
+                      {apiResponse.data.competitive_insights.key_competitors
+                        .slice(0, 3)
+                        .map((competitor: any, index: number) => {
+                          const domain = competitor.domain.replace(
+                            /^https?:\/\//,
+                            ""
+                          );
+                          const frequency = competitor.frequency;
+                          const isStrong = frequency >= 5;
+                          const isModerate = frequency >= 3 && frequency < 5;
+
+                          return (
+                            <div
+                              key={index}
+                              className="flex items-center justify-between p-2 bg-gray-50 rounded-lg"
+                            >
+                              <div className="flex items-center space-x-2">
+                                <div
+                                  className={`h-2 w-2 rounded-full ${
+                                    isStrong
+                                      ? "bg-red-500"
+                                      : isModerate
+                                      ? "bg-yellow-500"
+                                      : "bg-green-500"
+                                  }`}
+                                />
+                                <span className="text-sm font-medium truncate max-w-[150px]">
+                                  {domain}
+                                </span>
+                              </div>
+                              <div className="flex items-center space-x-2">
+                                <Badge
+                                  variant={
+                                    isStrong
+                                      ? "destructive"
+                                      : isModerate
+                                      ? "default"
+                                      : "secondary"
+                                  }
+                                  className="text-xs"
+                                >
+                                  {frequency} mentions
+                                </Badge>
+                                <span className="text-xs text-gray-500">
+                                  {isStrong
+                                    ? "Strong"
+                                    : isModerate
+                                    ? "Moderate"
+                                    : "Weak"}
+                                </span>
+                              </div>
+                            </div>
+                          );
+                        })}
+                    </div>
+                  ) : (
+                    <p className="text-sm text-gray-500">
+                      No competitor data available
+                    </p>
+                  )}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
       </div>
 
       <div className="max-w-full overflow-x-auto">
@@ -667,126 +803,6 @@ export default function ResultsStep({
           maxHeight="50vh"
         />
       </div>
-
-      {/* Competitive Insights Section */}
-      {apiResponse?.data?.competitive_insights && (
-        <Card>
-          <CardHeader>
-            <div className="flex items-center space-x-2">
-              <Users className="h-5 w-5 text-blue-500" />
-              <CardTitle className="text-lg">Competitive Insights</CardTitle>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Market Position */}
-              <div className="space-y-3">
-                <h4 className="font-semibold text-sm text-gray-900">
-                  Market Position
-                </h4>
-                <div className="flex items-center space-x-2">
-                  <Badge
-                    variant={
-                      apiResponse.data.competitive_insights.market_position ===
-                      "market_leader"
-                        ? "default"
-                        : apiResponse.data.competitive_insights
-                            .market_position === "strong_competitor"
-                        ? "secondary"
-                        : "outline"
-                    }
-                  >
-                    {apiResponse.data.competitive_insights.market_position?.replace(
-                      "_",
-                      " "
-                    )}
-                  </Badge>
-                </div>
-
-                {/* Competitive Advantages */}
-                {apiResponse.data.competitive_insights.competitive_advantages
-                  ?.length > 0 && (
-                  <div className="space-y-2">
-                    <h5 className="font-medium text-xs text-gray-800">
-                      Competitive Advantages
-                    </h5>
-                    <ul className="space-y-1">
-                      {apiResponse.data.competitive_insights.competitive_advantages.map(
-                        (advantage: string, index: number) => (
-                          <li
-                            key={index}
-                            className="flex items-start space-x-1 text-xs"
-                          >
-                            <CheckCircle className="h-3 w-3 text-green-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">{advantage}</span>
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                )}
-
-                {/* Improvement Areas */}
-                {apiResponse.data.competitive_insights.improvement_areas
-                  ?.length > 0 && (
-                  <div className="space-y-2">
-                    <h5 className="font-medium text-xs text-gray-800">
-                      Improvement Areas
-                    </h5>
-                    <ul className="space-y-1">
-                      {apiResponse.data.competitive_insights.improvement_areas.map(
-                        (area: string, index: number) => (
-                          <li
-                            key={index}
-                            className="flex items-start space-x-1 text-xs"
-                          >
-                            <Target className="h-3 w-3 text-orange-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">{area}</span>
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                )}
-              </div>
-
-              {/* Key Competitors */}
-              <div className="space-y-3">
-                <h4 className="font-semibold text-sm text-gray-900">
-                  Key Competitors
-                </h4>
-                {apiResponse.data.competitive_insights.key_competitors?.length >
-                0 ? (
-                  <div className="space-y-2">
-                    {apiResponse.data.competitive_insights.key_competitors
-                      .slice(0, 5)
-                      .map((competitor: any, index: number) => (
-                        <div
-                          key={index}
-                          className="flex items-center justify-between p-2 bg-gray-50 rounded-lg"
-                        >
-                          <div className="flex items-center space-x-2">
-                            <Link className="h-4 w-4 text-gray-400" />
-                            <span className="text-sm font-medium">
-                              {competitor.domain.replace(/^https?:\/\//, "")}
-                            </span>
-                          </div>
-                          <Badge variant="outline" className="text-xs">
-                            {competitor.frequency} mentions
-                          </Badge>
-                        </div>
-                      ))}
-                  </div>
-                ) : (
-                  <p className="text-sm text-gray-500">
-                    No competitor data available
-                  </p>
-                )}
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      )}
 
       {/* Actionable Advice Section */}
       <Card>
