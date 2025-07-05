@@ -4,79 +4,143 @@
     "gemini-2.5-flash": [
       {
         "model": "gemini-2.5-flash",
-        "response": "Identifying the \"best\" AI SEO companies can be subjective, as it depends on specific needs, budget, and industry. However, based on recent recognitions and their stated expertise in AI-driven SEO, here are some prominent companies in Germany: \n\n **Companies Recognized for AI SEO & Digital Marketing:** \n\n *   **AI bees:** This company was recognized by The Manifest as one of the most reviewed SEO and digital marketing leaders in Germany for 2024. They emphasize their use of artificial intelligence and performance-based solutions to help businesses achieve their goals. \n\n *   **IInfotanks:** Positioned as a leading SEO agency in Germany, IInfotanks combines proven tactics with AI-driven enhancements to improve conversion rates and drive relevant traffic. They highlight their ability to \"future-proof\" SEO with AI, including AI-generated smart snippets, voice search optimization, and LLM surfing. \n\n *   **Omnius:** This agency specializes in B2B SaaS SEO and content marketing, and explicitly offers \"AI Search Engine Optimization\" to optimize content for ranking on AI search engines like ChatGPT and Perplexity. They have case studies demonstrating significant organic click growth using AI-powered SEO strategies. \n\n *   **Rankstar.io:** This agency focuses on \"Next-Gen SEO\" by combining traditional SEO with Autosuggest Marketing and LLM Spotlight\u2122. They claim to be the only SEO agency mastering both Google rankings and Autosuggest through extensive R&D, and aim to get brands recommended by AI chatbots like ChatGPT and Gemini. \n\n *   **UnitedAds:** This specialized digital marketing agency offers advanced SEO and AI-driven Google and Microsoft Ads solutions. \n\n **Other Notable Agencies with AI SEO Focus:** \n\n *   **Pearl Lemon:** While a global agency, Pearl Lemon has a presence in Germany and incorporates AI into its content strategies, noting that AI-generated content can perform well when paired with human editing for the German market. \n\n *   **TRYSEO:** This SEO agency in Magdeburg focuses on search engine optimization, AI search optimization, and web design, specializing in medium-sized B2B companies and e-commerce. \n\n **Factors to Consider When Choosing an AI SEO Company:** \n\n *   **AI Integration:** Look for companies that clearly articulate how they use AI in their SEO strategies, beyond just buzzwords. This could include AI for keyword research, content optimization, technical SEO audits, or predictive analytics. \n *   **Proven Results:** Seek agencies that can provide case studies or testimonials demonstrating successful outcomes from their AI-powered SEO campaigns. \n *   **Industry Specialization:** Some agencies specialize in specific industries (e.g., B2B SaaS, e-commerce), which might be beneficial if your business falls into one of those categories. \n *   **Transparency and Communication:** A good agency should be transparent about their methods and provide clear communication regarding their strategies and results. \n *   **Customized Strategies:** The \"best\" company will offer tailored solutions rather than a one-size-fits-all approach, as SEO needs vary greatly between businesses. \n\n It's recommended to conduct further research and consult with a few of these companies to determine the best fit for your specific needs.",
+        "response": "Identifying the \"best\" AI SEO companies can be subjective, as it often depends on specific business needs, industry, and budget. However, several companies in Germany are recognized for their expertise in AI-driven SEO.\n\nSome of the top AI SEO companies and agencies in Germany include:\n\n*   **AI bees** AI bees was recognized as one of the most reviewed SEO and digital marketing leaders in Germany for 2024 by The Manifest. They focus on performance-based solutions and leverage AI to help businesses achieve their goals.\n*   **IInfotanks** IInfotanks is a leading SEO agency in Germany that emphasizes \"Next Gen-SEO services for the AI Era.\" They highlight their use of AI for smart snippets, voice search content optimization, and staying ahead of AI-driven search trends.\n*   **Omnius** Omnius is a B2B SaaS SEO and content marketing agency that specializes in AI Search Engine Optimization, optimizing content to rank on AI search engines like ChatGPT and Perplexity. They have case studies demonstrating significant organic click and signup growth for German-based AI SaaS and Fintech companies.\n*   **Rankstar.io** This agency positions itself as a \"Next-Gen SEO Agency\" that combines SEO services with Autosuggest Marketing and LLM Spotlight\u2122. They aim to get brands recommended by AI chatbots like ChatGPT and Gemini.\n*   **UnitedAds** UnitedAds offers advanced SEO and AI-driven Google and Microsoft Ads solutions, focusing on personalized strategies and real-time optimization.\n*   **Pearl Lemon** This agency emphasizes its expertise in technical SEO, keyword research, and multilingual SEO for the German market, including the use of AI for content scaffolding while ensuring human editing for quality.\n*   **TRYSEO** Based in Magdeburg, TRYSEO specializes in SEO, AI search optimization, and web design, particularly for medium-sized B2B companies and e-commerce.\n\nOther notable agencies and companies offering strong SEO services, often incorporating data-driven and advanced strategies that align with AI principles, include:\n\n*   **SmartSites** SmartSites offers AI-powered SEO services, including in-depth SEO analysis and technical SEO audits, utilizing various cutting-edge software and tools.\n*   **WebFX** WebFX provides AI-driven SEO solutions with its in-house technology and a commitment to using AI to drive revenue for clients.\n*   **Thrive Internet Marketing Agency** Thrive focuses on harnessing AI-driven SEO solutions for keyword research, content strategy development, and content creation.\n*   **SEO Agentur Hamburg** Recognized among Germany's top 100 SEO agencies, they combine technical expertise, tailored content, and data-driven approaches.\n*   **Seotrust** This Frankfurt-based agency specializes in search engine optimization and digital communication, using data-driven strategies.",
         "web_searches": {
           "best AI SEO companies Germany 2024": {
-            "https://www.ai-bees.io/post/ai-bees-leads-2024-seo-digital-marketing-and-call-center-rankings": [
-              1
-            ],
-            "https://iinfotanks.com": [
-              2
-            ],
-            "https://www.omnius.so/blog/german-seo-agencies": [
-              3,
-              5
-            ],
-            "https://rankstar.io/seo-agency-in-germany/": [
-              4
-            ],
-            "https://pearllemon.com": [
-              6
-            ],
-            "https://agencies.semrush.com/list/seo/germany/": [
-              7
-            ],
-            "https://semrush.com": [
-              7
-            ]
+            "https://www.ai-bees.io/post/ai-bees-leads-2024-seo-digital-marketing-and-call-center-rankings": {
+              "citations": [
+                1
+              ],
+              "contents": [
+                "They focus on performance-based solutions and leverage AI to help businesses achieve their goals."
+              ]
+            },
+            "https://iinfotanks.com": {
+              "citations": [
+                2
+              ],
+              "contents": [
+                "*   **IInfotanks** IInfotanks is a leading SEO agency in Germany that emphasizes \"Next Gen-SEO services for the AI Era.\" They highlight their use of AI for smart snippets, voice search content optimization, and staying ahead of AI-driven search trends."
+              ]
+            },
+            "https://www.omnius.so/blog/german-seo-agencies": {
+              "citations": [
+                3,
+                5,
+                11,
+                12
+              ],
+              "contents": [
+                "They have case studies demonstrating significant organic click and signup growth for German-based AI SaaS and Fintech companies.",
+                "*   **UnitedAds** UnitedAds offers advanced SEO and AI-driven Google and Microsoft Ads solutions, focusing on personalized strategies and real-time optimization.",
+                "*   **SEO Agentur Hamburg** Recognized among Germany's top 100 SEO agencies, they combine technical expertise, tailored content, and data-driven approaches.",
+                "*   **Seotrust** This Frankfurt-based agency specializes in search engine optimization and digital communication, using data-driven strategies."
+              ]
+            },
+            "https://rankstar.io/seo-agency-in-germany/": {
+              "citations": [
+                4
+              ],
+              "contents": [
+                "They aim to get brands recommended by AI chatbots like ChatGPT and Gemini."
+              ]
+            },
+            "https://pearllemon.com": {
+              "citations": [
+                6
+              ],
+              "contents": [
+                "*   **Pearl Lemon** This agency emphasizes its expertise in technical SEO, keyword research, and multilingual SEO for the German market, including the use of AI for content scaffolding while ensuring human editing for quality."
+              ]
+            },
+            "https://agencies.semrush.com/list/seo/germany/": {
+              "citations": [
+                7
+              ],
+              "contents": [
+                "*   **TRYSEO** Based in Magdeburg, TRYSEO specializes in SEO, AI search optimization, and web design, particularly for medium-sized B2B companies and e-commerce."
+              ]
+            },
+            "https://influencermarketinghub.com/seo-agency/ai-seo-agencies/": {
+              "citations": [
+                8,
+                9,
+                10
+              ],
+              "contents": [
+                "*   **SmartSites** SmartSites offers AI-powered SEO services, including in-depth SEO analysis and technical SEO audits, utilizing various cutting-edge software and tools.",
+                "*   **WebFX** WebFX provides AI-driven SEO solutions with its in-house technology and a commitment to using AI to drive revenue for clients.",
+                "*   **Thrive Internet Marketing Agency** Thrive focuses on harnessing AI-driven SEO solutions for keyword research, content strategy development, and content creation."
+              ]
+            }
           },
           "top AI SEO agencies Germany": {
-            "https://ai-bees.io": [
-              1
-            ],
-            "https://iinfotanks.com": [
-              2
-            ],
-            "https://www.omnius.so/blog/german-seo-agencies": [
-              3,
-              5
-            ],
-            "https://rankstar.io/seo-agency-in-germany/": [
-              4
-            ],
-            "https://pearllemon.com/seo-agency-in-germany/": [
-              6
-            ],
-            "https://agencies.semrush.com/list/seo/germany/": [
-              7
-            ],
-            "https://semrush.com": [
-              7
-            ]
-          },
-          "leading AI SEO service providers Germany": {
-            "https://ai-bees.io": [
-              1
-            ],
-            "https://www.iinfotanks.com/seo-services-in-germany/": [
-              2
-            ],
-            "https://www.omnius.so/blog/german-seo-agencies": [
-              3,
-              5
-            ],
-            "https://rankstar.io/seo-agency-in-germany/": [
-              4
-            ],
-            "https://pearllemon.com/seo-agency-in-germany/": [
-              6
-            ],
-            "https://agencies.semrush.com/list/seo/germany/": [
-              7
-            ],
-            "https://semrush.com": [
-              7
-            ]
+            "https://ai-bees.io": {
+              "citations": [
+                1
+              ],
+              "contents": [
+                "They focus on performance-based solutions and leverage AI to help businesses achieve their goals."
+              ]
+            },
+            "https://iinfotanks.com": {
+              "citations": [
+                2
+              ],
+              "contents": [
+                "*   **IInfotanks** IInfotanks is a leading SEO agency in Germany that emphasizes \"Next Gen-SEO services for the AI Era.\" They highlight their use of AI for smart snippets, voice search content optimization, and staying ahead of AI-driven search trends."
+              ]
+            },
+            "https://www.omnius.so/blog/german-seo-agencies": {
+              "citations": [
+                3,
+                5,
+                11,
+                12
+              ],
+              "contents": [
+                "They have case studies demonstrating significant organic click and signup growth for German-based AI SaaS and Fintech companies.",
+                "*   **UnitedAds** UnitedAds offers advanced SEO and AI-driven Google and Microsoft Ads solutions, focusing on personalized strategies and real-time optimization.",
+                "*   **SEO Agentur Hamburg** Recognized among Germany's top 100 SEO agencies, they combine technical expertise, tailored content, and data-driven approaches.",
+                "*   **Seotrust** This Frankfurt-based agency specializes in search engine optimization and digital communication, using data-driven strategies."
+              ]
+            },
+            "https://rankstar.io/seo-agency-in-germany/": {
+              "citations": [
+                4
+              ],
+              "contents": [
+                "They aim to get brands recommended by AI chatbots like ChatGPT and Gemini."
+              ]
+            },
+            "https://pearllemon.com/seo-agency-in-germany/": {
+              "citations": [
+                6
+              ],
+              "contents": [
+                "*   **Pearl Lemon** This agency emphasizes its expertise in technical SEO, keyword research, and multilingual SEO for the German market, including the use of AI for content scaffolding while ensuring human editing for quality."
+              ]
+            },
+            "https://agencies.semrush.com/list/seo/germany/": {
+              "citations": [
+                7
+              ],
+              "contents": [
+                "*   **TRYSEO** Based in Magdeburg, TRYSEO specializes in SEO, AI search optimization, and web design, particularly for medium-sized B2B companies and e-commerce."
+              ]
+            },
+            "https://influencermarketinghub.com": {
+              "citations": [
+                8,
+                9,
+                10
+              ],
+              "contents": [
+                "*   **SmartSites** SmartSites offers AI-powered SEO services, including in-depth SEO analysis and technical SEO audits, utilizing various cutting-edge software and tools.",
+                "*   **WebFX** WebFX provides AI-driven SEO solutions with its in-house technology and a commitment to using AI to drive revenue for clients.",
+                "*   **Thrive Internet Marketing Agency** Thrive focuses on harnessing AI-driven SEO solutions for keyword research, content strategy development, and content creation."
+              ]
+            }
           }
         },
         "success": true,
@@ -89,12 +153,11 @@
       "total_runs": 1,
       "successful_runs": 1,
       "success_rate": 1.0,
-      "total_web_searches": 3,
-      "unique_web_searches": 3,
+      "total_web_searches": 2,
+      "unique_web_searches": 2,
       "web_search_queries": [
         "best AI SEO companies Germany 2024",
-        "top AI SEO agencies Germany",
-        "leading AI SEO service providers Germany"
+        "top AI SEO agencies Germany"
       ]
     }
   }
