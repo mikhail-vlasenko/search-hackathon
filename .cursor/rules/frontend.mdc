@@ -1,0 +1,5 @@
+---
+alwaysApply: true
+---
+
+The root directory for the frontend is `./frontend`. We use Next.js App router, Tailwind CSS, and Shadcn UI and pnpm for package management. We only support light mode.
