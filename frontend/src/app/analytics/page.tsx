@@ -128,27 +128,6 @@ export default function AnalyticsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 animate-fadeIn">
-      <header className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">
-                AI Search Analytics Platform
-              </h1>
-              <p className="text-sm text-gray-600 mt-1">
-                Analyzing: {websiteUrl}
-              </p>
-            </div>
-            <button
-              onClick={() => router.push("/")}
-              className="text-sm text-blue-600 hover:text-blue-800 transition-colors"
-            >
-              ← Back to Home
-            </button>
-          </div>
-        </div>
-      </header>
-
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {currentStep === "prompts" && (
           <PromptsStep
