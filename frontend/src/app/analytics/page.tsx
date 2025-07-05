@@ -179,9 +179,7 @@ export default function AnalyticsPage() {
       }
     >
       <main
-        className={`w-full container flex flex-col items-center justify-center min-h-screen ${
-          currentStep === "results" ? "pt-20" : ""
-        }`}
+        className={`w-full container flex flex-col items-center pt-10 min-h-screen`}
       >
         {currentStep === "prompts" && (
           <PromptsStep

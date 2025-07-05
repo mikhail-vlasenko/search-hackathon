@@ -54,6 +54,12 @@ export interface AnalysisResult {
     count: number;
   }>;
   userDomainPositions?: number[]; // positions where user domain appears
+  // New fields from query_analysis
+  targetDomainRetrieved: boolean; // whether target domain was retrieved
+  targetDomainCited: boolean; // whether target domain was cited
+  allDomains: string[]; // all domains found in the query
+  promptsUsingQuery: string[]; // prompts that use this query
+  totalCitations: number; // total number of citations for the target domain
 }
 
 export interface WebsiteAnalysis {

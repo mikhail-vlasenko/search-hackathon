@@ -97,6 +97,57 @@ const CitationSparkline = ({ data }: { data: AnalysisResult }) => {
   );
 };
 
+// Citation Positions Distribution Component
+const CitationPositionsDistribution = ({
+  citationPositions,
+}: {
+  citationPositions: number[];
+}) => {
+  if (!citationPositions || citationPositions.length === 0) {
+    return null;
+  }
+
+  // Create distribution data from citation positions
+  const positionCounts: { [position: number]: number } = {};
+  citationPositions.forEach((position) => {
+    positionCounts[position] = (positionCounts[position] || 0) + 1;
+  });
+
+  const maxPosition = Math.max(...citationPositions);
+  const distributionData = [];
+  for (let i = 1; i <= maxPosition; i++) {
+    distributionData.push({
+      position: i,
+      count: positionCounts[i] || 0,
+    });
+  }
+
+  return (
+    <div className="w-full h-12">
+      <ResponsiveContainer width="100%" height="100%">
+        <ComposedChart
+          data={distributionData}
+          margin={{ top: 2, right: 2, bottom: 2, left: 2 }}
+        >
+          <XAxis
+            dataKey="position"
+            tick={{ fontSize: 8 }}
+            axisLine={false}
+            tickLine={false}
+          />
+          <Bar
+            dataKey="count"
+            fill="#3b82f6"
+            stroke="#2563eb"
+            strokeWidth={0.5}
+            radius={[1, 1, 0, 0]}
+          />
+        </ComposedChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
 export default function ResultsStep({
   analysis,
   onNewAnalysis,
@@ -128,61 +179,36 @@ export default function ResultsStep({
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <div className="">Frequency</div>
+                <div className="">Prompts Using Query</div>
               </TooltipTrigger>
               <TooltipContent>
-                <p>How many prompts this query appears in</p>
+                <p>Number of prompts that generated this query</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         ),
         cell: (info: any) => {
           const promptCount = info.getValue() as number;
-          const percentage = (promptCount / analysis.results.length) * 100;
-          return (
-            <span className={`font-medium `}>
-              {promptCount}{" "}
-              <span className="text-slate-500">({percentage.toFixed(0)}%)</span>
-            </span>
-          );
+          return <span className="font-medium">{promptCount}</span>;
         },
       },
-      // {
-      //   accessorKey: "category",
-      //   header: () => (
-      //     <TooltipProvider>
-      //       <Tooltip>
-      //         <TooltipTrigger asChild>
-      //           <div className="">Category</div>
-      //         </TooltipTrigger>
-      //         <TooltipContent>
-      //           <p>The topic category this query belongs to</p>
-      //         </TooltipContent>
-      //       </Tooltip>
-      //     </TooltipProvider>
-      //   ),
-      //   cell: createCellRenderer.badge("secondary"),
-      // },
       {
-        accessorKey: "isMentioned",
+        accessorKey: "targetDomainRetrieved",
         header: () => (
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <div className="">Domain Found</div>
+                <div className="">Domain Retrieved</div>
               </TooltipTrigger>
               <TooltipContent>
-                <p>
-                  Whether your domain appears in AI search results for this
-                  query
-                </p>
+                <p>Whether your domain was retrieved in search results</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         ),
         cell: (info: any) => {
-          const isMentioned = info.getValue() as boolean;
-          return isMentioned ? (
+          const retrieved = info.getValue() as boolean;
+          return retrieved ? (
             <Badge variant="default" className="bg-green-100 text-green-800">
               Yes
             </Badge>
@@ -191,63 +217,31 @@ export default function ResultsStep({
           );
         },
       },
-      // {
-      //   accessorKey: "averageRanking",
-      //   header: () => (
-      //     <TooltipProvider>
-      //       <Tooltip>
-      //         <TooltipTrigger asChild>
-      //           <div className="">Avg Ranking</div>
-      //         </TooltipTrigger>
-      //         <TooltipContent>
-      //           <p>
-      //             Average citation ranking position when your domain appears
-      //             (lower is better)
-      //           </p>
-      //         </TooltipContent>
-      //       </Tooltip>
-      //     </TooltipProvider>
-      //   ),
-      //   cell: (info: any) => {
-      //     const ranking = info.getValue() as number;
-      //     if (ranking === 0) {
-      //       return <span className="text-red-500">N/A</span>;
-      //     }
-      //     const colorClass =
-      //       ranking <= 3
-      //         ? "text-green-600"
-      //         : ranking <= 5
-      //         ? "text-yellow-600"
-      //         : "text-red-600";
-      //     return (
-      //       <span className={`font-bold ${colorClass}`}>
-      //         #{ranking.toFixed(1)}
-      //       </span>
-      //     );
-      //   },
-      // },
-      // {
-      //   accessorKey: "citationDistribution",
-      //   header: () => (
-      //     <TooltipProvider>
-      //       <Tooltip>
-      //         <TooltipTrigger asChild>
-      //           <div className="">Citation Distribution</div>
-      //         </TooltipTrigger>
-      //         <TooltipContent>
-      //           <p>
-      //             Distribution of citations by ranking position. Red lines show
-      //             where your domain appears.
-      //           </p>
-      //         </TooltipContent>
-      //       </Tooltip>
-      //     </TooltipProvider>
-      //   ),
-      //   cell: (info: any) => {
-      //     const row = info.row.original as AnalysisResult;
-      //     return <CitationSparkline data={row} />;
-      //   },
-      // },
+      {
+        accessorKey: "targetDomainCited",
+        header: () => (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="">Domain Cited</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Whether your domain was cited in AI responses</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ),
+        cell: (info: any) => {
+          const cited = info.getValue() as boolean;
+          return cited ? (
+            <Badge variant="default" className="bg-blue-100 text-blue-800">
+              Yes
+            </Badge>
+          ) : (
+            <Badge variant="secondary">No</Badge>
+          );
+        },
+      },
       {
         accessorKey: "totalSources",
         header: () => (
@@ -257,7 +251,7 @@ export default function ResultsStep({
                 <div className="">Total Sources</div>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Total number of sources found across all related searches</p>
+                <p>Total number of sources found for this query</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -265,6 +259,25 @@ export default function ResultsStep({
         cell: (info: any) => {
           const sources = info.getValue() as number;
           return <span className="text-gray-700">{sources}</span>;
+        },
+      },
+      {
+        accessorKey: "totalCitations",
+        header: () => (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="">Citations</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Total number of citations for your domain</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ),
+        cell: (info: any) => {
+          const citations = info.getValue() as number;
+          return <span className="text-gray-700">{citations}</span>;
         },
       },
     ],
@@ -298,8 +311,8 @@ export default function ResultsStep({
             </h4>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span className="text-sm">Domain Found</span>
-                {result.isMentioned ? (
+                <span className="text-sm">Domain Retrieved</span>
+                {result.targetDomainRetrieved ? (
                   <Badge
                     variant="default"
                     className="bg-green-100 text-green-800 text-xs"
@@ -311,6 +324,27 @@ export default function ResultsStep({
                     No
                   </Badge>
                 )}
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Domain Cited</span>
+                {result.targetDomainCited ? (
+                  <Badge
+                    variant="default"
+                    className="bg-blue-100 text-blue-800 text-xs"
+                  >
+                    Yes
+                  </Badge>
+                ) : (
+                  <Badge variant="secondary" className="text-xs">
+                    No
+                  </Badge>
+                )}
+              </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Total Citations</span>
+                <span className="text-sm font-medium text-gray-700">
+                  {result.totalCitations}
+                </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-sm">Average Ranking</span>
@@ -331,50 +365,15 @@ export default function ResultsStep({
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-sm">Search Coverage</span>
-                <span
-                  className={`text-sm font-medium ${
-                    result.totalSearches === 0
-                      ? "text-gray-400"
-                      : (result.appearsInSearches / result.totalSearches) *
-                          100 >=
-                        80
-                      ? "text-green-600"
-                      : (result.appearsInSearches / result.totalSearches) *
-                          100 >=
-                        50
-                      ? "text-yellow-600"
-                      : "text-red-600"
-                  }`}
-                >
-                  {result.appearsInSearches}/{result.totalSearches} (
-                  {result.totalSearches > 0
-                    ? (
-                        (result.appearsInSearches / result.totalSearches) *
-                        100
-                      ).toFixed(0)
-                    : 0}
-                  %)
-                </span>
-              </div>
-              <div className="flex justify-between">
                 <span className="text-sm">Category</span>
                 <Badge variant="secondary" className="text-xs">
                   {result.category}
                 </Badge>
               </div>
               <div className="flex justify-between">
-                <span className="text-sm">Prompt Frequency</span>
-                <span
-                  className={`text-sm font-medium ${
-                    result.promptCount >= 3
-                      ? "text-green-600"
-                      : result.promptCount >= 2
-                      ? "text-yellow-600"
-                      : "text-red-600"
-                  }`}
-                >
-                  {result.promptCount} prompts
+                <span className="text-sm">Prompts Using Query</span>
+                <span className="text-sm font-medium text-gray-700">
+                  {result.promptCount}
                 </span>
               </div>
             </div>
@@ -463,6 +462,48 @@ export default function ResultsStep({
 
         <div>
           <h4 className="font-medium text-sm text-muted-foreground mb-2">
+            All Domains Found
+          </h4>
+          <div className="max-h-32 overflow-y-auto">
+            <div className="grid grid-cols-2 gap-1">
+              {result.allDomains.map((domain, index) => (
+                <div
+                  key={index}
+                  className="text-xs bg-gray-50 px-2 py-1 rounded truncate"
+                  title={domain}
+                >
+                  {domain}
+                </div>
+              ))}
+            </div>
+            {result.allDomains.length === 0 && (
+              <span className="text-xs text-gray-500 italic">
+                No domains found
+              </span>
+            )}
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-medium text-sm text-muted-foreground mb-2">
+            Prompts Using This Query
+          </h4>
+          <div className="max-h-24 overflow-y-auto space-y-1">
+            {result.promptsUsingQuery.map((prompt, index) => (
+              <div key={index} className="text-xs bg-blue-50 px-2 py-1 rounded">
+                {prompt}
+              </div>
+            ))}
+            {result.promptsUsingQuery.length === 0 && (
+              <span className="text-xs text-gray-500 italic">
+                No prompts found
+              </span>
+            )}
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-medium text-sm text-muted-foreground mb-2">
             Analysis Date
           </h4>
           <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -476,16 +517,25 @@ export default function ResultsStep({
             Recommendations
           </h4>
           <div className="space-y-2">
-            {!result.isMentioned && (
+            {!result.targetDomainRetrieved && (
               <div className="flex items-start space-x-2 text-sm">
                 <Target className="h-4 w-4 text-red-500 mt-0.5" />
                 <span>
-                  Your domain doesn't appear in AI search results for this query
+                  Your domain wasn't retrieved in search results for this query
                   - create targeted content to increase visibility
                 </span>
               </div>
             )}
-            {result.isMentioned && result.averageRanking > 5 && (
+            {result.targetDomainRetrieved && !result.targetDomainCited && (
+              <div className="flex items-start space-x-2 text-sm">
+                <Target className="h-4 w-4 text-orange-500 mt-0.5" />
+                <span>
+                  Your domain was retrieved but not cited - improve content
+                  quality and authority to get citations
+                </span>
+              </div>
+            )}
+            {result.targetDomainRetrieved && result.averageRanking > 5 && (
               <div className="flex items-start space-x-2 text-sm">
                 <Target className="h-4 w-4 text-orange-500 mt-0.5" />
                 <span>
@@ -494,24 +544,14 @@ export default function ResultsStep({
                 </span>
               </div>
             )}
-            {result.isMentioned &&
-              (result.appearsInSearches / result.totalSearches) * 100 < 50 && (
-                <div className="flex items-start space-x-2 text-sm">
-                  <Eye className="h-4 w-4 text-blue-500 mt-0.5" />
-                  <span>
-                    Low search coverage - expand content to appear in more
-                    related searches
-                  </span>
-                </div>
-              )}
-            {result.isMentioned &&
-              result.averageRanking <= 3 &&
-              (result.appearsInSearches / result.totalSearches) * 100 >= 80 && (
+            {result.targetDomainRetrieved &&
+              result.targetDomainCited &&
+              result.averageRanking <= 3 && (
                 <div className="flex items-start space-x-2 text-sm">
                   <TrendingUp className="h-4 w-4 text-green-500 mt-0.5" />
                   <span>
-                    Excellent performance! Your domain ranks well and appears
-                    consistently - maintain content quality
+                    Excellent performance! Your domain is retrieved, cited, and
+                    ranks well - maintain content quality
                   </span>
                 </div>
               )}
@@ -579,23 +619,45 @@ export default function ResultsStep({
 
     // Fallback to original analysis if no API recommendations
     if (advice.length === 0) {
-      const notMentioned = analysis.results.filter((r) => !r.isMentioned);
+      const notRetrieved = analysis.results.filter(
+        (r) => !r.targetDomainRetrieved
+      );
+      const retrievedButNotCited = analysis.results.filter(
+        (r) => r.targetDomainRetrieved && !r.targetDomainCited
+      );
       const poorlyRanked = analysis.results.filter(
-        (r) => r.isMentioned && r.averageRanking > 5
+        (r) => r.targetDomainRetrieved && r.averageRanking > 5
       );
 
-      if (notMentioned.length > 0) {
+      if (notRetrieved.length > 0) {
         advice.push({
           type: "critical",
-          title: "Missing Domain Coverage",
-          description: `Your domain doesn't appear in ${notMentioned.length} out of ${analysis.results.length} AI search queries.`,
+          title: "Missing Domain Retrieval",
+          description: `Your domain wasn't retrieved in ${notRetrieved.length} out of ${analysis.results.length} AI search queries.`,
           actions: [
             "Create comprehensive content targeting these specific query topics",
             "Ensure your content directly answers the questions users are asking",
             "Optimize meta descriptions and titles for better AI search comprehension",
+            "Improve SEO fundamentals to increase search visibility",
           ],
           priority: "High",
           impact: "High Visibility Increase",
+        });
+      }
+
+      if (retrievedButNotCited.length > 0) {
+        advice.push({
+          type: "warning",
+          title: "Retrieved but Not Cited",
+          description: `Your domain was retrieved but not cited in ${retrievedButNotCited.length} queries.`,
+          actions: [
+            "Improve content quality and depth for better authority signals",
+            "Add more relevant internal and external links",
+            "Update content with latest information and statistics",
+            "Create more authoritative and comprehensive content",
+          ],
+          priority: "Medium",
+          impact: "Better Citation Rate",
         });
       }
 
@@ -608,6 +670,7 @@ export default function ResultsStep({
             "Improve content quality and depth for better authority signals",
             "Add more relevant internal and external links",
             "Update content with latest information and statistics",
+            "Optimize content structure for better search engine understanding",
           ],
           priority: "Medium",
           impact: "Better Positioning",
@@ -650,14 +713,31 @@ export default function ResultsStep({
   // Prepare data for pie chart
   const domainCoverageData = [
     {
-      name: "Found",
-      value: analysis.results.filter((r) => r.isMentioned).length,
+      name: "Retrieved",
+      value: analysis.results.filter((r) => r.targetDomainRetrieved).length,
       color: "#16a34a", // green-600
     },
     {
       name: "Missing",
-      value: analysis.results.filter((r) => !r.isMentioned).length,
+      value: analysis.results.filter((r) => !r.targetDomainRetrieved).length,
       color: "#dc2626", // red-600
+    },
+  ];
+
+  // Prepare data for citation chart (of retrieved domains)
+  const retrievedResults = analysis.results.filter(
+    (r) => r.targetDomainRetrieved
+  );
+  const citationData = [
+    {
+      name: "Cited",
+      value: retrievedResults.filter((r) => r.targetDomainCited).length,
+      color: "#2563eb", // blue-600
+    },
+    {
+      name: "Not Cited",
+      value: retrievedResults.filter((r) => !r.targetDomainCited).length,
+      color: "#9ca3af", // gray-400
     },
   ];
 
@@ -684,14 +764,22 @@ export default function ResultsStep({
                   <div className="flex items-center pl-2 gap-2">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-green-600">
-                        {analysis.results.filter((r) => r.isMentioned).length}
+                        {
+                          analysis.results.filter(
+                            (r) => r.targetDomainRetrieved
+                          ).length
+                        }
                       </div>
-                      <p className="text-xs text-muted-foreground">Found</p>
+                      <p className="text-xs text-muted-foreground">Retrieved</p>
                     </div>
                     <div className="text-gray-300 text-lg font-light">/</div>
                     <div className="">
                       <div className="text-2xl font-bold text-red-600">
-                        {analysis.results.filter((r) => !r.isMentioned).length}
+                        {
+                          analysis.results.filter(
+                            (r) => !r.targetDomainRetrieved
+                          ).length
+                        }
                       </div>
                       <p className="text-xs text-muted-foreground">Missing</p>
                     </div>
@@ -703,24 +791,41 @@ export default function ResultsStep({
                   <h3 className="text-sm font-medium text-gray-700">
                     How well does your domain rank?
                   </h3>
-                  <div className="pl-2">
-                    <div className="text-2xl font-bold text-blue-600">
-                      {(() => {
-                        const rankedResults = analysis.results.filter(
-                          (r) => r.averageRanking > 0
-                        );
-                        if (rankedResults.length === 0) return "N/A";
-                        const avgRanking =
-                          rankedResults.reduce(
-                            (sum, r) => sum + r.averageRanking,
-                            0
-                          ) / rankedResults.length;
-                        return `#${avgRanking.toFixed(1)}`;
-                      })()}
+                  <div className="flex items-start space-x-4">
+                    <div className="pl-2">
+                      <div className="text-2xl font-bold text-blue-600">
+                        {(() => {
+                          const rankedResults = analysis.results.filter(
+                            (r) =>
+                              r.targetDomainRetrieved && r.averageRanking > 0
+                          );
+                          if (rankedResults.length === 0) return "N/A";
+                          const avgRanking =
+                            rankedResults.reduce(
+                              (sum, r) => sum + r.averageRanking,
+                              0
+                            ) / rankedResults.length;
+                          return `#${avgRanking.toFixed(1)}`;
+                        })()}
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        Average citation position
+                      </p>
                     </div>
-                    <p className="text-xs text-muted-foreground">
-                      Average citation position
-                    </p>
+
+                    {/* Citation Positions Distribution */}
+                    {apiResponse?.data?.domain_analysis?.citation_positions && (
+                      <div className="flex-1 max-w-[120px]">
+                        <CitationPositionsDistribution
+                          citationPositions={
+                            apiResponse.data.domain_analysis.citation_positions
+                          }
+                        />
+                        <p className="text-xs text-gray-500 mt-1">
+                          Position distribution
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -880,51 +985,136 @@ export default function ResultsStep({
           </CardContent>
         </Card>
 
-        {/* Domain Coverage Pie Chart */}
-        <div className="max-w-sm flex-1 shrink-0 min-w-[600px]">
-          <div className="mb-3">
-            <h3 className="text-lg font-semibold">Domain Coverage</h3>
-            <p className="text-sm text-gray-600">
-              Distribution of queries where your domain appears
-            </p>
-          </div>
-          <div className="flex items-center justify-center h-48">
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={domainCoverageData}
-                  cx="50%"
-                  cy="50%"
-                  outerRadius={60}
-                  innerRadius={30}
-                  paddingAngle={2}
-                  dataKey="value"
-                  label={({ name, value, percent }) =>
-                    `${name}: ${value} (${((percent || 0) * 100).toFixed(0)}%)`
-                  }
-                  labelLine={false}
-                >
-                  {domainCoverageData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-          <div className="flex justify-center space-x-4 mt-2">
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-green-600 rounded-full"></div>
-              <span className="text-sm font-medium">
-                Found ({domainCoverageData[0].value})
-              </span>
+        {/* Charts Container */}
+        <div className="min-w-[600px]">
+          <div className="flex gap-6">
+            {/* Domain Coverage Pie Chart */}
+            <div className="flex-1">
+              <div className="mb-3">
+                <h3 className="text-lg font-semibold">Domain Coverage</h3>
+                <p className="text-sm text-gray-600">
+                  Distribution of queries where your domain appears
+                </p>
+              </div>
+              <div className="flex items-center justify-center h-48">
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={domainCoverageData}
+                      cx="50%"
+                      cy="50%"
+                      outerRadius={60}
+                      innerRadius={30}
+                      paddingAngle={2}
+                      dataKey="value"
+                      labelLine={false}
+                    >
+                      {domainCoverageData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={entry.color} />
+                      ))}
+                    </Pie>
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
+              <div className="flex justify-center space-x-4 mt-2">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-green-600 rounded-full"></div>
+                  <span className="text-sm font-medium">
+                    Retrieved ({domainCoverageData[0].value})
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-red-600 rounded-full"></div>
+                  <span className="text-sm font-medium">
+                    Missing ({domainCoverageData[1].value})
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-red-600 rounded-full"></div>
-              <span className="text-sm font-medium">
-                Missing ({domainCoverageData[1].value})
-              </span>
+
+            {/* Citation Rate Chart */}
+            <div className="w-72">
+              <div className="mb-3">
+                <h3 className="text-base font-semibold">Citation Rate</h3>
+                <p className="text-sm text-gray-600">
+                  Of retrieved domains, how many got cited
+                </p>
+              </div>
+              <div className="flex items-center justify-center h-48">
+                {retrievedResults.length > 0 ? (
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie
+                        data={citationData}
+                        cx="50%"
+                        cy="50%"
+                        outerRadius={45}
+                        innerRadius={20}
+                        paddingAngle={2}
+                        dataKey="value"
+                        labelLine={false}
+                      >
+                        {citationData.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={entry.color} />
+                        ))}
+                      </Pie>
+                    </PieChart>
+                  </ResponsiveContainer>
+                ) : (
+                  <div className="flex flex-col items-center justify-center h-full text-gray-500">
+                    <FileText className="h-8 w-8 mb-2" />
+                    <p className="text-sm text-center">
+                      No retrieved domains
+                      <br />
+                      to analyze
+                    </p>
+                  </div>
+                )}
+              </div>
+              <div className="flex justify-center space-x-4 mt-2">
+                {retrievedResults.length > 0 ? (
+                  <>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                      <span className="text-sm font-medium">
+                        Cited ({citationData[0].value})
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                      <span className="text-sm font-medium">
+                        Not Cited ({citationData[1].value})
+                      </span>
+                    </div>
+                  </>
+                ) : (
+                  <span className="text-sm text-gray-500">
+                    No data to display
+                  </span>
+                )}
+              </div>
             </div>
           </div>
+
+          {/* Citation Positions Distribution */}
+          {apiResponse?.data?.domain_analysis?.citation_positions && (
+            <div className="mt-4">
+              <div className="mb-2">
+                <h4 className="text-sm font-medium text-gray-700">
+                  Citation Positions Distribution
+                </h4>
+                <p className="text-xs text-gray-500">
+                  Position distribution of your domain citations across all
+                  responses
+                </p>
+              </div>
+              <CitationPositionsDistribution
+                citationPositions={
+                  apiResponse.data.domain_analysis.citation_positions
+                }
+              />
+            </div>
+          )}
         </div>
       </div>
 
@@ -936,7 +1126,7 @@ export default function ResultsStep({
           initialSorting={[{ id: "promptCount", desc: true }]}
           getRowClassName={(row) => {
             const result = row.original as AnalysisResult;
-            return result.isMentioned === false
+            return result.targetDomainRetrieved === false
               ? "bg-red-50 border-red-200"
               : "";
           }}
