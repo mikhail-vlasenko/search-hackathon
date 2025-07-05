@@ -291,30 +291,39 @@
       }
     },
     "domain_analysis": {
-      "total_appearances": 3,
-      "total_citations": 3,
-      "retrieval_rate": 0.125,
+      "total_appearances": 7,
+      "total_citations": 7,
+      "retrieval_rate": 0.2916666666666667,
       "usage_rate": 1,
-      "avg_citation_rank": 18,
-      "min_citation_rank": 18,
+      "avg_citation_rank": 9.142857142857142,
+      "min_citation_rank": 8,
       "prompt_appearances": [
-        "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+        "cheapest bicycle to buy in berlin",
+        "cycle fast; city bikes; berlin"
       ],
       "query_appearances": [
-        "Fahrradgeschäfte Deutschland Rennrad",
-        "Fahrradhelm kaufen Deutschland",
-        "Fahrrad kaufen Deutschland"
+        "cheapest bicycle Berlin",
+        "used bicycles Berlin",
+        "budget bicycles Berlin",
+        "affordable bikes Berlin",
+        "fast city bikes Berlin",
+        "Berlin bike shops fast city bikes",
+        "high-performance city bikes Berlin"
       ],
       "citation_positions": [
-        18,
-        18,
-        18
+        10,
+        10,
+        10,
+        10,
+        8,
+        8,
+        8
       ]
     },
     "query_analysis": {
       "cheapest bicycle Berlin": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
+        "target_domain_retrieved": true,
+        "target_domain_cited": true,
         "total_sources": 9,
         "prompts_using_query": [
           "cheapest bicycle to buy in berlin"
@@ -330,18 +339,20 @@
           "bikeopia.com",
           "reddit.com"
         ],
-        "target_domain_citations": [],
+        "target_domain_citations": [
+          10
+        ],
         "prompt_count": 1,
         "unique_prompts": 1,
         "total_unique_sources": 9,
         "avg_sources_per_prompt": 9,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
+        "best_citation_rank": 10,
+        "avg_citation_rank": 10,
+        "total_citations": 1
       },
       "used bicycles Berlin": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
+        "target_domain_retrieved": true,
+        "target_domain_cited": true,
         "total_sources": 9,
         "prompts_using_query": [
           "cheapest bicycle to buy in berlin"
@@ -357,18 +368,20 @@
           "bikeopia.com",
           "reddit.com"
         ],
-        "target_domain_citations": [],
+        "target_domain_citations": [
+          10
+        ],
         "prompt_count": 1,
         "unique_prompts": 1,
         "total_unique_sources": 9,
         "avg_sources_per_prompt": 9,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
+        "best_citation_rank": 10,
+        "avg_citation_rank": 10,
+        "total_citations": 1
       },
       "budget bicycles Berlin": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
+        "target_domain_retrieved": true,
+        "target_domain_cited": true,
         "total_sources": 9,
         "prompts_using_query": [
           "cheapest bicycle to buy in berlin"
@@ -384,18 +397,20 @@
           "bikeopia.com",
           "reddit.com"
         ],
-        "target_domain_citations": [],
+        "target_domain_citations": [
+          10
+        ],
         "prompt_count": 1,
         "unique_prompts": 1,
         "total_unique_sources": 9,
         "avg_sources_per_prompt": 9,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
+        "best_citation_rank": 10,
+        "avg_citation_rank": 10,
+        "total_citations": 1
       },
       "affordable bikes Berlin": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
+        "target_domain_retrieved": true,
+        "target_domain_cited": true,
         "total_sources": 9,
         "prompts_using_query": [
           "cheapest bicycle to buy in berlin"
@@ -411,49 +426,49 @@
           "bikeopia.com",
           "reddit.com"
         ],
-        "target_domain_citations": [],
+        "target_domain_citations": [
+          10
+        ],
         "prompt_count": 1,
         "unique_prompts": 1,
         "total_unique_sources": 9,
         "avg_sources_per_prompt": 9,
+        "best_citation_rank": 10,
+        "avg_citation_rank": 10,
+        "total_citations": 1
+      },
+      "Fahrradgeschäfte Deutschland Rennrad": {
+        "target_domain_retrieved": false,
+        "target_domain_cited": false,
+        "total_sources": 11,
+        "prompts_using_query": [
+          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+        ],
+        "all_domains": [
+          "rosebikes.de",
+          "fahrrad.de",
+          "shop.zweirad-stadler.de",
+          "bikesnboards.de",
+          "decathlon.de",
+          "kaufland.de",
+          "bike-discount.de",
+          "rabe-bike.de",
+          "fahrrad-xxl.de",
+          "boc24.de",
+          "bike24.de"
+        ],
+        "target_domain_citations": [],
+        "prompt_count": 1,
+        "unique_prompts": 1,
+        "total_unique_sources": 11,
+        "avg_sources_per_prompt": 11,
         "best_citation_rank": null,
         "avg_citation_rank": null,
         "total_citations": 0
       },
-      "Fahrradgeschäfte Deutschland Rennrad": {
-        "target_domain_retrieved": true,
-        "target_domain_cited": true,
-        "total_sources": 11,
-        "prompts_using_query": [
-          "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
-        ],
-        "all_domains": [
-          "rosebikes.de",
-          "fahrrad.de",
-          "shop.zweirad-stadler.de",
-          "bikesnboards.de",
-          "decathlon.de",
-          "kaufland.de",
-          "bike-discount.de",
-          "rabe-bike.de",
-          "fahrrad-xxl.de",
-          "boc24.de",
-          "bike24.de"
-        ],
-        "target_domain_citations": [
-          18
-        ],
-        "prompt_count": 1,
-        "unique_prompts": 1,
-        "total_unique_sources": 11,
-        "avg_sources_per_prompt": 11,
-        "best_citation_rank": 18,
-        "avg_citation_rank": 18,
-        "total_citations": 1
-      },
       "Fahrradhelm kaufen Deutschland": {
-        "target_domain_retrieved": true,
-        "target_domain_cited": true,
+        "target_domain_retrieved": false,
+        "target_domain_cited": false,
         "total_sources": 11,
         "prompts_using_query": [
           "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
@@ -471,20 +486,18 @@
           "boc24.de",
           "bike24.de"
         ],
-        "target_domain_citations": [
-          18
-        ],
+        "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
         "total_unique_sources": 11,
         "avg_sources_per_prompt": 11,
-        "best_citation_rank": 18,
-        "avg_citation_rank": 18,
-        "total_citations": 1
+        "best_citation_rank": null,
+        "avg_citation_rank": null,
+        "total_citations": 0
       },
       "Fahrrad kaufen Deutschland": {
-        "target_domain_retrieved": true,
-        "target_domain_cited": true,
+        "target_domain_retrieved": false,
+        "target_domain_cited": false,
         "total_sources": 11,
         "prompts_using_query": [
           "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
@@ -502,16 +515,14 @@
           "boc24.de",
           "bike24.de"
         ],
-        "target_domain_citations": [
-          18
-        ],
+        "target_domain_citations": [],
         "prompt_count": 1,
         "unique_prompts": 1,
         "total_unique_sources": 11,
         "avg_sources_per_prompt": 11,
-        "best_citation_rank": 18,
-        "avg_citation_rank": 18,
-        "total_citations": 1
+        "best_citation_rank": null,
+        "avg_citation_rank": null,
+        "total_citations": 0
       },
       "best bicycles for Berlin cycling": {
         "target_domain_retrieved": false,
@@ -959,8 +970,8 @@
         "total_citations": 0
       },
       "fast city bikes Berlin": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
+        "target_domain_retrieved": true,
+        "target_domain_cited": true,
         "total_sources": 11,
         "prompts_using_query": [
           "cycle fast; city bikes; berlin"
@@ -978,18 +989,20 @@
           "bikeopia.com",
           "theurbanmobilitystore.com"
         ],
-        "target_domain_citations": [],
+        "target_domain_citations": [
+          8
+        ],
         "prompt_count": 1,
         "unique_prompts": 1,
         "total_unique_sources": 11,
         "avg_sources_per_prompt": 11,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
+        "best_citation_rank": 8,
+        "avg_citation_rank": 8,
+        "total_citations": 1
       },
       "Berlin bike shops fast city bikes": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
+        "target_domain_retrieved": true,
+        "target_domain_cited": true,
         "total_sources": 11,
         "prompts_using_query": [
           "cycle fast; city bikes; berlin"
@@ -1007,18 +1020,20 @@
           "bikeopia.com",
           "theurbanmobilitystore.com"
         ],
-        "target_domain_citations": [],
+        "target_domain_citations": [
+          8
+        ],
         "prompt_count": 1,
         "unique_prompts": 1,
         "total_unique_sources": 11,
         "avg_sources_per_prompt": 11,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
+        "best_citation_rank": 8,
+        "avg_citation_rank": 8,
+        "total_citations": 1
       },
       "high-performance city bikes Berlin": {
-        "target_domain_retrieved": false,
-        "target_domain_cited": false,
+        "target_domain_retrieved": true,
+        "target_domain_cited": true,
         "total_sources": 11,
         "prompts_using_query": [
           "cycle fast; city bikes; berlin"
@@ -1036,14 +1051,16 @@
           "bikeopia.com",
           "theurbanmobilitystore.com"
         ],
-        "target_domain_citations": [],
+        "target_domain_citations": [
+          8
+        ],
         "prompt_count": 1,
         "unique_prompts": 1,
         "total_unique_sources": 11,
         "avg_sources_per_prompt": 11,
-        "best_citation_rank": null,
-        "avg_citation_rank": null,
-        "total_citations": 0
+        "best_citation_rank": 8,
+        "avg_citation_rank": 8,
+        "total_citations": 1
       }
     },
     "response_chunks_analysis": {
@@ -2121,54 +2138,85 @@
     },
     "gemini_analysis": {
       "poor_performance_analysis": {
-        "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet": {
+        "cheapest bicycle to buy in berlin": {
           "performance_rating": "poor",
-          "performance_score": 18,
-          "min_citation_rank": 18,
+          "performance_score": 10,
+          "min_citation_rank": 10,
+          "total_citations": 4,
+          "all_citations": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "competitor_count": 28,
+          "competitor_info": [
+            "Domain fietsenboerse.de was cited for query 'cheapest bicycle Berlin' with content: \"You can compare prices, test ride bikes, and get advice from independent specialists.\"",
+            "Domain berlin.de was cited for query 'cheapest bicycle Berlin' with content: \"You can compare prices, test ride bikes, and get advice from independent specialists.\"",
+            "Domain visitberlin.de was cited for query 'cheapest bicycle Berlin' with content: \"They offer a wide selection of used bicycles and provide free, independent purchasing advice.\"",
+            "Domain allaboutberlin.com was cited for query 'cheapest bicycle Berlin' with content: \"They offer a wide selection of used bicycles and provide free, independent purchasing advice.\"",
+            "Domain bikeopia.com was cited for query 'cheapest bicycle Berlin' with content: \"Their prices range from 400 to 1500 euros, and they offer a 6-month warranty on all bikes.\""
+          ],
+          "gemini_analysis": "Just-bikes.de likely lacked specific, actionable information on where to find genuinely *cheap* bicycles in Berlin, such as price ranges, options for used bikes, or direct links to independent shops offering affordability and advice, which the cited competitors provided."
+        },
+        "cycle fast; city bikes; berlin": {
+          "performance_rating": "poor",
+          "performance_score": 8,
+          "min_citation_rank": 8,
           "total_citations": 3,
           "all_citations": [
-            18,
-            18,
-            18
+            8,
+            8,
+            8
           ],
-          "competitor_count": 27,
+          "competitor_count": 21,
           "competitor_info": [
-            "Domain fahrrad-xxl.de was cited for query 'Fahrradgeschäfte Deutschland Rennrad' with content: \"*   **Online-Shops:**\n    *   **Fahrrad XXL:** Bietet eine große Auswahl an Fahrrädern, darunter auch Rennräder, und hat ein Filialnetz für Beratung und Service.\"",
-            "Domain bike24.de was cited for query 'Fahrradgeschäfte Deutschland Rennrad' with content: \"*   **Bike24:** Ein weiterer großer Online-Shop, der Fahrräder und E-Bikes anbietet.\"",
-            "Domain fahrrad.de was cited for query 'Fahrradgeschäfte Deutschland Rennrad' with content: \"*   **fahrrad.de:** Ein Online-Shop, der Fahrräder, Zubehör und Kleidung führt und auch Filialen und Service vor Ort anbietet.\"",
-            "Domain boc24.de was cited for query 'Fahrradgeschäfte Deutschland Rennrad' with content: \"*   **B.O.C.:** Ein Online-Fahrradshop mit 49 Filialen in Deutschland.\"",
-            "Domain bike-discount.de was cited for query 'Fahrradgeschäfte Deutschland Rennrad' with content: \"*   **Bike-Discount:** Bietet Fahrräder mit einer \"BEST-PRICE-Garantie\" an.\""
+            "Domain veloretti.com was cited for query 'fast city bikes Berlin' with content: \"It comes with a single-speed hub and an internal coaster brake.\"",
+            "Domain theurbanmobilitystore.com was cited for query 'fast city bikes Berlin' with content: \"It features a high-quality aluminum-titanium frame, making it the lightest Brompton model and ideal for commuters who frequently carry or transport their bike.\"",
+            "Domain mod-bikes.com was cited for query 'fast city bikes Berlin' with content: \"It's also designed for comfort with front suspension and a wide gel saddle.\"",
+            "Domain bikepunkshop.com was cited for query 'fast city bikes Berlin' with content: \"They have a showroom in Berlin-Kreuzberg.\"",
+            "Domain fahrradstation.com was cited for query 'fast city bikes Berlin' with content: \"*   **Fahrradstation Berlin:** As one of Berlin's oldest bike stores, Fahrradstation offers a variety of new and used bikes, including city bikes, and provides services like repairs and rentals.\""
           ],
-          "gemini_analysis": "Decathlon.de likely lacked explicit mentions of being a specialized \"Fahrradgeschäft Deutschland Rennrad\" (bicycle shop in Germany for road bikes) or highlighting specific services, variety, or guarantees for cycling products, which the competing domains emphasized."
+          "gemini_analysis": "Just-bikes.de likely lacked specific content about **local availability in Berlin, unique bike features (like lightweight materials or comfort aspects), or direct product benefits related to speed and city commuting** that the competitors provided."
         }
       },
       "has_poor_performance": true,
-      "total_poor_performance_cases": 1
+      "total_poor_performance_cases": 2
     },
     "domain_detailed_stats": {
-      "total_appearances": 3,
-      "total_citations": 3,
-      "retrieval_rate": 0.125,
+      "total_appearances": 7,
+      "total_citations": 7,
+      "retrieval_rate": 0.2916666666666667,
       "usage_rate": 1,
-      "avg_citation_rank": 18,
-      "min_citation_rank": 18,
+      "avg_citation_rank": 9.142857142857142,
+      "min_citation_rank": 8,
       "prompt_appearances": [
-        "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet"
+        "cheapest bicycle to buy in berlin",
+        "cycle fast; city bikes; berlin"
       ],
       "query_appearances": [
-        "Fahrradgeschäfte Deutschland Rennrad",
-        "Fahrradhelm kaufen Deutschland",
-        "Fahrrad kaufen Deutschland"
+        "cheapest bicycle Berlin",
+        "used bicycles Berlin",
+        "budget bicycles Berlin",
+        "affordable bikes Berlin",
+        "fast city bikes Berlin",
+        "Berlin bike shops fast city bikes",
+        "high-performance city bikes Berlin"
       ],
       "citation_positions": [
-        18,
-        18,
-        18
+        10,
+        10,
+        10,
+        10,
+        8,
+        8,
+        8
       ]
     },
     "intersecting_queries": {},
     "recommendations": [
-      "Decathlon.de likely lacked explicit mentions of being a specialized \"Fahrradgeschäft Deutschland Rennrad\" (bicycle shop in Germany for road bikes) or highlighting specific services, variety, or guarantees for cycling products, which the competing domains emphasized."
+      "Just-bikes.de likely lacked specific, actionable information on where to find genuinely *cheap* bicycles in Berlin, such as price ranges, options for used bikes, or direct links to independent shops offering affordability and advice, which the cited competitors provided.",
+      "Just-bikes.de likely lacked specific content about **local availability in Berlin, unique bike features (like lightweight materials or comfort aspects), or direct product benefits related to speed and city commuting** that the competitors provided."
     ],
     "competitive_insights": {
       "market_position": "emerging_player",
@@ -2205,7 +2253,7 @@
   },
   "error": null,
   "metadata": {
-    "target_domain": "decathlon.de",
+    "target_domain": "just-bikes.de",
     "experiment_files": [
       "gemini_experiment_results.json"
     ],

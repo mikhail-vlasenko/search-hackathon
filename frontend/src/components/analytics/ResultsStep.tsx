@@ -123,7 +123,7 @@ const CitationPositionsDistribution = ({
   }
 
   return (
-    <div className="w-full h-12">
+    <div className="w-full h-16">
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart
           data={distributionData}
@@ -815,15 +815,15 @@ export default function ResultsStep({
 
                     {/* Citation Positions Distribution */}
                     {apiResponse?.data?.domain_analysis?.citation_positions && (
-                      <div className="flex-1 max-w-[120px]">
+                      <div className="flex-1  max-w-[120px]">
                         <CitationPositionsDistribution
                           citationPositions={
                             apiResponse.data.domain_analysis.citation_positions
                           }
                         />
-                        <p className="text-xs text-gray-500 mt-1">
+                        {/* <p className="text-xs text-gray-500 mt-1">
                           Position distribution
-                        </p>
+                        </p> */}
                       </div>
                     )}
                   </div>
@@ -986,135 +986,113 @@ export default function ResultsStep({
         </Card>
 
         {/* Charts Container */}
-        <div className="min-w-[600px]">
-          <div className="flex gap-6">
-            {/* Domain Coverage Pie Chart */}
-            <div className="flex-1">
-              <div className="mb-3">
-                <h3 className="text-lg font-semibold">Domain Coverage</h3>
-                <p className="text-sm text-gray-600">
-                  Distribution of queries where your domain appears
-                </p>
+        <div className="flex gap-6 min-w-[600px]">
+          {/* Domain Coverage Pie Chart */}
+          <div className="flex-1">
+            <div className="mb-3">
+              <h3 className="text-lg font-semibold">Domain Coverage</h3>
+              <p className="text-sm text-gray-600">
+                Distribution of queries where your domain appears
+              </p>
+            </div>
+            <div className="flex items-center justify-center h-48">
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie
+                    data={domainCoverageData}
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={60}
+                    innerRadius={30}
+                    paddingAngle={2}
+                    dataKey="value"
+                    labelLine={false}
+                  >
+                    {domainCoverageData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))}
+                  </Pie>
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+            <div className="flex justify-center space-x-4 mt-2">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-green-600 rounded-full"></div>
+                <span className="text-sm font-medium">
+                  Retrieved ({domainCoverageData[0].value})
+                </span>
               </div>
-              <div className="flex items-center justify-center h-48">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-red-600 rounded-full"></div>
+                <span className="text-sm font-medium">
+                  Missing ({domainCoverageData[1].value})
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Citation Rate Chart */}
+          <div className="w-72">
+            <div className="mb-3">
+              <h3 className="text-base font-semibold">Citation Rate</h3>
+              <p className="text-sm text-gray-600">
+                Of retrieved domains, how many got cited
+              </p>
+            </div>
+            <div className="flex items-center justify-center h-48">
+              {retrievedResults.length > 0 ? (
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
-                      data={domainCoverageData}
+                      data={citationData}
                       cx="50%"
                       cy="50%"
-                      outerRadius={60}
-                      innerRadius={30}
+                      outerRadius={45}
+                      innerRadius={20}
                       paddingAngle={2}
                       dataKey="value"
                       labelLine={false}
                     >
-                      {domainCoverageData.map((entry, index) => (
+                      {citationData.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={entry.color} />
                       ))}
                     </Pie>
                   </PieChart>
                 </ResponsiveContainer>
-              </div>
-              <div className="flex justify-center space-x-4 mt-2">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-600 rounded-full"></div>
-                  <span className="text-sm font-medium">
-                    Retrieved ({domainCoverageData[0].value})
-                  </span>
+              ) : (
+                <div className="flex flex-col items-center justify-center h-full text-gray-500">
+                  <FileText className="h-8 w-8 mb-2" />
+                  <p className="text-sm text-center">
+                    No retrieved domains
+                    <br />
+                    to analyze
+                  </p>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-red-600 rounded-full"></div>
-                  <span className="text-sm font-medium">
-                    Missing ({domainCoverageData[1].value})
-                  </span>
-                </div>
-              </div>
+              )}
             </div>
-
-            {/* Citation Rate Chart */}
-            <div className="w-72">
-              <div className="mb-3">
-                <h3 className="text-base font-semibold">Citation Rate</h3>
-                <p className="text-sm text-gray-600">
-                  Of retrieved domains, how many got cited
-                </p>
-              </div>
-              <div className="flex items-center justify-center h-48">
-                {retrievedResults.length > 0 ? (
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={citationData}
-                        cx="50%"
-                        cy="50%"
-                        outerRadius={45}
-                        innerRadius={20}
-                        paddingAngle={2}
-                        dataKey="value"
-                        labelLine={false}
-                      >
-                        {citationData.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={entry.color} />
-                        ))}
-                      </Pie>
-                    </PieChart>
-                  </ResponsiveContainer>
-                ) : (
-                  <div className="flex flex-col items-center justify-center h-full text-gray-500">
-                    <FileText className="h-8 w-8 mb-2" />
-                    <p className="text-sm text-center">
-                      No retrieved domains
-                      <br />
-                      to analyze
-                    </p>
+            <div className="flex justify-center space-x-4 mt-2">
+              {retrievedResults.length > 0 ? (
+                <>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                    <span className="text-sm font-medium">
+                      Cited ({citationData[0].value})
+                    </span>
                   </div>
-                )}
-              </div>
-              <div className="flex justify-center space-x-4 mt-2">
-                {retrievedResults.length > 0 ? (
-                  <>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                      <span className="text-sm font-medium">
-                        Cited ({citationData[0].value})
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-                      <span className="text-sm font-medium">
-                        Not Cited ({citationData[1].value})
-                      </span>
-                    </div>
-                  </>
-                ) : (
-                  <span className="text-sm text-gray-500">
-                    No data to display
-                  </span>
-                )}
-              </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                    <span className="text-sm font-medium">
+                      Not Cited ({citationData[1].value})
+                    </span>
+                  </div>
+                </>
+              ) : (
+                <span className="text-sm text-gray-500">
+                  No data to display
+                </span>
+              )}
             </div>
           </div>
-
-          {/* Citation Positions Distribution */}
-          {apiResponse?.data?.domain_analysis?.citation_positions && (
-            <div className="mt-4">
-              <div className="mb-2">
-                <h4 className="text-sm font-medium text-gray-700">
-                  Citation Positions Distribution
-                </h4>
-                <p className="text-xs text-gray-500">
-                  Position distribution of your domain citations across all
-                  responses
-                </p>
-              </div>
-              <CitationPositionsDistribution
-                citationPositions={
-                  apiResponse.data.domain_analysis.citation_positions
-                }
-              />
-            </div>
-          )}
         </div>
       </div>
 
