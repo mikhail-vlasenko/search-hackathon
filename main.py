@@ -31,7 +31,8 @@ def decode_uri(uri: str):
         except Exception as e:
             time.sleep(1.5)
             try:
-                return e.request
+                print("\t\t" + str(e.request.url))
+                return str(e.request.url)
             except Exception as e:
                 pass
             pass
@@ -128,7 +129,9 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
         supports = grounding_metadata.grounding_supports
         chunks = grounding_metadata.grounding_chunks
         if chunks is None:
-            warnings.warn(f"Ultra bad, {response.candidates[0].contents}")
+            warnings.warn(
+                f"Ultra bad (chunks are none), {response.candidates[0].content}"
+            )
 
         # Extract all domains from chunk titles
         chunk_domains = []
@@ -147,7 +150,12 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
         chunk_contents = {}
 
         # Sort supports by start index to get citation order
-        sorted_supports = sorted(supports, key=lambda s: s.segment.start_index)
+        sorted_supports = sorted(
+            supports,
+            key=lambda s: s.segment.start_index
+            if isinstance(s.segment.start_index, int)
+            else 1_000_000,
+        )
 
         for citation_idx, support in enumerate(sorted_supports, 1):
             if support.grounding_chunk_indices:
@@ -156,14 +164,19 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
                         if chunk_idx not in chunk_citations:
                             chunk_citations[chunk_idx] = []
                             chunk_contents[chunk_idx] = []
-                        chunk_citations[chunk_idx].append(citation_idx)
-                        chunk_contents[chunk_idx].append(support.segment.text)
+                        if support.segment.start_index != 1_000_000:
+                            chunk_citations[chunk_idx].append(citation_idx)
+                            chunk_contents[chunk_idx].append(
+                                support.segment.text
+                                if isinstance(support.segment.text, str)
+                                else ""
+                            )
 
         # Now attribute domains to queries by searching (parallelized)
         result = {}
 
         # Use ThreadPoolExecutor to parallelize Google searches
-        with ThreadPoolExecutor(max_workers=min(len(all_queries), 5)) as executor:
+        with ThreadPoolExecutor(max_workers=min(len(all_queries), 1)) as executor:
             # Submit all search tasks
             future_to_query = {
                 executor.submit(
@@ -196,7 +209,6 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
                             query_results[url] = refs
                         else:
                             # No matching URL found, use a placeholder
-                            continue
                             query_results[grounding_uri] = refs
 
                     result[query] = query_results
@@ -299,7 +311,7 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
         config = types.GenerateContentConfig(
             tools=[grounding_tool],
             max_output_tokens=2048,
-            temperature=1.0,
+            temperature=0.2,
             seed=random.randint(1, 10000),
             thinking_config=types.ThinkingConfig(
                 thinking_budget=0
@@ -345,7 +357,7 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
 def run_all_gemini_models(
     prompt: str,
     api_key: str = None,
-    runs_per_model: int = 2,
+    runs_per_model: int = 1,
     project_id: str = None,
     location: str = "global",
     engine_id: str = None,
@@ -512,7 +524,7 @@ def respond(prompts):
         return None
 
     all_results = []
-    with ThreadPoolExecutor(max_workers=len(prompts)) as executor:
+    with ThreadPoolExecutor(max_workers=min(len(prompts), 2)) as executor:
         futures = [executor.submit(process_prompt, prompt) for prompt in prompts]
 
         for future in as_completed(futures):
@@ -535,6 +547,7 @@ if __name__ == "__main__":
             "cheapest bicycle to buy in berlin",
             "cycling good, where to buy cycling machine deutschalnd to ride on roads and helmet",
             "best bikes for cycling in Berlin",
+            "best bikes for cycling near Berlin",
             "best bikes for cycling in Europe",
             "cycle fast; city bikes; berlin",
         ]
