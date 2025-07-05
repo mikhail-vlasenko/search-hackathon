@@ -76,109 +76,105 @@ export function DataTable<TData, TValue>({
   };
 
   return (
-    <div className={cn("relative bg-white", className)}>
-      <div className="flex bg-white">
+    <div
+      className={cn("relative bg-white overflow-auto", className)}
+      style={{
+        maxHeight: maxHeight ? maxHeight : "none",
+      }}
+    >
+      <div className="flex bg-white overflow-hidden">
         {/* Main Table */}
         <div
           className={cn(
-            "flex-1 transition-all duration-300",
+            "flex-1 transition-all duration-300 overflow-hidden",
             selectedRow ? "mr-96" : "mr-0"
           )}
         >
-          <div className="rounded-md border bg-white">
-            <div
-              className={cn(
-                "overflow-auto"
-                // maxHeight && `max-h-[${maxHeight}]`
-              )}
-              style={{
-                maxHeight: maxHeight ? maxHeight : "none",
-              }}
-            >
-              <Table>
-                <TableHeader className="sticky top-0 z-10 bg-white border-b">
-                  {table.getHeaderGroups().map((headerGroup) => (
-                    <TableRow key={headerGroup.id}>
-                      {headerGroup.headers.map((header) => {
-                        const canSort = header.column.getCanSort();
-                        const sortDirection = header.column.getIsSorted();
+          <div className="rounded-md border bg-white overflow-hidden">
+            <Table>
+              <TableHeader className="sticky top-0 z-50 bg-white border-b">
+                {table.getHeaderGroups().map((headerGroup) => (
+                  <TableRow key={headerGroup.id}>
+                    {headerGroup.headers.map((header) => {
+                      const canSort = header.column.getCanSort();
+                      const sortDirection = header.column.getIsSorted();
 
-                        return (
-                          <TableHead key={header.id} className="bg-white">
-                            {header.isPlaceholder ? null : (
-                              <div
-                                className={cn(
-                                  "flex items-center space-x-2",
-                                  canSort &&
-                                    "cursor-pointer select-none hover:bg-muted/50 rounded p-2 -m-2"
-                                )}
-                                onClick={
-                                  canSort
-                                    ? header.column.getToggleSortingHandler()
-                                    : undefined
-                                }
-                              >
-                                <span>
-                                  {flexRender(
-                                    header.column.columnDef.header,
-                                    header.getContext()
-                                  )}
-                                </span>
-                                {canSort && (
-                                  <div className="flex flex-col">
-                                    {sortDirection === "asc" ? (
-                                      <ChevronUp className="h-4 w-4" />
-                                    ) : sortDirection === "desc" ? (
-                                      <ChevronDown className="h-4 w-4" />
-                                    ) : (
-                                      <ArrowUpDown className="h-4 w-4 text-muted-foreground" />
-                                    )}
-                                  </div>
-                                )}
-                              </div>
-                            )}
-                          </TableHead>
-                        );
-                      })}
-                      {showRowDetails && renderRowDetails && (
-                        <TableHead className="w-12 bg-white">
-                          <span className="sr-only">Details</span>
-                        </TableHead>
-                      )}
-                    </TableRow>
-                  ))}
-                </TableHeader>
-                <TableBody>
-                  <AnimatePresence>
-                    {table.getRowModel().rows?.length ? (
-                      table.getRowModel().rows.map((row, index) => (
-                        <motion.tr
-                          key={row.id}
-                          layout
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -20 }}
-                          transition={{
-                            duration: 0.3,
-                            delay: index * 0.02,
-                            layout: { duration: 0.3 },
-                          }}
-                          className={cn(
-                            "hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors cursor-pointer",
-                            selectedRow?.id === row.id && "bg-muted",
-                            getRowClassName?.(row)
-                          )}
-                          onClick={() => handleRowClick(row)}
-                        >
-                          {row.getVisibleCells().map((cell) => (
-                            <TableCell key={cell.id} className="p-4">
-                              {flexRender(
-                                cell.column.columnDef.cell,
-                                cell.getContext()
+                      return (
+                        <TableHead key={header.id} className="bg-white">
+                          {header.isPlaceholder ? null : (
+                            <div
+                              className={cn(
+                                "flex items-center space-x-2",
+                                canSort &&
+                                  "cursor-pointer select-none hover:bg-muted/50 rounded p-2 -m-2"
                               )}
-                            </TableCell>
-                          ))}
-                          {/* {showRowDetails && renderRowDetails && (
+                              onClick={
+                                canSort
+                                  ? header.column.getToggleSortingHandler()
+                                  : undefined
+                              }
+                            >
+                              <span>
+                                {flexRender(
+                                  header.column.columnDef.header,
+                                  header.getContext()
+                                )}
+                              </span>
+                              {canSort && (
+                                <div className="flex flex-col">
+                                  {sortDirection === "asc" ? (
+                                    <ChevronUp className="h-4 w-4" />
+                                  ) : sortDirection === "desc" ? (
+                                    <ChevronDown className="h-4 w-4" />
+                                  ) : (
+                                    <ArrowUpDown className="h-4 w-4 text-muted-foreground" />
+                                  )}
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </TableHead>
+                      );
+                    })}
+                    {showRowDetails && renderRowDetails && (
+                      <TableHead className="w-12 bg-white">
+                        <span className="sr-only">Details</span>
+                      </TableHead>
+                    )}
+                  </TableRow>
+                ))}
+              </TableHeader>
+              <TableBody>
+                <AnimatePresence>
+                  {table.getRowModel().rows?.length ? (
+                    table.getRowModel().rows.map((row, index) => (
+                      <motion.tr
+                        key={row.id}
+                        layout
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{
+                          duration: 0.3,
+                          delay: index * 0.02,
+                          layout: { duration: 0.3 },
+                        }}
+                        className={cn(
+                          "hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors cursor-pointer",
+                          selectedRow?.id === row.id && "bg-muted",
+                          getRowClassName?.(row)
+                        )}
+                        onClick={() => handleRowClick(row)}
+                      >
+                        {row.getVisibleCells().map((cell) => (
+                          <TableCell key={cell.id} className="p-4">
+                            {flexRender(
+                              cell.column.columnDef.cell,
+                              cell.getContext()
+                            )}
+                          </TableCell>
+                        ))}
+                        {/* {showRowDetails && renderRowDetails && (
                             <TableCell className="p-4 text-center">
                               <Button
                                 variant="ghost"
@@ -192,22 +188,21 @@ export function DataTable<TData, TValue>({
                               </Button>
                             </TableCell>
                           )} */}
-                        </motion.tr>
-                      ))
-                    ) : (
-                      <TableRow>
-                        <TableCell
-                          colSpan={columns.length + (showRowDetails ? 1 : 0)}
-                          className="h-24 text-center"
-                        >
-                          No results.
-                        </TableCell>
-                      </TableRow>
-                    )}
-                  </AnimatePresence>
-                </TableBody>
-              </Table>
-            </div>
+                      </motion.tr>
+                    ))
+                  ) : (
+                    <TableRow>
+                      <TableCell
+                        colSpan={columns.length + (showRowDetails ? 1 : 0)}
+                        className="h-24 text-center"
+                      >
+                        No results.
+                      </TableCell>
+                    </TableRow>
+                  )}
+                </AnimatePresence>
+              </TableBody>
+            </Table>
           </div>
         </div>
 

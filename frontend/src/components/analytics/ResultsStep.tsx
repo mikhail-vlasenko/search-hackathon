@@ -686,164 +686,181 @@ export default function ResultsStep({
 
   return (
     <div className="space-y-6">
-      {/* Top Row: Performance Overview and Competitive Insights */}
-      <div className="flex gap-4">
-        {/* Performance Overview */}
-        <Card className="shrink-0 min-w-[320px]">
-          <CardHeader className="shrink-0 pb-4">
-            <CardTitle className="text-lg text-nowrap">
-              Performance Overview
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="shrink-0 space-y-6">
-            {/* Domain Coverage */}
-            <div className="space-y-2">
-              <h3 className="text-sm font-medium text-gray-700">
-                How many queries is your domain found in?
-              </h3>
-              <div className="flex items-center justify-center gap-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">
-                    {analysis.results.filter((r) => r.isMentioned).length}
+      {/* Compact Overview */}
+      <Card>
+        <CardHeader className="pb-2">
+          <div className="flex items-center justify-between">
+            <CardTitle className="text-lg">Performance Overview</CardTitle>
+            {apiResponse?.data?.competitive_insights && (
+              <div className="flex items-center space-x-1">
+                <Users className="h-4 w-4 text-blue-500" />
+                <span className="text-sm font-medium text-gray-700">
+                  Competitive Insights
+                </span>
+              </div>
+            )}
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          <div className="grid grid-cols-2 gap-6">
+            {/* Performance Metrics Column */}
+            <div className="space-y-4">
+              {/* Domain Coverage */}
+              <div className="space-y-1">
+                <h3 className="text-sm font-medium text-gray-700">
+                  How many queries is your domain found in?
+                </h3>
+                <div className="flex items-center pl-2 gap-2">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600">
+                      {analysis.results.filter((r) => r.isMentioned).length}
+                    </div>
+                    <p className="text-xs text-muted-foreground">Found</p>
                   </div>
-                  <p className="text-sm text-muted-foreground">Found</p>
-                </div>
-                <div className="text-gray-300 text-2xl font-light">/</div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-red-600">
-                    {analysis.results.filter((r) => !r.isMentioned).length}
+                  <div className="text-gray-300 text-lg font-light">/</div>
+                  <div className="">
+                    <div className="text-2xl font-bold text-red-600">
+                      {analysis.results.filter((r) => !r.isMentioned).length}
+                    </div>
+                    <p className="text-xs text-muted-foreground">Missing</p>
                   </div>
-                  <p className="text-sm text-muted-foreground">Missing</p>
                 </div>
               </div>
-            </div>
 
-            {/* Avg Ranking */}
-            <div className="space-y-2">
-              <h3 className="text-sm font-medium text-gray-700">
-                How well does your domain rank?
-              </h3>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">
-                  {(() => {
-                    const rankedResults = analysis.results.filter(
-                      (r) => r.averageRanking > 0
-                    );
-                    if (rankedResults.length === 0) return "N/A";
-                    const avgRanking =
-                      rankedResults.reduce(
-                        (sum, r) => sum + r.averageRanking,
-                        0
-                      ) / rankedResults.length;
-                    return `#${avgRanking.toFixed(1)}`;
-                  })()}
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Average citation position
-                </p>
-              </div>
-            </div>
-
-            {/* Search Coverage */}
-            <div className="space-y-2">
-              <h3 className="text-sm font-medium text-gray-700">
-                How often does your domain appear?
-              </h3>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">
-                  {(() => {
-                    const totalSearches = analysis.results.reduce(
-                      (sum, r) => sum + r.totalSearches,
-                      0
-                    );
-                    const totalAppearances = analysis.results.reduce(
-                      (sum, r) => sum + r.appearsInSearches,
-                      0
-                    );
-                    return totalSearches > 0
-                      ? `${((totalAppearances / totalSearches) * 100).toFixed(
+              {/* Avg Ranking */}
+              <div className="space-y-1">
+                <h3 className="text-sm font-medium text-gray-700">
+                  How well does your domain rank?
+                </h3>
+                <div className="pl-2">
+                  <div className="text-2xl font-bold text-blue-600">
+                    {(() => {
+                      const rankedResults = analysis.results.filter(
+                        (r) => r.averageRanking > 0
+                      );
+                      if (rankedResults.length === 0) return "N/A";
+                      const avgRanking =
+                        rankedResults.reduce(
+                          (sum, r) => sum + r.averageRanking,
                           0
-                        )}%`
-                      : "0%";
-                  })()}
+                        ) / rankedResults.length;
+                      return `#${avgRanking.toFixed(1)}`;
+                    })()}
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Average citation position
+                  </p>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  Overall search coverage
-                </p>
+              </div>
+
+              {/* Search Coverage */}
+              <div className="space-y-1">
+                <h3 className="text-sm font-medium text-gray-700">
+                  How often does your domain appear?
+                </h3>
+                <div className="pl-2">
+                  <div className="text-2xl font-bold text-purple-600">
+                    {(() => {
+                      const totalSearches = analysis.results.reduce(
+                        (sum, r) => sum + r.totalSearches,
+                        0
+                      );
+                      const totalAppearances = analysis.results.reduce(
+                        (sum, r) => sum + r.appearsInSearches,
+                        0
+                      );
+                      return totalSearches > 0
+                        ? `${((totalAppearances / totalSearches) * 100).toFixed(
+                            0
+                          )}%`
+                        : "0%";
+                    })()}
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Overall search coverage
+                  </p>
+                </div>
               </div>
             </div>
-          </CardContent>
-        </Card>
 
-        {/* Competitive Insights */}
-        {apiResponse?.data?.competitive_insights && (
-          <Card>
-            <CardHeader>
-              <div className="flex items-center space-x-2">
-                <Users className="h-5 w-5 text-blue-500" />
-                <CardTitle className="text-lg">Competitive Insights</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2">
-                <div>
-                  {/* Competitive Advantages */}
-                  {apiResponse.data.competitive_insights.competitive_advantages
-                    ?.length > 0 && (
-                    <div className="space-y-2">
-                      <h4 className="font-semibold text-sm text-gray-900 flex items-center space-x-1">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        <span>Competitive Advantages</span>
-                      </h4>
-                      <div className="flex flex-wrap gap-1">
-                        {apiResponse.data.competitive_insights.competitive_advantages
-                          .slice(0, 3)
-                          .map((advantage: string, index: number) => (
-                            <Badge
-                              key={index}
-                              variant="default"
-                              className="text-xs"
-                            >
-                              {advantage}
-                            </Badge>
-                          ))}
-                      </div>
+            {/* Competitive Insights Column */}
+            {apiResponse?.data?.competitive_insights && (
+              <div className="space-y-3">
+                {/* Competitive Advantages */}
+                {apiResponse.data.competitive_insights.competitive_advantages
+                  ?.length > 0 && (
+                  <div className="space-y-1">
+                    <h4 className="font-medium text-xs text-gray-900 flex items-center space-x-1">
+                      <CheckCircle className="h-3 w-3 text-green-500" />
+                      <span>Competitive Advantages</span>
+                    </h4>
+                    <div className="flex flex-wrap gap-1">
+                      {apiResponse.data.competitive_insights.competitive_advantages
+                        .slice(0, 3)
+                        .map((advantage: string, index: number) => (
+                          <Badge
+                            key={index}
+                            variant="default"
+                            className="text-xs px-1 py-0"
+                          >
+                            {advantage}
+                          </Badge>
+                        ))}
+                      {apiResponse.data.competitive_insights
+                        .competitive_advantages.length > 3 && (
+                        <span className="text-xs text-gray-500">
+                          +{" "}
+                          {apiResponse.data.competitive_insights
+                            .competitive_advantages.length - 3}{" "}
+                          more
+                        </span>
+                      )}
                     </div>
-                  )}
-                  {/* Improvement Areas */}
-                  {apiResponse.data.competitive_insights.improvement_areas
-                    ?.length > 0 && (
-                    <div className="space-y-2">
-                      <h4 className="font-semibold text-sm text-gray-900 flex items-center space-x-1">
-                        <Target className="h-4 w-4 text-orange-500" />
-                        <span>Improvement Areas</span>
-                      </h4>
-                      <div className="flex flex-wrap gap-1">
-                        {apiResponse.data.competitive_insights.improvement_areas
-                          .slice(0, 3)
-                          .map((area: string, index: number) => (
-                            <Badge
-                              key={index}
-                              variant="outline"
-                              className="text-xs"
-                            >
-                              {area}
-                            </Badge>
-                          ))}
-                      </div>
+                  </div>
+                )}
+
+                {/* Improvement Areas */}
+                {apiResponse.data.competitive_insights.improvement_areas
+                  ?.length > 0 && (
+                  <div className="space-y-1">
+                    <h4 className="font-medium text-xs text-gray-900 flex items-center space-x-1">
+                      <Target className="h-3 w-3 text-orange-500" />
+                      <span>Improvement Areas</span>
+                    </h4>
+                    <div className="flex flex-wrap gap-1">
+                      {apiResponse.data.competitive_insights.improvement_areas
+                        .slice(0, 3)
+                        .map((area: string, index: number) => (
+                          <Badge
+                            key={index}
+                            variant="outline"
+                            className="text-xs px-1 py-0"
+                          >
+                            {area}
+                          </Badge>
+                        ))}
+                      {apiResponse.data.competitive_insights.improvement_areas
+                        .length > 3 && (
+                        <span className="text-xs text-gray-500">
+                          +{" "}
+                          {apiResponse.data.competitive_insights
+                            .improvement_areas.length - 3}{" "}
+                          more
+                        </span>
+                      )}
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
 
                 {/* Key Competitors */}
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-sm text-gray-900 flex items-center space-x-1">
-                    <Link className="h-4 w-4 text-blue-500" />
+                <div className="space-y-1">
+                  <h4 className="font-medium text-xs text-gray-900 flex items-center space-x-1">
+                    <Link className="h-3 w-3 text-blue-500" />
                     <span>Top Competitors</span>
                   </h4>
                   {apiResponse.data.competitive_insights.key_competitors
                     ?.length > 0 ? (
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       {apiResponse.data.competitive_insights.key_competitors
                         .slice(0, 3)
                         .map((competitor: any, index: number) => {
@@ -858,11 +875,11 @@ export default function ResultsStep({
                           return (
                             <div
                               key={index}
-                              className="flex items-center justify-between p-2 bg-gray-50 rounded-lg"
+                              className="flex items-center justify-between p-1 bg-gray-50 rounded text-xs"
                             >
-                              <div className="flex items-center space-x-2">
+                              <div className="flex items-center space-x-1">
                                 <div
-                                  className={`h-2 w-2 rounded-full ${
+                                  className={`h-1.5 w-1.5 rounded-full ${
                                     isStrong
                                       ? "bg-red-500"
                                       : isModerate
@@ -870,11 +887,11 @@ export default function ResultsStep({
                                       : "bg-green-500"
                                   }`}
                                 />
-                                <span className="text-sm font-medium truncate max-w-[150px]">
+                                <span className="font-medium truncate max-w-[120px]">
                                   {domain}
                                 </span>
                               </div>
-                              <div className="flex items-center space-x-2">
+                              <div className="flex items-center space-x-1">
                                 <Badge
                                   variant={
                                     isStrong
@@ -883,9 +900,9 @@ export default function ResultsStep({
                                       ? "default"
                                       : "secondary"
                                   }
-                                  className="text-xs"
+                                  className="text-xs px-1 py-0"
                                 >
-                                  {frequency} mentions
+                                  {frequency}
                                 </Badge>
                                 <span className="text-xs text-gray-500">
                                   {isStrong
@@ -898,18 +915,27 @@ export default function ResultsStep({
                             </div>
                           );
                         })}
+                      {apiResponse.data.competitive_insights.key_competitors
+                        .length > 3 && (
+                        <div className="text-xs text-gray-500 text-center">
+                          +{" "}
+                          {apiResponse.data.competitive_insights.key_competitors
+                            .length - 3}{" "}
+                          more competitors
+                        </div>
+                      )}
                     </div>
                   ) : (
-                    <p className="text-sm text-gray-500">
+                    <p className="text-xs text-gray-500">
                       No competitor data available
                     </p>
                   )}
                 </div>
               </div>
-            </CardContent>
-          </Card>
-        )}
-      </div>
+            )}
+          </div>
+        </CardContent>
+      </Card>
 
       <div className="max-w-full overflow-x-auto">
         <DataTable
