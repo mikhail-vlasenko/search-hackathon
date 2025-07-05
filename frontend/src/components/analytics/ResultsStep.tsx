@@ -715,40 +715,11 @@ export default function ResultsStep({
                   </p>
                 </div>
               </div>
-
-              {/* Search Coverage */}
-              <div className="space-y-1">
-                <h3 className="text-sm font-medium text-gray-700">
-                  How often does your domain appear?
-                </h3>
-                <div className="pl-2">
-                  <div className="text-2xl font-bold text-purple-600">
-                    {(() => {
-                      const totalSearches = analysis.results.reduce(
-                        (sum, r) => sum + r.totalSearches,
-                        0
-                      );
-                      const totalAppearances = analysis.results.reduce(
-                        (sum, r) => sum + r.appearsInSearches,
-                        0
-                      );
-                      return totalSearches > 0
-                        ? `${((totalAppearances / totalSearches) * 100).toFixed(
-                            0
-                          )}%`
-                        : "0%";
-                    })()}
-                  </div>
-                  <p className="text-xs text-muted-foreground">
-                    Overall search coverage
-                  </p>
-                </div>
-              </div>
             </div>
 
             {/* Competitive Insights Column */}
             {apiResponse?.data?.competitive_insights && (
-              <div className="space-y-3">
+              <div className="flex flex-col gap-2">
                 {/* Competitive Advantages */}
                 {apiResponse.data.competitive_insights.competitive_advantages
                   ?.length > 0 && (
