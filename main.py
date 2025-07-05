@@ -59,7 +59,7 @@ def search_and_match_domains(
 
         urls = []
         for i, url in enumerate(search_results):
-            print(f"Loaded {url}")
+            # print(f"Loaded {url}")
             if i > 10:
                 break
             time.sleep(0.1)
@@ -73,7 +73,7 @@ def search_and_match_domains(
             for turl in target_uris:
                 if turl in url or url in turl:
                     domain_to_url[turl] = url
-                    print(f"Found {url}")
+                    print(f"\t\tFound {url}")
                     break
 
         for url in urls:
@@ -148,7 +148,7 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
         result = {}
 
         # Use ThreadPoolExecutor to parallelize Google searches
-        with ThreadPoolExecutor(max_workers=min(len(all_queries), 5)) as executor:
+        with ThreadPoolExecutor(max_workers=min(len(all_queries), 10)) as executor:
             # Submit all search tasks
             future_to_query = {
                 executor.submit(
@@ -160,7 +160,7 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
             # Collect results as they complete
             for future in as_completed(future_to_query):
                 query = future_to_query[future]
-                print(f"Searching for: {query}")
+                # print(f"Searching for: {query}")
 
                 try:
                     url_to_url = future.result()
@@ -171,7 +171,7 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
                         domain = chunk_domains[chunk_idx]
                         url = chunk_uri[chunk_idx]
                         grounding_uri = chunk_uri[chunk_idx]
-                        print(f"The grounding uri is {grounding_uri}")
+                        # print(f"The grounding uri is {grounding_uri}")
                         citations = chunk_citations.get(chunk_idx, [])
                         contents = chunk_contents.get(chunk_idx, [])
                         refs = {"citations": citations, "contents": contents}
@@ -285,6 +285,7 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
             tools=[grounding_tool],
             max_output_tokens=2048,
             temperature=1.0,
+            seed=random.randint(1, 10000),
             thinking_config=types.ThinkingConfig(
                 thinking_budget=0
             ),  # Disable thinking for speed
@@ -293,7 +294,12 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
         response = client.models.generate_content(
             model=model_name, contents=prompt, config=config
         )
-        print(f"Got response from the {model_name} {prompt}")
+        try:
+            print(
+                f"Got response from the {model_name} {prompt}: {response.text[:50]}; {len(response.candidates)}"
+            )
+        except:
+            pass
 
         search_citations = {}
         for i in range(5):
