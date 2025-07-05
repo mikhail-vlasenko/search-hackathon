@@ -1,4 +1,5 @@
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import json
 import re
 import os
@@ -38,20 +39,22 @@ def extract_web_searches(response_text: str) -> List[str]:
 def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, Any]:
     """Call a specific Gemini model with the given prompt."""
     try:
-        genai.configure(api_key=api_key)
-        model = genai.GenerativeModel(model_name)
+        os.environ['GEMINI_API_KEY'] = api_key
+        client = genai.Client()
         
-        # Configure to enable web searches if available
-        generation_config = {
-            'temperature': 0.7,
-            'top_p': 0.9,
-            'top_k': 40,
-            'max_output_tokens': 2048,
-        }
+        # Configure generation settings
+        config = types.GenerateContentConfig(
+            temperature=0.7,
+            top_p=0.9,
+            top_k=40,
+            max_output_tokens=2048,
+            thinking_config=types.ThinkingConfig(thinking_budget=0)  # Disable thinking for speed
+        )
         
-        response = model.generate_content(
-            prompt,
-            generation_config=generation_config
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt,
+            config=config
         )
         
         return {
@@ -83,16 +86,16 @@ def run_gemini_experiments(prompt: str, api_key: str = None, runs_per_model: int
         Dictionary with model names as keys and lists of results as values
     """
     if api_key is None:
-        api_key = os.getenv('GOOGLE_API_KEY')
+        api_key = os.getenv('GEMINI_API_KEY')
         if not api_key:
-            raise ValueError("API key must be provided or set in GOOGLE_API_KEY environment variable")
+            raise ValueError("API key must be provided or set in GEMINI_API_KEY environment variable")
     
     # Available Gemini models
     models = [
-        'gemini-2.0-flash-exp',
+        'gemini-2.5-flash',
+        'gemini-2.5-pro',
         'gemini-1.5-pro',
-        'gemini-1.5-flash',
-        'gemini-1.0-pro'
+        'gemini-1.5-flash'
     ]
     
     results = {}
