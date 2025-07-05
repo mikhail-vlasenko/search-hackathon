@@ -284,6 +284,7 @@ def call_gemini_model(model_name: str, prompt: str, api_key: str) -> Dict[str, A
         config = types.GenerateContentConfig(
             tools=[grounding_tool],
             max_output_tokens=2048,
+            temperature=1.0,
             thinking_config=types.ThinkingConfig(
                 thinking_budget=0
             ),  # Disable thinking for speed
