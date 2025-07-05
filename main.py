@@ -182,7 +182,7 @@ def extract_searches_and_citations(response: Any) -> Dict[str, Dict[str, List[in
                             query_results[url] = refs
                         else:
                             # No matching URL found, use a placeholder
-                            query_results[f"https://{domain}"] = refs
+                            query_results[url] = refs
 
                     result[query] = query_results
 
