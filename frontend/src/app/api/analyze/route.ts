@@ -41,6 +41,9 @@ function transformPythonResponseToAnalysis(
       // If no related prompts found, try to match with any prompt for backwards compatibility
       const prompt = relatedPrompts.length > 0 ? relatedPrompts[0] : prompts[0];
 
+      // Count how many prompts this query appears in
+      const promptCount = queryData.prompts ? queryData.prompts.length : 1;
+
       // Check if target domain appears in this query
       const domainsWithCitations = queryData.domains_with_citations || {};
       const domainEntries = Object.entries(domainsWithCitations);
@@ -75,6 +78,47 @@ function transformPythonResponseToAnalysis(
         ? Math.max(10, 100 - averageRanking * 10)
         : 0;
 
+      // Create citation distribution data for sparkline
+      const citationDistribution: Array<{ position: number; count: number }> =
+        [];
+      const userDomainPositions: number[] = [];
+
+      if (queryData.domains_with_citations) {
+        // Count citations at each position
+        const positionCounts: { [position: number]: number } = {};
+
+        Object.entries(queryData.domains_with_citations).forEach(
+          ([domain, citations]) => {
+            const cleanDomain = domain
+              .replace(/^https?:\/\//, "")
+              .replace(/^www\./, "");
+            const isUserDomain =
+              cleanDomain === targetDomain ||
+              cleanDomain.includes(targetDomain) ||
+              targetDomain.includes(cleanDomain);
+
+            (citations as number[]).forEach((position) => {
+              positionCounts[position] = (positionCounts[position] || 0) + 1;
+
+              if (isUserDomain) {
+                userDomainPositions.push(position);
+              }
+            });
+          }
+        );
+
+        // Convert to array format for sparkline
+        const maxPosition = Math.max(
+          ...Object.keys(positionCounts).map(Number)
+        );
+        for (let i = 1; i <= maxPosition; i++) {
+          citationDistribution.push({
+            position: i,
+            count: positionCounts[i] || 0,
+          });
+        }
+      }
+
       results.push({
         id: `query-${queryIndex}`,
         query: query,
@@ -85,8 +129,11 @@ function transformPythonResponseToAnalysis(
         appearsInSearches,
         totalSources: totalDomains,
         visibility: Math.round(visibility),
+        promptCount,
         category: prompt?.category || "General",
         timestamp: new Date(),
+        citationDistribution,
+        userDomainPositions,
       });
 
       queryIndex++;
@@ -236,6 +283,27 @@ function generateMockAnalysis(
         : 0;
       const visibility = isMentioned ? Math.floor(Math.random() * 60) + 40 : 0;
 
+      // Generate mock citation distribution data
+      const citationDistribution: Array<{ position: number; count: number }> =
+        [];
+      const userDomainPositions: number[] = [];
+
+      // Create a realistic distribution for sparkline
+      const maxPosition = Math.floor(Math.random() * 10) + 5; // 5-15 positions
+      for (let i = 1; i <= maxPosition; i++) {
+        // Higher positions (closer to 1) should have fewer citations
+        const count = Math.max(0, Math.floor(Math.random() * (15 - i)) + 1);
+        citationDistribution.push({ position: i, count });
+      }
+
+      // Add user domain positions if mentioned
+      if (isMentioned) {
+        const numPositions = Math.floor(Math.random() * 3) + 1; // 1-3 positions
+        for (let i = 0; i < numPositions; i++) {
+          userDomainPositions.push(Math.floor(Math.random() * maxPosition) + 1);
+        }
+      }
+
       results.push({
         id: `${prompt.id}-${queryIndex}`,
         query: query,
@@ -246,8 +314,11 @@ function generateMockAnalysis(
         appearsInSearches: isMentioned ? Math.floor(Math.random() * 3) + 1 : 0,
         totalSources: Math.floor(Math.random() * 10) + 5,
         visibility,
+        promptCount: Math.floor(Math.random() * 3) + 1, // Mock: 1-3 prompts per query
         category: prompt.category,
         timestamp: new Date(),
+        citationDistribution,
+        userDomainPositions,
       });
     });
   });

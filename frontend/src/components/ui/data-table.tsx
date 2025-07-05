@@ -178,7 +178,7 @@ export function DataTable<TData, TValue>({
                               )}
                             </TableCell>
                           ))}
-                          {showRowDetails && renderRowDetails && (
+                          {/* {showRowDetails && renderRowDetails && (
                             <TableCell className="p-4 text-center">
                               <Button
                                 variant="ghost"
@@ -191,7 +191,7 @@ export function DataTable<TData, TValue>({
                                 <Eye className="h-4 w-4" />
                               </Button>
                             </TableCell>
-                          )}
+                          )} */}
                         </motion.tr>
                       ))
                     ) : (

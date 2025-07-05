@@ -26,6 +26,8 @@ import {
   PieChart,
   Pie,
   Cell,
+  ReferenceLine,
+  ComposedChart,
 } from "recharts";
 import {
   TrendingUp,
@@ -57,6 +59,44 @@ interface ResultsStepProps {
   apiResponse?: any; // Add optional API response to access recommendations and competitive insights
 }
 
+// Citation Distribution Sparkline Component
+const CitationSparkline = ({ data }: { data: AnalysisResult }) => {
+  if (!data.citationDistribution || data.citationDistribution.length === 0) {
+    return <span className="text-gray-400 text-xs">No data</span>;
+  }
+
+  const maxCount = Math.max(...data.citationDistribution.map((d) => d.count));
+  const userPositions = data.userDomainPositions || [];
+
+  return (
+    <div className="w-32 h-8">
+      <ResponsiveContainer width="100%" height="100%">
+        <ComposedChart
+          data={data.citationDistribution}
+          margin={{ top: 2, right: 2, bottom: 2, left: 2 }}
+        >
+          <Bar
+            dataKey="count"
+            fill="#e5e7eb"
+            stroke="#d1d5db"
+            strokeWidth={0.5}
+            radius={[1, 1, 0, 0]}
+          />
+          {userPositions.map((position, index) => (
+            <ReferenceLine
+              key={index}
+              x={position}
+              stroke="#ef4444"
+              strokeWidth={2}
+              strokeDasharray="none"
+            />
+          ))}
+        </ComposedChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
 export default function ResultsStep({
   analysis,
   onNewAnalysis,
@@ -83,21 +123,46 @@ export default function ResultsStep({
         size: 300,
       },
       {
-        accessorKey: "category",
+        accessorKey: "promptCount",
         header: () => (
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <div className="">Category</div>
+                <div className="">Frequency</div>
               </TooltipTrigger>
               <TooltipContent>
-                <p>The topic category this query belongs to</p>
+                <p>How many prompts this query appears in</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         ),
-        cell: createCellRenderer.badge("secondary"),
+        cell: (info: any) => {
+          const promptCount = info.getValue() as number;
+          const percentage = (promptCount / analysis.results.length) * 100;
+          return (
+            <span className={`font-medium `}>
+              {promptCount}{" "}
+              <span className="text-slate-500">({percentage.toFixed(0)}%)</span>
+            </span>
+          );
+        },
       },
+      // {
+      //   accessorKey: "category",
+      //   header: () => (
+      //     <TooltipProvider>
+      //       <Tooltip>
+      //         <TooltipTrigger asChild>
+      //           <div className="">Category</div>
+      //         </TooltipTrigger>
+      //         <TooltipContent>
+      //           <p>The topic category this query belongs to</p>
+      //         </TooltipContent>
+      //       </Tooltip>
+      //     </TooltipProvider>
+      //   ),
+      //   cell: createCellRenderer.badge("secondary"),
+      // },
       {
         accessorKey: "isMentioned",
         header: () => (
@@ -146,7 +211,7 @@ export default function ResultsStep({
         cell: (info: any) => {
           const ranking = info.getValue() as number;
           if (ranking === 0) {
-            return <span className="text-gray-400">N/A</span>;
+            return <span className="text-red-500">N/A</span>;
           }
           const colorClass =
             ranking <= 3
@@ -159,6 +224,28 @@ export default function ResultsStep({
               #{ranking.toFixed(1)}
             </span>
           );
+        },
+      },
+      {
+        accessorKey: "citationDistribution",
+        header: () => (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="">Citation Distribution</div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>
+                  Distribution of citations by ranking position. Red lines show
+                  where your domain appears.
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ),
+        cell: (info: any) => {
+          const row = info.row.original as AnalysisResult;
+          return <CitationSparkline data={row} />;
         },
       },
       {
@@ -313,6 +400,20 @@ export default function ResultsStep({
                   {result.category}
                 </Badge>
               </div>
+              <div className="flex justify-between">
+                <span className="text-sm">Prompt Frequency</span>
+                <span
+                  className={`text-sm font-medium ${
+                    result.promptCount >= 3
+                      ? "text-green-600"
+                      : result.promptCount >= 2
+                      ? "text-yellow-600"
+                      : "text-red-600"
+                  }`}
+                >
+                  {result.promptCount} prompts
+                </span>
+              </div>
             </div>
           </div>
           <div>
@@ -332,6 +433,67 @@ export default function ResultsStep({
                   {result.visibility}%
                 </span>
               </div>
+              {result.citationDistribution &&
+                result.citationDistribution.length > 0 && (
+                  <div className="space-y-2">
+                    <div className="flex justify-between">
+                      <span className="text-sm">Citation Positions</span>
+                      <span className="text-sm font-medium text-gray-700">
+                        {result.citationDistribution.reduce(
+                          (sum, d) => sum + d.count,
+                          0
+                        )}{" "}
+                        total
+                      </span>
+                    </div>
+                    <div className="w-full h-16">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <ComposedChart
+                          data={result.citationDistribution}
+                          margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
+                        >
+                          <XAxis
+                            dataKey="position"
+                            tick={{ fontSize: 10 }}
+                            axisLine={false}
+                            tickLine={false}
+                          />
+                          <YAxis
+                            tick={{ fontSize: 10 }}
+                            axisLine={false}
+                            tickLine={false}
+                          />
+                          <Bar
+                            dataKey="count"
+                            fill="#e5e7eb"
+                            stroke="#d1d5db"
+                            strokeWidth={0.5}
+                            radius={[2, 2, 0, 0]}
+                          />
+                          {result.userDomainPositions?.map(
+                            (position, index) => (
+                              <ReferenceLine
+                                key={index}
+                                x={position}
+                                stroke="#ef4444"
+                                strokeWidth={2}
+                                strokeDasharray="none"
+                              />
+                            )
+                          )}
+                        </ComposedChart>
+                      </ResponsiveContainer>
+                    </div>
+                    {result.userDomainPositions &&
+                      result.userDomainPositions.length > 0 && (
+                        <div className="text-xs text-gray-600">
+                          <span className="inline-block w-2 h-2 bg-red-500 mr-1"></span>
+                          Your domain appears at positions:{" "}
+                          {result.userDomainPositions.join(", ")}
+                        </div>
+                      )}
+                  </div>
+                )}
             </div>
           </div>
         </div>
@@ -525,128 +687,89 @@ export default function ResultsStep({
   return (
     <div className="space-y-6">
       {/* Top Row: Performance Overview and Competitive Insights */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="flex gap-4">
         {/* Performance Overview */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Performance Overview</CardTitle>
+        <Card className="shrink-0 min-w-[320px]">
+          <CardHeader className="shrink-0 pb-4">
+            <CardTitle className="text-lg text-nowrap">
+              Performance Overview
+            </CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-8">
-              {/* Domain Coverage */}
-              <div className="flex items-center gap-3">
-                <Search className="h-full text-muted-foreground" />
+          <CardContent className="shrink-0 space-y-6">
+            {/* Domain Coverage */}
+            <div className="space-y-2">
+              <h3 className="text-sm font-medium text-gray-700">
+                How many queries is your domain found in?
+              </h3>
+              <div className="flex items-center justify-center gap-4">
                 <div className="text-center">
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <div className="text-sm font-medium text-muted-foreground ">
-                          Domain Coverage
-                        </div>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>
-                          How many queries your domain appears in vs queries
-                          where it's missing
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                  <div className="flex items-center gap-2 mt-1">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-green-600">
-                        {analysis.results.filter((r) => r.isMentioned).length}
-                      </div>
-                      <p className="text-xs text-muted-foreground">Found</p>
-                    </div>
-                    <div className="text-gray-400">/</div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-red-600">
-                        {analysis.results.filter((r) => !r.isMentioned).length}
-                      </div>
-                      <p className="text-xs text-muted-foreground">Missing</p>
-                    </div>
+                  <div className="text-3xl font-bold text-green-600">
+                    {analysis.results.filter((r) => r.isMentioned).length}
                   </div>
+                  <p className="text-sm text-muted-foreground">Found</p>
+                </div>
+                <div className="text-gray-300 text-2xl font-light">/</div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-red-600">
+                    {analysis.results.filter((r) => !r.isMentioned).length}
+                  </div>
+                  <p className="text-sm text-muted-foreground">Missing</p>
                 </div>
               </div>
+            </div>
 
-              {/* Avg Ranking */}
-              <div className="flex items-center gap-3">
-                <Hash className="h-full text-muted-foreground" />
-                <div className="text-center">
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <div className="text-sm font-medium text-muted-foreground ">
-                          Avg Ranking
-                        </div>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>
-                          Average citation ranking across all queries where your
-                          domain appears (lower is better)
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                  <div className="text-lg font-bold mt-1">
-                    {(() => {
-                      const rankedResults = analysis.results.filter(
-                        (r) => r.averageRanking > 0
-                      );
-                      if (rankedResults.length === 0) return "N/A";
-                      const avgRanking =
-                        rankedResults.reduce(
-                          (sum, r) => sum + r.averageRanking,
+            {/* Avg Ranking */}
+            <div className="space-y-2">
+              <h3 className="text-sm font-medium text-gray-700">
+                How well does your domain rank?
+              </h3>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">
+                  {(() => {
+                    const rankedResults = analysis.results.filter(
+                      (r) => r.averageRanking > 0
+                    );
+                    if (rankedResults.length === 0) return "N/A";
+                    const avgRanking =
+                      rankedResults.reduce(
+                        (sum, r) => sum + r.averageRanking,
+                        0
+                      ) / rankedResults.length;
+                    return `#${avgRanking.toFixed(1)}`;
+                  })()}
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Average citation position
+                </p>
+              </div>
+            </div>
+
+            {/* Search Coverage */}
+            <div className="space-y-2">
+              <h3 className="text-sm font-medium text-gray-700">
+                How often does your domain appear?
+              </h3>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600">
+                  {(() => {
+                    const totalSearches = analysis.results.reduce(
+                      (sum, r) => sum + r.totalSearches,
+                      0
+                    );
+                    const totalAppearances = analysis.results.reduce(
+                      (sum, r) => sum + r.appearsInSearches,
+                      0
+                    );
+                    return totalSearches > 0
+                      ? `${((totalAppearances / totalSearches) * 100).toFixed(
                           0
-                        ) / rankedResults.length;
-                      return `#${avgRanking.toFixed(1)}`;
-                    })()}
-                  </div>
-                  <p className="text-xs text-muted-foreground">Citation rank</p>
+                        )}%`
+                      : "0%";
+                  })()}
                 </div>
-              </div>
-
-              {/* Search Coverage */}
-              <div className="flex items-center gap-3">
-                <BarChart3 className="h-full text-muted-foreground" />
-                <div className="text-center">
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <div className="text-sm font-medium text-muted-foreground ">
-                          Search Coverage
-                        </div>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>
-                          Percentage of related searches where your domain
-                          appears across all queries
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                  <div className="text-lg font-bold mt-1">
-                    {(() => {
-                      const totalSearches = analysis.results.reduce(
-                        (sum, r) => sum + r.totalSearches,
-                        0
-                      );
-                      const totalAppearances = analysis.results.reduce(
-                        (sum, r) => sum + r.appearsInSearches,
-                        0
-                      );
-                      return totalSearches > 0
-                        ? `${((totalAppearances / totalSearches) * 100).toFixed(
-                            0
-                          )}%`
-                        : "0%";
-                    })()}
-                  </div>
-                  <p className="text-xs text-muted-foreground">
-                    Overall coverage
-                  </p>
-                </div>
+                <p className="text-sm text-muted-foreground">
+                  Overall search coverage
+                </p>
               </div>
             </div>
           </CardContent>
@@ -793,7 +916,7 @@ export default function ResultsStep({
           columns={columns}
           data={analysis.results}
           renderRowDetails={renderRowDetails}
-          initialSorting={[{ id: "averageRanking", desc: false }]}
+          initialSorting={[{ id: "promptCount", desc: true }]}
           getRowClassName={(row) => {
             const result = row.original as AnalysisResult;
             return result.isMentioned === false
